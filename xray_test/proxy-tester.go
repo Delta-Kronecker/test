@@ -17,6 +17,7 @@ import (
 	"os/signal"
 	"path/filepath"
 	"regexp"
+	"runtime"
 	"strconv"
 	"strings"
 	"sync"
@@ -625,7 +626,7 @@ func (pm *ProcessManager) Cleanup() {
 	}
 
 	log.Println("Starting process cleanup...")
-	
+
 	var wg sync.WaitGroup
 	pm.processes.Range(func(key, value interface{}) bool {
 		pid := key.(int)
@@ -636,14 +637,14 @@ func (pm *ProcessManager) Cleanup() {
 		}(pid)
 		return true
 	})
-	
+
 	// منتظر تمام شدن cleanup
 	done := make(chan struct{})
 	go func() {
 		wg.Wait()
 		close(done)
 	}()
-	
+
 	select {
 	case <-done:
 		log.Println("Process cleanup completed")
@@ -655,13 +656,13 @@ func (pm *ProcessManager) Cleanup() {
 // CleanupBatch برای پاکسازی بعد از هر batch
 func (pm *ProcessManager) CleanupBatch() {
 	log.Println("Cleaning up batch processes...")
-	
+
 	var toKill []int
 	pm.processes.Range(func(key, value interface{}) bool {
 		toKill = append(toKill, key.(int))
 		return true
 	})
-	
+
 	var wg sync.WaitGroup
 	for _, pid := range toKill {
 		wg.Add(1)
@@ -670,7 +671,7 @@ func (pm *ProcessManager) CleanupBatch() {
 			pm.KillProcess(p)
 		}(pid)
 	}
-	
+
 	wg.Wait()
 	time.Sleep(500 * time.Millisecond) // اجازه به سیستم برای آزادسازی منابع
 	log.Printf("Batch cleanup completed, killed %d processes", len(toKill))
@@ -1036,12 +1037,12 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 		if processInfo != nil && processInfo.cmd != nil && processInfo.cmd.Process != nil {
 			pt.processManager.KillProcess(processInfo.cmd.Process.Pid)
 		}
-		
+
 		// سپس فایل config را پاک کن
 		if configFile != "" {
 			os.Remove(configFile)
 		}
-		
+
 		// در آخر پورت را آزاد کن
 		if proxyPort > 0 {
 			pt.portManager.ReleasePort(proxyPort)
@@ -1090,7 +1091,7 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 		port:       proxyPort,
 		startTime:  time.Now(),
 	}
-	
+
 	pt.processManager.RegisterProcess(cmd.Process.Pid, processInfo)
 
 	// منتظر بمان تا پروسه شروع شود
@@ -1160,7 +1161,7 @@ func (pt *ProxyTester) startXrayProcess(configFile string) (*exec.Cmd, error) {
 	if err != nil {
 		return nil, err
 	}
-	
+
 	cmd.Stdout = devNull
 	cmd.Stderr = devNull
 
@@ -1469,7 +1470,7 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 
 		// پاکسازی کامل بعد از هر batch
 		pt.processManager.CleanupBatch()
-		
+
 		// فراخوانی garbage collector
 		runtime.GC()
 
@@ -1569,7 +1570,7 @@ func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
 
 func (pt *ProxyTester) Cleanup() {
 	log.Println("Starting final cleanup...")
-	
+
 	for _, file := range pt.outputFiles {
 		if file != nil {
 			file.Close()
@@ -1590,7 +1591,7 @@ func (pt *ProxyTester) Cleanup() {
 
 	pt.processManager.Cleanup()
 	pt.portManager.cleanup()
-	
+
 	log.Println("Final cleanup completed")
 }
 
