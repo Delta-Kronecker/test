@@ -225,7 +225,7 @@ func (pm *PortManager) findEmergencyPort() int {
 func (pm *PortManager) ReleasePort(port int) {
 	pm.usedPorts.Delete(port)
 	go func() {
-		time.Sleep(50 * time.Millisecond)
+		time.Sleep(200 * time.Millisecond) // افزایش تأخیر
 		select {
 		case pm.availablePorts <- port:
 		default:
@@ -548,51 +548,75 @@ func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort i
 	return xrayConfig, nil
 }
 
+// ProcessInfo ذخیره اطلاعات کامل پروسه
+type ProcessInfo struct {
+	cmd        *exec.Cmd
+	configFile string
+	port       int
+	startTime  time.Time
+}
+
 type ProcessManager struct {
-	processes sync.Map
+	processes sync.Map // map[int]*ProcessInfo
 	cleanup   int32
+	mu        sync.Mutex
 }
 
 func NewProcessManager() *ProcessManager {
 	return &ProcessManager{}
 }
 
-func (pm *ProcessManager) RegisterProcess(pid int, cmd *exec.Cmd) {
-	pm.processes.Store(pid, cmd)
+func (pm *ProcessManager) RegisterProcess(pid int, info *ProcessInfo) {
+	pm.processes.Store(pid, info)
 }
 
 func (pm *ProcessManager) UnregisterProcess(pid int) {
 	pm.processes.Delete(pid)
 }
 
+// KillProcess با مدیریت بهتر و Wait
 func (pm *ProcessManager) KillProcess(pid int) error {
 	if atomic.LoadInt32(&pm.cleanup) == 1 {
 		return nil
 	}
 
-	if value, ok := pm.processes.Load(pid); ok {
-		if cmd, ok := value.(*exec.Cmd); ok {
-			if cmd.Process != nil {
-				if err := cmd.Process.Signal(syscall.SIGTERM); err == nil {
-					done := make(chan error, 1)
-					go func() {
-						done <- cmd.Wait()
-					}()
-
-					select {
-					case <-done:
-					case <-time.After(200 * time.Millisecond):
-						cmd.Process.Kill()
-					}
-				} else {
-					cmd.Process.Kill()
-				}
-				pm.UnregisterProcess(pid)
-				return nil
-			}
-		}
+	value, ok := pm.processes.Load(pid)
+	if !ok {
+		return fmt.Errorf("process not found")
 	}
-	return fmt.Errorf("process not found")
+
+	info, ok := value.(*ProcessInfo)
+	if !ok || info.cmd == nil || info.cmd.Process == nil {
+		pm.UnregisterProcess(pid)
+		return fmt.Errorf("invalid process info")
+	}
+
+	// ارسال SIGTERM
+	if err := info.cmd.Process.Signal(syscall.SIGTERM); err != nil {
+		// اگر قبلاً مرده، مستقیماً Kill کن
+		info.cmd.Process.Kill()
+		info.cmd.Wait() // Wait برای جمع‌آوری zombie
+		pm.UnregisterProcess(pid)
+		return nil
+	}
+
+	// منتظر بمان تا terminate شود
+	done := make(chan error, 1)
+	go func() {
+		done <- info.cmd.Wait()
+	}()
+
+	select {
+	case <-done:
+		// موفقیت‌آمیز terminate شد
+	case <-time.After(500 * time.Millisecond):
+		// Force kill
+		info.cmd.Process.Kill()
+		<-done // حتماً wait کن
+	}
+
+	pm.UnregisterProcess(pid)
+	return nil
 }
 
 func (pm *ProcessManager) Cleanup() {
@@ -600,12 +624,56 @@ func (pm *ProcessManager) Cleanup() {
 		return
 	}
 
+	log.Println("Starting process cleanup...")
+	
+	var wg sync.WaitGroup
 	pm.processes.Range(func(key, value interface{}) bool {
-		if pid, ok := key.(int); ok {
-			pm.KillProcess(pid)
-		}
+		pid := key.(int)
+		wg.Add(1)
+		go func(p int) {
+			defer wg.Done()
+			pm.KillProcess(p)
+		}(pid)
 		return true
 	})
+	
+	// منتظر تمام شدن cleanup
+	done := make(chan struct{})
+	go func() {
+		wg.Wait()
+		close(done)
+	}()
+	
+	select {
+	case <-done:
+		log.Println("Process cleanup completed")
+	case <-time.After(5 * time.Second):
+		log.Println("Process cleanup timeout")
+	}
+}
+
+// CleanupBatch برای پاکسازی بعد از هر batch
+func (pm *ProcessManager) CleanupBatch() {
+	log.Println("Cleaning up batch processes...")
+	
+	var toKill []int
+	pm.processes.Range(func(key, value interface{}) bool {
+		toKill = append(toKill, key.(int))
+		return true
+	})
+	
+	var wg sync.WaitGroup
+	for _, pid := range toKill {
+		wg.Add(1)
+		go func(p int) {
+			defer wg.Done()
+			pm.KillProcess(p)
+		}(pid)
+	}
+	
+	wg.Wait()
+	time.Sleep(500 * time.Millisecond) // اجازه به سیستم برای آزادسازی منابع
+	log.Printf("Batch cleanup completed, killed %d processes", len(toKill))
 }
 
 type ProxyTester struct {
@@ -952,7 +1020,7 @@ func (pt *ProxyTester) getConfigHash(config *ProxyConfig) string {
 func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestResultData {
 	startTime := time.Now()
 	var proxyPort int
-	var process *exec.Cmd
+	var processInfo *ProcessInfo
 	var configFile string
 
 	result := &TestResultData{
@@ -960,15 +1028,21 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 		BatchID: &batchID,
 	}
 
+	// Defer با ترتیب صحیح
 	defer func() {
 		result.TestTime = time.Since(startTime).Seconds()
 
-		if process != nil && process.Process != nil {
-			pt.processManager.KillProcess(process.Process.Pid)
+		// اول پروسه را kill کن
+		if processInfo != nil && processInfo.cmd != nil && processInfo.cmd.Process != nil {
+			pt.processManager.KillProcess(processInfo.cmd.Process.Pid)
 		}
+		
+		// سپس فایل config را پاک کن
 		if configFile != "" {
 			os.Remove(configFile)
 		}
+		
+		// در آخر پورت را آزاد کن
 		if proxyPort > 0 {
 			pt.portManager.ReleasePort(proxyPort)
 		}
@@ -1002,20 +1076,30 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 		return result
 	}
 
-	process, err = pt.startXrayProcess(configFile)
+	cmd, err := pt.startXrayProcess(configFile)
 	if err != nil {
 		result.Result = ResultConnectionError
 		result.ErrorMessage = err.Error()
 		return result
 	}
 
-	pt.processManager.RegisterProcess(process.Process.Pid, process)
+	// ایجاد ProcessInfo کامل
+	processInfo = &ProcessInfo{
+		cmd:        cmd,
+		configFile: configFile,
+		port:       proxyPort,
+		startTime:  time.Now(),
+	}
+	
+	pt.processManager.RegisterProcess(cmd.Process.Pid, processInfo)
 
-	time.Sleep(time.Second)
+	// منتظر بمان تا پروسه شروع شود
+	time.Sleep(1500 * time.Millisecond) // افزایش زمان انتظار
 
-	if process.ProcessState != nil && process.ProcessState.Exited() {
+	// چک کن پروسه هنوز زنده است
+	if cmd.ProcessState != nil && cmd.ProcessState.Exited() {
 		result.Result = ResultConnectionError
-		result.ErrorMessage = "Xray process terminated"
+		result.ErrorMessage = "Xray process terminated unexpectedly"
 		return result
 	}
 
@@ -1071,10 +1155,17 @@ func (pt *ProxyTester) testConfigSyntax(configFile string) error {
 func (pt *ProxyTester) startXrayProcess(configFile string) (*exec.Cmd, error) {
 	cmd := exec.Command(pt.configGenerator.xrayPath, "run", "-config", configFile)
 
-	cmd.Stdout = nil
-	cmd.Stderr = nil
+	// Redirect stdout/stderr به /dev/null برای جلوگیری از file descriptor leak
+	devNull, err := os.OpenFile(os.DevNull, os.O_WRONLY, 0)
+	if err != nil {
+		return nil, err
+	}
+	
+	cmd.Stdout = devNull
+	cmd.Stderr = devNull
 
 	if err := cmd.Start(); err != nil {
+		devNull.Close()
 		return nil, err
 	}
 
@@ -1376,10 +1467,18 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 		batchResults := pt.TestConfigs(batch, batchID)
 		allResults = append(allResults, batchResults...)
 
+		// پاکسازی کامل بعد از هر batch
+		pt.processManager.CleanupBatch()
+		
+		// فراخوانی garbage collector
+		runtime.GC()
+
 		pt.saveResults(allResults)
 
 		if end < totalConfigs {
-			time.Sleep(500 * time.Millisecond)
+			// زمان بیشتری برای استراحت سیستم
+			time.Sleep(2 * time.Second)
+			log.Printf("System cleanup completed, ready for next batch")
 		}
 	}
 
@@ -1469,6 +1568,8 @@ func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
 }
 
 func (pt *ProxyTester) Cleanup() {
+	log.Println("Starting final cleanup...")
+	
 	for _, file := range pt.outputFiles {
 		if file != nil {
 			file.Close()
@@ -1489,6 +1590,8 @@ func (pt *ProxyTester) Cleanup() {
 
 	pt.processManager.Cleanup()
 	pt.portManager.cleanup()
+	
+	log.Println("Final cleanup completed")
 }
 
 func setupDirectories(config *Config) error {
