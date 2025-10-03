@@ -1,0 +1,185 @@
+name: ProxyTesting
+
+on:
+  schedule:
+    - cron: '0 0,12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  proxy-collection-and-testing:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install Python dependencies
+      run: |
+        echo "Installing required Python packages..."
+        pip install tenacity requests
+        echo "Python dependencies installed successfully"
+
+    - name: Set up Go 1.23
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.23'
+
+    - name: Install Xray
+      run: |
+        echo "Installing Xray..."
+        # Download and install Xray
+        wget -q https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip 
+        unzip -o -q Xray-linux-64.zip
+        chmod +x xray
+        sudo mv xray /usr/local/bin/
+        
+        # Verify installation
+        xray -version
+        echo "Xray installed successfully"
+
+    - name: Install Go dependencies
+      run: |
+        cd xray_test
+        go mod download
+        go mod verify
+
+    - name: Clear and prepare data folder
+      run: |
+        echo "Clearing and preparing data folder..."
+        if [ -d "data" ]; then
+          rm -rf data/*
+        else
+          mkdir -p data
+        fi
+        # Create all necessary subdirectories
+        mkdir -p data/working_url
+        echo "Created directory structure:"
+        find data -type d
+
+    - name: Execute Python proxy collector
+      id: python-collector
+      run: |
+        echo "Starting Python proxy collection..."
+        cd config_collector
+        python main.py
+        echo "Python proxy collection completed"
+      continue-on-error: true
+
+    - name: Execute Go proxy tester
+      id: go-proxy-tester
+      run: |
+        echo "Starting Go proxy connectivity testing..."
+        cd xray_test
+        go run proxy-tester.go || echo "Proxy tester completed (may have timed out)"
+        echo "Go proxy testing completed"
+      continue-on-error: true
+
+    - name: Check for xray_test data and move files
+      run: |
+        echo "Checking for files in xray_test/data..."
+        if [ -d "xray_test/data" ]; then
+          echo "Found xray_test/data directory, moving files to main data directory..."
+          # Move all files from xray_test/data to data/
+          mv xray_test/data/* data/ 2>/dev/null || echo "No files to move or already moved"
+          # Remove empty directory
+          rm -rf xray_test/data 2>/dev/null || true
+        else
+          echo "xray_test/data directory not found"
+        fi
+
+    - name: Comprehensive file check
+      run: |
+        echo "=== COMPREHENSIVE FILE CHECK ==="
+        echo "Current working directory: $(pwd)"
+        echo "=== Data directory contents ==="
+        if [ -d "data" ]; then
+          find data -type f | head -50
+          echo "=== File counts by type ==="
+          echo "Working URL: $(find data/working_url -type f 2>/dev/null | wc -l || echo 0)"
+          echo "Total files in data: $(find data -type f | wc -l)"
+        else
+          echo "Data folder not found!"
+        fi
+
+    - name: Configure git for automated commits
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+    - name: Commit and push ALL changes
+      run: |
+        echo "Checking for changes in all data subdirectories..."
+        # Stash all local changes, including untracked/new files (quiet to suppress output)
+        git stash push --include-untracked --quiet || true
+        # Fetch and pull with rebase (now on a clean working directory)
+        git fetch origin
+        git pull --rebase origin "${{ github.ref_name }}" || { echo "Pull failed"; exit 1; }
+        # Reapply stashed changes
+        git stash pop --quiet || { echo "Stash pop failed (possible conflicts)"; exit 1; }
+        # Add all files in data/ explicitly (expanded from original to cover all subdirs for safety)
+        git add data/working_url || true
+        echo "Files to be committed:"
+        git diff --cached --name-only || echo "No files to commit"
+        if git diff --cached --quiet; then
+          echo "No changes to commit"
+        else
+          echo "Changes detected, committing..."
+          # Create commit message with execution summary
+          TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+          PYTHON_STATUS="${{ steps.python-collector.outcome }}"
+          PROXY_STATUS="${{ steps.go-proxy-tester.outcome }}"
+          RUN_ID="${{ github.run_id }}"
+          GITHUB_REF_NAME="${{ github.ref_name }}"
+          git commit -m "Automated proxy collection - ${TIMESTAMP}" \
+                     -m "Python Collector: ${PYTHON_STATUS}" \
+                     -m "Proxy Tester: ${PROXY_STATUS}" \
+                     -m "Workflow run: ${RUN_ID}"
+          git push origin "${GITHUB_REF_NAME}"
+          echo "✅ Changes committed and pushed successfully"
+        fi
+
+    - name: Upload all results as artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: proxy-results-${{ github.run_id }}
+        path: |
+          data/working_url/
+        retention-days: 7
+
+    - name: Workflow summary
+      if: always()
+      run: |
+        echo "## 🤖 Automated Proxy Collection Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Execution Time:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+        echo "**Workflow Run:** [${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Script Execution Status" >> $GITHUB_STEP_SUMMARY
+        echo "| Script | Status |" >> $GITHUB_STEP_SUMMARY
+        echo "|--------|--------|" >> $GITHUB_STEP_SUMMARY
+        echo "| Python Collector | ${{ steps.python-collector.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Go Proxy Tester | ${{ steps.go-proxy-tester.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+
+        if [ -d "data" ]; then
+          echo "### Results Summary" >> $GITHUB_STEP_SUMMARY
+          echo "| Result Type | File Count |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------------|------------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Working URLs | $(find data/working_url -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Total Files** | **$(find data -type f | wc -l)** |" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "**Data Files Generated:** 0" >> $GITHUB_STEP_SUMMARY
+        fi
