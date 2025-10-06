@@ -191,7 +191,7 @@ func (pm *PortManager) initializePortPool() {
 }
 
 func (pm *PortManager) isPortAvailable(port int) bool {
-	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 50*time.Millisecond)
+	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 1*time.Second)
 	if err != nil {
 		return true
 	}
@@ -204,7 +204,7 @@ func (pm *PortManager) GetAvailablePort() (int, bool) {
 	case port := <-pm.availablePorts:
 		pm.usedPorts.Store(port, time.Now())
 		return port, true
-	case <-time.After(500 * time.Millisecond):
+	case <-time.After(1 * time.Second):
 		return pm.findEmergencyPort(), true
 	}
 }
@@ -265,13 +265,25 @@ func NewNetworkTester(timeout time.Duration) *NetworkTester {
 		timeout: timeout,
 		testURLs: []string{
 			"http://httpbin.org/ip",
-			"http://icanhazip.com",
-			"http://ifconfig.me/ip",
-			"http://api.ipify.org",
-			"http://ipinfo.io/ip",
-			"http://checkip.amazonaws.com",
 			"https://httpbin.org/ip",
-			"https://icanhazip.com",
+			"http://ip.42.pl/raw",
+			"https://api.my-ip.io/ip",
+			"http://whatismyipaddress.com/api",
+			"https://checkip.amazonaws.com/",
+			"http://icanhazip.com",
+			"https://ipv4.icanhazip.com",
+			"http://ipecho.net/plain",
+			"https://ipinfo.io/ip",
+			"http://ifconfig.me/ip",
+			"https://ifconfig.me/ip",
+			"http://api.ipify.org",
+			"https://api.ipify.org",
+			"http://ident.me",
+			"https://ident.me",
+			"http://v4.ident.me",
+			"https://v4.ident.me",
+			"http://ip-api.com/line/?fields=query",
+			"https://ip-api.com/line/?fields=query",
 		},
 		client: &http.Client{Timeout: timeout},
 	}
@@ -284,7 +296,7 @@ func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float
 		return false, "", time.Since(startTime).Seconds()
 	}
 
-	testCount := 3
+	testCount := 5
 	if len(nt.testURLs) < testCount {
 		testCount = len(nt.testURLs)
 	}
@@ -295,18 +307,36 @@ func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float
 		shuffled[i], shuffled[j] = shuffled[j], shuffled[i]
 	})
 
+	successCount := 0
+	var lastIP string
+	var lastResponseTime float64
+
 	for i := 0; i < testCount; i++ {
 		success, ip, responseTime := nt.singleTest(proxyPort, shuffled[i])
 		if success {
-			return true, ip, responseTime
+			successCount++
+			lastIP = ip
+			lastResponseTime = responseTime
+			if successCount >= 2 {
+				return true, ip, responseTime
+			}
 		}
+	}
+
+	if successCount > 0 {
+		return true, lastIP, lastResponseTime
 	}
 
 	return false, "", time.Since(startTime).Seconds()
 }
 
 func (nt *NetworkTester) isProxyResponsive(port int) bool {
-	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 2*time.Second)
+	dialer, err := proxy.SOCKS5("tcp", fmt.Sprintf("127.0.0.1:%d", port), nil, proxy.Direct)
+	if err != nil {
+		return false
+	}
+
+	conn, err := dialer.Dial("tcp", "8.8.8.8:53")
 	if err != nil {
 		return false
 	}
@@ -325,10 +355,11 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 	transport := &http.Transport{
 		Dial:                dialer.Dial,
 		DisableKeepAlives:   true,
-		TLSHandshakeTimeout: 5 * time.Second,
-		IdleConnTimeout:     time.Second,
+		TLSHandshakeTimeout: 15 * time.Second,
+		IdleConnTimeout:     10 * time.Second,
 		MaxIdleConns:        1,
 		MaxIdleConnsPerHost: 1,
+		ResponseHeaderTimeout: 10 * time.Second,
 	}
 
 	client := &http.Client{
@@ -343,7 +374,7 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 	}
 	defer resp.Body.Close()
 
-	if resp.StatusCode != 200 {
+	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
 		return false, "", time.Since(startTime).Seconds()
 	}
 
@@ -923,20 +954,20 @@ func (pt *ProxyTester) isValidUUID(uuid string) bool {
 
 func (pt *ProxyTester) loadVMessConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
 	type VMConfig struct {
-		Add  string `json:"add"`
-		Port int    `json:"port"`
-		ID   string `json:"id"`
-		Aid  int    `json:"aid"`
-		Net  string `json:"net"`
-		Type string `json:"type"`
-		Host string `json:"host"`
-		Path string `json:"path"`
-		TLS  string `json:"tls"`
-		SNI  string `json:"sni"`
-		ALPN string `json:"alpn"`
-		Ps   string `json:"ps"`
-		Scy  string `json:"scy"`
-		Fp   string `json:"fp"`
+		Add  string      `json:"add"`
+		Port int         `json:"port"`
+		ID   string      `json:"id"`
+		Aid  interface{} `json:"aid"`
+		Net  string      `json:"net"`
+		Type string      `json:"type"`
+		Host string      `json:"host"`
+		Path string      `json:"path"`
+		TLS  string      `json:"tls"`
+		SNI  string      `json:"sni"`
+		ALPN string      `json:"alpn"`
+		Ps   string      `json:"ps"`
+		Scy  string      `json:"scy"`
+		Fp   string      `json:"fp"`
 	}
 
 	var data []VMConfig
@@ -952,12 +983,24 @@ func (pt *ProxyTester) loadVMessConfigs(file *os.File, seenHashes map[string]boo
 			cipher = "auto"
 		}
 
+		var alterID int
+		switch v := item.Aid.(type) {
+		case int:
+			alterID = v
+		case float64:
+			alterID = int(v)
+		case string:
+			alterID, _ = strconv.Atoi(v)
+		default:
+			alterID = 0
+		}
+
 		config := ProxyConfig{
 			Protocol:    ProtocolVMess,
 			Server:      item.Add,
 			Port:        item.Port,
 			UUID:        item.ID,
-			AlterID:     item.Aid,
+			AlterID:     alterID,
 			Cipher:      cipher,
 			Network:     item.Net,
 			TLS:         item.TLS,
@@ -1144,7 +1187,7 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 
 	pt.processManager.RegisterProcess(cmd.Process.Pid, processInfo)
 
-	time.Sleep(2 * time.Second)
+	time.Sleep(5 * time.Second)
 
 	if cmd.ProcessState != nil && cmd.ProcessState.Exited() {
 		result.Result = ResultConnectionError
@@ -1189,7 +1232,7 @@ func (pt *ProxyTester) writeConfigToTempFile(config map[string]interface{}) (str
 }
 
 func (pt *ProxyTester) testConfigSyntax(configFile string) error {
-	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
 	cmd := exec.CommandContext(ctx, pt.configGenerator.xrayPath, "run", "-test", "-config", configFile)
