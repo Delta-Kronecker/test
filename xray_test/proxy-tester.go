@@ -871,7 +871,6 @@ func (pt *ProxyTester) loadShadowsocksConfigs(file *os.File, seenHashes map[stri
 		return nil, err
 	}
 
-)
 	return re.MatchString(uuid)
 }
 
