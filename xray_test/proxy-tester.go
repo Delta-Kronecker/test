@@ -72,9 +72,9 @@ func NewDefaultConfig() *Config {
 
 	return &Config{
 		XrayPath:        getEnvOrDefault("XRAY_PATH", ""),
-		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 100),
-		Timeout:         time.Duration(getEnvIntOrDefault("PROXY_TIMEOUT", 10)) * time.Second,
-		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 100),
+		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 25),
+		Timeout:         time.Duration(getEnvIntOrDefault("PROXY_TIMEOUT", 5)) * time.Second,
+		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 50),
 		IncrementalSave: getEnvBoolOrDefault("PROXY_INCREMENTAL_SAVE", true),
 		DataDir:         dataDir,
 		ConfigDir:       configDir,
@@ -191,7 +191,7 @@ func (pm *PortManager) initializePortPool() {
 }
 
 func (pm *PortManager) isPortAvailable(port int) bool {
-	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 1*time.Second)
+	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 50*time.Millisecond)
 	if err != nil {
 		return true
 	}
@@ -204,7 +204,7 @@ func (pm *PortManager) GetAvailablePort() (int, bool) {
 	case port := <-pm.availablePorts:
 		pm.usedPorts.Store(port, time.Now())
 		return port, true
-	case <-time.After(1 * time.Second):
+	case <-time.After(100 * time.Millisecond):
 		return pm.findEmergencyPort(), true
 	}
 }
@@ -213,7 +213,7 @@ func (pm *PortManager) findEmergencyPort() int {
 	pm.mu.Lock()
 	defer pm.mu.Unlock()
 
-	for i := 0; i < 200; i++ {
+	for i := 0; i < 100; i++ {
 		port := rand.Intn(pm.endPort-pm.startPort+1) + pm.startPort
 		if _, used := pm.usedPorts.Load(port); !used && pm.isPortAvailable(port) {
 			pm.usedPorts.Store(port, time.Now())
@@ -224,24 +224,12 @@ func (pm *PortManager) findEmergencyPort() int {
 }
 
 func (pm *PortManager) ReleasePort(port int) {
-	if port <= 0 {
-		return
-	}
-
 	pm.usedPorts.Delete(port)
-
 	go func() {
-		time.Sleep(500 * time.Millisecond)
-		for i := 0; i < 3; i++ {
-			if pm.isPortAvailable(port) {
-				select {
-				case pm.availablePorts <- port:
-					return
-				default:
-					return
-				}
-			}
-			time.Sleep(300 * time.Millisecond)
+		time.Sleep(50 * time.Millisecond)
+		select {
+		case pm.availablePorts <- port:
+		default:
 		}
 	}()
 }
@@ -251,7 +239,6 @@ func (pm *PortManager) cleanup() {
 		pm.usedPorts.Delete(key)
 		return true
 	})
-	close(pm.availablePorts)
 }
 
 type NetworkTester struct {
@@ -265,25 +252,13 @@ func NewNetworkTester(timeout time.Duration) *NetworkTester {
 		timeout: timeout,
 		testURLs: []string{
 			"http://httpbin.org/ip",
-			"https://httpbin.org/ip",
-			"http://ip.42.pl/raw",
-			"https://api.my-ip.io/ip",
-			"http://whatismyipaddress.com/api",
-			"https://checkip.amazonaws.com/",
 			"http://icanhazip.com",
-			"https://ipv4.icanhazip.com",
-			"http://ipecho.net/plain",
-			"https://ipinfo.io/ip",
 			"http://ifconfig.me/ip",
-			"https://ifconfig.me/ip",
 			"http://api.ipify.org",
-			"https://api.ipify.org",
-			"http://ident.me",
-			"https://ident.me",
-			"http://v4.ident.me",
-			"https://v4.ident.me",
-			"http://ip-api.com/line/?fields=query",
-			"https://ip-api.com/line/?fields=query",
+			"http://ipinfo.io/ip",
+			"http://checkip.amazonaws.com",
+			"https://httpbin.org/ip",
+			"https://icanhazip.com",
 		},
 		client: &http.Client{Timeout: timeout},
 	}
@@ -296,7 +271,7 @@ func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float
 		return false, "", time.Since(startTime).Seconds()
 	}
 
-	testCount := 3
+	testCount := 4
 	if len(nt.testURLs) < testCount {
 		testCount = len(nt.testURLs)
 	}
@@ -318,7 +293,7 @@ func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float
 }
 
 func (nt *NetworkTester) isProxyResponsive(port int) bool {
-	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 3*time.Second)
+	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), time.Second)
 	if err != nil {
 		return false
 	}
@@ -335,20 +310,16 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 	}
 
 	transport := &http.Transport{
-		Dial:                  dialer.Dial,
-		DisableKeepAlives:     true,
-		TLSHandshakeTimeout:   8 * time.Second,
-		IdleConnTimeout:       5 * time.Second,
-		MaxIdleConns:          1,
-		MaxIdleConnsPerHost:   1,
-		ResponseHeaderTimeout: 8 * time.Second,
+		Dial:                dialer.Dial,
+		DisableKeepAlives:   true,
+		TLSHandshakeTimeout: 5 * time.Second,
+		IdleConnTimeout:     time.Second,
 	}
 
 	client := &http.Client{
 		Transport: transport,
 		Timeout:   nt.timeout,
 	}
-	defer client.CloseIdleConnections()
 
 	resp, err := client.Get(testURL)
 	if err != nil {
@@ -356,7 +327,7 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 	}
 	defer resp.Body.Close()
 
-	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
+	if resp.StatusCode != 200 {
 		return false, "", time.Since(startTime).Seconds()
 	}
 
@@ -578,26 +549,17 @@ func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort i
 	return xrayConfig, nil
 }
 
-type ProcessInfo struct {
-	cmd        *exec.Cmd
-	configFile string
-	port       int
-	startTime  time.Time
-	stopChan   chan struct{}
-}
-
 type ProcessManager struct {
 	processes sync.Map
 	cleanup   int32
-	mu        sync.Mutex
 }
 
 func NewProcessManager() *ProcessManager {
 	return &ProcessManager{}
 }
 
-func (pm *ProcessManager) RegisterProcess(pid int, info *ProcessInfo) {
-	pm.processes.Store(pid, info)
+func (pm *ProcessManager) RegisterProcess(pid int, cmd *exec.Cmd) {
+	pm.processes.Store(pid, cmd)
 }
 
 func (pm *ProcessManager) UnregisterProcess(pid int) {
@@ -609,47 +571,29 @@ func (pm *ProcessManager) KillProcess(pid int) error {
 		return nil
 	}
 
-	value, ok := pm.processes.Load(pid)
-	if !ok {
-		return nil
-	}
+	if value, ok := pm.processes.Load(pid); ok {
+		if cmd, ok := value.(*exec.Cmd); ok {
+			if cmd.Process != nil {
+				if err := cmd.Process.Signal(syscall.SIGTERM); err == nil {
+					done := make(chan error, 1)
+					go func() {
+						done <- cmd.Wait()
+					}()
 
-	info, ok := value.(*ProcessInfo)
-	if !ok || info.cmd == nil || info.cmd.Process == nil {
-		pm.UnregisterProcess(pid)
-		return nil
-	}
-
-	process := info.cmd.Process
-
-	if err := process.Signal(syscall.Signal(0)); err != nil {
-		pm.UnregisterProcess(pid)
-		return nil
-	}
-
-	process.Signal(syscall.SIGTERM)
-
-	done := make(chan error, 1)
-	go func() {
-		done <- info.cmd.Wait()
-	}()
-
-	select {
-	case <-done:
-	case <-time.After(500 * time.Millisecond):
-		process.Kill()
-		select {
-		case <-done:
-		case <-time.After(500 * time.Millisecond):
+					select {
+					case <-done:
+					case <-time.After(200 * time.Millisecond):
+						cmd.Process.Kill()
+					}
+				} else {
+					cmd.Process.Kill()
+				}
+				pm.UnregisterProcess(pid)
+				return nil
+			}
 		}
 	}
-
-	if info.configFile != "" {
-		os.Remove(info.configFile)
-	}
-
-	pm.UnregisterProcess(pid)
-	return nil
+	return fmt.Errorf("process not found")
 }
 
 func (pm *ProcessManager) Cleanup() {
@@ -657,65 +601,12 @@ func (pm *ProcessManager) Cleanup() {
 		return
 	}
 
-	log.Println("Starting process cleanup...")
-
-	var pids []int
 	pm.processes.Range(func(key, value interface{}) bool {
-		pids = append(pids, key.(int))
+		if pid, ok := key.(int); ok {
+			pm.KillProcess(pid)
+		}
 		return true
 	})
-
-	var wg sync.WaitGroup
-	for _, pid := range pids {
-		wg.Add(1)
-		go func(p int) {
-			defer wg.Done()
-			pm.KillProcess(p)
-		}(pid)
-	}
-
-	done := make(chan struct{})
-	go func() {
-		wg.Wait()
-		close(done)
-	}()
-
-	select {
-	case <-done:
-		log.Printf("Process cleanup completed (%d processes)", len(pids))
-	case <-time.After(10 * time.Second):
-		log.Println("Process cleanup timeout")
-	}
-}
-
-func (pm *ProcessManager) CleanupBatch() {
-	var pids []int
-	pm.processes.Range(func(key, value interface{}) bool {
-		pids = append(pids, key.(int))
-		return true
-	})
-
-	if len(pids) == 0 {
-		return
-	}
-
-	log.Printf("Cleaning up batch processes (%d active)...", len(pids))
-
-	var wg sync.WaitGroup
-	for _, pid := range pids {
-		wg.Add(1)
-		go func(p int) {
-			defer wg.Done()
-			pm.KillProcess(p)
-		}(pid)
-	}
-
-	wg.Wait()
-	time.Sleep(3 * time.Second)
-
-	runtime.GC()
-
-	log.Printf("Batch cleanup completed")
 }
 
 type ProxyTester struct {
@@ -732,7 +623,6 @@ type ProxyTester struct {
 
 	stats             sync.Map
 	resultsMu         sync.Mutex
-	activeTests       int32
 }
 
 func NewProxyTester(config *Config) (*ProxyTester, error) {
@@ -894,28 +784,138 @@ func (pt *ProxyTester) loadShadowsocksConfigs(file *os.File, seenHashes map[stri
 	}
 
 	var configs []ProxyConfig
-	for _, item := range data {
+	for _, configData := range data {
 		config := ProxyConfig{
 			Protocol: ProtocolShadowsocks,
-			Server:   item.Server,
-			Port:     item.ServerPort,
-			Method:   item.Method,
-			Password: item.Password,
-			Remarks:  item.Name,
+			Server:   configData.Server,
+			Port:     configData.ServerPort,
+			Method:   configData.Method,
+			Password: configData.Password,
+			Remarks:  configData.Name,
+			Network:  "tcp",
 		}
 
-		if !pt.isValidConfig(&config) {
-			continue
-		}
-
-		hash := pt.getConfigHash(&config)
-		if !seenHashes[hash] {
-			seenHashes[hash] = true
-			configs = append(configs, config)
+		if pt.isValidConfig(&config) {
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
 		}
 	}
 
 	return configs, nil
+}
+
+func (pt *ProxyTester) loadVMessConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
+	type VMConfig struct {
+		Address  string `json:"address"`
+		Port     int    `json:"port"`
+		ID       string `json:"id"`
+		Security string `json:"security"`
+		Network  string `json:"network"`
+		Name     string `json:"name"`
+		AlterId  string `json:"aid"`
+		Type     string `json:"type"`
+		Path     string `json:"path"`
+		Host     string `json:"host"`
+		TLS      string `json:"tls"`
+		SNI      string `json:"sni"`
+	}
+
+	var data []VMConfig
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&data); err != nil {
+		return nil, err
+	}
+
+	var configs []ProxyConfig
+	for _, configData := range data {
+		alterId := 0
+		if configData.AlterId != "" {
+			if aid, err := strconv.Atoi(configData.AlterId); err == nil {
+				alterId = aid
+			}
+		}
+
+		config := ProxyConfig{
+			Protocol:   ProtocolVMess,
+			Server:     configData.Address,
+			Port:       configData.Port,
+			UUID:       configData.ID,
+			AlterID:    alterId,
+			Cipher:     configData.Security,
+			Network:    configData.Network,
+			TLS:        configData.TLS,
+			SNI:        configData.SNI,
+			Path:       configData.Path,
+			Host:       configData.Host,
+			Remarks:    configData.Name,
+			HeaderType: configData.Type,
+		}
+
+		if pt.isValidConfig(&config) {
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
+		}
+	}
+
+	return configs, nil
+}
+
+func (pt *ProxyTester) loadVLessConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
+	type VLConfig struct {
+		Address string `json:"address"`
+		Port    int    `json:"port"`
+		ID      string `json:"id"`
+		Name    string `json:"name"`
+		Type    string `json:"type"`
+		Host    string `json:"host"`
+		Path    string `json:"path"`
+		TLS     string `json:"tls"`
+		SNI     string `json:"sni"`
+	}
+
+	var data []VLConfig
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&data); err != nil {
+		return nil, err
+	}
+
+	var configs []ProxyConfig
+	for _, configData := range data {
+		config := ProxyConfig{
+			Protocol: ProtocolVLESS,
+			Server:   configData.Address,
+			Port:     configData.Port,
+			UUID:     configData.ID,
+			Network:  configData.Type,
+			TLS:      configData.TLS,
+			SNI:      configData.SNI,
+			Path:     configData.Path,
+			Host:     configData.Host,
+			Remarks:  configData.Name,
+			Encrypt:  "none",
+		}
+
+		if pt.isValidConfig(&config) {
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
+		}
+	}
+
+	return configs, nil
+}
+
+func (pt *ProxyTester) isValidUUID(uuid string) bool {
+	re := regexp.MustCompile(`^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`)
+	return re.MatchString(uuid)
 }
 
 func (pt *ProxyTester) isValidConfig(config *ProxyConfig) bool {
@@ -935,158 +935,6 @@ func (pt *ProxyTester) isValidConfig(config *ProxyConfig) bool {
 	return false
 }
 
-func (pt *ProxyTester) isValidUUID(uuid string) bool {
-	if uuid == "" {
-		return false
-	}
-	uuidPattern := regexp.MustCompile(`^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`)
-	return uuidPattern.MatchString(uuid)
-}
-
-func (pt *ProxyTester) loadVMessConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
-	type VMConfig struct {
-		Add  string      `json:"add"`
-		Port int         `json:"port"`
-		ID   string      `json:"id"`
-		Aid  interface{} `json:"aid"`
-		Net  string      `json:"net"`
-		Type string      `json:"type"`
-		Host string      `json:"host"`
-		Path string      `json:"path"`
-		TLS  string      `json:"tls"`
-		SNI  string      `json:"sni"`
-		ALPN string      `json:"alpn"`
-		Ps   string      `json:"ps"`
-		Scy  string      `json:"scy"`
-		Fp   string      `json:"fp"`
-	}
-
-	var data []VMConfig
-	decoder := json.NewDecoder(file)
-	if err := decoder.Decode(&data); err != nil {
-		return nil, err
-	}
-
-	var configs []ProxyConfig
-	for _, item := range data {
-		cipher := item.Scy
-		if cipher == "" {
-			cipher = "auto"
-		}
-
-		var alterID int
-		switch v := item.Aid.(type) {
-		case int:
-			alterID = v
-		case float64:
-			alterID = int(v)
-		case string:
-			alterID, _ = strconv.Atoi(v)
-		default:
-			alterID = 0
-		}
-
-		config := ProxyConfig{
-			Protocol:    ProtocolVMess,
-			Server:      item.Add,
-			Port:        item.Port,
-			UUID:        item.ID,
-			AlterID:     alterID,
-			Cipher:      cipher,
-			Network:     item.Net,
-			TLS:         item.TLS,
-			SNI:         item.SNI,
-			Path:        item.Path,
-			Host:        item.Host,
-			ALPN:        item.ALPN,
-			Fingerprint: item.Fp,
-			HeaderType:  item.Type,
-			Remarks:     item.Ps,
-		}
-
-		if !pt.isValidConfig(&config) {
-			continue
-		}
-
-		hash := pt.getConfigHash(&config)
-		if !seenHashes[hash] {
-			seenHashes[hash] = true
-			configs = append(configs, config)
-		}
-	}
-
-	return configs, nil
-}
-
-func (pt *ProxyTester) loadVLessConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
-	type VLConfig struct {
-		Add        string `json:"add"`
-		Port       int    `json:"port"`
-		ID         string `json:"id"`
-		Net        string `json:"net"`
-		Type       string `json:"type"`
-		Host       string `json:"host"`
-		Path       string `json:"path"`
-		TLS        string `json:"tls"`
-		SNI        string `json:"sni"`
-		ALPN       string `json:"alpn"`
-		Ps         string `json:"ps"`
-		Flow       string `json:"flow"`
-		Encryption string `json:"encryption"`
-		Fp         string `json:"fp"`
-		Security   string `json:"security"`
-	}
-
-	var data []VLConfig
-	decoder := json.NewDecoder(file)
-	if err := decoder.Decode(&data); err != nil {
-		return nil, err
-	}
-
-	var configs []ProxyConfig
-	for _, item := range data {
-		encryption := item.Encryption
-		if encryption == "" {
-			encryption = "none"
-		}
-
-		tls := item.TLS
-		if tls == "" && item.Security != "" {
-			tls = item.Security
-		}
-
-		config := ProxyConfig{
-			Protocol:    ProtocolVLESS,
-			Server:      item.Add,
-			Port:        item.Port,
-			UUID:        item.ID,
-			Flow:        item.Flow,
-			Encrypt:     encryption,
-			Network:     item.Net,
-			TLS:         tls,
-			SNI:         item.SNI,
-			Path:        item.Path,
-			Host:        item.Host,
-			ALPN:        item.ALPN,
-			Fingerprint: item.Fp,
-			HeaderType:  item.Type,
-			Remarks:     item.Ps,
-		}
-
-		if !pt.isValidConfig(&config) {
-			continue
-		}
-
-		hash := pt.getConfigHash(&config)
-		if !seenHashes[hash] {
-			seenHashes[hash] = true
-			configs = append(configs, config)
-		}
-	}
-
-	return configs, nil
-}
-
 func (pt *ProxyTester) getConfigHash(config *ProxyConfig) string {
 	var hashStr string
 	switch config.Protocol {
@@ -1103,12 +951,9 @@ func (pt *ProxyTester) getConfigHash(config *ProxyConfig) string {
 }
 
 func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestResultData {
-	atomic.AddInt32(&pt.activeTests, 1)
-	defer atomic.AddInt32(&pt.activeTests, -1)
-
 	startTime := time.Now()
 	var proxyPort int
-	var processInfo *ProcessInfo
+	var process *exec.Cmd
 	var configFile string
 
 	result := &TestResultData{
@@ -1119,14 +964,12 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 	defer func() {
 		result.TestTime = time.Since(startTime).Seconds()
 
-		if processInfo != nil && processInfo.cmd != nil && processInfo.cmd.Process != nil {
-			pt.processManager.KillProcess(processInfo.cmd.Process.Pid)
+		if process != nil && process.Process != nil {
+			pt.processManager.KillProcess(process.Process.Pid)
 		}
-
 		if configFile != "" {
 			os.Remove(configFile)
 		}
-
 		if proxyPort > 0 {
 			pt.portManager.ReleasePort(proxyPort)
 		}
@@ -1136,7 +979,6 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 	proxyPort, ok = pt.portManager.GetAvailablePort()
 	if !ok || proxyPort == 0 {
 		result.Result = ResultPortConflict
-		result.ErrorMessage = "No available port"
 		return result
 	}
 	result.ProxyPort = &proxyPort
@@ -1161,28 +1003,20 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 		return result
 	}
 
-	cmd, err := pt.startXrayProcess(configFile)
+	process, err = pt.startXrayProcess(configFile)
 	if err != nil {
 		result.Result = ResultConnectionError
 		result.ErrorMessage = err.Error()
 		return result
 	}
 
-	processInfo = &ProcessInfo{
-		cmd:        cmd,
-		configFile: configFile,
-		port:       proxyPort,
-		startTime:  time.Now(),
-		stopChan:   make(chan struct{}),
-	}
+	pt.processManager.RegisterProcess(process.Process.Pid, process)
 
-	pt.processManager.RegisterProcess(cmd.Process.Pid, processInfo)
+	time.Sleep(time.Second)
 
-	time.Sleep(4 * time.Second)
-
-	if cmd.ProcessState != nil && cmd.ProcessState.Exited() {
+	if process.ProcessState != nil && process.ProcessState.Exited() {
 		result.Result = ResultConnectionError
-		result.ErrorMessage = "Xray process terminated unexpectedly"
+		result.ErrorMessage = "Xray process terminated"
 		return result
 	}
 
@@ -1223,7 +1057,7 @@ func (pt *ProxyTester) writeConfigToTempFile(config map[string]interface{}) (str
 }
 
 func (pt *ProxyTester) testConfigSyntax(configFile string) error {
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 
 	cmd := exec.CommandContext(ctx, pt.configGenerator.xrayPath, "run", "-test", "-config", configFile)
@@ -1238,26 +1072,12 @@ func (pt *ProxyTester) testConfigSyntax(configFile string) error {
 func (pt *ProxyTester) startXrayProcess(configFile string) (*exec.Cmd, error) {
 	cmd := exec.Command(pt.configGenerator.xrayPath, "run", "-config", configFile)
 
-	devNull, err := os.OpenFile(os.DevNull, os.O_WRONLY, 0)
-	if err != nil {
-		return nil, err
-	}
-
-	cmd.Stdout = devNull
-	cmd.Stderr = devNull
-	cmd.SysProcAttr = &syscall.SysProcAttr{
-		Setpgid: true,
-	}
+	cmd.Stdout = nil
+	cmd.Stderr = nil
 
 	if err := cmd.Start(); err != nil {
-		devNull.Close()
 		return nil, err
 	}
-
-	go func() {
-		cmd.Wait()
-		devNull.Close()
-	}()
 
 	return cmd, nil
 }
@@ -1266,9 +1086,6 @@ func (pt *ProxyTester) saveConfigImmediately(result *TestResultData) {
 	if result.Result != ResultSuccess {
 		return
 	}
-
-	pt.resultsMu.Lock()
-	defer pt.resultsMu.Unlock()
 
 	protocol := result.Config.Protocol
 	timestamp := time.Now().Format("2006-01-02 15:04:05")
@@ -1560,17 +1377,15 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 		batchResults := pt.TestConfigs(batch, batchID)
 		allResults = append(allResults, batchResults...)
 
-		pt.processManager.CleanupBatch()
-
-		runtime.GC()
-		runtime.Gosched()
-
 		pt.saveResults(allResults)
 
+		// Report system status after batch completion
+		pt.reportSystemStatus(batchID)
+
+		// Add 5-second rest between batches
 		if end < totalConfigs {
+			log.Printf("⏸️  Resting for 5 seconds before next batch...")
 			time.Sleep(5 * time.Second)
-			runtime.GC()
-			log.Printf("System cleanup completed, ready for next batch")
 		}
 	}
 
@@ -1594,6 +1409,78 @@ func (pt *ProxyTester) saveResults(results []*TestResultData) {
 	encoder := json.NewEncoder(file)
 	encoder.SetIndent("", "  ")
 	encoder.Encode(results)
+}
+
+func (pt *ProxyTester) getSystemMemoryUsage() (uint64, error) {
+	var m runtime.MemStats
+	runtime.ReadMemStats(&m)
+
+	// Get system memory on different platforms
+	if runtime.GOOS == "windows" {
+		// On Windows, use PowerShell to get total RAM usage
+		cmd := exec.Command("powershell", "-Command", "(Get-Process | Measure-Object WorkingSet64 -Sum).Sum / 1MB")
+		output, err := cmd.Output()
+		if err == nil {
+			if memMB, err := strconv.ParseFloat(strings.TrimSpace(string(output)), 64); err == nil {
+				return uint64(memMB), nil
+			}
+		}
+	} else {
+		// On Linux/Unix, read from /proc/meminfo
+		cmd := exec.Command("sh", "-c", "free -m | awk '/^Mem:/ {print $3}'")
+		output, err := cmd.Output()
+		if err == nil {
+			if memMB, err := strconv.ParseUint(strings.TrimSpace(string(output)), 10, 64); err == nil {
+				return memMB, nil
+			}
+		}
+	}
+
+	// Fallback to current process memory
+	return m.Alloc / 1024 / 1024, nil
+}
+
+func (pt *ProxyTester) countXrayCoreProcesses() int {
+	var cmd *exec.Cmd
+
+	if runtime.GOOS == "windows" {
+		// On Windows, use tasklist
+		cmd = exec.Command("powershell", "-Command", "(Get-Process -Name '*xray*' -ErrorAction SilentlyContinue | Measure-Object).Count")
+	} else {
+		// On Linux/Unix, use ps and grep
+		cmd = exec.Command("sh", "-c", "ps aux | grep -i xray | grep -v grep | wc -l")
+	}
+
+	output, err := cmd.Output()
+	if err != nil {
+		return 0
+	}
+
+	count, err := strconv.Atoi(strings.TrimSpace(string(output)))
+	if err != nil {
+		return 0
+	}
+
+	return count
+}
+
+func (pt *ProxyTester) reportSystemStatus(batchID int) {
+	log.Println(strings.Repeat("-", 60))
+	log.Printf("📊 System Status After Batch %d:", batchID)
+
+	// Get memory usage
+	memUsage, err := pt.getSystemMemoryUsage()
+	if err == nil {
+		log.Printf("  💾 RAM Usage: %.2f MB", float64(memUsage))
+	} else {
+		log.Printf("  💾 RAM Usage: Unable to retrieve (Error: %v)", err)
+	}
+
+	// Count xray-core processes
+	processCount := pt.countXrayCoreProcesses()
+	log.Printf("  🔧 Xray-core Processes: %d", processCount)
+
+	log.Println(strings.Repeat("-", 60))
 }
 
 func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
@@ -1660,8 +1547,6 @@ func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
 }
 
 func (pt *ProxyTester) Cleanup() {
-	log.Println("Starting final cleanup...")
-
 	for _, file := range pt.outputFiles {
 		if file != nil {
 			file.Close()
@@ -1682,8 +1567,6 @@ func (pt *ProxyTester) Cleanup() {
 
 	pt.processManager.Cleanup()
 	pt.portManager.cleanup()
-
-	log.Println("Final cleanup completed")
 }
 
 func setupDirectories(config *Config) error {
