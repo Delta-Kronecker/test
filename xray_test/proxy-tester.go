@@ -227,9 +227,9 @@ func (pm *PortManager) ReleasePort(port int) {
 	if port <= 0 {
 		return
 	}
-	
+
 	pm.usedPorts.Delete(port)
-	
+
 	go func() {
 		time.Sleep(1 * time.Second)
 		for i := 0; i < 5; i++ {
@@ -692,7 +692,7 @@ func (pm *ProcessManager) CleanupBatch() {
 
 	wg.Wait()
 	time.Sleep(2 * time.Second)
-	
+
 	log.Printf("Batch cleanup completed")
 }
 
@@ -871,7 +871,29 @@ func (pt *ProxyTester) loadShadowsocksConfigs(file *os.File, seenHashes map[stri
 		return nil, err
 	}
 
-	return re.MatchString(uuid)
+	var configs []ProxyConfig
+	for _, item := range data {
+		config := ProxyConfig{
+			Protocol: ProtocolShadowsocks,
+			Server:   item.Server,
+			Port:     item.ServerPort,
+			Method:   item.Method,
+			Password: item.Password,
+			Remarks:  item.Name,
+		}
+
+		if !pt.isValidConfig(&config) {
+			continue
+		}
+
+		hash := pt.getConfigHash(&config)
+		if !seenHashes[hash] {
+			seenHashes[hash] = true
+			configs = append(configs, config)
+		}
+	}
+
+	return configs, nil
 }
 
 func (pt *ProxyTester) isValidConfig(config *ProxyConfig) bool {
@@ -889,6 +911,146 @@ func (pt *ProxyTester) isValidConfig(config *ProxyConfig) bool {
 	}
 
 	return false
+}
+
+func (pt *ProxyTester) isValidUUID(uuid string) bool {
+	if uuid == "" {
+		return false
+	}
+	uuidPattern := regexp.MustCompile(`^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`)
+	return uuidPattern.MatchString(uuid)
+}
+
+func (pt *ProxyTester) loadVMessConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
+	type VMConfig struct {
+		Add  string `json:"add"`
+		Port int    `json:"port"`
+		ID   string `json:"id"`
+		Aid  int    `json:"aid"`
+		Net  string `json:"net"`
+		Type string `json:"type"`
+		Host string `json:"host"`
+		Path string `json:"path"`
+		TLS  string `json:"tls"`
+		SNI  string `json:"sni"`
+		ALPN string `json:"alpn"`
+		Ps   string `json:"ps"`
+		Scy  string `json:"scy"`
+		Fp   string `json:"fp"`
+	}
+
+	var data []VMConfig
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&data); err != nil {
+		return nil, err
+	}
+
+	var configs []ProxyConfig
+	for _, item := range data {
+		cipher := item.Scy
+		if cipher == "" {
+			cipher = "auto"
+		}
+
+		config := ProxyConfig{
+			Protocol:    ProtocolVMess,
+			Server:      item.Add,
+			Port:        item.Port,
+			UUID:        item.ID,
+			AlterID:     item.Aid,
+			Cipher:      cipher,
+			Network:     item.Net,
+			TLS:         item.TLS,
+			SNI:         item.SNI,
+			Path:        item.Path,
+			Host:        item.Host,
+			ALPN:        item.ALPN,
+			Fingerprint: item.Fp,
+			HeaderType:  item.Type,
+			Remarks:     item.Ps,
+		}
+
+		if !pt.isValidConfig(&config) {
+			continue
+		}
+
+		hash := pt.getConfigHash(&config)
+		if !seenHashes[hash] {
+			seenHashes[hash] = true
+			configs = append(configs, config)
+		}
+	}
+
+	return configs, nil
+}
+
+func (pt *ProxyTester) loadVLessConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
+	type VLConfig struct {
+		Add        string `json:"add"`
+		Port       int    `json:"port"`
+		ID         string `json:"id"`
+		Net        string `json:"net"`
+		Type       string `json:"type"`
+		Host       string `json:"host"`
+		Path       string `json:"path"`
+		TLS        string `json:"tls"`
+		SNI        string `json:"sni"`
+		ALPN       string `json:"alpn"`
+		Ps         string `json:"ps"`
+		Flow       string `json:"flow"`
+		Encryption string `json:"encryption"`
+		Fp         string `json:"fp"`
+		Security   string `json:"security"`
+	}
+
+	var data []VLConfig
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&data); err != nil {
+		return nil, err
+	}
+
+	var configs []ProxyConfig
+	for _, item := range data {
+		encryption := item.Encryption
+		if encryption == "" {
+			encryption = "none"
+		}
+
+		tls := item.TLS
+		if tls == "" && item.Security != "" {
+			tls = item.Security
+		}
+
+		config := ProxyConfig{
+			Protocol:    ProtocolVLESS,
+			Server:      item.Add,
+			Port:        item.Port,
+			UUID:        item.ID,
+			Flow:        item.Flow,
+			Encrypt:     encryption,
+			Network:     item.Net,
+			TLS:         tls,
+			SNI:         item.SNI,
+			Path:        item.Path,
+			Host:        item.Host,
+			ALPN:        item.ALPN,
+			Fingerprint: item.Fp,
+			HeaderType:  item.Type,
+			Remarks:     item.Ps,
+		}
+
+		if !pt.isValidConfig(&config) {
+			continue
+		}
+
+		hash := pt.getConfigHash(&config)
+		if !seenHashes[hash] {
+			seenHashes[hash] = true
+			configs = append(configs, config)
+		}
+	}
+
+	return configs, nil
 }
 
 func (pt *ProxyTester) getConfigHash(config *ProxyConfig) string {
