@@ -985,9 +985,8 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 	defer func() {
 		result.TestTime = time.Since(startTime).Seconds()
 
-		if process != nil && process.Process != nil {
-			pt.processManager.KillProcess(process.Process.Pid)
-		}
+		// Don't kill process here - let cleanup handle it
+		// Just clean up temp files and release port
 		if configFile != "" {
 			os.Remove(configFile)
 		}
