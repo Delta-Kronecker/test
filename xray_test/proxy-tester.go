@@ -1479,25 +1479,32 @@ func (pt *ProxyTester) countXrayCoreProcesses() int {
 }
 
 func (pt *ProxyTester) killAllXrayCoreProcesses() int {
-	var cmd *exec.Cmd
-	killedCount := 0
+	processesBefore := pt.countXrayCoreProcesses()
 
 	if runtime.GOOS == "windows" {
-		// On Windows, use taskkill to stop all xray processes
-		cmd = exec.Command("powershell", "-Command", "Get-Process -Name '*xray*' -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.Id -Force -ErrorAction SilentlyContinue }")
-		if err := cmd.Run(); err == nil {
-			// Count how many were killed
-			time.Sleep(100 * time.Millisecond)
-			killedCount = pt.countXrayCoreProcesses()
-		}
+		// On Windows, use taskkill with force flag
+		// First try to kill by name pattern
+		cmd := exec.Command("taskkill", "/F", "/IM", "xray.exe", "/T")
+		cmd.Run() // Ignore errors as some processes might not exist
+
+		// Also try wildcard pattern
+		cmd2 := exec.Command("powershell", "-Command",
+			"Get-Process | Where-Object {$_.ProcessName -like '*xray*'} | Stop-Process -Force")
+		cmd2.Run()
+
+		// Wait for processes to terminate
+		time.Sleep(1 * time.Second)
 	} else {
-		// On Linux/Unix, use pkill
-		cmd = exec.Command("sh", "-c", "pkill -9 xray")
-		if err := cmd.Run(); err == nil {
-			time.Sleep(100 * time.Millisecond)
-			killedCount = pt.countXrayCoreProcesses()
-		}
+		// On Linux/Unix, use pkill with force
+		cmd := exec.Command("sh", "-c", "pkill -9 -f xray")
+		cmd.Run()
+
+		// Wait for processes to terminate
+		time.Sleep(1 * time.Second)
 	}
+
+	processesAfter := pt.countXrayCoreProcesses()
+	killedCount := processesBefore - processesAfter
 
 	return killedCount
 }
@@ -1512,13 +1519,17 @@ func (pt *ProxyTester) cleanupBetweenBatches() {
 
 	// Stop all xray-core processes
 	log.Println("  🛑 Stopping all xray-core processes...")
-	pt.processManager.Cleanup()
-	pt.killAllXrayCoreProcesses()
 
-	time.Sleep(500 * time.Millisecond) // Wait for processes to fully terminate
+	// First cleanup through process manager
+	pt.processManager.Cleanup()
+	time.Sleep(500 * time.Millisecond)
+
+	// Then force kill any remaining xray processes
+	killedCount := pt.killAllXrayCoreProcesses()
 
 	processesAfter := pt.countXrayCoreProcesses()
-	log.Printf("  ✅ Xray-core processes after cleanup: %d", processesAfter)
+	log.Printf("  ✅ Xray-core processes killed: %d", processesBefore - processesAfter)
+	log.Printf("  ✅ Xray-core processes remaining: %d", processesAfter)
 
 	// Release all used ports
 	log.Println("  🔓 Releasing all used ports...")
@@ -1536,7 +1547,12 @@ func (pt *ProxyTester) cleanupBetweenBatches() {
 		portsAfter++
 		return true
 	})
-	log.Printf("  ✅ Used ports after cleanup: %d", portsAfter)
+	log.Printf("  ✅ Used ports released: %d", portsBefore - portsAfter)
+	log.Printf("  ✅ Used ports remaining: %d", portsAfter)
+
+	// Force garbage collection to free memory
+	runtime.GC()
+	log.Println("  🗑️  Garbage collection completed")
 
 	log.Println("  🎯 Cleanup completed successfully!")
 	log.Println(strings.Repeat("-", 70))
