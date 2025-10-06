@@ -1525,7 +1525,7 @@ func (pt *ProxyTester) cleanupBetweenBatches() {
 	time.Sleep(500 * time.Millisecond)
 
 	// Then force kill any remaining xray processes
-	killedCount := pt.killAllXrayCoreProcesses()
+	pt.killAllXrayCoreProcesses()
 
 	processesAfter := pt.countXrayCoreProcesses()
 	log.Printf("  ✅ Xray-core processes killed: %d", processesBefore - processesAfter)
