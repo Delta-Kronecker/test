@@ -72,9 +72,9 @@ func NewDefaultConfig() *Config {
 
 	return &Config{
 		XrayPath:        getEnvOrDefault("XRAY_PATH", ""),
-		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 200),
+		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 50),
 		Timeout:         time.Duration(getEnvIntOrDefault("PROXY_TIMEOUT", 10)) * time.Second,
-		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 200),
+		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 100),
 		IncrementalSave: getEnvBoolOrDefault("PROXY_INCREMENTAL_SAVE", true),
 		DataDir:         dataDir,
 		ConfigDir:       configDir,
@@ -231,8 +231,8 @@ func (pm *PortManager) ReleasePort(port int) {
 	pm.usedPorts.Delete(port)
 
 	go func() {
-		time.Sleep(1 * time.Second)
-		for i := 0; i < 5; i++ {
+		time.Sleep(500 * time.Millisecond)
+		for i := 0; i < 3; i++ {
 			if pm.isPortAvailable(port) {
 				select {
 				case pm.availablePorts <- port:
@@ -241,7 +241,7 @@ func (pm *PortManager) ReleasePort(port int) {
 					return
 				}
 			}
-			time.Sleep(500 * time.Millisecond)
+			time.Sleep(300 * time.Millisecond)
 		}
 	}()
 }
@@ -654,9 +654,16 @@ func (pm *ProcessManager) KillProcess(pid int) error {
 
 	select {
 	case <-done:
-	case <-time.After(1 * time.Second):
+	case <-time.After(500 * time.Millisecond):
 		process.Kill()
-		<-done
+		select {
+		case <-done:
+		case <-time.After(500 * time.Millisecond):
+		}
+	}
+
+	if info.configFile != "" {
+		os.Remove(info.configFile)
 	}
 
 	pm.UnregisterProcess(pid)
@@ -722,7 +729,9 @@ func (pm *ProcessManager) CleanupBatch() {
 	}
 
 	wg.Wait()
-	time.Sleep(2 * time.Second)
+	time.Sleep(3 * time.Second)
+
+	runtime.GC()
 
 	log.Printf("Batch cleanup completed")
 }
@@ -1577,7 +1586,8 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 		pt.saveResults(allResults)
 
 		if end < totalConfigs {
-			time.Sleep(3 * time.Second)
+			time.Sleep(5 * time.Second)
+			runtime.GC()
 			log.Printf("System cleanup completed, ready for next batch")
 		}
 	}
