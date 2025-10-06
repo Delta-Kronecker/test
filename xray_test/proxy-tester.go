@@ -72,7 +72,7 @@ func NewDefaultConfig() *Config {
 
 	return &Config{
 		XrayPath:        getEnvOrDefault("XRAY_PATH", ""),
-		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 50),
+		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 100),
 		Timeout:         time.Duration(getEnvIntOrDefault("PROXY_TIMEOUT", 10)) * time.Second,
 		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 100),
 		IncrementalSave: getEnvBoolOrDefault("PROXY_INCREMENTAL_SAVE", true),
@@ -296,7 +296,7 @@ func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float
 		return false, "", time.Since(startTime).Seconds()
 	}
 
-	testCount := 5
+	testCount := 3
 	if len(nt.testURLs) < testCount {
 		testCount = len(nt.testURLs)
 	}
@@ -307,36 +307,18 @@ func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float
 		shuffled[i], shuffled[j] = shuffled[j], shuffled[i]
 	})
 
-	successCount := 0
-	var lastIP string
-	var lastResponseTime float64
-
 	for i := 0; i < testCount; i++ {
 		success, ip, responseTime := nt.singleTest(proxyPort, shuffled[i])
 		if success {
-			successCount++
-			lastIP = ip
-			lastResponseTime = responseTime
-			if successCount >= 2 {
-				return true, ip, responseTime
-			}
+			return true, ip, responseTime
 		}
-	}
-
-	if successCount > 0 {
-		return true, lastIP, lastResponseTime
 	}
 
 	return false, "", time.Since(startTime).Seconds()
 }
 
 func (nt *NetworkTester) isProxyResponsive(port int) bool {
-	dialer, err := proxy.SOCKS5("tcp", fmt.Sprintf("127.0.0.1:%d", port), nil, proxy.Direct)
-	if err != nil {
-		return false
-	}
-
-	conn, err := dialer.Dial("tcp", "8.8.8.8:53")
+	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 3*time.Second)
 	if err != nil {
 		return false
 	}
@@ -1196,7 +1178,7 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 
 	pt.processManager.RegisterProcess(cmd.Process.Pid, processInfo)
 
-	time.Sleep(5 * time.Second)
+	time.Sleep(3 * time.Second)
 
 	if cmd.ProcessState != nil && cmd.ProcessState.Exited() {
 		result.Result = ResultConnectionError
