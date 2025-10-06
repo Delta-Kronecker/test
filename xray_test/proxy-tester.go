@@ -335,13 +335,13 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 	}
 
 	transport := &http.Transport{
-		Dial:                dialer.Dial,
-		DisableKeepAlives:   true,
-		TLSHandshakeTimeout: 15 * time.Second,
-		IdleConnTimeout:     10 * time.Second,
-		MaxIdleConns:        1,
-		MaxIdleConnsPerHost: 1,
-		ResponseHeaderTimeout: 10 * time.Second,
+		Dial:                  dialer.Dial,
+		DisableKeepAlives:     true,
+		TLSHandshakeTimeout:   8 * time.Second,
+		IdleConnTimeout:       5 * time.Second,
+		MaxIdleConns:          1,
+		MaxIdleConnsPerHost:   1,
+		ResponseHeaderTimeout: 8 * time.Second,
 	}
 
 	client := &http.Client{
@@ -1178,7 +1178,7 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 
 	pt.processManager.RegisterProcess(cmd.Process.Pid, processInfo)
 
-	time.Sleep(3 * time.Second)
+	time.Sleep(4 * time.Second)
 
 	if cmd.ProcessState != nil && cmd.ProcessState.Exited() {
 		result.Result = ResultConnectionError
