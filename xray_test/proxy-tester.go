@@ -615,19 +615,32 @@ func (pm *ProcessManager) ForceCleanupAll() int {
 	pm.mu.Lock()
 	defer pm.mu.Unlock()
 
-	killedCount := 0
+	var cmdsToKill []*exec.Cmd
+
+	// Collect all processes
 	pm.processes.Range(func(key, value interface{}) bool {
 		if cmd, ok := value.(*exec.Cmd); ok {
 			if cmd.Process != nil {
-				cmd.Process.Kill()
-				killedCount++
+				cmdsToKill = append(cmdsToKill, cmd)
 			}
 		}
 		pm.processes.Delete(key)
 		return true
 	})
 
-	return killedCount
+	// Kill all processes
+	for _, cmd := range cmdsToKill {
+		cmd.Process.Kill()
+	}
+
+	// Wait for all processes to be reaped (prevent zombies)
+	for _, cmd := range cmdsToKill {
+		go func(c *exec.Cmd) {
+			c.Wait() // Reap the process
+		}(cmd)
+	}
+
+	return len(cmdsToKill)
 }
 
 type ProxyTester struct {
@@ -1512,15 +1525,21 @@ func (pt *ProxyTester) cleanupBetweenBatches() {
 	log.Println("  🛑 Force killing all tracked xray processes...")
 	killedCount := pt.processManager.ForceCleanupAll()
 
-	// Wait for processes to fully terminate
-	time.Sleep(1 * time.Second)
+	// Wait for processes to be reaped and fully terminate
+	log.Println("  ⏳ Waiting for processes to terminate...")
+	time.Sleep(2 * time.Second)
 
 	trackedProcessesAfter := pt.processManager.GetProcessCount()
 	systemProcessesAfter := pt.countXrayCoreProcesses()
 
 	log.Printf("  ✅ Tracked processes killed: %d", killedCount)
 	log.Printf("  ✅ Tracked processes remaining: %d", trackedProcessesAfter)
-	log.Printf("  ⚠️  System xray-core processes still running: %d", systemProcessesAfter)
+
+	if systemProcessesAfter == 0 {
+		log.Printf("  ✅ System xray-core processes cleaned: %d", systemProcessesBefore)
+	} else {
+		log.Printf("  ⚠️  System xray-core processes still running: %d", systemProcessesAfter)
+	}
 
 	// Release all used ports
 	log.Println("  🔓 Releasing all used ports...")
