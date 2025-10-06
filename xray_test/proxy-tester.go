@@ -1382,10 +1382,10 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 		// Report system status after batch completion
 		pt.reportSystemStatus(batchID)
 
-		// Add 5-second rest between batches
+		// Add 10-second rest between batches
 		if end < totalConfigs {
-			log.Printf("⏸️  Resting for 5 seconds before next batch...")
-			time.Sleep(5 * time.Second)
+			log.Printf("⏸️  Resting for 10 seconds before next batch...")
+			time.Sleep(10 * time.Second)
 		}
 	}
 
@@ -1411,33 +1411,72 @@ func (pt *ProxyTester) saveResults(results []*TestResultData) {
 	encoder.Encode(results)
 }
 
-func (pt *ProxyTester) getSystemMemoryUsage() (uint64, error) {
+func (pt *ProxyTester) getSystemMemoryUsage() (used uint64, total uint64, err error) {
 	var m runtime.MemStats
 	runtime.ReadMemStats(&m)
 
 	// Get system memory on different platforms
 	if runtime.GOOS == "windows" {
-		// On Windows, use PowerShell to get total RAM usage
-		cmd := exec.Command("powershell", "-Command", "(Get-Process | Measure-Object WorkingSet64 -Sum).Sum / 1MB")
-		output, err := cmd.Output()
-		if err == nil {
-			if memMB, err := strconv.ParseFloat(strings.TrimSpace(string(output)), 64); err == nil {
-				return uint64(memMB), nil
+		// On Windows, use PowerShell to get total and used RAM
+		cmdUsed := exec.Command("powershell", "-Command", "(Get-Process | Measure-Object WorkingSet64 -Sum).Sum / 1MB")
+		outputUsed, errUsed := cmdUsed.Output()
+
+		cmdTotal := exec.Command("powershell", "-Command", "(Get-CimInstance Win32_OperatingSystem).TotalVisibleMemorySize / 1KB")
+		outputTotal, errTotal := cmdTotal.Output()
+
+		if errUsed == nil && errTotal == nil {
+			if memUsedMB, err := strconv.ParseFloat(strings.TrimSpace(string(outputUsed)), 64); err == nil {
+				if memTotalMB, err := strconv.ParseFloat(strings.TrimSpace(string(outputTotal)), 64); err == nil {
+					return uint64(memUsedMB), uint64(memTotalMB), nil
+				}
 			}
 		}
 	} else {
-		// On Linux/Unix, read from /proc/meminfo
-		cmd := exec.Command("sh", "-c", "free -m | awk '/^Mem:/ {print $3}'")
-		output, err := cmd.Output()
-		if err == nil {
-			if memMB, err := strconv.ParseUint(strings.TrimSpace(string(output)), 10, 64); err == nil {
-				return memMB, nil
+		// On Linux/Unix, read from /proc/meminfo or free command
+		cmd := exec.Command("sh", "-c", "free -m | awk '/^Mem:/ {print $3, $2}'")
+		output, cmdErr := cmd.Output()
+		if cmdErr == nil {
+			parts := strings.Fields(strings.TrimSpace(string(output)))
+			if len(parts) >= 2 {
+				if memUsedMB, err := strconv.ParseUint(parts[0], 10, 64); err == nil {
+					if memTotalMB, err := strconv.ParseUint(parts[1], 10, 64); err == nil {
+						return memUsedMB, memTotalMB, nil
+					}
+				}
 			}
 		}
 	}
 
 	// Fallback to current process memory
-	return m.Alloc / 1024 / 1024, nil
+	return m.Alloc / 1024 / 1024, 0, nil
+}
+
+func (pt *ProxyTester) getSystemProcessList() ([]string, error) {
+	var cmd *exec.Cmd
+	var processes []string
+
+	if runtime.GOOS == "windows" {
+		// On Windows, use PowerShell to get process list
+		cmd = exec.Command("powershell", "-Command", "Get-Process | Select-Object -First 50 ProcessName, CPU, WS | Format-Table -AutoSize | Out-String -Width 200")
+	} else {
+		// On Linux/Unix, use ps
+		cmd = exec.Command("sh", "-c", "ps aux | head -n 51")
+	}
+
+	output, err := cmd.Output()
+	if err != nil {
+		return nil, err
+	}
+
+	lines := strings.Split(string(output), "\n")
+	for _, line := range lines {
+		trimmed := strings.TrimSpace(line)
+		if trimmed != "" {
+			processes = append(processes, trimmed)
+		}
+	}
+
+	return processes, nil
 }
 
 func (pt *ProxyTester) countXrayCoreProcesses() int {
@@ -1465,22 +1504,45 @@ func (pt *ProxyTester) countXrayCoreProcesses() int {
 }
 
 func (pt *ProxyTester) reportSystemStatus(batchID int) {
-	log.Println(strings.Repeat("-", 60))
+	log.Println(strings.Repeat("=", 70))
 	log.Printf("📊 System Status After Batch %d:", batchID)
+	log.Println(strings.Repeat("=", 70))
 
 	// Get memory usage
-	memUsage, err := pt.getSystemMemoryUsage()
+	memUsed, memTotal, err := pt.getSystemMemoryUsage()
 	if err == nil {
-		log.Printf("  💾 RAM Usage: %.2f MB", float64(memUsage))
+		if memTotal > 0 {
+			usagePercent := float64(memUsed) / float64(memTotal) * 100
+			log.Printf("💾 RAM Usage: %.2f MB / %.2f MB (%.1f%%)",
+				float64(memUsed), float64(memTotal), usagePercent)
+		} else {
+			log.Printf("💾 RAM Usage: %.2f MB", float64(memUsed))
+		}
 	} else {
-		log.Printf("  💾 RAM Usage: Unable to retrieve (Error: %v)", err)
+		log.Printf("💾 RAM Usage: Unable to retrieve (Error: %v)", err)
 	}
 
 	// Count xray-core processes
 	processCount := pt.countXrayCoreProcesses()
-	log.Printf("  🔧 Xray-core Processes: %d", processCount)
+	log.Printf("🔧 Xray-core Processes: %d", processCount)
 
-	log.Println(strings.Repeat("-", 60))
+	// Get and display system process list
+	log.Println("")
+	log.Println("📋 Top System Processes:")
+	log.Println(strings.Repeat("-", 70))
+	processList, err := pt.getSystemProcessList()
+	if err == nil {
+		for i, process := range processList {
+			if i >= 50 { // Limit to top 50 processes
+				break
+			}
+			log.Println(process)
+		}
+	} else {
+		log.Printf("Unable to retrieve process list: %v", err)
+	}
+
+	log.Println(strings.Repeat("=", 70))
 }
 
 func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
