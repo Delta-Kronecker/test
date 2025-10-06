@@ -1,4 +1,2 @@
 https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/sub.txt
-https://raw.githubusercontent.com/10ium/V2ray-Config/main/All_Configs_Sub.txt
-https://github.com/skywrt/v2ray-configs/raw/main/All_Configs_Sub.txt
 https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt
