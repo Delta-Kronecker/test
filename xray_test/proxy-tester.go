@@ -552,6 +552,7 @@ func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort i
 type ProcessManager struct {
 	processes sync.Map
 	cleanup   int32
+	mu        sync.Mutex
 }
 
 func NewProcessManager() *ProcessManager {
@@ -567,27 +568,11 @@ func (pm *ProcessManager) UnregisterProcess(pid int) {
 }
 
 func (pm *ProcessManager) KillProcess(pid int) error {
-	if atomic.LoadInt32(&pm.cleanup) == 1 {
-		return nil
-	}
-
 	if value, ok := pm.processes.Load(pid); ok {
 		if cmd, ok := value.(*exec.Cmd); ok {
 			if cmd.Process != nil {
-				if err := cmd.Process.Signal(syscall.SIGTERM); err == nil {
-					done := make(chan error, 1)
-					go func() {
-						done <- cmd.Wait()
-					}()
-
-					select {
-					case <-done:
-					case <-time.After(200 * time.Millisecond):
-						cmd.Process.Kill()
-					}
-				} else {
-					cmd.Process.Kill()
-				}
+				// Force kill immediately
+				cmd.Process.Kill()
 				pm.UnregisterProcess(pid)
 				return nil
 			}
@@ -597,16 +582,52 @@ func (pm *ProcessManager) KillProcess(pid int) error {
 }
 
 func (pm *ProcessManager) Cleanup() {
-	if !atomic.CompareAndSwapInt32(&pm.cleanup, 0, 1) {
-		return
-	}
+	pm.mu.Lock()
+	defer pm.mu.Unlock()
 
+	var pids []int
 	pm.processes.Range(func(key, value interface{}) bool {
 		if pid, ok := key.(int); ok {
-			pm.KillProcess(pid)
+			pids = append(pids, pid)
 		}
 		return true
 	})
+
+	// Kill all processes
+	for _, pid := range pids {
+		pm.KillProcess(pid)
+	}
+
+	// Wait for processes to terminate
+	time.Sleep(100 * time.Millisecond)
+}
+
+func (pm *ProcessManager) GetProcessCount() int {
+	count := 0
+	pm.processes.Range(func(key, value interface{}) bool {
+		count++
+		return true
+	})
+	return count
+}
+
+func (pm *ProcessManager) ForceCleanupAll() int {
+	pm.mu.Lock()
+	defer pm.mu.Unlock()
+
+	killedCount := 0
+	pm.processes.Range(func(key, value interface{}) bool {
+		if cmd, ok := value.(*exec.Cmd); ok {
+			if cmd.Process != nil {
+				cmd.Process.Kill()
+				killedCount++
+			}
+		}
+		pm.processes.Delete(key)
+		return true
+	})
+
+	return killedCount
 }
 
 type ProxyTester struct {
@@ -1478,58 +1499,29 @@ func (pt *ProxyTester) countXrayCoreProcesses() int {
 	return count
 }
 
-func (pt *ProxyTester) killAllXrayCoreProcesses() int {
-	processesBefore := pt.countXrayCoreProcesses()
-
-	if runtime.GOOS == "windows" {
-		// On Windows, use taskkill with force flag
-		// First try to kill by name pattern
-		cmd := exec.Command("taskkill", "/F", "/IM", "xray.exe", "/T")
-		cmd.Run() // Ignore errors as some processes might not exist
-
-		// Also try wildcard pattern
-		cmd2 := exec.Command("powershell", "-Command",
-			"Get-Process | Where-Object {$_.ProcessName -like '*xray*'} | Stop-Process -Force")
-		cmd2.Run()
-
-		// Wait for processes to terminate
-		time.Sleep(1 * time.Second)
-	} else {
-		// On Linux/Unix, use pkill with force
-		cmd := exec.Command("sh", "-c", "pkill -9 -f xray")
-		cmd.Run()
-
-		// Wait for processes to terminate
-		time.Sleep(1 * time.Second)
-	}
-
-	processesAfter := pt.countXrayCoreProcesses()
-	killedCount := processesBefore - processesAfter
-
-	return killedCount
-}
-
 func (pt *ProxyTester) cleanupBetweenBatches() {
 	log.Println(strings.Repeat("-", 70))
 	log.Println("🧹 Cleaning up resources before next batch...")
 
-	// Count processes before cleanup
-	processesBefore := pt.countXrayCoreProcesses()
-	log.Printf("  📊 Xray-core processes before cleanup: %d", processesBefore)
+	// Count tracked processes before cleanup
+	trackedProcessesBefore := pt.processManager.GetProcessCount()
+	systemProcessesBefore := pt.countXrayCoreProcesses()
+	log.Printf("  📊 Tracked processes: %d", trackedProcessesBefore)
+	log.Printf("  📊 System xray-core processes: %d", systemProcessesBefore)
 
-	// Stop all xray-core processes
-	log.Println("  🛑 Stopping all xray-core processes...")
+	// Stop all tracked xray-core processes
+	log.Println("  🛑 Force killing all tracked xray processes...")
+	killedCount := pt.processManager.ForceCleanupAll()
 
-	// First cleanup through process manager
-	pt.processManager.Cleanup()
-	time.Sleep(500 * time.Millisecond)
+	// Wait for processes to fully terminate
+	time.Sleep(1 * time.Second)
 
-	// Then force kill any remaining xray processes
-	pt.killAllXrayCoreProcesses()
+	trackedProcessesAfter := pt.processManager.GetProcessCount()
+	systemProcessesAfter := pt.countXrayCoreProcesses()
 
-	processesAfter := pt.countXrayCoreProcesses()
-	log.Printf("  ✅ Xray-core processes killed: %d", processesBefore - processesAfter)
-	log.Printf("  ✅ Xray-core processes remaining: %d", processesAfter)
+	log.Printf("  ✅ Tracked processes killed: %d", killedCount)
+	log.Printf("  ✅ Tracked processes remaining: %d", trackedProcessesAfter)
+	log.Printf("  ⚠️  System xray-core processes still running: %d", systemProcessesAfter)
 
 	// Release all used ports
 	log.Println("  🔓 Releasing all used ports...")
