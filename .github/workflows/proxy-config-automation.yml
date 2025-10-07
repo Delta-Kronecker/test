@@ -65,6 +65,7 @@ jobs:
         fi
         # Create all necessary subdirectories
         mkdir -p data/working_url
+        mkdir -p data/enriched_urls
         echo "Created directory structure:"
         find data -type d
 
@@ -84,6 +85,21 @@ jobs:
         cd xray_test
         go run proxy-tester.go || echo "Proxy tester completed (may have timed out)"
         echo "Go proxy testing completed"
+      continue-on-error: true
+
+    - name: Execute Geo-Fraud Checker
+      id: geo-fraud-checker
+      run: |
+        echo "Starting Geo-Fraud detection and IP scoring..."
+        cd xray_test
+        # Make sure xray is accessible
+        if [ -f "/usr/local/bin/xray" ]; then
+          export XRAY_PATH="/usr/local/bin/xray"
+          echo "Using xray from: $XRAY_PATH"
+        fi
+        # Run geo-fraud-checker
+        go run geo-fraud-checker.go || echo "Geo-fraud checker completed (may have timed out)"
+        echo "Geo-fraud checking completed"
       continue-on-error: true
 
     - name: Check for xray_test data and move files
@@ -107,7 +123,8 @@ jobs:
         if [ -d "data" ]; then
           find data -type f | head -50
           echo "=== File counts by type ==="
-          echo "Working URL: $(find data/working_url -type f 2>/dev/null | wc -l || echo 0)"
+          echo "Working URLs: $(find data/working_url -type f 2>/dev/null | wc -l || echo 0)"
+          echo "Enriched URLs: $(find data/enriched_urls -type f 2>/dev/null | wc -l || echo 0)"
           echo "Total files in data: $(find data -type f | wc -l)"
         else
           echo "Data folder not found!"
@@ -121,34 +138,54 @@ jobs:
     - name: Commit and push ALL changes
       run: |
         echo "Checking for changes in all data subdirectories..."
-        # Stash all local changes, including untracked/new files (quiet to suppress output)
-        git stash push --include-untracked --quiet || true
-        # Fetch and pull with rebase (now on a clean working directory)
-        git fetch origin
-        git pull --rebase origin "${{ github.ref_name }}" || { echo "Pull failed"; exit 1; }
-        # Reapply stashed changes
-        git stash pop --quiet || { echo "Stash pop failed (possible conflicts)"; exit 1; }
-        # Add all files in data/ explicitly (expanded from original to cover all subdirs for safety)
+
+        # Add all files in data/ first (before pull to avoid conflicts)
         git add data/working_url || true
-        echo "Files to be committed:"
-        git diff --cached --name-only || echo "No files to commit"
+        git add data/enriched_urls || true
+
+        # Check if there are changes to commit
         if git diff --cached --quiet; then
           echo "No changes to commit"
-        else
-          echo "Changes detected, committing..."
-          # Create commit message with execution summary
-          TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
-          PYTHON_STATUS="${{ steps.python-collector.outcome }}"
-          PROXY_STATUS="${{ steps.go-proxy-tester.outcome }}"
-          RUN_ID="${{ github.run_id }}"
-          GITHUB_REF_NAME="${{ github.ref_name }}"
-          git commit -m "Automated proxy collection - ${TIMESTAMP}" \
-                     -m "Python Collector: ${PYTHON_STATUS}" \
-                     -m "Proxy Tester: ${PROXY_STATUS}" \
-                     -m "Workflow run: ${RUN_ID}"
-          git push origin "${GITHUB_REF_NAME}"
-          echo "✅ Changes committed and pushed successfully"
+          exit 0
         fi
+
+        echo "Files to be committed:"
+        git diff --cached --name-only
+
+        # Create commit message with execution summary
+        TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+        PYTHON_STATUS="${{ steps.python-collector.outcome }}"
+        PROXY_STATUS="${{ steps.go-proxy-tester.outcome }}"
+        GEO_FRAUD_STATUS="${{ steps.geo-fraud-checker.outcome }}"
+        RUN_ID="${{ github.run_id }}"
+        GITHUB_REF_NAME="${{ github.ref_name }}"
+
+        git commit -m "Automated proxy collection - ${TIMESTAMP}" \
+                   -m "Python Collector: ${PYTHON_STATUS}" \
+                   -m "Proxy Tester: ${PROXY_STATUS}" \
+                   -m "Geo-Fraud Checker: ${GEO_FRAUD_STATUS}" \
+                   -m "Workflow run: ${RUN_ID}"
+
+        # Pull with rebase and push (handle conflicts gracefully)
+        echo "Pulling latest changes from remote..."
+        git fetch origin
+
+        # Try to pull with rebase, accepting ours for conflicts in data folder
+        git pull --rebase origin "${GITHUB_REF_NAME}" -X ours || {
+          echo "Rebase had conflicts, attempting to continue with our changes..."
+          # If rebase fails, abort and try merge strategy instead
+          git rebase --abort 2>/dev/null || true
+          git pull origin "${GITHUB_REF_NAME}" --no-rebase --strategy=recursive -X ours || {
+            echo "Merge also failed, forcing push with our changes"
+            git push origin "${GITHUB_REF_NAME}" --force-with-lease
+            echo "✅ Changes force-pushed successfully"
+            exit 0
+          }
+        }
+
+        # Push the changes
+        git push origin "${GITHUB_REF_NAME}"
+        echo "✅ Changes committed and pushed successfully"
 
     - name: Upload all results as artifacts
       if: always()
@@ -157,6 +194,7 @@ jobs:
         name: proxy-results-${{ github.run_id }}
         path: |
           data/working_url/
+          data/enriched_urls/
         retention-days: 7
 
     - name: Workflow summary
@@ -172,6 +210,7 @@ jobs:
         echo "|--------|--------|" >> $GITHUB_STEP_SUMMARY
         echo "| Python Collector | ${{ steps.python-collector.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
         echo "| Go Proxy Tester | ${{ steps.go-proxy-tester.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Geo-Fraud Checker | ${{ steps.geo-fraud-checker.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
 
         if [ -d "data" ]; then
@@ -179,6 +218,7 @@ jobs:
           echo "| Result Type | File Count |" >> $GITHUB_STEP_SUMMARY
           echo "|-------------|------------|" >> $GITHUB_STEP_SUMMARY
           echo "| Working URLs | $(find data/working_url -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Enriched URLs (with IP-Score) | $(find data/enriched_urls -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
           echo "| **Total Files** | **$(find data -type f | wc -l)** |" >> $GITHUB_STEP_SUMMARY
         else
           echo "**Data Files Generated:** 0" >> $GITHUB_STEP_SUMMARY
