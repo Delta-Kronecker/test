@@ -1243,8 +1243,8 @@ func main() {
 		MaxWorkers:     10, // Lower workers for stability
 		Timeout:        30 * time.Second,
 		RequestTimeout: 30 * time.Second,
-		InputFile:      "../data/working_url/working_all_urls.txt",
-		OutputDir:      "../data/enriched_urls",
+		InputFile:      "./data/working_url/working_all_urls.txt",
+		OutputDir:      "./data/enriched_urls",
 		StartPort:      30000,
 		EndPort:        31000,
 	}
