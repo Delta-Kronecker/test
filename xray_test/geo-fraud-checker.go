@@ -512,24 +512,72 @@ func getString(m map[string]interface{}, key string) string {
 
 func (gfc *GeoFraudChecker) startXrayProcess(configFile string) (*exec.Cmd, error) {
 	cmd := exec.Command(gfc.config.XrayPath, "run", "-config", configFile)
-	cmd.Stdout = nil
-	cmd.Stderr = nil
+
+	// Create log files for debugging in CI environments
+	var logFileName string
+	logFile, err := os.CreateTemp("", "xray-log-*.txt")
+	if err == nil {
+		logFileName = logFile.Name()
+		cmd.Stdout = logFile
+		cmd.Stderr = logFile
+		// Note: logFile will be closed when process exits
+	}
 
 	if err := cmd.Start(); err != nil {
+		if logFileName != "" {
+			return nil, fmt.Errorf("failed to start xray (logs: %s): %v", logFileName, err)
+		}
 		return nil, err
+	}
+
+	// Give the process a moment to fail if there's an immediate error
+	time.Sleep(200 * time.Millisecond)
+
+	// Check if process is still running
+	if cmd.ProcessState != nil && cmd.ProcessState.Exited() {
+		if logFileName != "" {
+			// Try to read the log for debugging
+			if logContent, readErr := os.ReadFile(logFileName); readErr == nil && len(logContent) > 0 {
+				return nil, fmt.Errorf("xray process exited immediately. Log: %s", string(logContent))
+			}
+			return nil, fmt.Errorf("xray process exited immediately (check log: %s)", logFileName)
+		}
+		return nil, fmt.Errorf("xray process exited immediately")
 	}
 
 	return cmd, nil
 }
 
 func (gfc *GeoFraudChecker) getIPInfo(proxyPort int) (string, string, string, error) {
-	time.Sleep(500 * time.Millisecond)
-
-	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", proxyPort), 2*time.Second)
-	if err != nil {
-		return "", "", "", fmt.Errorf("proxy not responsive: %v", err)
+	// Detect CI environment and adjust timeouts accordingly
+	ciWaitTime := 1 * time.Second
+	dialTimeout := 5 * time.Second
+	if os.Getenv("CI") != "" || os.Getenv("GITHUB_ACTIONS") != "" {
+		ciWaitTime = 3 * time.Second
+		dialTimeout = 10 * time.Second
+		log.Printf("CI environment detected, using extended timeouts")
 	}
-	conn.Close()
+
+	time.Sleep(ciWaitTime)
+
+	// Try multiple times to connect to the proxy
+	var conn net.Conn
+	var err error
+	maxRetries := 5
+	for i := 0; i < maxRetries; i++ {
+		conn, err = net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", proxyPort), dialTimeout)
+		if err == nil {
+			conn.Close()
+			break
+		}
+		if i < maxRetries-1 {
+			time.Sleep(time.Duration(i+1) * time.Second)
+		}
+	}
+
+	if err != nil {
+		return "", "", "", fmt.Errorf("proxy not responsive after %d attempts: %v", maxRetries, err)
+	}
 
 	dialer, err := proxy.SOCKS5("tcp", fmt.Sprintf("127.0.0.1:%d", proxyPort), nil, proxy.Direct)
 	if err != nil {
@@ -666,7 +714,18 @@ func (gfc *GeoFraudChecker) ProcessURL(proxyURL string) *ProxyInfo {
 
 	gfc.processManager.RegisterProcess(process.Process.Pid, process)
 
-	time.Sleep(2 * time.Second)
+	// Wait for Xray to fully initialize - longer in CI environments
+	waitTime := 2 * time.Second
+	if os.Getenv("CI") != "" || os.Getenv("GITHUB_ACTIONS") != "" {
+		waitTime = 5 * time.Second
+	}
+	time.Sleep(waitTime)
+
+	// Verify process is still running before attempting connection
+	if process.ProcessState != nil && process.ProcessState.Exited() {
+		info.Error = "xray process died after startup"
+		return info
+	}
 
 	ip, country, countryCode, err := gfc.getIPInfo(proxyPort)
 	if err != nil {
@@ -925,11 +984,25 @@ func main() {
 
 	log.Printf("✓ Using Xray path: %s", xrayPath)
 
+	// Detect CI environment and adjust configuration
+	maxWorkers := 10
+	timeout := 30 * time.Second
+	requestTimeout := 30 * time.Second
+
+	if os.Getenv("CI") != "" || os.Getenv("GITHUB_ACTIONS") != "" {
+		log.Println("🔧 CI environment detected - adjusting configuration for reliability")
+		maxWorkers = 3 // Reduce parallelism in CI to avoid resource exhaustion
+		timeout = 60 * time.Second
+		requestTimeout = 45 * time.Second
+		log.Printf("   Max workers: %d (reduced for CI)", maxWorkers)
+		log.Printf("   Timeouts: %v request, %v overall", requestTimeout, timeout)
+	}
+
 	config := &GeoFraudConfig{
 		XrayPath:       xrayPath,
-		MaxWorkers:     10,
-		Timeout:        30 * time.Second,
-		RequestTimeout: 30 * time.Second,
+		MaxWorkers:     maxWorkers,
+		Timeout:        timeout,
+		RequestTimeout: requestTimeout,
 		InputFile:      "./data/working_url/working_all_urls.txt",
 		OutputDir:      "./data/enriched_urls",
 		StartPort:      30000,
