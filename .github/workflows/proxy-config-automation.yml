@@ -89,6 +89,7 @@ jobs:
 
     - name: Execute Geo-Fraud Checker
       id: geo-fraud-checker
+      timeout-minutes: 30
       run: |
         echo "Starting Geo-Fraud detection and IP scoring..."
         cd xray_test
@@ -96,10 +97,18 @@ jobs:
         if [ -f "/usr/local/bin/xray" ]; then
           export XRAY_PATH="/usr/local/bin/xray"
           echo "Using xray from: $XRAY_PATH"
+          xray version || echo "Warning: xray version check failed"
         fi
-        # Run geo-fraud-checker
-        go run geo-fraud-checker.go || echo "Geo-fraud checker completed (may have timed out)"
+        # Set CI environment variable (already set by GitHub, but being explicit)
+        export CI=true
+        export GITHUB_ACTIONS=true
+        echo "Environment configured for CI with extended timeouts"
+        # Run geo-fraud-checker with timeout
+        timeout 25m go run geo-fraud-checker.go || echo "Geo-fraud checker completed (may have timed out)"
         echo "Geo-fraud checking completed"
+        # Show any xray log files for debugging
+        echo "Checking for Xray log files..."
+        ls -lh /tmp/xray-log-*.txt 2>/dev/null | head -5 || echo "No xray log files found"
       continue-on-error: true
 
     - name: Check for xray_test data and move files
