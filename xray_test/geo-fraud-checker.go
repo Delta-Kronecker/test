@@ -14,7 +14,6 @@ import (
 	"os/exec"
 	"os/signal"
 	"path/filepath"
-	"regexp"
 	"strconv"
 	"strings"
 	"sync"
@@ -41,7 +40,6 @@ type ProxyInfo struct {
 	IP           string
 	Country      string
 	CountryCode  string
-	FraudScore   int
 	Error        string
 	ResponseTime float64
 }
@@ -159,7 +157,6 @@ type GeoFraudChecker struct {
 		failed    int64
 		processed int64
 	}
-	countryFlags map[string]string
 }
 
 func NewGeoFraudChecker(config *GeoFraudConfig) *GeoFraudChecker {
@@ -167,53 +164,8 @@ func NewGeoFraudChecker(config *GeoFraudConfig) *GeoFraudChecker {
 		config:         config,
 		portManager:    NewPortManager(config.StartPort, config.EndPort),
 		processManager: NewProcessManager(),
-		countryFlags:   initCountryFlags(),
 	}
 	return gfc
-}
-
-func initCountryFlags() map[string]string {
-	return map[string]string{
-		// Europe
-		"US": "🇺🇸", "GB": "🇬🇧", "DE": "🇩🇪", "FR": "🇫🇷", "CA": "🇨🇦",
-		"NL": "🇳🇱", "SE": "🇸🇪", "CH": "🇨🇭", "SG": "🇸🇬", "JP": "🇯🇵",
-		"AU": "🇦🇺", "ES": "🇪🇸", "IT": "🇮🇹", "BR": "🇧🇷", "IN": "🇮🇳",
-		"CN": "🇨🇳", "KR": "🇰🇷", "RU": "🇷🇺", "TR": "🇹🇷", "PL": "🇵🇱",
-		"UA": "🇺🇦", "RO": "🇷🇴", "CZ": "🇨🇿", "AT": "🇦🇹", "BE": "🇧🇪",
-		"DK": "🇩🇰", "FI": "🇫🇮", "NO": "🇳🇴", "IE": "🇮🇪", "PT": "🇵🇹",
-		"GR": "🇬🇷", "HU": "🇭🇺", "BG": "🇧🇬", "HR": "🇭🇷", "LT": "🇱🇹",
-		"LV": "🇱🇻", "EE": "🇪🇪", "SK": "🇸🇰", "SI": "🇸🇮", "LU": "🇱🇺",
-		"MT": "🇲🇹", "CY": "🇨🇾", "IS": "🇮🇸", "LI": "🇱🇮", "MC": "🇲🇨",
-
-		// Middle East & Asia
-		"IL": "🇮🇱", "AE": "🇦🇪", "SA": "🇸🇦", "QA": "🇶🇦", "KW": "🇰🇼",
-		"IR": "🇮🇷", "IQ": "🇮🇶", "AF": "🇦🇫", "PK": "🇵🇰", "BD": "🇧🇩",
-		"HK": "🇭🇰", "TW": "🇹🇼", "MY": "🇲🇾", "TH": "🇹🇭", "ID": "🇮🇩",
-		"PH": "🇵🇭", "VN": "🇻🇳", "MN": "🇲🇳", "KZ": "🇰🇿", "UZ": "🇺🇿",
-		"AZ": "🇦🇿", "GE": "🇬🇪", "AM": "🇦🇲", "LB": "🇱🇧", "JO": "🇯🇴",
-		"SY": "🇸🇾", "YE": "🇾🇪", "OM": "🇴🇲", "BH": "🇧🇭",
-
-		// Americas
-		"MX": "🇲🇽", "AR": "🇦🇷", "CL": "🇨🇱", "CO": "🇨🇴", "PE": "🇵🇪",
-		"VE": "🇻🇪", "UY": "🇺🇾", "EC": "🇪🇨", "BO": "🇧🇴", "PY": "🇵🇾",
-		"CR": "🇨🇷", "PA": "🇵🇦", "GT": "🇬🇹", "SV": "🇸🇻", "HN": "🇭🇳",
-		"NI": "🇳🇮", "CU": "🇨🇺", "DO": "🇩🇴", "JM": "🇯🇲", "TT": "🇹🇹",
-
-		// Africa & Oceania
-		"ZA": "🇿🇦", "EG": "🇪🇬", "NZ": "🇳🇿", "NG": "🇳🇬", "KE": "🇰🇪",
-		"MA": "🇲🇦", "DZ": "🇩🇿", "TN": "🇹🇳", "LY": "🇱🇾", "ET": "🇪🇹",
-		"GH": "🇬🇭", "UG": "🇺🇬", "TZ": "🇹🇿", "ZW": "🇿🇼", "ZM": "🇿🇲",
-
-		// Others
-		"XX": "🏴", "UNKNOWN": "🏴",
-	}
-}
-
-func (gfc *GeoFraudChecker) getCountryFlag(countryCode string) string {
-	if flag, ok := gfc.countryFlags[strings.ToUpper(countryCode)]; ok {
-		return flag
-	}
-	return "🏴"
 }
 
 func (gfc *GeoFraudChecker) LoadURLsFromFile() ([]string, error) {
@@ -232,7 +184,6 @@ func (gfc *GeoFraudChecker) LoadURLsFromFile() ([]string, error) {
 			continue
 		}
 
-		// Extract URL (handle lines with metadata)
 		if strings.Contains(line, "://") {
 			urls = append(urls, line)
 		}
@@ -247,7 +198,6 @@ func (gfc *GeoFraudChecker) LoadURLsFromFile() ([]string, error) {
 }
 
 func (gfc *GeoFraudChecker) createXrayConfig(proxyURL string, listenPort int) (string, error) {
-	// Parse proxy URL and create appropriate Xray config
 	var config map[string]interface{}
 	var err error
 
@@ -282,20 +232,16 @@ func (gfc *GeoFraudChecker) createXrayConfig(proxyURL string, listenPort int) (s
 }
 
 func (gfc *GeoFraudChecker) createShadowsocksConfig(proxyURL string, listenPort int) (map[string]interface{}, error) {
-	// Parse Shadowsocks URL: ss://base64(method:password)@server:port#remark
 	proxyURL = strings.TrimPrefix(proxyURL, "ss://")
 
-	// Split remark if exists
 	parts := strings.Split(proxyURL, "#")
 	proxyURL = parts[0]
 
-	// Split auth and server
 	authServer := strings.Split(proxyURL, "@")
 	if len(authServer) != 2 {
 		return nil, fmt.Errorf("invalid shadowsocks URL format")
 	}
 
-	// Decode base64 auth
 	authDecoded, err := base64.StdEncoding.DecodeString(authServer[0])
 	if err != nil {
 		authDecoded, err = base64.RawStdEncoding.DecodeString(authServer[0])
@@ -304,7 +250,6 @@ func (gfc *GeoFraudChecker) createShadowsocksConfig(proxyURL string, listenPort 
 		}
 	}
 
-	// Parse method:password
 	authParts := strings.SplitN(string(authDecoded), ":", 2)
 	if len(authParts) != 2 {
 		return nil, fmt.Errorf("invalid auth format")
@@ -312,7 +257,6 @@ func (gfc *GeoFraudChecker) createShadowsocksConfig(proxyURL string, listenPort 
 	method := authParts[0]
 	password := authParts[1]
 
-	// Parse server:port
 	serverPort := strings.Split(authServer[1], ":")
 	if len(serverPort) != 2 {
 		return nil, fmt.Errorf("invalid server:port format")
@@ -357,10 +301,8 @@ func (gfc *GeoFraudChecker) createShadowsocksConfig(proxyURL string, listenPort 
 }
 
 func (gfc *GeoFraudChecker) createVMessConfig(proxyURL string, listenPort int) (map[string]interface{}, error) {
-	// Parse VMess URL: vmess://base64(json)
 	proxyURL = strings.TrimPrefix(proxyURL, "vmess://")
 
-	// Decode base64
 	jsonData, err := base64.StdEncoding.DecodeString(proxyURL)
 	if err != nil {
 		jsonData, err = base64.RawStdEncoding.DecodeString(proxyURL)
@@ -369,13 +311,11 @@ func (gfc *GeoFraudChecker) createVMessConfig(proxyURL string, listenPort int) (
 		}
 	}
 
-	// Parse JSON
 	var vmessConfig map[string]interface{}
 	if err := json.Unmarshal(jsonData, &vmessConfig); err != nil {
 		return nil, fmt.Errorf("failed to parse vmess json: %v", err)
 	}
 
-	// Extract fields
 	address := getString(vmessConfig, "add")
 	portStr := getString(vmessConfig, "port")
 	id := getString(vmessConfig, "id")
@@ -410,7 +350,6 @@ func (gfc *GeoFraudChecker) createVMessConfig(proxyURL string, listenPort int) (
 		},
 	}
 
-	// Add TLS if present
 	if getString(vmessConfig, "tls") == "tls" {
 		streamSettings := outbound["streamSettings"].(map[string]interface{})
 		streamSettings["security"] = "tls"
@@ -420,7 +359,6 @@ func (gfc *GeoFraudChecker) createVMessConfig(proxyURL string, listenPort int) (
 		}
 	}
 
-	// Add WebSocket settings if needed
 	if network == "ws" {
 		streamSettings := outbound["streamSettings"].(map[string]interface{})
 		streamSettings["wsSettings"] = map[string]interface{}{
@@ -451,14 +389,11 @@ func (gfc *GeoFraudChecker) createVMessConfig(proxyURL string, listenPort int) (
 }
 
 func (gfc *GeoFraudChecker) createVLESSConfig(proxyURL string, listenPort int) (map[string]interface{}, error) {
-	// Parse VLESS URL: vless://uuid@server:port?params#remark
 	proxyURL = strings.TrimPrefix(proxyURL, "vless://")
 
-	// Split remark
 	parts := strings.Split(proxyURL, "#")
 	proxyURL = parts[0]
 
-	// Split params
 	parts = strings.Split(proxyURL, "?")
 	mainPart := parts[0]
 	params := make(map[string]string)
@@ -471,7 +406,6 @@ func (gfc *GeoFraudChecker) createVLESSConfig(proxyURL string, listenPort int) (
 		}
 	}
 
-	// Parse uuid@server:port
 	atSplit := strings.Split(mainPart, "@")
 	if len(atSplit) != 2 {
 		return nil, fmt.Errorf("invalid vless URL format")
@@ -516,7 +450,6 @@ func (gfc *GeoFraudChecker) createVLESSConfig(proxyURL string, listenPort int) (
 		},
 	}
 
-	// Add TLS/Reality settings
 	security := params["security"]
 	if security == "tls" || security == "reality" {
 		streamSettings := outbound["streamSettings"].(map[string]interface{})
@@ -534,7 +467,6 @@ func (gfc *GeoFraudChecker) createVLESSConfig(proxyURL string, listenPort int) (
 		}
 	}
 
-	// Add transport settings
 	if network == "ws" {
 		streamSettings := outbound["streamSettings"].(map[string]interface{})
 		streamSettings["wsSettings"] = map[string]interface{}{
@@ -591,10 +523,8 @@ func (gfc *GeoFraudChecker) startXrayProcess(configFile string) (*exec.Cmd, erro
 }
 
 func (gfc *GeoFraudChecker) getIPInfo(proxyPort int) (string, string, string, error) {
-	// Wait for proxy to be ready
 	time.Sleep(500 * time.Millisecond)
 
-	// Test if proxy is responsive
 	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", proxyPort), 2*time.Second)
 	if err != nil {
 		return "", "", "", fmt.Errorf("proxy not responsive: %v", err)
@@ -618,8 +548,6 @@ func (gfc *GeoFraudChecker) getIPInfo(proxyPort int) (string, string, string, er
 		Timeout:   gfc.config.RequestTimeout,
 	}
 
-	// Try to get IP from multiple sources
-	// First try: ipify (simple and reliable)
 	resp, err := client.Get("https://api.ipify.org?format=json")
 	if err == nil && resp.StatusCode == 200 {
 		defer resp.Body.Close()
@@ -627,14 +555,12 @@ func (gfc *GeoFraudChecker) getIPInfo(proxyPort int) (string, string, string, er
 		var result map[string]interface{}
 		if json.Unmarshal(body, &result) == nil {
 			if ip, ok := result["ip"].(string); ok {
-				// Get country from ip-api.com
 				country, countryCode := gfc.getCountryFromIPAPI(client, ip)
 				return ip, country, countryCode, nil
 			}
 		}
 	}
 
-	// Fallback: httpbin
 	resp, err = client.Get("https://httpbin.org/ip")
 	if err != nil {
 		return "", "", "", fmt.Errorf("failed to get IP: %v", err)
@@ -656,7 +582,6 @@ func (gfc *GeoFraudChecker) getIPInfo(proxyPort int) (string, string, string, er
 			ip := strings.Split(origin, ",")[0]
 			ip = strings.TrimSpace(ip)
 
-			// Get country from ip-api.com
 			country, countryCode := gfc.getCountryFromIPAPI(client, ip)
 			return ip, country, countryCode, nil
 		}
@@ -666,7 +591,6 @@ func (gfc *GeoFraudChecker) getIPInfo(proxyPort int) (string, string, string, er
 }
 
 func (gfc *GeoFraudChecker) getCountryFromIPAPI(client *http.Client, ip string) (string, string) {
-	// Use ip-api.com for geolocation (free, no key required)
 	url := fmt.Sprintf("http://ip-api.com/json/%s?fields=country,countryCode", ip)
 
 	resp, err := client.Get(url)
@@ -696,113 +620,6 @@ func (gfc *GeoFraudChecker) getCountryFromIPAPI(client *http.Client, ip string) 
 	return "Unknown", "XX"
 }
 
-func (gfc *GeoFraudChecker) getFraudScore(ip string, proxyPort int) (int, error) {
-	dialer, err := proxy.SOCKS5("tcp", fmt.Sprintf("127.0.0.1:%d", proxyPort), nil, proxy.Direct)
-	if err != nil {
-		return 0, err
-	}
-
-	transport := &http.Transport{
-		Dial:                dialer.Dial,
-		DisableKeepAlives:   true,
-		TLSHandshakeTimeout: 15 * time.Second,
-		IdleConnTimeout:     10 * time.Second,
-	}
-
-	client := &http.Client{
-		Transport: transport,
-		Timeout:   gfc.config.RequestTimeout,
-		CheckRedirect: func(req *http.Request, via []*http.Request) error {
-			return nil // Allow redirects
-		},
-	}
-
-	url := fmt.Sprintf("https://scamalytics.com/ip/%s", ip)
-
-	req, err := http.NewRequest("GET", url, nil)
-	if err != nil {
-		return 0, err
-	}
-
-	// Add headers to mimic a browser
-	req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
-	req.Header.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8")
-	req.Header.Set("Accept-Language", "en-US,en;q=0.9")
-
-	resp, err := client.Do(req)
-	if err != nil {
-		return 0, fmt.Errorf("request failed: %v", err)
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != 200 {
-		return 0, fmt.Errorf("status code: %d", resp.StatusCode)
-	}
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return 0, err
-	}
-
-	// Extract fraud score from response
-	fraudScore := gfc.extractFraudScore(string(body))
-	return fraudScore, nil
-}
-
-func (gfc *GeoFraudChecker) extractFraudScore(html string) int {
-	// Try multiple patterns to extract fraud score
-
-	// Pattern 1: Fraud Score: XX
-	scoreRegex1 := regexp.MustCompile(`Fraud\s+Score:\s*(\d+)`)
-	matches := scoreRegex1.FindStringSubmatch(html)
-	if len(matches) > 1 {
-		var score int
-		fmt.Sscanf(matches[1], "%d", &score)
-		return score
-	}
-
-	// Pattern 2: <div class="score">XX</div>
-	scoreRegex2 := regexp.MustCompile(`<div[^>]*class="score"[^>]*>(\d+)</div>`)
-	matches = scoreRegex2.FindStringSubmatch(html)
-	if len(matches) > 1 {
-		var score int
-		fmt.Sscanf(matches[1], "%d", &score)
-		return score
-	}
-
-	// Pattern 3: score">XX<
-	scoreRegex3 := regexp.MustCompile(`score">(\d+)<`)
-	matches = scoreRegex3.FindStringSubmatch(html)
-	if len(matches) > 1 {
-		var score int
-		fmt.Sscanf(matches[1], "%d", &score)
-		return score
-	}
-
-	// Pattern 4: "score":XX
-	scoreRegex4 := regexp.MustCompile(`"score"\s*:\s*(\d+)`)
-	matches = scoreRegex4.FindStringSubmatch(html)
-	if len(matches) > 1 {
-		var score int
-		fmt.Sscanf(matches[1], "%d", &score)
-		return score
-	}
-
-	// Pattern 5: Look for gauge or panel with score
-	scoreRegex5 := regexp.MustCompile(`(?i)fraud.*?score.*?(\d{1,3})`)
-	matches = scoreRegex5.FindStringSubmatch(html)
-	if len(matches) > 1 {
-		var score int
-		fmt.Sscanf(matches[1], "%d", &score)
-		if score <= 100 {
-			return score
-		}
-	}
-
-	log.Printf("Warning: Could not extract fraud score from scamalytics response")
-	return 0
-}
-
 func (gfc *GeoFraudChecker) ProcessURL(proxyURL string) *ProxyInfo {
 	startTime := time.Now()
 	info := &ProxyInfo{
@@ -827,7 +644,6 @@ func (gfc *GeoFraudChecker) ProcessURL(proxyURL string) *ProxyInfo {
 		info.ResponseTime = time.Since(startTime).Seconds()
 	}()
 
-	// Get available port
 	var ok bool
 	proxyPort, ok = gfc.portManager.GetAvailablePort()
 	if !ok || proxyPort == 0 {
@@ -835,7 +651,6 @@ func (gfc *GeoFraudChecker) ProcessURL(proxyURL string) *ProxyInfo {
 		return info
 	}
 
-	// Create Xray config
 	var err error
 	configFile, err = gfc.createXrayConfig(proxyURL, proxyPort)
 	if err != nil {
@@ -843,7 +658,6 @@ func (gfc *GeoFraudChecker) ProcessURL(proxyURL string) *ProxyInfo {
 		return info
 	}
 
-	// Start Xray process
 	process, err = gfc.startXrayProcess(configFile)
 	if err != nil {
 		info.Error = fmt.Sprintf("process error: %v", err)
@@ -852,10 +666,8 @@ func (gfc *GeoFraudChecker) ProcessURL(proxyURL string) *ProxyInfo {
 
 	gfc.processManager.RegisterProcess(process.Process.Pid, process)
 
-	// Wait for process to start
 	time.Sleep(2 * time.Second)
 
-	// Get IP and country info
 	ip, country, countryCode, err := gfc.getIPInfo(proxyPort)
 	if err != nil {
 		info.Error = fmt.Sprintf("IP info error: %v", err)
@@ -866,36 +678,22 @@ func (gfc *GeoFraudChecker) ProcessURL(proxyURL string) *ProxyInfo {
 	info.Country = country
 	info.CountryCode = countryCode
 
-	// Get fraud score
-	fraudScore, err := gfc.getFraudScore(ip, proxyPort)
-	if err != nil {
-		// Don't fail completely if fraud score fails
-		info.FraudScore = -1
-		log.Printf("Warning: Failed to get fraud score for %s: %v", ip, err)
-	} else {
-		info.FraudScore = fraudScore
-	}
-
 	return info
 }
 
 func (gfc *GeoFraudChecker) rebuildURLWithRemark(originalURL, remark string) string {
 	if strings.HasPrefix(originalURL, "ss://") {
-		// Shadowsocks: ss://base64@server:port#remark
-		// URL encode the remark for fragment
 		parts := strings.Split(originalURL, "#")
 		encodedRemark := url.QueryEscape(remark)
 		return parts[0] + "#" + encodedRemark
 
 	} else if strings.HasPrefix(originalURL, "vmess://") {
-		// VMess: vmess://base64(json)
-		// Decode, modify ps field, re-encode
 		vmessURL := strings.TrimPrefix(originalURL, "vmess://")
 		jsonData, err := base64.StdEncoding.DecodeString(vmessURL)
 		if err != nil {
 			jsonData, err = base64.RawStdEncoding.DecodeString(vmessURL)
 			if err != nil {
-				return originalURL // Return original if can't decode
+				return originalURL
 			}
 		}
 
@@ -904,10 +702,8 @@ func (gfc *GeoFraudChecker) rebuildURLWithRemark(originalURL, remark string) str
 			return originalURL
 		}
 
-		// Update ps (remark) field - keep as plain UTF-8 string (NOT percent-encoded)
 		vmessConfig["ps"] = remark
 
-		// Re-encode
 		newJSON, err := json.Marshal(vmessConfig)
 		if err != nil {
 			return originalURL
@@ -917,8 +713,6 @@ func (gfc *GeoFraudChecker) rebuildURLWithRemark(originalURL, remark string) str
 		return "vmess://" + newBase64
 
 	} else if strings.HasPrefix(originalURL, "vless://") {
-		// VLESS: vless://uuid@server:port?params#remark
-		// URL encode the remark for fragment
 		parts := strings.Split(originalURL, "#")
 		encodedRemark := url.QueryEscape(remark)
 		return parts[0] + "#" + encodedRemark
@@ -928,24 +722,8 @@ func (gfc *GeoFraudChecker) rebuildURLWithRemark(originalURL, remark string) str
 }
 
 func (gfc *GeoFraudChecker) formatURLWithInfo(info *ProxyInfo) string {
-	flag := gfc.getCountryFlag(info.CountryCode)
-
-	// Create remark in format: "🔥 🇩🇪 IP-Score: 076 🇩🇪 🔥"
-	// IP-Score is inverted: IP-Score = 100 - FraudScore
-	// Example: FraudScore 20 -> IP-Score 80, FraudScore 30 -> IP-Score 70
-	var remark string
-	if info.FraudScore >= 0 {
-		// Calculate IP-Score (inverted fraud score)
-		ipScore := 100 - info.FraudScore
-		// Format score as 3-digit number with leading zeros (e.g., 080, 070, 000)
-		remark = fmt.Sprintf("🔥 %s IP-Score: %03d %s 🔥", flag, ipScore, flag)
-	} else {
-		remark = fmt.Sprintf("🔥 %s IP-Score: N/A %s 🔥", flag, flag)
-	}
-
-	// Rebuild URL with new remark
+	remark := fmt.Sprintf("🔥 %s 🔥", info.Country)
 	newURL := gfc.rebuildURLWithRemark(info.URL, remark)
-
 	return newURL
 }
 
@@ -999,15 +777,12 @@ func (gfc *GeoFraudChecker) ProcessAllURLs(urls []string) {
 		close(resultChan)
 	}()
 
-	// Save results
 	gfc.saveResults(resultChan)
 }
 
 func (gfc *GeoFraudChecker) saveResults(resultChan chan *ProxyInfo) {
-	// Create multiple output files organized by country and quality
 	timestamp := time.Now().Format("2006-01-02_15-04-05")
 
-	// Main enriched file
 	mainOutputFile := filepath.Join(gfc.config.OutputDir, "enriched_urls.txt")
 	mainFile, err := os.Create(mainOutputFile)
 	if err != nil {
@@ -1015,27 +790,18 @@ func (gfc *GeoFraudChecker) saveResults(resultChan chan *ProxyInfo) {
 	}
 	defer mainFile.Close()
 
-	// Country-specific directories
 	countryDir := filepath.Join(gfc.config.OutputDir, "by_country")
 	os.MkdirAll(countryDir, 0755)
 
-	// Quality-based directories
-	qualityDir := filepath.Join(gfc.config.OutputDir, "by_quality")
-	os.MkdirAll(qualityDir, 0755)
-
-	// Write main file header
-	fmt.Fprintf(mainFile, "# Enriched Proxy URLs with Geo-location and Fraud Scores\n")
+	fmt.Fprintf(mainFile, "# Enriched Proxy URLs with Geo-location\n")
 	fmt.Fprintf(mainFile, "# Generated at: %s\n", time.Now().Format("2006-01-02 15:04:05"))
-	fmt.Fprintf(mainFile, "# Format: Each URL has remark embedded as \"🔥 [Flag] Fraud Score: X [Flag] 🔥\"\n")
-	fmt.Fprintf(mainFile, "# The remark is visible in your VPN client\n\n")
+	fmt.Fprintf(mainFile, "# Format: Each URL has remark embedded as \"🔥 Country 🔥\"\n\n")
 
 	successCount := 0
 	failedCount := 0
 	countryFiles := make(map[string]*os.File)
-	qualityFiles := make(map[string]*os.File)
 
-	// Helper function to get or create country file
-	getCountryFile := func(countryCode string) *os.File {
+	getCountryFile := func(countryCode, countryName string) *os.File {
 		if file, exists := countryFiles[countryCode]; exists {
 			return file
 		}
@@ -1047,56 +813,15 @@ func (gfc *GeoFraudChecker) saveResults(resultChan chan *ProxyInfo) {
 			return nil
 		}
 
-		flag := gfc.getCountryFlag(countryCode)
-		fmt.Fprintf(file, "# %s %s Proxy URLs\n", flag, countryCode)
+		fmt.Fprintf(file, "# %s Proxy URLs\n", countryName)
 		fmt.Fprintf(file, "# Generated at: %s\n\n", time.Now().Format("2006-01-02 15:04:05"))
 
 		countryFiles[countryCode] = file
 		return file
 	}
 
-	// Helper function to get or create quality file
-	getQualityFile := func(score int) *os.File {
-		var quality string
-		switch {
-		case score >= 0 && score <= 20:
-			quality = "excellent"
-		case score <= 40:
-			quality = "good"
-		case score <= 60:
-			quality = "medium"
-		case score <= 80:
-			quality = "poor"
-		default:
-			quality = "very_poor"
-		}
-
-		if file, exists := qualityFiles[quality]; exists {
-			return file
-		}
-
-		filename := filepath.Join(qualityDir, fmt.Sprintf("%s_%s.txt", quality, timestamp))
-		file, err := os.Create(filename)
-		if err != nil {
-			log.Printf("Failed to create quality file for %s: %v", quality, err)
-			return nil
-		}
-
-		fmt.Fprintf(file, "# %s Quality Proxy URLs (Fraud Score: %s)\n", strings.ToUpper(quality), getScoreRange(quality))
-		fmt.Fprintf(file, "# Generated at: %s\n\n", time.Now().Format("2006-01-02 15:04:05"))
-
-		qualityFiles[quality] = file
-		return file
-	}
-
-	// Close all files at the end
 	defer func() {
 		for _, file := range countryFiles {
-			if file != nil {
-				file.Close()
-			}
-		}
-		for _, file := range qualityFiles {
 			if file != nil {
 				file.Close()
 			}
@@ -1113,34 +838,18 @@ func (gfc *GeoFraudChecker) saveResults(resultChan chan *ProxyInfo) {
 		successCount++
 		formattedURL := gfc.formatURLWithInfo(result)
 
-		// Save to main file (just the URL, remark is embedded in URL)
 		fmt.Fprintf(mainFile, "%s\n", formattedURL)
 
-		// Save to country-specific file
-		if countryFile := getCountryFile(result.CountryCode); countryFile != nil {
+		if countryFile := getCountryFile(result.CountryCode, result.Country); countryFile != nil {
 			fmt.Fprintf(countryFile, "%s\n", formattedURL)
 		}
 
-		// Save to quality-specific file
-		if result.FraudScore >= 0 {
-			if qualityFile := getQualityFile(result.FraudScore); qualityFile != nil {
-				fmt.Fprintf(qualityFile, "%s\n", formattedURL)
-			}
-		}
-
-		log.Printf("SUCCESS: %s | %s %s | Score: %d | %.2fs",
-			result.IP, gfc.getCountryFlag(result.CountryCode), result.Country,
-			result.FraudScore, result.ResponseTime)
+		log.Printf("SUCCESS: %s | %s | %.2fs",
+			result.IP, result.Country, result.ResponseTime)
 
 		if successCount%10 == 0 {
 			mainFile.Sync()
-			// Sync country and quality files
 			for _, file := range countryFiles {
-				if file != nil {
-					file.Sync()
-				}
-			}
-			for _, file := range qualityFiles {
 				if file != nil {
 					file.Sync()
 				}
@@ -1160,25 +869,7 @@ func (gfc *GeoFraudChecker) saveResults(resultChan chan *ProxyInfo) {
 	log.Printf("\n📁 Output files:")
 	log.Printf("   Main file: %s", mainOutputFile)
 	log.Printf("   By country: %s", countryDir)
-	log.Printf("   By quality: %s", qualityDir)
 	log.Printf(strings.Repeat("=", 60))
-}
-
-func getScoreRange(quality string) string {
-	switch quality {
-	case "excellent":
-		return "0-20"
-	case "good":
-		return "21-40"
-	case "medium":
-		return "41-60"
-	case "poor":
-		return "61-80"
-	case "very_poor":
-		return "81-100"
-	default:
-		return "Unknown"
-	}
 }
 
 func truncateString(s string, maxLen int) string {
@@ -1193,17 +884,14 @@ func (gfc *GeoFraudChecker) Cleanup() {
 }
 
 func main() {
-	// Get xray path
 	xrayPath := getEnvOrDefault("XRAY_PATH", "")
 
-	// Get current directory for path resolution
 	currentDir, err := os.Getwd()
 	if err != nil {
 		log.Fatalf("Failed to get current directory: %v", err)
 	}
 
 	if xrayPath == "" || xrayPath == "xray" || xrayPath == "xray.exe" {
-		// Try to find xray.exe in current directory
 		possiblePaths := []string{
 			filepath.Join(currentDir, "xray.exe"),
 			filepath.Join(currentDir, "xray"),
@@ -1223,15 +911,14 @@ func main() {
 			log.Fatalf("Xray executable not found in %s. Please place xray.exe in current directory or set XRAY_PATH to full path", currentDir)
 		}
 	} else {
-		// If path is relative, make it absolute
 		if !filepath.IsAbs(xrayPath) {
 			xrayPath = filepath.Join(currentDir, xrayPath)
 		}
 
-		// Verify the provided path exists
 		if info, err := os.Stat(xrayPath); err != nil {
 			log.Fatalf("Xray path does not exist: %s (tried: %s)", getEnvOrDefault("XRAY_PATH", ""), xrayPath)
 		} else if info.IsDir() {
+
 			log.Fatalf("Xray path is a directory, not a file: %s", xrayPath)
 		}
 	}
@@ -1240,7 +927,7 @@ func main() {
 
 	config := &GeoFraudConfig{
 		XrayPath:       xrayPath,
-		MaxWorkers:     10, // Lower workers for stability
+		MaxWorkers:     10,
 		Timeout:        30 * time.Second,
 		RequestTimeout: 30 * time.Second,
 		InputFile:      "./data/working_url/working_all_urls.txt",
@@ -1249,7 +936,6 @@ func main() {
 		EndPort:        31000,
 	}
 
-	// Create output directory
 	if err := os.MkdirAll(config.OutputDir, 0755); err != nil {
 		log.Fatalf("Failed to create output directory: %v", err)
 	}
@@ -1257,13 +943,11 @@ func main() {
 	checker := NewGeoFraudChecker(config)
 	defer checker.Cleanup()
 
-	// Load URLs
 	urls, err := checker.LoadURLsFromFile()
 	if err != nil {
 		log.Fatalf("Failed to load URLs: %v", err)
 	}
 
-	// Process all URLs
 	checker.ProcessAllURLs(urls)
 
 	log.Println("Processing completed!")
