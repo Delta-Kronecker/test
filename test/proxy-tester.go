@@ -77,9 +77,9 @@ func NewDefaultConfig() *Config {
 
 	return &Config{
 		XrayPath:        getEnvOrDefault("XRAY_PATH", ""),
-		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 500),
+		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 200),
 		Timeout:         time.Duration(getEnvIntOrDefault("PROXY_TIMEOUT", 5)) * time.Second,
-		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 500),
+		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 400),
 		IncrementalSave: getEnvBoolOrDefault("PROXY_INCREMENTAL_SAVE", true),
 		DataDir:         dataDir,
 		ConfigDir:       configDir,
@@ -824,22 +824,23 @@ func (pt *ProxyTester) LoadConfigsFromDirectory(dirPath string) ([]ProxyConfig, 
 	log.Printf("Found %d JSON files in: %s", len(files), dirPath)
 
 	var allConfigs []ProxyConfig
-	seenHashes := make(map[string]bool)
 
 	for _, filePath := range files {
-		configs, err := pt.loadConfigCollectorJSON(filePath, seenHashes)
+		config, err := pt.loadConfigCollectorJSON(filePath)
 		if err != nil {
 			log.Printf("Warning: Failed to load %s: %v", filepath.Base(filePath), err)
 			continue
 		}
-		allConfigs = append(allConfigs, configs...)
+		if config != nil {
+			allConfigs = append(allConfigs, *config)
+		}
 	}
 
-	log.Printf("Loaded %d unique configurations from %d files", len(allConfigs), len(files))
+	log.Printf("Loaded %d configurations from %d files", len(allConfigs), len(files))
 	return allConfigs, nil
 }
 
-func (pt *ProxyTester) loadConfigCollectorJSON(filePath string, seenHashes map[string]bool) ([]ProxyConfig, error) {
+func (pt *ProxyTester) loadConfigCollectorJSON(filePath string) (*ProxyConfig, error) {
 	file, err := os.Open(filePath)
 	if err != nil {
 		return nil, err
@@ -926,13 +927,7 @@ func (pt *ProxyTester) loadConfigCollectorJSON(filePath string, seenHashes map[s
 		return nil, fmt.Errorf("invalid config")
 	}
 
-	hash := pt.getConfigHash(&config)
-	if seenHashes[hash] {
-		return nil, nil // Already seen, skip
-	}
-	seenHashes[hash] = true
-
-	return []ProxyConfig{config}, nil
+	return &config, nil
 }
 
 func getString(data map[string]interface{}, key string) string {
