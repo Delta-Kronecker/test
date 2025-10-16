@@ -1,10 +1,12 @@
 name: Build ConfigCollector and Collect Configs
 
 on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+  # push و pull_request غیرفعال شد تا هر تغییری workflow را trigger نکند
+  # push:
+  #   branches: [ main, master ]
+  # pull_request:
+  #   branches: [ main, master ]
+
   workflow_dispatch:  # اجرای دستی از طریق GitHub UI
   schedule:
     # اجرا هر روز ساعت 00:00 UTC (برای بروزرسانی خودکار کانفیگ‌ها)
@@ -48,13 +50,26 @@ jobs:
       run: |
         cmake --build . --config Release -j$(nproc)
 
-    - name: Create Data Directories
+    - name: Verify Data Files Exist
       run: |
+        echo "=== Checking data directory ==="
+        ls -lh data/
+        echo ""
+        echo "=== Sub.txt content preview ==="
+        head -5 data/Sub.txt || echo "Sub.txt not found!"
+        echo ""
+        echo "=== Creating Config directory ==="
         mkdir -p data/Config
+        ls -lh data/
 
     - name: Run ConfigCollector
       working-directory: main/build
       run: |
+        pwd
+        echo "Current directory: $(pwd)"
+        echo "Checking relative path to data:"
+        ls -lh ../../data/Sub.txt || echo "Sub.txt not found at ../../data/Sub.txt"
+        echo ""
         ./ConfigCollector
       timeout-minutes: 30
       continue-on-error: true
