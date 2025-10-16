@@ -37,23 +37,23 @@ jobs:
         cmake --version
 
     - name: Configure CMake
-      working-directory: ConfigCollector/main
+      working-directory: main
       run: |
         mkdir -p build
         cd build
         cmake -DCMAKE_BUILD_TYPE=Release ..
 
     - name: Build Project
-      working-directory: ConfigCollector/main/build
+      working-directory: main/build
       run: |
         cmake --build . --config Release -j$(nproc)
 
     - name: Create Data Directories
       run: |
-        mkdir -p ConfigCollector/data/Config
+        mkdir -p data/Config
 
     - name: Run ConfigCollector
-      working-directory: ConfigCollector/main/build
+      working-directory: main/build
       run: |
         ./ConfigCollector
       timeout-minutes: 30
@@ -62,13 +62,13 @@ jobs:
     - name: Check Generated Configs
       run: |
         echo "=== Generated Config Files ==="
-        ls -lh ConfigCollector/data/Config/ || echo "No config files found"
+        ls -lh data/Config/ || echo "No config files found"
         echo ""
         echo "=== Total Configs Count ==="
-        find ConfigCollector/data/Config/ -name "*.json" | wc -l
+        find data/Config/ -name "*.json" | wc -l
         echo ""
         echo "=== Sample Config (First 5 files) ==="
-        find ConfigCollector/data/Config/ -name "*.json" | head -5 | while read f; do
+        find data/Config/ -name "*.json" | head -5 | while read f; do
           echo "File: $f"
           head -3 "$f"
           echo "---"
@@ -78,7 +78,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: collected-configs-${{ github.run_number }}
-        path: ConfigCollector/data/Config/
+        path: data/Config/
         retention-days: 30
         if-no-files-found: warn
 
@@ -86,8 +86,8 @@ jobs:
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
       continue-on-error: true
       run: |
-        cd ConfigCollector/data/Config
-        tar -czf ../../../configs-$(date +%Y%m%d-%H%M%S).tar.gz *.json
+        cd data/Config
+        tar -czf ../../configs-$(date +%Y%m%d-%H%M%S).tar.gz *.json
 
     - name: Create/Update Configs Archive
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
@@ -106,7 +106,7 @@ jobs:
         echo "## Build Status: ✅ Success" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "## Collected Configs Statistics" >> $GITHUB_STEP_SUMMARY
-        CONFIG_COUNT=$(find ConfigCollector/data/Config/ -name "*.json" 2>/dev/null | wc -l)
+        CONFIG_COUNT=$(find data/Config/ -name "*.json" 2>/dev/null | wc -l)
         echo "- **Total Configs**: $CONFIG_COUNT" >> $GITHUB_STEP_SUMMARY
         echo "- **Run Number**: ${{ github.run_number }}" >> $GITHUB_STEP_SUMMARY
         echo "- **Timestamp**: $(date)" >> $GITHUB_STEP_SUMMARY
@@ -114,6 +114,6 @@ jobs:
         if [ $CONFIG_COUNT -gt 0 ]; then
           echo "## Sample Configs" >> $GITHUB_STEP_SUMMARY
           echo '```json' >> $GITHUB_STEP_SUMMARY
-          find ConfigCollector/data/Config/ -name "*.json" | head -1 | xargs cat >> $GITHUB_STEP_SUMMARY
+          find data/Config/ -name "*.json" | head -1 | xargs cat >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
         fi
