@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
     qDebug() << "=== ConfigCollector Started ===";
 
     // Read Sub.txt
-    QString subFilePath = "../data/Sub.txt";
+    QString subFilePath = "../../data/Sub.txt";
     QString subContent = ReadFileText(subFilePath);
 
     if (subContent.isEmpty()) {
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
             auto json = bean->ToJson();
             auto jsonStr = QJsonObject2QString(json, false);
 
-            QString filename = QString("../data/Config/config_%1.json").arg(configIndex, 4, 10, QChar('0'));
+            QString filename = QString("../../data/Config/config_%1.json").arg(configIndex, 4, 10, QChar('0'));
 
             if (WriteFileText(filename, jsonStr)) {
                 qDebug() << "  Saved:" << filename << "-" << bean->name;
