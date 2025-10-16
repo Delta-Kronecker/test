@@ -98,7 +98,7 @@ jobs:
         xray version
 
     - name: Build ProxyTester
-      working-directory: xray_test
+      working-directory: test
       run: |
         echo "=== Building ProxyTester ==="
         go build -o proxy-tester proxy-tester.go
@@ -110,11 +110,10 @@ jobs:
         mkdir -p data/working_url
 
     - name: Run ProxyTester
-      working-directory: xray_test
+      working-directory: test
       run: |
         echo "=== Running ProxyTester ==="
         ./proxy-tester
-      timeout-minutes: 60
       continue-on-error: true
 
     - name: Check Test Results
