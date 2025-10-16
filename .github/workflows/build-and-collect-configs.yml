@@ -135,30 +135,31 @@ jobs:
           echo "working_url directory not found"
         fi
 
-    - name: Upload Working Configs (URL Format)
+    - name: Commit and Push Working Configs to Repository
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+
+        # Add working configs to git
+        git add data/working_url/
+
+        # Check if there are changes
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "🤖 Auto-update: Working proxy configs ($(date '+%Y-%m-%d %H:%M:%S'))"
+          git push
+          echo "✅ Successfully pushed working configs to repository"
+        fi
+
+    - name: Upload Working Configs as Artifact (Backup)
       uses: actions/upload-artifact@v4
       with:
         name: working-configs-${{ github.run_number }}
         path: data/working_url/
-        retention-days: 90
+        retention-days: 30
         if-no-files-found: warn
-
-    - name: Create Working Configs Archive
-      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-      run: |
-        if [ -d "data/working_url" ] && [ "$(ls -A data/working_url)" ]; then
-          cd data/working_url
-          tar -czf ../../working-configs-$(date +%Y%m%d-%H%M%S).tar.gz *.txt
-        fi
-
-    - name: Upload Archive
-      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-      uses: actions/upload-artifact@v4
-      with:
-        name: working-configs-archive
-        path: working-configs-*.tar.gz
-        retention-days: 180
-        if-no-files-found: ignore
 
     - name: Final Summary Report
       if: always()
