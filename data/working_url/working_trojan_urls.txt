@@ -1,0 +1,16 @@
+# Working TROJAN Configurations (URL Format)
+# Generated at: 2025-10-16 22:59:20
+# Format: Each line contains one working configuration as URL
+
+# Tested at: 2025-10-16 22:59:24 | Response: 0.893s | IP: 2a05:d012:bc9:3000:2acc:655f:b169:5391
+trojan://telegram-id-privatevpns@13.38.156.135:22222?security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
+
+# Tested at: 2025-10-16 22:59:25 | Response: 1.284s | IP: 154.93.37.169
+trojan://N0R3eiSMlv8UybTC@154.93.37.169:16526?security=tls&sni=glowingpickle.bananatornado.click#%F0%9F%94%A5
+
+# Tested at: 2025-10-16 22:59:26 | Response: 0.514s | IP: 2a05:d012:bc9:3000:495e:9fd7:be07:acca
+trojan://telegram-id-privatevpns@51.45.11.113:22222?security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
+
+# Tested at: 2025-10-16 22:59:59 | Response: 1.620s | IP: 63.179.213.209
+trojan://telegram-id-privatevpns@63.179.213.209:22222?security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
+
