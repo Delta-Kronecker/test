@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt
+https://raw.githubusercontent.com/Delta-Kronecker/v2ray-config-collector/refs/heads/main/data/working_url/working_all_urls.txt
