@@ -1,0 +1,119 @@
+name: Build ConfigCollector and Collect Configs
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:  # اجرای دستی از طریق GitHub UI
+  schedule:
+    # اجرا هر روز ساعت 00:00 UTC (برای بروزرسانی خودکار کانفیگ‌ها)
+    - cron: '0 0 * * *'
+
+jobs:
+  build-and-collect:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Install Qt6
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: '6.5.*'
+        modules: 'qtnetworkauth'
+        cache: true
+
+    - name: Install CMake and Build Tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake build-essential
+
+    - name: Verify Qt Installation
+      run: |
+        echo "Qt6 Path: $Qt6_DIR"
+        qmake --version
+        cmake --version
+
+    - name: Configure CMake
+      working-directory: ConfigCollector/main
+      run: |
+        mkdir -p build
+        cd build
+        cmake -DCMAKE_BUILD_TYPE=Release ..
+
+    - name: Build Project
+      working-directory: ConfigCollector/main/build
+      run: |
+        cmake --build . --config Release -j$(nproc)
+
+    - name: Create Data Directories
+      run: |
+        mkdir -p ConfigCollector/data/Config
+
+    - name: Run ConfigCollector
+      working-directory: ConfigCollector/main/build
+      run: |
+        ./ConfigCollector
+      timeout-minutes: 30
+      continue-on-error: true
+
+    - name: Check Generated Configs
+      run: |
+        echo "=== Generated Config Files ==="
+        ls -lh ConfigCollector/data/Config/ || echo "No config files found"
+        echo ""
+        echo "=== Total Configs Count ==="
+        find ConfigCollector/data/Config/ -name "*.json" | wc -l
+        echo ""
+        echo "=== Sample Config (First 5 files) ==="
+        find ConfigCollector/data/Config/ -name "*.json" | head -5 | while read f; do
+          echo "File: $f"
+          head -3 "$f"
+          echo "---"
+        done
+
+    - name: Upload Config Files as Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: collected-configs-${{ github.run_number }}
+        path: ConfigCollector/data/Config/
+        retention-days: 30
+        if-no-files-found: warn
+
+    - name: Upload Configs to Release (Optional)
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      continue-on-error: true
+      run: |
+        cd ConfigCollector/data/Config
+        tar -czf ../../../configs-$(date +%Y%m%d-%H%M%S).tar.gz *.json
+
+    - name: Create/Update Configs Archive
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      uses: actions/upload-artifact@v4
+      with:
+        name: configs-archive-latest
+        path: configs-*.tar.gz
+        retention-days: 90
+        if-no-files-found: ignore
+
+    - name: Summary Report
+      if: always()
+      run: |
+        echo "# ConfigCollector Build Report" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "## Build Status: ✅ Success" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "## Collected Configs Statistics" >> $GITHUB_STEP_SUMMARY
+        CONFIG_COUNT=$(find ConfigCollector/data/Config/ -name "*.json" 2>/dev/null | wc -l)
+        echo "- **Total Configs**: $CONFIG_COUNT" >> $GITHUB_STEP_SUMMARY
+        echo "- **Run Number**: ${{ github.run_number }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Timestamp**: $(date)" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        if [ $CONFIG_COUNT -gt 0 ]; then
+          echo "## Sample Configs" >> $GITHUB_STEP_SUMMARY
+          echo '```json' >> $GITHUB_STEP_SUMMARY
+          find ConfigCollector/data/Config/ -name "*.json" | head -1 | xargs cat >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+        fi
