@@ -1,12 +1,6 @@
 name: Collect and Test Proxy Configs
 
 on:
-  # push و pull_request غیرفعال شد تا هر تغییری workflow را trigger نکند
-  # push:
-  #   branches: [ main, master ]
-  # pull_request:
-  #   branches: [ main, master ]
-
   workflow_dispatch:  # اجرای دستی از طریق GitHub UI
   schedule:
     # اجرا هر روز ساعت 00:00 UTC (برای بروزرسانی خودکار کانفیگ‌ها)
@@ -15,6 +9,8 @@ on:
 jobs:
   collect-and-test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # اجازه write برای push کردن
 
     steps:
     - name: Checkout Repository
