@@ -1,4 +1,4 @@
-name: Build ConfigCollector and Collect Configs
+name: Collect and Test Proxy Configs
 
 on:
   # push و pull_request غیرفعال شد تا هر تغییری workflow را trigger نکند
@@ -13,7 +13,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  build-and-collect:
+  collect-and-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -80,55 +80,123 @@ jobs:
         ls -lh data/Config/ || echo "No config files found"
         echo ""
         echo "=== Total Configs Count ==="
-        find data/Config/ -name "*.json" | wc -l
-        echo ""
-        echo "=== Sample Config (First 5 files) ==="
-        find data/Config/ -name "*.json" | head -5 | while read f; do
-          echo "File: $f"
-          head -3 "$f"
-          echo "---"
-        done
+        CONFIG_COUNT=$(find data/Config/ -name "*.json" 2>/dev/null | wc -l)
+        echo "Total configs collected: $CONFIG_COUNT"
 
-    - name: Upload Config Files as Artifact
+    - name: Install Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.21'
+
+    - name: Install Xray-core
+      run: |
+        echo "=== Installing Xray-core ==="
+        wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
+        unzip -q Xray-linux-64.zip -d xray-core
+        chmod +x xray-core/xray
+        sudo mv xray-core/xray /usr/local/bin/xray
+        xray version
+
+    - name: Build ProxyTester
+      working-directory: xray_test
+      run: |
+        echo "=== Building ProxyTester ==="
+        go build -o proxy-tester proxy-tester.go
+        ls -lh proxy-tester
+
+    - name: Create Working Directories
+      run: |
+        mkdir -p data/working_json
+        mkdir -p data/working_url
+
+    - name: Run ProxyTester
+      working-directory: xray_test
+      run: |
+        echo "=== Running ProxyTester ==="
+        ./proxy-tester
+      timeout-minutes: 60
+      continue-on-error: true
+
+    - name: Check Test Results
+      run: |
+        echo "=== Working Configurations ==="
+        if [ -d "data/working_url" ]; then
+          echo "Files in working_url:"
+          ls -lh data/working_url/ || echo "No files found"
+          echo ""
+          echo "=== Total Working Configs ==="
+          if [ -f "data/working_url/working_all_urls.txt" ]; then
+            WORKING_COUNT=$(grep -v "^#" data/working_url/working_all_urls.txt | grep -c "://")
+            echo "Total working configs: $WORKING_COUNT"
+          else
+            echo "No working configs file found"
+          fi
+        else
+          echo "working_url directory not found"
+        fi
+
+    - name: Upload Working Configs (URL Format)
       uses: actions/upload-artifact@v4
       with:
-        name: collected-configs-${{ github.run_number }}
-        path: data/Config/
-        retention-days: 30
+        name: working-configs-${{ github.run_number }}
+        path: data/working_url/
+        retention-days: 90
         if-no-files-found: warn
 
-    - name: Upload Configs to Release (Optional)
+    - name: Create Working Configs Archive
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-      continue-on-error: true
       run: |
-        cd data/Config
-        tar -czf ../../configs-$(date +%Y%m%d-%H%M%S).tar.gz *.json
+        if [ -d "data/working_url" ] && [ "$(ls -A data/working_url)" ]; then
+          cd data/working_url
+          tar -czf ../../working-configs-$(date +%Y%m%d-%H%M%S).tar.gz *.txt
+        fi
 
-    - name: Create/Update Configs Archive
+    - name: Upload Archive
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
       uses: actions/upload-artifact@v4
       with:
-        name: configs-archive-latest
-        path: configs-*.tar.gz
-        retention-days: 90
+        name: working-configs-archive
+        path: working-configs-*.tar.gz
+        retention-days: 180
         if-no-files-found: ignore
 
-    - name: Summary Report
+    - name: Final Summary Report
       if: always()
       run: |
-        echo "# ConfigCollector Build Report" >> $GITHUB_STEP_SUMMARY
+        echo "# 🚀 Proxy Testing Complete" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "## Build Status: ✅ Success" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "## Collected Configs Statistics" >> $GITHUB_STEP_SUMMARY
+
+        # ConfigCollector Stats
         CONFIG_COUNT=$(find data/Config/ -name "*.json" 2>/dev/null | wc -l)
-        echo "- **Total Configs**: $CONFIG_COUNT" >> $GITHUB_STEP_SUMMARY
+        echo "## 📥 ConfigCollector Results" >> $GITHUB_STEP_SUMMARY
+        echo "- **Total Configs Collected**: $CONFIG_COUNT" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+
+        # ProxyTester Stats
+        echo "## ✅ ProxyTester Results" >> $GITHUB_STEP_SUMMARY
+        if [ -f "data/working_url/working_all_urls.txt" ]; then
+          WORKING_COUNT=$(grep -v "^#" data/working_url/working_all_urls.txt | grep -c "://" || echo "0")
+          SUCCESS_RATE=$(echo "scale=2; $WORKING_COUNT * 100 / $CONFIG_COUNT" | bc || echo "0")
+          echo "- **Working Configs**: $WORKING_COUNT" >> $GITHUB_STEP_SUMMARY
+          echo "- **Success Rate**: ${SUCCESS_RATE}%" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Protocol breakdown
+          echo "### Protocol Breakdown:" >> $GITHUB_STEP_SUMMARY
+          for protocol in vmess vless trojan shadowsocks; do
+            if [ -f "data/working_url/working_${protocol}_urls.txt" ]; then
+              COUNT=$(grep -v "^#" "data/working_url/working_${protocol}_urls.txt" | grep -c "://" || echo "0")
+              if [ "$COUNT" -gt 0 ]; then
+                echo "- **${protocol^^}**: $COUNT" >> $GITHUB_STEP_SUMMARY
+              fi
+            fi
+          done
+        else
+          echo "- **Working Configs**: 0 (No working configs found)" >> $GITHUB_STEP_SUMMARY
+        fi
+
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "## 📊 Metadata" >> $GITHUB_STEP_SUMMARY
         echo "- **Run Number**: ${{ github.run_number }}" >> $GITHUB_STEP_SUMMARY
         echo "- **Timestamp**: $(date)" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        if [ $CONFIG_COUNT -gt 0 ]; then
-          echo "## Sample Configs" >> $GITHUB_STEP_SUMMARY
-          echo '```json' >> $GITHUB_STEP_SUMMARY
-          find data/Config/ -name "*.json" | head -1 | xargs cat >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-        fi
+        echo "- **Workflow**: Build → Collect → Test → Filter" >> $GITHUB_STEP_SUMMARY
