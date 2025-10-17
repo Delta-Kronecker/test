@@ -1,16 +1,85 @@
 # Working TROJAN Configurations (URL Format)
-# Generated at: 2025-10-16 22:59:20
+# Generated at: 2025-10-16 23:14:22
 # Format: Each line contains one working configuration as URL
 
-# Tested at: 2025-10-16 22:59:24 | Response: 0.893s | IP: 2a05:d012:bc9:3000:2acc:655f:b169:5391
-trojan://telegram-id-privatevpns@13.38.156.135:22222?security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
+# Tested at: 2025-10-16 23:28:30 | Response: 1.498s | IP: 154.93.37.169
+trojan://N0R3eiSMlv8UybTC@154.93.37.169:16526?security=tls&sni=glowingpickle.bananatornado.click#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%40FreakConfig
 
-# Tested at: 2025-10-16 22:59:25 | Response: 1.284s | IP: 154.93.37.169
-trojan://N0R3eiSMlv8UybTC@154.93.37.169:16526?security=tls&sni=glowingpickle.bananatornado.click#%F0%9F%94%A5
+# Tested at: 2025-10-16 23:34:31 | Response: 1.259s | IP: 165.154.112.107
+trojan://1640ef52-2db0-44ab-b3f3-8690b762ebc9@165.154.112.107:12000?security=tls&sni=aliyun.com#%F0%9F%87%AD%F0%9F%87%B0HK-165.154.112.107-0654
 
-# Tested at: 2025-10-16 22:59:26 | Response: 0.514s | IP: 2a05:d012:bc9:3000:495e:9fd7:be07:acca
-trojan://telegram-id-privatevpns@51.45.11.113:22222?security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
+# Tested at: 2025-10-16 23:35:14 | Response: 0.852s | IP: 167.160.10.54
+trojan://liCV_rq-BftxwXpM@167.160.10.54:12184?security=tls#%5B%F0%9F%87%B9%F0%9F%87%B7%5Dt.me%2FConfigsHub
 
-# Tested at: 2025-10-16 22:59:59 | Response: 1.620s | IP: 63.179.213.209
-trojan://telegram-id-privatevpns@63.179.213.209:22222?security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
+# Tested at: 2025-10-16 23:38:23 | Response: 0.272s | IP: 104.28.158.136
+trojan://juzi@172.66.45.35:443?host=juzi8186-sr1.pages.dev&security=tls&sni=juzi8186-sr1.pages.dev&type=ws#%F0%9F%94%92
+
+# Tested at: 2025-10-16 23:38:23 | Response: 0.897s | IP: 104.28.163.76
+trojan://auto@172.66.45.2:443?host=dcf741e8.epeius-2gy.pages.dev&security=tls&sni=dcf741e8.epeius-2gy.pages.dev&type=ws#%40vpnclashfa+-+1999
+
+# Tested at: 2025-10-16 23:42:56 | Response: 1.153s | IP: 176.97.68.153
+trojan://installshield@176.97.68.153:8443?security=tls&sni=176.97.68.153#%F0%9F%87%A6%F0%9F%87%BAAU-176.97.68.153-5831
+
+# Tested at: 2025-10-16 23:58:16 | Response: 0.366s | IP: 2.56.125.113
+trojan://vpn@2.56.125.113:2025?host=dns.google.com&path=%2F&security=none&type=ws#%F0%9F%87%B5%F0%9F%87%B1+Poland+-+Warsaw+%F0%9F%8C%8D+TR-WS-NONE+4%E2%83%A3
+
+# Tested at: 2025-10-17 00:00:31 | Response: 0.613s | IP: 212.113.102.67
+trojan://testme@212.113.102.67:2025?host=dns.google.com&path=%2F&security=none&type=ws#%F0%9F%87%B8%F0%9F%87%AA+Sweden+-+Stockholm+%F0%9F%8C%8D+TR-WS-NONE+4%E2%83%A3
+
+# Tested at: 2025-10-17 00:03:02 | Response: 0.578s | IP: 23.162.152.30
+trojan://installshield@23.162.152.30:8443?security=tls&sni=23.162.152.30#%F0%9F%87%AB%F0%9F%87%B7FR-23.162.152.30-5524
+
+# Tested at: 2025-10-17 00:12:35 | Response: 0.737s | IP: 38.180.249.177
+trojan://installshield@38.180.249.177:8443?security=tls&sni=38.180.249.177#%F0%9F%87%B8%F0%9F%87%AC+Singapore+-+Singapore+%F0%9F%8C%8F+TR-TCP-TLS+4%E2%83%A3
+
+# Tested at: 2025-10-17 00:12:36 | Response: 0.942s | IP: 38.180.106.124
+trojan://installshield@38.180.106.124:8443?security=tls#SG_speednode_0020
+
+# Tested at: 2025-10-17 00:12:37 | Response: 1.888s | IP: 104.28.156.216
+trojan://trojan@38.207.133.204:10002?path=%252F%253Fed%3D2560&security=tls&sni=qingming-b08.pages.dev&type=ws#%F0%9F%87%AD%F0%9F%87%B0HK-38.207.133.204-0626
+
+# Tested at: 2025-10-17 00:17:25 | Response: 0.244s | IP: 104.28.158.137
+trojan://trojan@45.192.222.112:8443?host=store.timimi.dpdns.org&path=%252F%253Fed%3D2560&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%87%AD%F0%9F%87%B0+%E5%85%B3%E6%B3%A8TG%40dafei_di+%E9%A6%99%E6%B8%AF+09
+
+# Tested at: 2025-10-17 00:18:57 | Response: 0.741s | IP: 45.82.14.144
+trojan://vpn@45.82.14.144:2025?host=dns.google.com&path=%2F&security=none&type=ws#%F0%9F%87%B7%F0%9F%87%BA+Russian+Federation+-+NA+%F0%9F%8C%8D+TR-WS-NONE+4%E2%83%A3
+
+# Tested at: 2025-10-17 00:25:01 | Response: 0.562s | IP: 2a05:d012:bc9:3000:b987:526c:861a:f070
+trojan://telegram-id-privatevpns@51.45.11.113:22222?security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7+FR+%7C+%F0%9F%94%92+TROJAN+%7C+%40privatevpns+%5B15%5D
+
+# Tested at: 2025-10-17 00:29:43 | Response: 0.444s | IP: 2a05:541:103:aa::1
+trojan://vpn@62.133.60.83:2025?host=dns.google.com&path=%2F&security=none&type=ws#%F0%9F%87%A9%F0%9F%87%AA+Germany+-+Frankfurt+am+Main+%F0%9F%8C%8D+TR-WS-NONE+4%E2%83%A3
+
+# Tested at: 2025-10-17 00:31:14 | Response: 0.433s | IP: 63.180.134.234
+trojan://telegram-id-privatevpns@63.180.134.234:22222?security=tls&sni=trojan.burgerip.co.uk#%28S102%29%F0%9F%87%A9%F0%9F%87%AAt.me%2FPrivateVPNs
+
+# Tested at: 2025-10-17 00:35:43 | Response: 0.463s | IP: 79.137.204.130
+trojan://vpn@79.137.204.130:2025?host=dns.google.com&path=%2F&security=none&type=ws#%F0%9F%87%B3%F0%9F%87%B1+Netherlands+-+Amsterdam+%F0%9F%8C%8D+TR-WS-NONE+4%E2%83%A3
+
+# Tested at: 2025-10-17 00:40:34 | Response: 0.539s | IP: 104.28.159.122
+trojan://trojan@91.193.58.0:443?host=wahaha.yingyangkuaixian.dpdns.org&path=%252F&security=tls&sni=wahaha.yingyangkuaixian.dpdns.org&type=ws#%40vpnclashfa+-+2347
+
+# Tested at: 2025-10-17 00:47:34 | Response: 1.111s | IP: 5.255.102.41
+trojan://02XtoczO7V@creativecommons.org:443?host=mooshali.arshiacomplus.dpdns.org&path=%2Fhishhhh123&security=tls&sni=mooshali.arshiacomplus.dpdns.org&type=ws#IR-%40IRAN_V2RAY1
+
+# Tested at: 2025-10-17 00:48:08 | Response: 0.196s | IP: 104.28.153.136
+trojan://auto@dcf741e8.epeius-2gy.pages.dev:443?path=%252F%253Fed%3D2560&security=tls&sni=dcf741e8.epeius-2gy.pages.dev&type=ws#%F0%9F%8F%81RELAY-172.66.45.2-0599
+
+# Tested at: 2025-10-17 00:53:19 | Response: 0.754s | IP: 2a09:bac5:79db:1800::264:5c
+trojan://er668@kfjdi.pages.dev:443?path=%252F&security=tls&type=ws#%5BTrojan+08%5D+%40ResistalProxy
+
+# Tested at: 2025-10-17 00:53:22 | Response: 4.015s | IP: 23.94.37.117
+trojan://juzi@juzi8186-sr1.pages.dev:443?host=juzi8186-sr1.pages.dev&path=%252F%253Fed%3D2560&security=tls&sni=juzi8186-sr1.pages.dev&type=ws#%5B%F0%9F%87%A8%F0%9F%87%A6%5Dt.me%2FMoftConfig
+
+# Tested at: 2025-10-17 00:59:17 | Response: 0.800s | IP: 5.255.102.41
+trojan://02XtoczO7V@tm-azarbayjan.vip.1.pages.dev:443?host=mooshali.arshiacomplus.dpdns.org&path=%2Fhishhhh123&security=tls&sni=mooshali.arshiacomplus.dpdns.org&type=ws#%40Azarbayjab1+%28TROJAN%29
+
+# Tested at: 2025-10-17 01:02:28 | Response: 0.100s | IP: 104.28.153.139
+trojan://trojan@www.digitalocean.com:443?host=azadnet-9ya.pages.dev&path=%252F%253Fed%3D2560&security=tls&sni=azadnet-9ya.pages.dev&type=ws#%F0%9F%91%89%F0%9F%86%94%40v2ray_configs_pool%F0%9F%93%A1%F0%9F%87%A8%F0%9F%87%A6%C2%AE%EF%B8%8FCanada%C2%A9%EF%B8%8FToronto%F0%9F%85%BF%EF%B8%8Fping%3A29.24ms
+
+# Tested at: 2025-10-17 01:08:11 | Response: 0.246s | IP: 2a09:bac6:d684:1046::19f:c0
+trojan://trojan@109.234.211.66:8443?host=store.timimi.dpdns.org&path=%252F&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%92%8D30%40oneclickvpnkeys
+
+# Tested at: 2025-10-17 01:10:56 | Response: 0.477s | IP: 2a05:d012:bc9:3000:54e4:8c72:7e52:bee1
+trojan://telegram-id-privatevpns@13.38.156.135:22222?security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7+FR+%7C+%F0%9F%94%92+TROJAN+%7C+%40privatevpns+%5B16%5D
 
