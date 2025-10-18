@@ -77,9 +77,9 @@ func NewDefaultConfig() *Config {
 
 	return &Config{
 		XrayPath:        getEnvOrDefault("XRAY_PATH", ""),
-		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 2000),
-		Timeout:         time.Duration(getEnvIntOrDefault("PROXY_TIMEOUT", 5)) * time.Second,
-		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 2000),
+		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 150),
+		Timeout:         time.Duration(getEnvIntOrDefault("PROXY_TIMEOUT", 10)) * time.Second,
+		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 300),
 		IncrementalSave: getEnvBoolOrDefault("PROXY_INCREMENTAL_SAVE", true),
 		DataDir:         dataDir,
 		ConfigDir:       configDir,
