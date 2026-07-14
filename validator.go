@@ -685,7 +685,7 @@ func tryHTTP(ctx context.Context, client *http.Client, testURLs []string, maxRet
 // ── buildXrayConfig ──────────────────────────────────────────────────────────
 
 func buildXrayConfig(outboundJSON string, port int) string {
-	return fmt.Sprintf(`{"log":{"loglevel":"warning"},"dns":{"servers":["8.8.8.8","localhost"]},"inbounds":[{"port":%d,"listen":"127.0.0.1","protocol":"http","tag":"http-in"}],"outbounds":[%s,{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}]}`,
+	return fmt.Sprintf(`{"log":{"loglevel":"warning"},"dns":{"servers":["8.8.8.8","localhost"]},"inbounds":[{"port":%d,"listen":"127.0.0.1","protocol":"http","tag":"http-in"}],"outbounds":[%s,{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"rules":[{"type":"field","inboundTag":["http-in"],"outboundTag":"proxy"}]}}`,
 		port, outboundJSON)
 }
 

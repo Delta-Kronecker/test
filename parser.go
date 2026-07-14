@@ -238,12 +238,26 @@ func parseVLess(raw string) (string, string) {
 	host := q.Get("host")
 	grpcService := first(q.Get("serviceName"), q.Get("path"))
 
-	tlsType, tlsSettingsJSON := vlessTLSSettings(security, sni, fp, alpnStr, q)
-	streamSettings := buildXrayStreamSettings(network, path, host, grpcService, tlsType, sni, fp, "", "", "")
-	if tlsSettingsJSON != "" {
-		streamSettings = strings.TrimSuffix(streamSettings, "}")
-		streamSettings += "," + tlsSettingsJSON + "}"
+	tlsType := ""
+	realityPubKey := ""
+	realityShortID := ""
+	switch security {
+	case "tls", "xtls":
+		tlsType = "tls"
+	case "reality":
+		pbk := q.Get("pbk")
+		if pbk == "" {
+			return "", "reality: missing public key (pbk)"
+		}
+		tlsType = "reality"
+		realityPubKey = pbk
+		realityShortID = q.Get("sid")
+	case "none", "":
+	default:
+		return "", "unknown security: " + security
 	}
+
+	streamSettings := buildXrayStreamSettings(network, path, host, grpcService, tlsType, sni, fp, realityPubKey, realityShortID, alpnStr)
 
 	flowJSON := ""
 	if flow != "" {
@@ -254,7 +268,7 @@ func parseVLess(raw string) (string, string) {
 		server, port, uuid, flowJSON, streamSettings), ""
 }
 
-func vlessTLSSettings(security, sni, fp, alpnStr string, q url.Values) (string, string) {
+func vlessTLSSettingsUNUSED(security, sni, fp, alpnStr string, q url.Values) (string, string) {
 	switch security {
 	case "tls", "xtls":
 		tlsSettings := fmt.Sprintf(`"security":"tls","tlsSettings":{"serverName":%q,"allowInsecure":true`, sni)
@@ -639,7 +653,15 @@ func buildXrayStreamSettings(network, path, host, grpcService, tlsType, sni, fp 
 	if networkSettings == "" && tlsSettings == "" {
 		return ""
 	}
-	return fmt.Sprintf(`,"streamSettings":{%s%s}`, strings.TrimPrefix(networkSettings, ","), tlsSettings)
+	// networkSettings starts with ",", tlsSettings starts with ","
+	// Trim leading comma from tlsSettings if networkSettings is empty
+	inner := strings.TrimPrefix(networkSettings, ",")
+	if inner == "" {
+		inner = strings.TrimPrefix(tlsSettings, ",")
+	} else {
+		inner += tlsSettings
+	}
+	return fmt.Sprintf(`,"streamSettings":{%s}`, inner)
 }
 
 // ── URL helpers ───────────────────────────────────────────────────────────────
