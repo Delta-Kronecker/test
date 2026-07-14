@@ -264,14 +264,14 @@ func parseVLess(raw string) (string, string) {
 		flowJSON = fmt.Sprintf(`,"flow":%q`, flow)
 	}
 
-	return fmt.Sprintf(`{"protocol":"vless","settings":{"vnext":[{"address":%q,"port":%d,"users":[{"id":%q%s}]}]}%s,"tag":"proxy"}`,
+	return fmt.Sprintf(`{"protocol":"vless","settings":{"vnext":[{"address":%q,"port":%d,"users":[{"id":%q,"encryption":"none"%s}]}]}%s,"tag":"proxy"}`,
 		server, port, uuid, flowJSON, streamSettings), ""
 }
 
 func vlessTLSSettingsUNUSED(security, sni, fp, alpnStr string, q url.Values) (string, string) {
 	switch security {
 	case "tls", "xtls":
-		tlsSettings := fmt.Sprintf(`"security":"tls","tlsSettings":{"serverName":%q,"allowInsecure":true`, sni)
+		tlsSettings := fmt.Sprintf(`"security":"tls","tlsSettings":{"serverName":%q`, sni)
 		if fp != "" {
 			tlsSettings += fmt.Sprintf(`,"fingerprint":%q`, fp)
 		}
@@ -636,7 +636,7 @@ func buildXrayStreamSettings(network, path, host, grpcService, tlsType, sni, fp 
 	tlsSettings := ""
 	switch tlsType {
 	case "tls":
-		tlsSettings = fmt.Sprintf(`,"security":"tls","tlsSettings":{"serverName":%q,"allowInsecure":true`, sni)
+		tlsSettings = fmt.Sprintf(`,"security":"tls","tlsSettings":{"serverName":%q`, sni)
 		if fp != "" {
 			tlsSettings += fmt.Sprintf(`,"fingerprint":%q`, fp)
 		}
