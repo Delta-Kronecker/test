@@ -1,0 +1,107 @@
+name: Update Configs
+permissions: write-all
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.21'
+        cache: true
+
+    - name: Download Xray
+      run: |
+        XRAY_VERSION="1.8.24"
+        echo "Downloading Xray-core v${XRAY_VERSION}"
+        wget -q "https://github.com/XTLS/Xray-core/releases/download/v${XRAY_VERSION}/Xray-linux-64.zip"
+        unzip -o "Xray-linux-64.zip" xray -d .
+        chmod +x ./xray
+        rm -f "Xray-linux-64.zip" LICENSE README.md
+        ./xray version
+
+    - name: Build
+      run: |
+        export GOPROXY=https://goproxy.io,direct
+        go mod tidy
+        go build -ldflags="-s -w" -o aggregator .
+
+    - name: Run
+      run: |
+        ulimit -n 65535
+        mkdir -p logs
+        ./aggregator
+
+    - name: Verify
+      run: |
+        echo "=== Config Output ==="
+        ls -lh config/
+        ls -lh config/protocols/ 2>/dev/null || true
+        ls -lh config/batches/v2ray/ 2>/dev/null || true
+        ls -lh config/batches/clash/ 2>/dev/null || true
+        ls -lh config/batches/clash_advanced/ 2>/dev/null || true
+
+        if [ -f "config/all_configs.txt" ]; then
+          echo "Total V2ray configs: $(wc -l < config/all_configs.txt)"
+        fi
+        if [ -f "config/clash.yaml" ]; then
+          CLASH_COUNT=$(grep -c '  - name:' config/clash.yaml 2>/dev/null || echo 0)
+          echo "Clash standard proxies: $CLASH_COUNT"
+        fi
+        if [ -f "config/clash_advanced.yaml" ]; then
+          ADV_COUNT=$(grep -c '  - name:' config/clash_advanced.yaml 2>/dev/null || echo 0)
+          echo "Clash advanced proxies: $ADV_COUNT"
+        fi
+        echo "V2ray batches: $(ls config/batches/v2ray/*.txt 2>/dev/null | wc -l)"
+        echo "Clash standard batches: $(ls config/batches/clash/*.yaml 2>/dev/null | wc -l)"
+        echo "Clash advanced batches: $(ls config/batches/clash_advanced/*.yaml 2>/dev/null | wc -l)"
+
+        echo "=== Logs ==="
+        ls -lh logs/ 2>/dev/null || echo "No logs directory"
+        if ls logs/*.log 2>/dev/null | head -1 | xargs -I{} tail -30 {}; then
+          true
+        fi
+
+    - name: Upload Validation Logs
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: validation-logs-${{ github.run_number }}
+        path: logs/
+        retention-days: 14
+        if-no-files-found: warn
+
+    - name: Commit and Push
+      run: |
+            git config user.name "GitHub Actions"
+            git config user.email "actions@github.com"
+            
+            
+            # Pull latest changes cleanly
+            git pull origin main --rebase --autostash
+            
+            # Add freshly generated files (only if they exist)
+            git add config/ 2>/dev/null || true
+            git add README.md 2>/dev/null || true
+            
+            # Only commit if there are changes
+            if ! git diff --staged --quiet; then
+              git commit -m "Update configs [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+              git push origin main
+            else
+              echo "No changes to commit"
+            fi
