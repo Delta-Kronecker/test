@@ -350,129 +350,161 @@ func validateAll(lines []string) ([]configResult, []string) {
 			continue
 		}
 
-		// ── Phase 2: Full xray validation ──────────────────────────────────────
+		// ── Phase 2: Full xray validation (with retry) ─────────────────────────
 		protoTotal := len(pingPassed)
-		totalBatches := (protoTotal + batchSize - 1) / batchSize
 		protoStart := time.Now()
-
-		fmt.Printf("🔵 [%s] Full validation — %d configs in %d batches of %d\n",
-			strings.ToUpper(proto), protoTotal, totalBatches, batchSize)
-
-		if gLog != nil {
-			gLog.logProtoStart(proto, protoTotal)
+		var protoPassed int64
+		maxRetries := v.MaxRetries
+		if maxRetries < 1 {
+			maxRetries = 1
 		}
 
-		var protoPassed int64
+		passedSet := make(map[string]bool)
+		failedSet := make(map[string]bool)
+		currentConfigs := pingPassed
 
-		for batchIdx := 0; batchIdx < totalBatches; batchIdx++ {
-			start := batchIdx * batchSize
-			end := start + batchSize
-			if end > protoTotal {
-				end = protoTotal
+		for attempt := 0; attempt <= maxRetries; attempt++ {
+			if len(currentConfigs) == 0 {
+				break
 			}
-			batch := pingPassed[start:end]
-			actualBatchSize := len(batch)
+			totalBatches := (len(currentConfigs) + batchSize - 1) / batchSize
 
-			localPorts := make(chan int, actualBatchSize)
-			for i := 0; i < actualBatchSize; i++ {
-				localPorts <- v.BasePort + i
-			}
-
-			bt := &batchTracker{}
-
-			type workerResult struct {
-				line string
-				res  validationResult
-			}
-			workerResults := make([]workerResult, actualBatchSize)
-
-			var wg sync.WaitGroup
-			batchStart := time.Now()
-
-			for i, line := range batch {
-				wg.Add(1)
-				go func(idx int, l string) {
-					defer wg.Done()
-					globalIdx := atomic.AddInt64(&testedCount, 1)
-					res := validateWithTracker(l, proto, localPorts, bt)
-					if gLog != nil {
-						gLog.logResult(globalIdx, proto, l, res)
-					}
-					workerResults[idx] = workerResult{line: l, res: res}
-				}(i, line)
+			if attempt == 0 {
+				fmt.Printf("🔵 [%s] Full validation — %d configs in %d batches of %d\n",
+					strings.ToUpper(proto), len(currentConfigs), totalBatches, batchSize)
+			} else {
+				fmt.Printf("🔄 [%s] Retry %d — %d configs in %d batches of %d\n",
+					strings.ToUpper(proto), attempt, len(currentConfigs), totalBatches, batchSize)
 			}
 
-			wg.Wait()
-
-			bt.killAll()
-			if v.ProcessKillWaitMs > 0 {
-				time.Sleep(time.Duration(v.ProcessKillWaitMs) * time.Millisecond)
+			if gLog != nil && attempt == 0 {
+				gLog.logProtoStart(proto, len(currentConfigs))
 			}
 
-			procsAfter := countXrayProcs()
-			occupiedAfter := checkOccupiedPorts(v.BasePort, actualBatchSize)
+			var nextRetryConfigs []string
 
-			if procsAfter > 0 || len(occupiedAfter) > 0 {
-				fmt.Printf("     ⚠️  After kill  — procs:%-3d  ports-busy:%-3d\n",
-					procsAfter, len(occupiedAfter))
-				if len(occupiedAfter) > 0 && len(occupiedAfter) <= 20 {
-					fmt.Printf("     ⚠️  Still-busy ports: %v\n", occupiedAfter)
+			for batchIdx := 0; batchIdx < totalBatches; batchIdx++ {
+				start := batchIdx * batchSize
+				end := start + batchSize
+				if end > len(currentConfigs) {
+					end = len(currentConfigs)
 				}
-			}
+				batch := currentConfigs[start:end]
+				actualBatchSize := len(batch)
 
-			var bPassed, bFailed, bParse, bStart, bConn int
+				localPorts := make(chan int, actualBatchSize)
+				for i := 0; i < actualBatchSize; i++ {
+					localPorts <- v.BasePort + i
+				}
 
-			for _, wr := range workerResults {
-				res := wr.res
-				if res.passed {
-					bPassed++
-					atomic.AddInt64(&passedCount, 1)
-					atomic.AddInt64(&protoPassed, 1)
-					out = append(out, configResult{line: wr.line, proto: proto})
-				} else {
-					bFailed++
-					reason := res.failReason
-					norm := classifyFailReason(reason)
-					fd := protoFails[proto]
-					fd.mu.Lock()
-					fd.reasons[norm]++
-					if len(fd.samples[norm]) < 100 {
-						fd.samples[norm] = append(fd.samples[norm], wr.line)
+				bt := &batchTracker{}
+
+				type workerResult struct {
+					line string
+					res  validationResult
+				}
+				workerResults := make([]workerResult, actualBatchSize)
+
+				var wg sync.WaitGroup
+				batchStart := time.Now()
+
+				for i, line := range batch {
+					wg.Add(1)
+					go func(idx int, l string) {
+						defer wg.Done()
+						globalIdx := atomic.AddInt64(&testedCount, 1)
+						res := validateWithTracker(l, proto, localPorts, bt)
+						if gLog != nil {
+							gLog.logResult(globalIdx, proto, l, res)
+						}
+						workerResults[idx] = workerResult{line: l, res: res}
+					}(i, line)
+				}
+
+				wg.Wait()
+
+				bt.killAll()
+				if v.ProcessKillWaitMs > 0 {
+					time.Sleep(time.Duration(v.ProcessKillWaitMs) * time.Millisecond)
+				}
+
+				procsAfter := countXrayProcs()
+				occupiedAfter := checkOccupiedPorts(v.BasePort, actualBatchSize)
+
+				if procsAfter > 0 || len(occupiedAfter) > 0 {
+					fmt.Printf("     ⚠️  After kill  — procs:%-3d  ports-busy:%-3d\n",
+						procsAfter, len(occupiedAfter))
+					if len(occupiedAfter) > 0 && len(occupiedAfter) <= 20 {
+						fmt.Printf("     ⚠️  Still-busy ports: %v\n", occupiedAfter)
 					}
-					fd.mu.Unlock()
+				}
 
-					if strings.HasPrefix(reason, "PARSE:") {
-						bParse++
-						atomic.AddInt64(&failedParse, 1)
-					} else if strings.HasPrefix(reason, "XRAY_START:") || strings.HasPrefix(reason, "START:") {
-						bStart++
-						atomic.AddInt64(&failedStart, 1)
+				var bPassed, bFailed, bParse, bStart, bConn int
+
+				for _, wr := range workerResults {
+					res := wr.res
+					if res.passed && !passedSet[wr.line] {
+						passedSet[wr.line] = true
+						delete(failedSet, wr.line)
+						bPassed++
+						atomic.AddInt64(&passedCount, 1)
+						atomic.AddInt64(&protoPassed, 1)
+						out = append(out, configResult{line: wr.line, proto: proto})
+					} else if !res.passed && !failedSet[wr.line] {
+						failedSet[wr.line] = true
+						bFailed++
+						reason := res.failReason
+						norm := classifyFailReason(reason)
+						fd := protoFails[proto]
+						fd.mu.Lock()
+						fd.reasons[norm]++
+						if len(fd.samples[norm]) < 100 {
+							fd.samples[norm] = append(fd.samples[norm], wr.line)
+						}
+						fd.mu.Unlock()
+
+						if strings.HasPrefix(reason, "PARSE:") {
+							bParse++
+							atomic.AddInt64(&failedParse, 1)
+						} else if strings.HasPrefix(reason, "XRAY_START:") || strings.HasPrefix(reason, "START:") {
+							bStart++
+							atomic.AddInt64(&failedStart, 1)
+						} else {
+							bConn++
+							atomic.AddInt64(&failedConn, 1)
+							if attempt < maxRetries {
+								nextRetryConfigs = append(nextRetryConfigs, wr.line)
+							}
+						}
+					} else if res.passed {
+						bPassed++
 					} else {
-						bConn++
-						atomic.AddInt64(&failedConn, 1)
+						bFailed++
 					}
+				}
+
+				batchElapsed := time.Since(batchStart).Seconds()
+				batchPassRate := 0.0
+				if actualBatchSize > 0 {
+					batchPassRate = float64(bPassed) / float64(actualBatchSize) * 100
+				}
+				totalDone := (batchIdx + 1) * batchSize
+				if totalDone > len(currentConfigs) {
+					totalDone = len(currentConfigs)
+				}
+
+				fmt.Printf("  📦 Batch %d/%d [%d configs]  ✅%d ❌%d  Rate:%.1f%%  Time:%.1fs\n",
+					batchIdx+1, totalBatches, actualBatchSize, bPassed, bFailed, batchPassRate, batchElapsed)
+				fmt.Printf("     Parse✗:%-5d  Start✗:%-5d  Conn✗:%-5d  Total:%d/%d\n",
+					bParse, bStart, bConn, totalDone, len(currentConfigs))
+
+				if batchIdx < totalBatches-1 && v.BatchRestMs > 0 {
+					fmt.Printf("     💤 %dms rest...\n", v.BatchRestMs)
+					time.Sleep(time.Duration(v.BatchRestMs) * time.Millisecond)
 				}
 			}
 
-			batchElapsed := time.Since(batchStart).Seconds()
-			batchPassRate := 0.0
-			if actualBatchSize > 0 {
-				batchPassRate = float64(bPassed) / float64(actualBatchSize) * 100
-			}
-			totalDone := (batchIdx + 1) * batchSize
-			if totalDone > protoTotal {
-				totalDone = protoTotal
-			}
-
-			fmt.Printf("  📦 Batch %d/%d [%d configs]  ✅%d ❌%d  Rate:%.1f%%  Time:%.1fs\n",
-				batchIdx+1, totalBatches, actualBatchSize, bPassed, bFailed, batchPassRate, batchElapsed)
-			fmt.Printf("     Parse✗:%-5d  Start✗:%-5d  Conn✗:%-5d  Total:%d/%d\n",
-				bParse, bStart, bConn, totalDone, protoTotal)
-
-			if batchIdx < totalBatches-1 && v.BatchRestMs > 0 {
-				fmt.Printf("     💤 %dms rest...\n", v.BatchRestMs)
-				time.Sleep(time.Duration(v.BatchRestMs) * time.Millisecond)
-			}
+			currentConfigs = nextRetryConfigs
 		}
 
 		protoElapsed := time.Since(protoStart).Seconds()
@@ -902,6 +934,12 @@ func printFailureReport(protoFails map[string]*failDetail, byProto map[string][]
 	for _, row := range rows {
 		passRate := float64(row.passed) / float64(row.total) * 100
 		barLen := int(passRate / 5)
+		if barLen > 20 {
+			barLen = 20
+		}
+		if barLen < 0 {
+			barLen = 0
+		}
 		bar := strings.Repeat("▓", barLen) + strings.Repeat("░", 20-barLen)
 		fmt.Printf("  %-7s %7d %7d %5.1f%%  %9d %9d %9d %8d  %s\n",
 			strings.ToUpper(row.name),
