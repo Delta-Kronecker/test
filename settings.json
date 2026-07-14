@@ -13,6 +13,7 @@
     "tcp_ping_workers": 4000,
     "tcp_ping_batch_size": 4000,
     "tcp_ping_batch_rest_ms": 200,
+    "validation_retries": 2,
     "max_retries": 1,
     "base_port": 10000,
     "batch_rest_ms": 3000,

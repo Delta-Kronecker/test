@@ -354,9 +354,9 @@ func validateAll(lines []string) ([]configResult, []string) {
 		protoTotal := len(pingPassed)
 		protoStart := time.Now()
 		var protoPassed int64
-		maxRetries := v.MaxRetries
-		if maxRetries < 1 {
-			maxRetries = 1
+		maxRetries := v.ValidationRetries
+		if maxRetries < 0 {
+			maxRetries = 0
 		}
 
 		passedSet := make(map[string]bool)
@@ -408,17 +408,17 @@ func validateAll(lines []string) ([]configResult, []string) {
 				var wg sync.WaitGroup
 				batchStart := time.Now()
 
-				for i, line := range batch {
-					wg.Add(1)
-					go func(idx int, l string) {
-						defer wg.Done()
-						globalIdx := atomic.AddInt64(&testedCount, 1)
-						res := validateWithTracker(l, proto, localPorts, bt)
-						if gLog != nil {
-							gLog.logResult(globalIdx, proto, l, res)
-						}
-						workerResults[idx] = workerResult{line: l, res: res}
-					}(i, line)
+			for i, line := range batch {
+				wg.Add(1)
+				go func(idx int, l string, urlIdx int) {
+					defer wg.Done()
+					globalIdx := atomic.AddInt64(&testedCount, 1)
+					res := validateWithTracker(l, proto, localPorts, bt, urlIdx)
+					if gLog != nil {
+						gLog.logResult(globalIdx, proto, l, res)
+					}
+					workerResults[idx] = workerResult{line: l, res: res}
+				}(i, line, attempt)
 				}
 
 				wg.Wait()
@@ -534,7 +534,7 @@ func validateAll(lines []string) ([]configResult, []string) {
 
 // ── validateWithTracker ───────────────────────────────────────────────────────
 
-func validateWithTracker(configURL, protocol string, localPorts chan int, bt *batchTracker) validationResult {
+func validateWithTracker(configURL, protocol string, localPorts chan int, bt *batchTracker, testURLIdx int) validationResult {
 	var result validationResult
 
 	outboundJSON, parseErr := toXrayOutbound(configURL, protocol)
@@ -623,7 +623,11 @@ func validateWithTracker(configURL, protocol string, localPorts chan int, bt *ba
 		},
 	}
 
-	success, latency, httpErr := tryHTTP(ctx, client, v.TestURLs, v.MaxRetries)
+	testURL := v.TestURLs[0]
+	if testURLIdx >= 0 && testURLIdx < len(v.TestURLs) {
+		testURL = v.TestURLs[testURLIdx]
+	}
+	success, latency, httpErr := tryHTTP(ctx, client, []string{testURL}, v.MaxRetries)
 	killGroup(cmd)
 
 	if success {

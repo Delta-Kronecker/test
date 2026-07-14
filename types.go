@@ -27,6 +27,7 @@ type ValidationSettings struct {
 	HTTPResponseTimeoutMs  int      `json:"http_response_timeout_ms"`
 	PortCheckTimeoutMs     int      `json:"port_check_timeout_ms"`
 	MaxRetries             int      `json:"max_retries"`
+	ValidationRetries      int      `json:"validation_retries"`
 	BasePort               int      `json:"base_port"`
 	BatchRestMs            int      `json:"batch_rest_ms"`
 	ProcessKillWaitMs      int      `json:"process_kill_wait_ms"`
