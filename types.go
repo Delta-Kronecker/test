@@ -20,8 +20,8 @@ type Settings struct {
 type ValidationSettings struct {
 	NumWorkers             int      `json:"num_workers"`
 	GlobalTimeoutSec       float64  `json:"global_timeout_sec"`
-	XrayStartTimeoutMs    int      `json:"singbox_start_timeout_ms"`
-	XrayStartIntervalMs   int      `json:"singbox_start_interval_ms"`
+	XrayStartTimeoutMs    int      `json:"xray_start_timeout_ms"`
+	XrayStartIntervalMs   int      `json:"xray_start_interval_ms"`
 	HTTPRequestTimeoutMs   int      `json:"http_request_timeout_ms"`
 	HTTPDialTimeoutMs      int      `json:"http_dial_timeout_ms"`
 	HTTPResponseTimeoutMs  int      `json:"http_response_timeout_ms"`
