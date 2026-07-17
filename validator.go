@@ -469,6 +469,9 @@ func validateAll(lines []string) ([]configResult, []string) {
 						} else if strings.HasPrefix(reason, "XRAY_START:") || strings.HasPrefix(reason, "START:") {
 							bStart++
 							atomic.AddInt64(&failedStart, 1)
+							if attempt < maxRetries {
+								nextRetryConfigs = append(nextRetryConfigs, wr.line)
+							}
 						} else {
 							bConn++
 							atomic.AddInt64(&failedConn, 1)
