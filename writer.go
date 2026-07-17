@@ -211,21 +211,23 @@ func isWSTransport(line, proto string) bool {
 	switch proto {
 	case "vmess":
 		trimmed := strings.TrimPrefix(line, "vmess://")
-		if decoded, err := base64.StdEncoding.DecodeString(trimmed); err == nil {
-			trimmed = string(decoded)
+		payload := trimmed
+		if decoded, err := base64.RawStdEncoding.DecodeString(trimmed); err == nil {
+			payload = string(decoded)
+		}
+		if !strings.HasPrefix(payload, "{") {
+			if decoded2, err2 := base64.StdEncoding.DecodeString(trimmed); err2 == nil {
+				payload = string(decoded2)
+			}
 		}
 		var d map[string]interface{}
-		if json.Unmarshal([]byte(trimmed), &d) == nil {
+		if json.Unmarshal([]byte(payload), &d) == nil {
 			if n, ok := d["net"].(string); ok && strings.ToLower(n) == "ws" {
 				return true
 			}
 		}
 	case "vless", "trojan", "ss":
-		sanitized := strings.Replace(line, "#", "?", 1)
-		if idx := strings.Index(sanitized, "?"); idx != -1 {
-			sanitized = sanitized[:idx] + "?" + sanitized[idx+1:]
-		}
-		u, err := url.Parse(sanitized)
+		u, err := url.Parse(line)
 		if err != nil {
 			return false
 		}
@@ -1519,77 +1521,65 @@ func writeSummary(results []configResult, failedLinks []string, duration float64
 
 	// ── 1. V2ray ────────────────────────────────────────────────────────────────
 	gen.WriteString("## V2ray\n\n")
-	fmt.Fprintf(&gen, "| Protocol | Count | Link |\n|---|---|---|\n")
-	fmt.Fprintf(&gen, "| All | %d | ```%s/config/all_configs.txt``` |\n", len(results), repoBase)
+	fmt.Fprintf(&gen, "V2ray All (%d config):\n```\n%s/config/all_configs.txt\n```\n\n", len(results), repoBase)
 	for _, p := range cfg.ProtocolOrder {
 		if n := byProtoOut[p]; n > 0 {
-			fmt.Fprintf(&gen, "| %s | %d | ```%s/config/protocols/%s.txt``` |\n",
+			fmt.Fprintf(&gen, "V2ray %s (%d config):\n```\n%s/config/protocols/%s.txt\n```\n\n",
 				strings.ToUpper(p), n, repoBase, p)
 		}
 	}
-	gen.WriteString("\n---\n\n")
 
 	// ── 2. V2ray Batches ────────────────────────────────────────────────────────
 	v2rayBatches := countBatchFiles("config/batches/v2ray")
 	if v2rayBatches > 0 {
 		gen.WriteString("## V2ray Batches\n\n")
-		fmt.Fprintf(&gen, "| Batch | Count | Link |\n|---|---|---|\n")
 		for i := 1; i <= v2rayBatches; i++ {
 			cnt := min500(i, len(results))
-			fmt.Fprintf(&gen, "| %03d | %d | ```%s/config/batches/v2ray/batch_%03d.txt``` |\n",
+			fmt.Fprintf(&gen, "V2ray Batch %03d (%d config):\n```\n%s/config/batches/v2ray/batch_%03d.txt\n```\n\n",
 				i, cnt, repoBase, i)
 		}
-		gen.WriteString("\n")
 	}
 
 	// ── 3. Clash ────────────────────────────────────────────────────────────────
 	gen.WriteString("## Clash\n\n")
-	fmt.Fprintf(&gen, "| Protocol | Count | Link |\n|---|---|---|\n")
-	fmt.Fprintf(&gen, "| All | %d | ```%s/config/clash.yaml``` |\n", len(results), repoBase)
+	fmt.Fprintf(&gen, "Clash All (%d config):\n```\n%s/config/clash.yaml\n```\n\n", len(results), repoBase)
 	for _, p := range cfg.ProtocolOrder {
 		if n := byProtoOut[p]; n > 0 {
-			fmt.Fprintf(&gen, "| %s | %d | ```%s/config/protocols/%s_clash.yaml``` |\n",
+			fmt.Fprintf(&gen, "Clash %s (%d config):\n```\n%s/config/protocols/%s_clash.yaml\n```\n\n",
 				strings.ToUpper(p), n, repoBase, p)
 		}
 	}
-	gen.WriteString("\n---\n\n")
 
 	// ── 4. Clash Batches ────────────────────────────────────────────────────────
-	gen.WriteString("## Clash Batches\n\n")
 	clashBatches := countBatchFiles("config/batches/clash")
 	if clashBatches > 0 {
-		fmt.Fprintf(&gen, "| Batch | Count | Link |\n|---|---|---|\n")
+		gen.WriteString("## Clash Batches\n\n")
 		for i := 1; i <= clashBatches; i++ {
 			cnt := min500(i, len(results))
-			fmt.Fprintf(&gen, "| %03d | %d | ```%s/config/batches/clash/batch_%03d.yaml``` |\n",
+			fmt.Fprintf(&gen, "Clash Batch %03d (%d config):\n```\n%s/config/batches/clash/batch_%03d.yaml\n```\n\n",
 				i, cnt, repoBase, i)
 		}
-		gen.WriteString("\n---\n\n")
 	}
 
 	// ── 5. 127.0.0.1:40443 ─────────────────────────────────────────────────────
-	gen.WriteString("## 127.0.0.1:40443 \n\n")
-	fmt.Fprintf(&gen, "| Protocol | Count | Link |\n|---|---|---|\n")
-	fmt.Fprintf(&gen, "| All | %d | ```%s/config/sni/all_configs_sni.txt``` |\n", len(results), repoBase)
+	gen.WriteString("## 127.0.0.1:40443\n\n")
+	fmt.Fprintf(&gen, "SNI All (%d config):\n```\n%s/config/sni/all_configs_sni.txt\n```\n\n", len(results), repoBase)
 	for _, p := range cfg.ProtocolOrder {
 		if n := byProtoOut[p]; n > 0 {
-			fmt.Fprintf(&gen, "| %s | %d | ```%s/config/sni/protocols/%s_sni.txt``` |\n",
+			fmt.Fprintf(&gen, "SNI %s (%d config):\n```\n%s/config/sni/protocols/%s_sni.txt\n```\n\n",
 				strings.ToUpper(p), n, repoBase, p)
 		}
 	}
-	gen.WriteString("\n---\n\n")
 
 	// ── 6. 127.0.0.1:40443 Batches ─────────────────────────────────────────────
 	sniV2rayBatches := countBatchFiles("config/batches/sni_v2ray")
 	if sniV2rayBatches > 0 {
 		gen.WriteString("## 127.0.0.1:40443 Batches\n\n")
-		fmt.Fprintf(&gen, "| Batch | Count | Link |\n|---|---|---|\n")
 		for i := 1; i <= sniV2rayBatches; i++ {
 			cnt := min500(i, len(results))
-			fmt.Fprintf(&gen, "| %03d | %d | ```%s/config/batches/sni_v2ray/batch_%03d.txt``` |\n",
+			fmt.Fprintf(&gen, "SNI Batch %03d (%d config):\n```\n%s/config/batches/sni_v2ray/batch_%03d.txt\n```\n\n",
 				i, cnt, repoBase, i)
 		}
-		gen.WriteString("\n")
 	}
 
 	// ── 7. TCP Pass ─────────────────────────────────────────────────────────────
@@ -1597,12 +1587,10 @@ func writeSummary(results []configResult, failedLinks []string, duration float64
 	if onlyTCPBatches > 0 {
 		gen.WriteString("## TCP Pass (for advanced users)\n\n")
 		fmt.Fprintf(&gen, "> All configs that passed TCP ping. Total: **%d**\n\n", onlyTCPPassCount)
-		fmt.Fprintf(&gen, "| Batch | Link |\n|---|---|\n")
 		for i := 1; i <= onlyTCPBatches; i++ {
-			fmt.Fprintf(&gen, "| %03d | ```%s/config/tcp-pass/batch_%03d.txt``` |\n",
+			fmt.Fprintf(&gen, "TCP Pass Batch %03d:\n```\n%s/config/tcp-pass/batch_%03d.txt\n```\n\n",
 				i, repoBase, i)
 		}
-		gen.WriteString("\n---\n\n")
 	}
 
 	// ── 8. TCP Pass 127.0.0.1:40443 ───────────────────────────────────────────
@@ -1610,12 +1598,10 @@ func writeSummary(results []configResult, failedLinks []string, duration float64
 	if onlyTCPSNIBatches > 0 {
 		gen.WriteString("## TCP Pass 127.0.0.1:40443 (for advanced users)\n\n")
 		fmt.Fprintf(&gen, "> SNI version of TCP Pass configs. Total: **%d**\n\n", onlyTCPPassCount)
-		fmt.Fprintf(&gen, "| Batch | Link |\n|---|---|\n")
 		for i := 1; i <= onlyTCPSNIBatches; i++ {
-			fmt.Fprintf(&gen, "| %03d | ```%s/config/tcp-pass-sni/batch_%03d.txt``` |\n",
+			fmt.Fprintf(&gen, "TCP Pass SNI Batch %03d:\n```\n%s/config/tcp-pass-sni/batch_%03d.txt\n```\n\n",
 				i, repoBase, i)
 		}
-		gen.WriteString("\n---\n\n")
 	}
 
 	existingContent := ""

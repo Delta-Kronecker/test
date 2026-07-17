@@ -1,0 +1,19 @@
+# Binary
+aggregator
+aggregator.exe
+
+# Xray binaries
+xray
+xray.exe
+Xray-linux-64/
+
+# Generated output
+config/
+
+# Temp files
+local_40443.txt
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
