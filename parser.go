@@ -170,8 +170,10 @@ func parseVMess(raw string) (string, string) {
 		network = strings.ToLower(n)
 	}
 	switch network {
-	case "xhttp", "splithttp", "kcp", "mkcp", "quic":
-		return "", "unsupported transport: " + network
+	case "xhttp", "splithttp":
+		network = "tcp"
+	case "kcp", "mkcp", "quic":
+		network = "tcp"
 	}
 	tlsVal := ""
 	if tls, _ := d["tls"].(string); tls == "tls" {
@@ -224,8 +226,10 @@ func parseVLess(raw string) (string, string) {
 		network = "tcp"
 	}
 	switch network {
-	case "xhttp", "splithttp", "kcp", "mkcp", "quic":
-		return "", "unsupported transport: " + network
+	case "xhttp", "splithttp":
+		network = "tcp"
+	case "kcp", "mkcp", "quic":
+		network = "tcp"
 	}
 	sni := first(q.Get("sni"), q.Get("peer"), server)
 	flow := q.Get("flow")
@@ -319,8 +323,10 @@ func parseTrojan(raw string) (string, string) {
 	fp := first(q.Get("fp"), "")
 	network := strings.ToLower(q.Get("type"))
 	switch network {
-	case "xhttp", "splithttp", "kcp", "mkcp", "quic":
-		return "", "unsupported transport: " + network
+	case "xhttp", "splithttp":
+		network = "tcp"
+	case "kcp", "mkcp", "quic":
+		network = "tcp"
 	}
 	path := first(q.Get("path"), "/")
 	host := q.Get("host")

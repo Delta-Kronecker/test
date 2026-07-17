@@ -602,6 +602,26 @@ func validateWithTracker(configURL, protocol string, localPorts chan int, bt *ba
 		return result
 	}
 
+	testURL := v.TestURLs[0]
+	if testURLIdx >= 0 && testURLIdx < len(v.TestURLs) {
+		testURL = v.TestURLs[testURLIdx]
+	}
+
+	// First: TCP handshake to proxy port (fast check)
+	handshakeTimeout := time.Duration(v.HTTPDialTimeoutMs) * time.Millisecond
+	conn, dialErr := net.DialTimeout("tcp", addr, handshakeTimeout)
+	if dialErr != nil {
+		killGroup(cmd)
+		sbErr := extractErrVerbose(stderr.String())
+		if sbErr == "" {
+			sbErr = fmt.Sprintf("handshake failed: %s", dialErr.Error())
+		}
+		result.failReason = "CONN: " + sbErr
+		return result
+	}
+	conn.Close()
+
+	// Second: HTTP test through proxy (full validation)
 	httpTimeout := v.HTTPRequestTimeoutMs
 	if protocol == "vless" && v.VlessSpecificTimeoutMs > 0 {
 		httpTimeout = v.VlessSpecificTimeoutMs
@@ -623,10 +643,6 @@ func validateWithTracker(configURL, protocol string, localPorts chan int, bt *ba
 		},
 	}
 
-	testURL := v.TestURLs[0]
-	if testURLIdx >= 0 && testURLIdx < len(v.TestURLs) {
-		testURL = v.TestURLs[testURLIdx]
-	}
 	success, latency, httpErr := tryHTTP(ctx, client, []string{testURL}, v.MaxRetries)
 	killGroup(cmd)
 
