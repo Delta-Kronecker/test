@@ -1,6 +1,6 @@
 {
   "validation": {
-    "num_workers": 600,
+    "num_workers": 1500,
     "global_timeout_sec": 3500,
     "xray_start_timeout_ms": 2500,
     "xray_start_interval_ms": 450,

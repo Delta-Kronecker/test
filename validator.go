@@ -443,46 +443,50 @@ func validateAll(lines []string) ([]configResult, []string) {
 
 				for _, wr := range workerResults {
 					res := wr.res
-					if res.passed && !passedSet[wr.line] {
-						passedSet[wr.line] = true
-						delete(failedSet, wr.line)
-						bPassed++
-						atomic.AddInt64(&passedCount, 1)
-						atomic.AddInt64(&protoPassed, 1)
-						out = append(out, configResult{line: wr.line, proto: proto})
-					} else if !res.passed && !failedSet[wr.line] {
-						failedSet[wr.line] = true
-						bFailed++
-						reason := res.failReason
-						norm := classifyFailReason(reason)
-						fd := protoFails[proto]
-						fd.mu.Lock()
-						fd.reasons[norm]++
-						if len(fd.samples[norm]) < 100 {
-							fd.samples[norm] = append(fd.samples[norm], wr.line)
+					if res.passed {
+						if !passedSet[wr.line] {
+							passedSet[wr.line] = true
+							delete(failedSet, wr.line)
+							atomic.AddInt64(&passedCount, 1)
+							atomic.AddInt64(&protoPassed, 1)
+							out = append(out, configResult{line: wr.line, proto: proto})
 						}
-						fd.mu.Unlock()
+						bPassed++
+					} else {
+						bFailed++
+						if !failedSet[wr.line] {
+							failedSet[wr.line] = true
+							reason := res.failReason
+							norm := classifyFailReason(reason)
+							fd := protoFails[proto]
+							fd.mu.Lock()
+							fd.reasons[norm]++
+							if len(fd.samples[norm]) < 100 {
+								fd.samples[norm] = append(fd.samples[norm], wr.line)
+							}
+							fd.mu.Unlock()
 
-						if strings.HasPrefix(reason, "PARSE:") {
+							if strings.HasPrefix(reason, "PARSE:") {
+								atomic.AddInt64(&failedParse, 1)
+							} else if strings.HasPrefix(reason, "XRAY_START:") || strings.HasPrefix(reason, "START:") {
+								atomic.AddInt64(&failedStart, 1)
+							} else {
+								atomic.AddInt64(&failedConn, 1)
+							}
+						}
+						if strings.HasPrefix(res.failReason, "PARSE:") {
 							bParse++
-							atomic.AddInt64(&failedParse, 1)
-						} else if strings.HasPrefix(reason, "XRAY_START:") || strings.HasPrefix(reason, "START:") {
+						} else if strings.HasPrefix(res.failReason, "XRAY_START:") || strings.HasPrefix(res.failReason, "START:") {
 							bStart++
-							atomic.AddInt64(&failedStart, 1)
 							if attempt < maxRetries {
 								nextRetryConfigs = append(nextRetryConfigs, wr.line)
 							}
 						} else {
 							bConn++
-							atomic.AddInt64(&failedConn, 1)
 							if attempt < maxRetries {
 								nextRetryConfigs = append(nextRetryConfigs, wr.line)
 							}
 						}
-					} else if res.passed {
-						bPassed++
-					} else {
-						bFailed++
 					}
 				}
 
