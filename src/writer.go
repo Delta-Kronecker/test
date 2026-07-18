@@ -1528,6 +1528,7 @@ func writeSummary(results []configResult, failedLinks []string, duration float64
 				strings.ToUpper(p), n, repoBase, p)
 		}
 	}
+	gen.WriteString("WARP All:\n```\nhttps://github.com/Delta-Kronecker/WARP-Config/raw/refs/heads/main/ALL.txt\n```\n\n")
 
 	// ── 2. V2ray Batches ────────────────────────────────────────────────────────
 	v2rayBatches := countBatchFiles("config/batches/v2ray")
@@ -1549,6 +1550,7 @@ func writeSummary(results []configResult, failedLinks []string, duration float64
 				strings.ToUpper(p), n, repoBase, p)
 		}
 	}
+	gen.WriteString("WARP All:\n```\nhttps://github.com/Delta-Kronecker/WARP-Config/raw/refs/heads/main/ALL.yaml\n```\n\n")
 
 	// ── 4. Clash Batches ────────────────────────────────────────────────────────
 	clashBatches := countBatchFiles("config/batches/clash")
