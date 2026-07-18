@@ -1607,7 +1607,7 @@ func writeSummary(results []configResult, failedLinks []string, duration float64
 	}
 
 	existingContent := ""
-	if raw, err := os.ReadFile("read.md"); err == nil {
+	if raw, err := os.ReadFile("templates/read.md"); err == nil {
 		existing := string(raw)
 		if idx := strings.Index(existing, autoGenMarker); idx != -1 {
 			existingContent = strings.TrimRight(existing[:idx], "\n\r ")
