@@ -72,6 +72,7 @@ proxies:
     tls: true
     skip-cert-verify: true
     servername: "mold.speedload.online"
+    client-fingerprint: "chrome"
     reality-opts:
       public-key: "J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs"
       short-id: "a20d3ed244c76426"
