@@ -1,0 +1,209 @@
+name: "Standard"
+mixed-port: 7890
+socks-port: 7891
+port: 7892
+allow-lan: true
+bind-address: '*'
+mode: global
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: ui
+secret: ""
+unified-delay: true
+tcp-concurrent: true
+global-client-fingerprint: chrome
+find-process-mode: strict
+keep-alive-interval: 15
+
+profile:
+  store-selected: true
+  store-fake-ip: false
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:5353
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.local'
+    - '*.lan'
+    - '*.localhost'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - 'time.*'
+    - 'time.*.com'
+    - 'connectivitycheck.gstatic.com'
+    - 'detectportal.firefox.com'
+    - 'captive.apple.com'
+    - 'www.msftncsi.com'
+    - 'cp.cloudflare.com'
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+    - 9.9.9.9
+    - 149.112.112.112
+    - 208.67.222.222
+    - 94.140.14.14
+    - 64.6.64.6
+    - 84.200.69.80
+    - 76.76.19.19
+    - 8.26.56.26
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://doh.opendns.com/dns-query
+    - https://doh.comodo.com/dns-query
+    - https://doh.mullvad.net/dns-query
+    - https://doh.dns.mullvad.net/dns-query
+    - https://freedns.controld.com/p0
+    - https://freedns.controld.com/family
+
+proxies:
+  - name: "🇧🇷_1"
+    type: vless
+    server: "vpn.morrow-vpn.ru"
+    port: 443
+    uuid: "482d4c0f-69df-1d34-9803-b933a6b990a2"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "ya.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "bKDaOHdoIGn61t71D2iF-5_Jh9YS2aGOCXadFYuAhT8"
+      short-id: "2aff3dd38675a4c7"
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "assets.RealityFanout1"
+  - name: "🇧🇷_2"
+    type: vless
+    server: "vpn.morrow-vpn.ru"
+    port: 443
+    uuid: "482d4c0f-69df-1c53-9803-b933a6b990a2"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "ya.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "bKDaOHdoIGn61t71D2iF-5_Jh9YS2aGOCXadFYuAhT8"
+      short-id: "2aff3dd38675a4c7"
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "assets.RealityFanout1"
+  - name: "🇧🇷_3"
+    type: vless
+    server: "vpn.morrow-vpn.ru"
+    port: 443
+    uuid: "482d4c0f-69df-1d32-9803-b933a6b990a2"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "avito.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "bKDaOHdoIGn61t71D2iF-5_Jh9YS2aGOCXadFYuAhT8"
+      short-id: "2aff3dd38675a4c7"
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "assets.RealityFanout9"
+  - name: "🇧🇷_4"
+    type: vless
+    server: "vpn.morrow-vpn.ru"
+    port: 443
+    uuid: "970457cc-29c9-1c00-bc8e-f2821baa1be8"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "max.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "bKDaOHdoIGn61t71D2iF-5_Jh9YS2aGOCXadFYuAhT8"
+      short-id: "2aff3dd38675a4c7"
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "assets.RealityService"
+  - name: "🇧🇷_5"
+    type: vless
+    server: "167.234.255.2"
+    port: 34045
+    uuid: "d8dd94fd-540e-461d-b5d4-acebef02c22a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA"
+      short-id: "e8ab71d0"
+  - name: "🇧🇷_6"
+    type: vless
+    server: "45.194.53.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "vms.lifetime19.workers.dev"
+  - name: "🇧🇷_7"
+    type: ss
+    server: "136.248.89.191"
+    port: 59319
+    cipher: "chacha20-ietf-poly1305"
+    password: "YjliYmFlNzVmMmE4ZmJkYjAxNzQ2NWUyNzZlNjhkZGU="
+    udp: true
+  - name: "🇧🇷_8"
+    type: ss
+    server: "168.138.246.189"
+    port: 59319
+    cipher: "chacha20-ietf-poly1305"
+    password: "YjliYmFlNzVmMmE4ZmJkYjAxNzQ2NWUyNzZlNjhkZGU="
+    udp: true
+  - name: "🇧🇷_9"
+    type: ss
+    server: "168.138.246.189"
+    port: 59319
+    cipher: "chacha20-ietf-poly1305"
+    password: "YjliYmFlNzVmMmE4ZmJkYjAxNzQ2NWUyNzZlNjhkZGU="
+    udp: true
+  - name: "🇧🇷_10"
+    type: ss
+    server: "136.248.89.191"
+    port: 59319
+    cipher: "chacha20-ietf-poly1305"
+    password: "YjliYmFlNzVmMmE4ZmJkYjAxNzQ2NWUyNzZlNjhkZGU="
+    udp: true
+
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "Auto"
+
+  - name: "Auto"
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 30
+    lazy: true
+    proxies:
+      - "🇧🇷_1"
+      - "🇧🇷_2"
+      - "🇧🇷_3"
+      - "🇧🇷_4"
+      - "🇧🇷_5"
+      - "🇧🇷_6"
+      - "🇧🇷_7"
+      - "🇧🇷_8"
+      - "🇧🇷_9"
+      - "🇧🇷_10"
+
+
+rules:
+  - MATCH,PROXY

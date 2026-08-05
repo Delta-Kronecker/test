@@ -1,0 +1,184 @@
+name: "Standard"
+mixed-port: 7890
+socks-port: 7891
+port: 7892
+allow-lan: true
+bind-address: '*'
+mode: global
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: ui
+secret: ""
+unified-delay: true
+tcp-concurrent: true
+global-client-fingerprint: chrome
+find-process-mode: strict
+keep-alive-interval: 15
+
+profile:
+  store-selected: true
+  store-fake-ip: false
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:5353
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.local'
+    - '*.lan'
+    - '*.localhost'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - 'time.*'
+    - 'time.*.com'
+    - 'connectivitycheck.gstatic.com'
+    - 'detectportal.firefox.com'
+    - 'captive.apple.com'
+    - 'www.msftncsi.com'
+    - 'cp.cloudflare.com'
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+    - 9.9.9.9
+    - 149.112.112.112
+    - 208.67.222.222
+    - 94.140.14.14
+    - 64.6.64.6
+    - 84.200.69.80
+    - 76.76.19.19
+    - 8.26.56.26
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://doh.opendns.com/dns-query
+    - https://doh.comodo.com/dns-query
+    - https://doh.mullvad.net/dns-query
+    - https://doh.dns.mullvad.net/dns-query
+    - https://freedns.controld.com/p0
+    - https://freedns.controld.com/family
+
+proxies:
+  - name: "🇹🇷_1"
+    type: vless
+    server: "shop.jafarghasemi75.ir"
+    port: 443
+    uuid: "951e4f7b-5780-46e5-85ba-eb0bda8d08d8"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "play.google.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Pq_QVabqWziXM-EdIvhECN7IoFBSpUUIGgO1XrUCL0k"
+      short-id: "2f"
+  - name: "🇹🇷_2"
+    type: vless
+    server: "un.nexavps.com.tr"
+    port: 8443
+    uuid: "b140b69a-1592-4af1-ee8e-d92c927a97cf"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "updates.cdn-apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "0NCVdIN-gT854Meoc8v-8DJsGEDgIvyaia6Ytrxo5yA"
+      short-id: ""
+  - name: "🇹🇷_3"
+    type: vless
+    server: "2.26.94.13"
+    port: 443
+    uuid: "18f71148-a3c7-40c7-b02a-be04da72efe3"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "pro-tr.emrata.top"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "da5UVhoC5QOCDm84AxB-RRxf0z2nySZ3lOemgqizLS4"
+      short-id: ""
+    flow: "xtls-rprx-vision"
+  - name: "🇹🇷_4"
+    type: vless
+    server: "155.103.69.93"
+    port: 443
+    uuid: "951e4f7b-5780-46e5-85ba-eb0bda8d08d8"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "play.google.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Pq_QVabqWziXM-EdIvhECN7IoFBSpUUIGgO1XrUCL0k"
+      short-id: "2f"
+  - name: "🇹🇷_5"
+    type: vless
+    server: "185.39.204.155"
+    port: 8443
+    uuid: "7e8f7489-e65f-4be6-93ed-867a74ec6759"
+    udp: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇹🇷_6"
+    type: trojan
+    server: "195.162.69.238"
+    port: 9443
+    password: "ac8ae2c29cd149eb85cae990572f0d59"
+    sni: "apple.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇹🇷_7"
+    type: trojan
+    server: "45.67.202.101"
+    port: 8443
+    password: "8r<[9'l6hAO#8ZQi"
+    sni: "Koma-YT.PAGeS.Dev"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇹🇷_8"
+    type: ss
+    server: "185.123.101.64"
+    port: 2376
+    cipher: "aes-256-gcm"
+    password: "faBAoD54k87UJG7"
+    udp: true
+  - name: "🇹🇷_9"
+    type: ss
+    server: "38.180.113.194"
+    port: 8119
+    cipher: "aes-256-gcm"
+    password: "cdBIDV42DCwnfIN"
+    udp: true
+
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "Auto"
+
+  - name: "Auto"
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 30
+    lazy: true
+    proxies:
+      - "🇹🇷_1"
+      - "🇹🇷_2"
+      - "🇹🇷_3"
+      - "🇹🇷_4"
+      - "🇹🇷_5"
+      - "🇹🇷_6"
+      - "🇹🇷_7"
+      - "🇹🇷_8"
+      - "🇹🇷_9"
+
+
+rules:
+  - MATCH,PROXY

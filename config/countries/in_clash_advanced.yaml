@@ -1,0 +1,387 @@
+mixed-port: 7890
+socks-port: 7891
+port: 7892
+allow-lan: true
+bind-address: '*'
+mode: global
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: ui
+secret: ""
+unified-delay: true
+tcp-concurrent: true
+global-client-fingerprint: chrome
+find-process-mode: strict
+keep-alive-interval: 15
+
+profile:
+  store-selected: true
+  store-fake-ip: false
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:5353
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.local'
+    - '*.lan'
+    - '*.localhost'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - 'time.*'
+    - 'time.*.com'
+    - 'connectivitycheck.gstatic.com'
+    - 'detectportal.firefox.com'
+    - 'captive.apple.com'
+    - 'www.msftncsi.com'
+    - 'cp.cloudflare.com'
+  default-nameserver:
+    - 178.22.122.100
+    - 185.51.200.2
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.google/dns-query
+    - tls://8.8.8.8:853
+    - tls://8.8.4.4:853
+    - https://cloudflare-dns.com/dns-query
+    - tls://1.1.1.1:853
+    - tls://1.0.0.1:853
+    - https://dns.quad9.net/dns-query
+    - tls://9.9.9.9:853
+    - tls://149.112.112.112:853
+    - https://doh.opendns.com/dns-query
+    - tls://208.67.222.222:853
+    - https://dns.adguard.com/dns-query
+    - tls://94.140.14.14:853
+
+proxies:
+  - name: "🇮🇳_17"
+    type: vless
+    server: "5.253.30.99"
+    port: 40443
+    uuid: "511c1563-2cb6-4064-abc6-a59ee49818a8"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0"
+      short-id: "88b6"
+    flow: "xtls-rprx-vision"
+  - name: "🇮🇳_18"
+    type: vless
+    server: "5.253.42.164"
+    port: 40443
+    uuid: "e99ba96d-dec8-42eb-be53-19e71eef7cab"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw"
+      short-id: "68a8"
+    flow: "xtls-rprx-vision"
+  - name: "🇮🇳_19"
+    type: vless
+    server: "194.61.31.126"
+    port: 2053
+    uuid: "7f1f5848-da44-47df-8581-df83e88ee2b3"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.apple.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "GAYlNViQ9mkjs0iTjNmijAIXOaK2h0P2opHCYOrCNy0"
+      short-id: "ae3ba555edc1ba0a"
+  - name: "🇮🇳_20"
+    type: vless
+    server: "108.165.152.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime61.workers.dev"
+  - name: "🇮🇳_21"
+    type: trojan
+    server: "34.131.228.210"
+    port: 443
+    password: "M7v%w11Se*"
+    sni: "hyfuuf6.wsone.icu"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇮🇳_22"
+    type: trojan
+    server: "185.67.125.147"
+    port: 443
+    password: "3763495894587285504"
+    sni: "optimal-owl.goat627.mom"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇮🇳_23"
+    type: trojan
+    server: "tttyder.wsone.icu"
+    port: 443
+    password: "M7v%w11Se*"
+    sni: "tttyder.wsone.icu"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇮🇳_24"
+    type: trojan
+    server: "185.67.125.119"
+    port: 443
+    password: "3747000103274291200"
+    sni: "oriented-pug.adder289.quest"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇮🇳_25"
+    type: trojan
+    server: "185.67.125.147"
+    port: 443
+    password: "3747000103274291200"
+    sni: "polished-collie.adder289.quest"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇮🇳_26"
+    type: trojan
+    server: "143.110.246.228"
+    port: 443
+    password: "3bcd9e33-8377-4b32-af33-217158577ff3"
+    sni: "kdlsupport.zendesk.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇮🇳_27"
+    type: trojan
+    server: "139.84.133.199"
+    port: 443
+    password: "af4b064a9c39472fb34ad8b113acdc6b"
+    sni: "139.84.133.199"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇮🇳_28"
+    type: trojan
+    server: "65.20.82.177"
+    port: 443
+    password: "Tg3RnK7Xp8B1"
+    sni: "ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇮🇳_29"
+    type: trojan
+    server: "64.227.131.19"
+    port: 443
+    password: "21c6c7cb-332b-4a0c-9ad7-dff9c3111442"
+    sni: "us02web.zoom.us"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇮🇳_30"
+    type: ss
+    server: "103.120.178.193"
+    port: 31348
+    cipher: "chacha20-ietf-poly1305"
+    password: "EBDRo9THx4CqiFU7h5gfov76oNwzZURAh0ZwbWjBKddtUhvz"
+    udp: true
+  - name: "🇮🇳_31"
+    type: ss
+    server: "103.120.178.193"
+    port: 31348
+    cipher: "chacha20-ietf-poly1305"
+    password: "EBDRo9THx4CqiFU7h5gfov76oNwzZURAh0ZwbWjBKddtUhvz"
+    udp: true
+  - name: "🇮🇳_32"
+    type: ss
+    server: "172.105.39.124"
+    port: 7002
+    cipher: "aes-256-gcm"
+    password: "RexnBgU7EV5ADxG"
+    udp: true
+
+proxy-groups:
+  # ── Top-level selector ────────────────────────────────────────────────────
+  - name: "PROXY-BEST"
+    type: select
+    proxies:
+      - "SCEN-OPEN"
+      - "SCEN-CDN"
+      - "UDP-BEST"
+      - "FAST-ALL"
+      - "LB-ALL"
+      - "MANUAL"
+      - DIRECT
+
+  # ── Scenario groups ───────────────────────────────────────────────────────
+  - name: "SCEN-OPEN"
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    lazy: true
+    proxies:
+      - "LB-ALL"
+      - "FAST-ALL"
+
+  - name: "SCEN-CDN"
+    type: fallback
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    lazy: true
+    proxies:
+      - "LB-CDN"
+      - "FAST-CDN"
+
+  # ── Load-balance groups ───────────────────────────────────────────────────
+  - name: "LB-ALL"
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 150
+    lazy: true
+    proxies:
+      - "🇮🇳_17"
+      - "🇮🇳_18"
+      - "🇮🇳_19"
+      - "🇮🇳_20"
+      - "🇮🇳_21"
+      - "🇮🇳_22"
+      - "🇮🇳_23"
+      - "🇮🇳_24"
+      - "🇮🇳_25"
+      - "🇮🇳_26"
+      - "🇮🇳_27"
+      - "🇮🇳_28"
+      - "🇮🇳_29"
+      - "🇮🇳_30"
+      - "🇮🇳_31"
+      - "🇮🇳_32"
+
+  - name: "LB-CDN"
+    type: load-balance
+    strategy: round-robin
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 150
+    lazy: true
+    proxies:
+      - "🇮🇳_17"
+      - "🇮🇳_18"
+      - "🇮🇳_19"
+      - "🇮🇳_20"
+      - "🇮🇳_21"
+      - "🇮🇳_22"
+      - "🇮🇳_23"
+      - "🇮🇳_24"
+      - "🇮🇳_25"
+      - "🇮🇳_26"
+      - "🇮🇳_27"
+      - "🇮🇳_28"
+      - "🇮🇳_29"
+      - "🇮🇳_30"
+      - "🇮🇳_31"
+      - "🇮🇳_32"
+
+  # ── Fastest-proxy groups ──────────────────────────────────────────────────
+  - name: "FAST-ALL"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "🇮🇳_17"
+      - "🇮🇳_18"
+      - "🇮🇳_19"
+      - "🇮🇳_20"
+      - "🇮🇳_21"
+      - "🇮🇳_22"
+      - "🇮🇳_23"
+      - "🇮🇳_24"
+      - "🇮🇳_25"
+      - "🇮🇳_26"
+      - "🇮🇳_27"
+      - "🇮🇳_28"
+      - "🇮🇳_29"
+      - "🇮🇳_30"
+      - "🇮🇳_31"
+      - "🇮🇳_32"
+
+  - name: "FAST-CDN"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "🇮🇳_17"
+      - "🇮🇳_18"
+      - "🇮🇳_19"
+      - "🇮🇳_20"
+      - "🇮🇳_21"
+      - "🇮🇳_22"
+      - "🇮🇳_23"
+      - "🇮🇳_24"
+      - "🇮🇳_25"
+      - "🇮🇳_26"
+      - "🇮🇳_27"
+      - "🇮🇳_28"
+      - "🇮🇳_29"
+      - "🇮🇳_30"
+      - "🇮🇳_31"
+      - "🇮🇳_32"
+
+  # ── UDP group ─────────────────────────────────────────────────────────────
+  - name: "UDP-BEST"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "🇮🇳_17"
+      - "🇮🇳_18"
+      - "🇮🇳_19"
+      - "🇮🇳_20"
+      - "🇮🇳_21"
+      - "🇮🇳_22"
+      - "🇮🇳_23"
+      - "🇮🇳_24"
+      - "🇮🇳_25"
+      - "🇮🇳_26"
+      - "🇮🇳_27"
+      - "🇮🇳_28"
+      - "🇮🇳_29"
+      - "🇮🇳_30"
+      - "🇮🇳_31"
+      - "🇮🇳_32"
+
+  # ── Manual selector ───────────────────────────────────────────────────────
+  - name: "MANUAL"
+    type: select
+    proxies:
+      - "🇮🇳_17"
+      - "🇮🇳_18"
+      - "🇮🇳_19"
+      - "🇮🇳_20"
+      - "🇮🇳_21"
+      - "🇮🇳_22"
+      - "🇮🇳_23"
+      - "🇮🇳_24"
+      - "🇮🇳_25"
+      - "🇮🇳_26"
+      - "🇮🇳_27"
+      - "🇮🇳_28"
+      - "🇮🇳_29"
+      - "🇮🇳_30"
+      - "🇮🇳_31"
+      - "🇮🇳_32"
+
+rules:
+  - MATCH,PROXY-BEST

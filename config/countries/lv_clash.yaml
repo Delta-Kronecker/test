@@ -1,0 +1,306 @@
+name: "Standard"
+mixed-port: 7890
+socks-port: 7891
+port: 7892
+allow-lan: true
+bind-address: '*'
+mode: global
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: ui
+secret: ""
+unified-delay: true
+tcp-concurrent: true
+global-client-fingerprint: chrome
+find-process-mode: strict
+keep-alive-interval: 15
+
+profile:
+  store-selected: true
+  store-fake-ip: false
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:5353
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.local'
+    - '*.lan'
+    - '*.localhost'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - 'time.*'
+    - 'time.*.com'
+    - 'connectivitycheck.gstatic.com'
+    - 'detectportal.firefox.com'
+    - 'captive.apple.com'
+    - 'www.msftncsi.com'
+    - 'cp.cloudflare.com'
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+    - 9.9.9.9
+    - 149.112.112.112
+    - 208.67.222.222
+    - 94.140.14.14
+    - 64.6.64.6
+    - 84.200.69.80
+    - 76.76.19.19
+    - 8.26.56.26
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://doh.opendns.com/dns-query
+    - https://doh.comodo.com/dns-query
+    - https://doh.mullvad.net/dns-query
+    - https://doh.dns.mullvad.net/dns-query
+    - https://freedns.controld.com/p0
+    - https://freedns.controld.com/family
+
+proxies:
+  - name: "🇱🇻_1"
+    type: vless
+    server: "31.76.37.6"
+    port: 443
+    uuid: "18f71148-a3c7-40c7-b02a-be04da72efe3"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "pro-it.emrata.top"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
+      short-id: ""
+  - name: "🇱🇻_2"
+    type: vless
+    server: "195.123.208.92"
+    port: 13443
+    uuid: "fc1b3bda-b226-452a-8c5c-b0e36a1f8f88"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "auto.cendora.ru"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM"
+      short-id: "a7f3c91b2e6d84c0"
+    flow: "xtls-rprx-vision"
+  - name: "🇱🇻_3"
+    type: vless
+    server: "91.204.75.198"
+    port: 24499
+    uuid: "7b6c6542-f3f2-4ca8-aa37-38428cb3bc3a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "static.rutube.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "pXqtZamxC_qxublGTL8rVZqNI_tt3Ul_GHhcKJPaoQ0"
+      short-id: ""
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇱🇻_4"
+    type: vless
+    server: "91.204.75.198"
+    port: 15959
+    uuid: "7b6c6542-f3f2-4ca8-aa37-38428cb3bc3a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "ozon.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "pXqtZamxC_qxublGTL8rVZqNI_tt3Ul_GHhcKJPaoQ0"
+      short-id: ""
+    flow: "xtls-rprx-vision"
+  - name: "🇱🇻_5"
+    type: vless
+    server: "31.76.123.22"
+    port: 443
+    uuid: "18f71148-a3c7-40c7-b02a-be04da72efe3"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "pro-fi.emrata.top"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
+      short-id: ""
+    flow: "xtls-rprx-vision"
+  - name: "🇱🇻_6"
+    type: vless
+    server: "188.92.78.81"
+    port: 443
+    uuid: "631ee34f-4faf-4ad7-b49d-e6f50403cf0e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "anyfile2file.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0"
+      short-id: "93ae75024604f796"
+    flow: "xtls-rprx-vision"
+  - name: "🇱🇻_7"
+    type: vless
+    server: "91.204.75.198"
+    port: 34499
+    uuid: "7b6c6542-f3f2-4ca8-aa37-38428cb3bc3a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "m.vk.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "pXqtZamxC_qxublGTL8rVZqNI_tt3Ul_GHhcKJPaoQ0"
+      short-id: ""
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇱🇻_8"
+    type: vless
+    server: "185.220.223.61"
+    port: 8443
+    uuid: "2181d0c8-448a-4f75-b848-1718029baef9"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "max.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "-Dg4mGAAM5Lwe9ri7Bx5WlYdPBsyYJy-Pai2Z0FGlyc"
+      short-id: "afee962d"
+    flow: "xtls-rprx-vision"
+  - name: "🇱🇻_9"
+    type: vless
+    server: "pro-fi.emrata.top"
+    port: 443
+    uuid: "18f71148-a3c7-40c7-b02a-be04da72efe3"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "pro-fi.emrata.top"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
+      short-id: ""
+    flow: "xtls-rprx-vision"
+  - name: "🇱🇻_10"
+    type: vless
+    server: "46.8.237.5"
+    port: 2084
+    uuid: "59b2ff61-808d-4dcc-b74a-fa283ff82c42"
+    udp: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇱🇻_11"
+    type: vless
+    server: "31.76.123.45"
+    port: 443
+    uuid: "18f71148-a3c7-40c7-b02a-be04da72efe3"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "pro-fi.emrata.top"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
+      short-id: ""
+    flow: "xtls-rprx-vision"
+  - name: "🇱🇻_12"
+    type: vless
+    server: "85.159.228.250"
+    port: 25703
+    uuid: "7e5964d0-36b8-43ff-885b-86c4d3bfd466"
+    udp: true
+  - name: "🇱🇻_13"
+    type: vless
+    server: "188.92.78.80"
+    port: 443
+    uuid: "631ee34f-4faf-4ad7-b49d-e6f50403cf0e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "anyfile2file.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0"
+      short-id: "93ae75024604f796"
+    flow: "xtls-rprx-vision"
+  - name: "🇱🇻_14"
+    type: vless
+    server: "pro-it.emrata.top"
+    port: 443
+    uuid: "2e4101cd-40b4-4d1a-8df6-cc949c136e5a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "pro-it.emrata.top"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
+      short-id: ""
+  - name: "🇱🇻_15"
+    type: vless
+    server: "91.204.75.198"
+    port: 443
+    uuid: "7b6c6542-f3f2-4ca8-aa37-38428cb3bc3a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "cdnv-img.perekrestok.ru"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "P3hme8DVrjQvkIBsclS18PvvoWJODb2K7o8s0iaV7k0"
+      short-id: ""
+    flow: "xtls-rprx-vision"
+  - name: "🇱🇻_16"
+    type: trojan
+    server: "31.57.61.76"
+    port: 2053
+    password: "8r<[9'l6hAO#8ZQi"
+    sni: "Koma-YT.PAGeS.Dev"
+    skip-cert-verify: true
+    udp: true
+
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "Auto"
+
+  - name: "Auto"
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 30
+    lazy: true
+    proxies:
+      - "🇱🇻_1"
+      - "🇱🇻_2"
+      - "🇱🇻_3"
+      - "🇱🇻_4"
+      - "🇱🇻_5"
+      - "🇱🇻_6"
+      - "🇱🇻_7"
+      - "🇱🇻_8"
+      - "🇱🇻_9"
+      - "🇱🇻_10"
+      - "🇱🇻_11"
+      - "🇱🇻_12"
+      - "🇱🇻_13"
+      - "🇱🇻_14"
+      - "🇱🇻_15"
+      - "🇱🇻_16"
+
+
+rules:
+  - MATCH,PROXY
