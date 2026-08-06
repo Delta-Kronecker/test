@@ -65,20 +65,6 @@ dns:
 proxies:
   - name: "🇦🇪_1"
     type: vless
-    server: "45.88.13.3"
-    port: 993
-    uuid: "5e243126-4a2a-84b6-782a-73b14797fb5f"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇦🇪_2"
-    type: vless
     server: "uae.unixzone.us"
     port: 22573
     uuid: "39947382-3212-41c9-bc3a-589574ac8b23"
@@ -101,7 +87,6 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇦🇪_1"
-      - "🇦🇪_2"
 
 
 rules:

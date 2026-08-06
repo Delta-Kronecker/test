@@ -65,17 +65,11 @@ dns:
 proxies:
   - name: "🇭🇰_1"
     type: vless
-    server: "45.125.32.115"
-    port: 443
-    uuid: "e2c8fa8c-886d-4649-bd59-cf73bee48b55"
-    udp: true
-  - name: "🇭🇰_2"
-    type: vless
     server: "182.16.61.3"
     port: 45647
     uuid: "431fe973-a43a-4fac-bf83-2a772e0d0625"
     udp: true
-  - name: "🇭🇰_3"
+  - name: "🇭🇰_2"
     type: vless
     server: "38.207.177.236"
     port: 443
@@ -89,7 +83,7 @@ proxies:
       public-key: "maES4RMEtsm5emBCixDRa6Y5GvmVwmwZNBL2G4Q03D4"
       short-id: "47de54e71fee3451"
     flow: "xtls-rprx-vision"
-  - name: "🇭🇰_4"
+  - name: "🇭🇰_3"
     type: trojan
     server: "18.163.180.201"
     port: 6357
@@ -114,7 +108,6 @@ proxy-groups:
       - "🇭🇰_1"
       - "🇭🇰_2"
       - "🇭🇰_3"
-      - "🇭🇰_4"
 
 
 rules:

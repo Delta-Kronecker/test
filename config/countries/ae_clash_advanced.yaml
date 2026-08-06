@@ -59,21 +59,7 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
-  - name: "🇦🇪_3"
-    type: vless
-    server: "45.88.13.3"
-    port: 993
-    uuid: "5e243126-4a2a-84b6-782a-73b14797fb5f"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇦🇪_4"
+  - name: "🇦🇪_2"
     type: vless
     server: "uae.unixzone.us"
     port: 22573
@@ -124,8 +110,7 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
-      - "🇦🇪_3"
-      - "🇦🇪_4"
+      - "🇦🇪_2"
 
   - name: "LB-CDN"
     type: load-balance
@@ -135,8 +120,7 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
-      - "🇦🇪_3"
-      - "🇦🇪_4"
+      - "🇦🇪_2"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -146,8 +130,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇦🇪_3"
-      - "🇦🇪_4"
+      - "🇦🇪_2"
 
   - name: "FAST-CDN"
     type: url-test
@@ -156,8 +139,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇦🇪_3"
-      - "🇦🇪_4"
+      - "🇦🇪_2"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -167,15 +149,13 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇦🇪_3"
-      - "🇦🇪_4"
+      - "🇦🇪_2"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
-      - "🇦🇪_3"
-      - "🇦🇪_4"
+      - "🇦🇪_2"
 
 rules:
   - MATCH,PROXY-BEST

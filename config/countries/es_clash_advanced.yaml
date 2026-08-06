@@ -61,20 +61,6 @@ dns:
 proxies:
   - name: "🇪🇸_7"
     type: vless
-    server: "isp03.skorostnet.space"
-    port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "isp03.skorostnet.space"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
-      short-id: "fdda9806fe5d8584"
-    flow: "xtls-rprx-vision"
-  - name: "🇪🇸_8"
-    type: vless
     server: "78.17.180.106"
     port: 443
     uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
@@ -87,7 +73,7 @@ proxies:
       public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
       short-id: "fdda9806fe5d8584"
     flow: "xtls-rprx-vision"
-  - name: "🇪🇸_9"
+  - name: "🇪🇸_8"
     type: vless
     server: "78.17.180.110"
     port: 443
@@ -97,6 +83,20 @@ proxies:
     skip-cert-verify: true
     servername: "isp05.skorostnet.space"
     client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
+      short-id: "fdda9806fe5d8584"
+    flow: "xtls-rprx-vision"
+  - name: "🇪🇸_9"
+    type: vless
+    server: "isp03.skorostnet.space"
+    port: 443
+    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "isp03.skorostnet.space"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
       short-id: "fdda9806fe5d8584"

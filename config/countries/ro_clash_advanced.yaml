@@ -61,14 +61,14 @@ dns:
 proxies:
   - name: "🇷🇴_3"
     type: ss
-    server: "bogging-eyeteeth-fly.freesocks.work"
+    server: "154.46.31.106"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "QFWzCw2uX9B9i6qAYeFBIE"
     udp: true
   - name: "🇷🇴_4"
     type: ss
-    server: "154.46.31.106"
+    server: "bogging-eyeteeth-fly.freesocks.work"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "QFWzCw2uX9B9i6qAYeFBIE"

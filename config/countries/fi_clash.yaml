@@ -65,20 +65,6 @@ dns:
 proxies:
   - name: "🇫🇮_1"
     type: vless
-    server: "107.181.151.241"
-    port: 443
-    uuid: "ee39fb11-56a3-4ee7-9e7c-35a4235bd30e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.tradingview.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "b27ba098687b"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇮_2"
-    type: vless
     server: "staging.lastilhame.monster"
     port: 443
     uuid: "455cfdc6-9abf-4e40-863f-5ff6cc63457c"
@@ -91,7 +77,7 @@ proxies:
       public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
       short-id: "18e4d2d21241"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇮_3"
+  - name: "🇫🇮_2"
     type: vless
     server: "107.181.147.22"
     port: 443
@@ -104,6 +90,20 @@ proxies:
     reality-opts:
       public-key: "Cs45TZ-4YKa8fWZ72YJcIcQCKipWsoYNZHEqFvs-PTE"
       short-id: "f6e197a0b9f2"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇮_3"
+    type: vless
+    server: "193.124.36.234"
+    port: 443
+    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fl09.skorostnet.space"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
+      short-id: "fdda9806fe5d8584"
     flow: "xtls-rprx-vision"
   - name: "🇫🇮_4"
     type: vless
@@ -121,24 +121,9 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇫🇮_5"
     type: vless
-    server: "83.147.216.223"
-    port: 4433
-    uuid: "660174a2-d32d-4521-840d-d1853bfc80b8"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/@Marisa_kristi"
-      headers:
-        Host: "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
-  - name: "🇫🇮_6"
-    type: vless
-    server: "107.181.151.39"
+    server: "server.slavkiti.monster"
     port: 443
-    uuid: "1896c6c9-a941-4688-a865-29027bf7f8e6"
+    uuid: "68cf8d29-5aa0-44b3-88a9-f1a576b6e84c"
     udp: true
     tls: true
     skip-cert-verify: true
@@ -146,7 +131,21 @@ proxies:
     client-fingerprint: "chrome"
     reality-opts:
       public-key: "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk"
-      short-id: "6c825bc79850"
+      short-id: "73a9e631a09b"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇮_6"
+    type: vless
+    server: "5.181.21.234"
+    port: 443
+    uuid: "d7fc372d-c057-43ce-8070-9b96abbc60f3"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fl4.raketa-balance.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "JaP4bhvIMW-l7T0_RkLra59DeBYI6W9XemKa8MyRPSY"
+      short-id: "6c6082a2223c1d03"
     flow: "xtls-rprx-vision"
   - name: "🇫🇮_7"
     type: vless
@@ -164,6 +163,35 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇫🇮_8"
     type: vless
+    server: "fl11.skorostnet.space"
+    port: 443
+    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fl11.skorostnet.space"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
+      short-id: "fdda9806fe5d8584"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇮_9"
+    type: vless
+    server: "83.147.216.223"
+    port: 4433
+    uuid: "660174a2-d32d-4521-840d-d1853bfc80b8"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/@Marisa_kristi"
+      headers:
+        Host: "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
+  - name: "🇫🇮_10"
+    type: vless
     server: "83.143.112.140.cdn-one.org"
     port: 443
     uuid: "4f375fb4-3c95-425f-bc7b-8085487a6f3c"
@@ -177,25 +205,25 @@ proxies:
       path: "/29378/wQYeoLE7LS"
       headers:
         Host: "83.143.112.140.cdn-one.org"
-  - name: "🇫🇮_9"
+  - name: "🇫🇮_11"
     type: vless
-    server: "193.124.36.234"
+    server: "107.181.151.241"
     port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
+    uuid: "ee39fb11-56a3-4ee7-9e7c-35a4235bd30e"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "fl09.skorostnet.space"
+    servername: "www.tradingview.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
-      short-id: "fdda9806fe5d8584"
+      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
+      short-id: "b27ba098687b"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇮_10"
+  - name: "🇫🇮_12"
     type: vless
-    server: "server.slavkiti.monster"
+    server: "107.181.151.39"
     port: 443
-    uuid: "68cf8d29-5aa0-44b3-88a9-f1a576b6e84c"
+    uuid: "1896c6c9-a941-4688-a865-29027bf7f8e6"
     udp: true
     tls: true
     skip-cert-verify: true
@@ -203,43 +231,9 @@ proxies:
     client-fingerprint: "chrome"
     reality-opts:
       public-key: "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk"
-      short-id: "73a9e631a09b"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇮_11"
-    type: vless
-    server: "5.181.21.234"
-    port: 443
-    uuid: "d7fc372d-c057-43ce-8070-9b96abbc60f3"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fl4.raketa-balance.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "JaP4bhvIMW-l7T0_RkLra59DeBYI6W9XemKa8MyRPSY"
-      short-id: "6c6082a2223c1d03"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇮_12"
-    type: vless
-    server: "fl11.skorostnet.space"
-    port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fl11.skorostnet.space"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
-      short-id: "fdda9806fe5d8584"
+      short-id: "6c825bc79850"
     flow: "xtls-rprx-vision"
   - name: "🇫🇮_13"
-    type: vless
-    server: "193.233.23.196"
-    port: 26048
-    uuid: "9896c5bf-949a-4278-a0c4-f8ba371cfa0e"
-    udp: true
-  - name: "🇫🇮_14"
     type: ss
     server: "31.76.80.205"
     port: 8388
@@ -273,7 +267,6 @@ proxy-groups:
       - "🇫🇮_11"
       - "🇫🇮_12"
       - "🇫🇮_13"
-      - "🇫🇮_14"
 
 
 rules:

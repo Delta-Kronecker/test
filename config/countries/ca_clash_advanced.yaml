@@ -59,1124 +59,7 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
-  - name: "🇨🇦_178"
-    type: vless
-    server: "104.17.149.233"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_179"
-    type: vless
-    server: "104.16.251.148"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "random"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_180"
-    type: vless
-    server: "104.21.96.1"
-    port: 443
-    uuid: "0836463b-214f-4af6-aa85-85a56a62388e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "D2127A49-Flat-WOoD-c4b5.Milia-AKbaRpOor.workers.Dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/Pl67KhTLWmJqQ2lY?ed=2560"
-      headers:
-        Host: "D2127A49-Flat-WOoD-c4b5.Milia-AKbaRpOor.workers.Dev"
-  - name: "🇨🇦_181"
-    type: vless
-    server: "162.159.156.214"
-    port: 8880
-    uuid: "ad85a1ce-3519-4634-9ea1-66c60d3694ba"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.SG.CMLiussss.net"
-      headers:
-        Host: "little-pond-8731.81-68e.workers.dev"
-  - name: "🇨🇦_182"
-    type: vless
-    server: "172.64.144.66"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "🇨🇦_183"
-    type: vless
-    server: "104.21.12.116"
-    port: 8880
-    uuid: "ad85a1ce-3519-4634-9ea1-66c60d3694ba"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.SG.CMLiussss.net"
-      headers:
-        Host: "little-pond-8731.81-68e.workers.dev"
-  - name: "🇨🇦_184"
-    type: vless
-    server: "104.16.174.164"
-    port: 443
-    uuid: "73796e63-0000-4000-8000-000000000000"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "wireguard.ahmad-kh5716.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sync"
-      headers:
-        Host: "wireguard.ahmad-kh5716.workers.dev"
-  - name: "🇨🇦_185"
-    type: vless
-    server: "104.21.66.61"
-    port: 8443
-    uuid: "05cf7b0e-ad1a-42bb-80e7-73ae45b1019a"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "france.io-com-de-dev.org"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/api/voip/updates/static/x9i2"
-      headers:
-        Host: "france.io-com-de-dev.org"
-  - name: "🇨🇦_186"
-    type: vless
-    server: "soskeynets.hoyes.cloudns.ch"
-    port: 2053
-    uuid: "83afd88f-200f-4d89-bfc7-66eff160c1d8"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "josni.hoyes.cloudns.ch"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "josni.hoyes.cloudns.ch"
-  - name: "🇨🇦_187"
-    type: vless
-    server: "free.server6peekconfig.workers.dev"
-    port: 443
-    uuid: "d195909a-eff4-489d-a261-955b904894cb"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fREE.sERVer6PeeKCOnFIG.wOrkErs.dEv"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoieUhYMWhoZEVEIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19?ed=2560"
-      headers:
-        Host: "free.server6peekconfig.workers.dev"
-  - name: "🇨🇦_188"
-    type: vless
-    server: "104.17.182.11"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_189"
-    type: vless
-    server: "www.ipget.net"
-    port: 8880
-    uuid: "472e0fb5-3a6b-48be-8060-cfffc6335624"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.KR.CMLiussss.net"
-      headers:
-        Host: "broken-grass-24c4.288-005.workers.dev"
-  - name: "🇨🇦_190"
-    type: vless
-    server: "108.162.194.119"
-    port: 443
-    uuid: "49e76398-5127-4005-90cb-c2a971f745f1"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "rmqkx.freshfox-nilo.sbs"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/carbon"
-      headers:
-        Host: "rmqkx.freshfox-nilo.sbs"
-  - name: "🇨🇦_191"
-    type: vless
-    server: "162.159.2.228"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_192"
-    type: vless
-    server: "104.19.35.206"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_193"
-    type: vless
-    server: "download.yunzhongzhuan.com"
-    port: 8880
-    uuid: "f22856f8-66f0-4655-ba86-5385971e1302"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.US.CMLiussss.net"
-      headers:
-        Host: "throbbing-mountain-45e9.314-df3.workers.dev"
-  - name: "🇨🇦_194"
-    type: vless
-    server: "172.64.32.6"
-    port: 443
-    uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "soucuovls.pages.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/pyip=proxyip.cmliussss.net"
-      headers:
-        Host: "soucuovls.pages.dev"
-  - name: "🇨🇦_195"
-    type: vless
-    server: "172.67.78.254"
-    port: 2083
-    uuid: "fc8a0708-951a-4027-860f-2a154ebc4dd7"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "crimson-king-301d.nexoxnet.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "crimson-king-301d.nexoxnet.workers.dev"
-  - name: "🇨🇦_196"
-    type: vless
-    server: "nameless-moon-7c4d.shafmrhjlos23.workers.dev"
-    port: 443
-    uuid: "9e65fe63-b771-c63d-5272-fdd700000000"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "nameless-moon-7c4d.shafmrhjlos23.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/vasl"
-  - name: "🇨🇦_197"
-    type: vless
-    server: "108.162.192.5"
-    port: 443
-    uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "soucuovls.pages.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/pyip=proxyip.cmliussss.netfp=random"
-      headers:
-        Host: "soucuovls.pages.dev"
-  - name: "🇨🇦_198"
-    type: vless
-    server: "104.21.0.119"
-    port: 443
-    uuid: "98262dbd-3606-437b-b12e-3f38ca62522f"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "1.rmgyvpn.rest"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/ws-cdn"
-      headers:
-        Host: "1.rmgyvpn.rest"
-  - name: "🇨🇦_199"
-    type: vless
-    server: "162.159.23.117"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_200"
-    type: vless
-    server: "188.114.97.3"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_201"
-    type: vless
-    server: "162.159.40.49"
-    port: 80
-    uuid: "57bd62cf-5550-4075-8fa3-d4519aae8df0"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoiRURaNEp6YUhMbVlqdzQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0="
-      headers:
-        Host: "silent-feather-8539.sddadad2233122eew.workers.dev"
-  - name: "🇨🇦_202"
-    type: vless
-    server: "o.server3peekconfig.workers.dev"
-    port: 443
-    uuid: "78abbe41-95dd-4f6f-a500-1450913fb933"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "o.SERVeR3PeEkConFIG.WOrKerS.dEv"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoiZ3VVMHdacGtDIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19?ed=2560"
-      headers:
-        Host: "o.server3peekconfig.workers.dev"
-  - name: "🇨🇦_203"
-    type: vless
-    server: "104.24.68.193"
-    port: 443
-    uuid: "ed0e05af-49ab-4ea8-a39c-634855811b03"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "wild-grass-1917.tmpduardoolfsonerluke15.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "wild-grass-1917.tmpduardoolfsonerluke15.workers.dev"
-  - name: "🇨🇦_204"
-    type: vless
-    server: "104.18.34.124"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_205"
-    type: vless
-    server: "104.16.72.70"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2560"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_206"
-    type: vless
-    server: "104.21.117.9"
-    port: 443
-    uuid: "0926b50d-3a90-18dd-7c8e-0cf100000000"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "netlivpn4024.bgfjhd.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN"
-      headers:
-        Host: "netlivpn4024.bgfjhd.workers.dev"
-  - name: "🇨🇦_207"
-    type: vless
-    server: "172.64.32.7"
-    port: 443
-    uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "soucuovls.pages.dev"
-    client-fingerprint: "random"
-    network: ws
-    ws-opts:
-      path: "/pyip=proxyip.cmliussss.net"
-      headers:
-        Host: "soucuovls.pages.dev"
-  - name: "🇨🇦_208"
-    type: vless
-    server: "soskeynets-hat-f95e.ilia-1000-a.workers.dev"
-    port: 8080
-    uuid: "e3eff0b8-7276-3179-e538-a53000000002"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/sync"
-      headers:
-        Host: "tiny-hat-f95e.ilia-1000-a.workers.dev"
-  - name: "🇨🇦_209"
-    type: vless
-    server: "104.19.54.116"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_210"
-    type: vless
-    server: "104.26.2.173"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_211"
-    type: vless
-    server: "108.162.195.7"
-    port: 2053
-    uuid: "83afd88f-200f-4d89-bfc7-66eff160c1d8"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "josni.hoyes.cloudns.ch"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "josni.hoyes.cloudns.ch"
-  - name: "🇨🇦_212"
-    type: vless
-    server: "104.16.43.192"
-    port: 2083
-    uuid: "88e32d76-b49f-44ee-a90a-1ad01d542d55"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "ez-2cB1f5.sabZIpolObAMAHi9.WORkerS.deV"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoiOWc3WUROOHZXemEiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560"
-      headers:
-        Host: "ez-2cb1f5.sabzipolobamahi9.workers.dev"
-  - name: "🇨🇦_213"
-    type: vless
-    server: "172.67.78.139"
-    port: 8443
-    uuid: "ad4ae058-cd7e-4e69-a6f7-aee7ce7b0e6e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev"
-  - name: "🇨🇦_214"
-    type: vless
-    server: "104.17.22.240"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "random"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_215"
-    type: vless
-    server: "ad-007.cloud25075.info"
-    port: 8443
-    uuid: "2e8beadd-99bf-4fda-8692-8493886504bc"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "ad-007.cloud25075.info"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "ad-007.cloud25075.info"
-  - name: "🇨🇦_216"
-    type: vless
-    server: "198.41.209.80"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_217"
-    type: vless
-    server: "188.114.98.66"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_218"
-    type: vless
-    server: "104.18.109.147"
-    port: 80
-    uuid: "c29d39bd-92a4-45db-bb61-56013998617c"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/Telegram-XV2ry2?ed=2048"
-      headers:
-        Host: "www.speedtest.net.www.1google.com.bing.com.visa.com.tls.xv98.ip-ddns.com"
-  - name: "🇨🇦_219"
-    type: vless
-    server: "172.64.150.28"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/fp"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_220"
-    type: vless
-    server: "104.16.158.255"
-    port: 443
-    uuid: "d2213442-94d7-4143-8398-082efde2174e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "nova-atlas-core-5a95.rajabyshokofeh3-bcc.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "nova-atlas-core-5a95.rajabyshokofeh3-bcc.workers.dev"
-  - name: "🇨🇦_221"
-    type: vless
-    server: "162.159.0.8"
-    port: 443
-    uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "soucuovls.pages.dev"
-    client-fingerprint: "random"
-    network: ws
-    ws-opts:
-      path: "/pyip=proxyip.cmliussss.net"
-      headers:
-        Host: "soucuovls.pages.dev"
-  - name: "🇨🇦_222"
-    type: vless
-    server: "172.64.146.86"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_223"
-    type: vless
-    server: "162.159.140.78"
-    port: 8880
-    uuid: "363202dd-0521-46b4-b4e2-443dfbaa2ce1"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.KR.CMLiussss.net"
-      headers:
-        Host: "flat-heart-b60a.401-306.workers.dev"
-  - name: "🇨🇦_224"
-    type: vless
-    server: "104.18.95.26"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_225"
-    type: vless
-    server: "108.162.192.9"
-    port: 443
-    uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "soucuovls.pages.dev"
-    client-fingerprint: "random"
-    network: ws
-    ws-opts:
-      path: "/pyip=proxyip.cmliussss.net"
-      headers:
-        Host: "soucuovls.pages.dev"
-  - name: "🇨🇦_226"
-    type: vless
-    server: "104.26.12.41"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_227"
-    type: vless
-    server: "www.gov.ua"
-    port: 8880
-    uuid: "942bdcfc-e522-44f1-b899-3bd8db7c5ae2"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.SG.CMLiussss.net"
-      headers:
-        Host: "winter-leaf-b4da.122-6c9.workers.dev"
-  - name: "🇨🇦_228"
-    type: vless
-    server: "104.24.212.81"
-    port: 443
-    uuid: "52322144-50c7-9d9f-6ba9-fdb600000003"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "broad-wind-e1ca.salmanmahigir9508.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sync"
-      headers:
-        Host: "broad-wind-e1ca.salmanmahigir9508.workers.dev"
-  - name: "🇨🇦_229"
-    type: vless
-    server: "104.19.35.8"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_230"
-    type: vless
-    server: "108.162.194.34"
-    port: 2096
-    uuid: "6eda0aac-4964-46c2-9132-1fda49cc7dcf"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "teleGRAm8.FReEPerSiaNlaNd10.WORkerS.DeV"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoieHc3MmJYdFVYbUhMIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560"
-      headers:
-        Host: "telegram8.freepersianland10.workers.dev"
-  - name: "🇨🇦_231"
-    type: vless
-    server: "162.159.12.41"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/fp=chrome"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_232"
-    type: vless
-    server: "104.16.8.66"
-    port: 8880
-    uuid: "725c66a2-2bce-4a24-ba52-b4e2e7047076"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.SG.CMLiussss.net"
-      headers:
-        Host: "rapid-base-6c9e.45-d79.workers.dev"
-  - name: "🇨🇦_233"
-    type: vless
-    server: "104.16.75.44"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "de-new-1.ariyuz.org"
-    network: ws
-    ws-opts:
-      path: "/"
-  - name: "🇨🇦_234"
-    type: vless
-    server: "188.114.97.6"
-    port: 2096
-    uuid: "c648c6d0-4d3e-4f51-8ee6-4fcdbdddd684"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "PEekCoNFig.hAMRahfreE2.wORKERs.dEv"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoibTBZdXp5cm93NSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIl19?ed=2560"
-      headers:
-        Host: "peekconfig.hamrahfree2.workers.dev"
-  - name: "🇨🇦_235"
-    type: vless
-    server: "172.66.214.247"
-    port: 8880
-    uuid: "e7f6f783-6754-4228-a5d0-aeed84b9949a"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.SG.CMLiussss.net"
-      headers:
-        Host: "sweet-sun-c70f.317-ba5.workers.dev"
-  - name: "🇨🇦_236"
-    type: vless
-    server: "o.server2peekconfig.workers.dev"
-    port: 443
-    uuid: "ca185ddd-de24-4bc0-b907-232fe947b538"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "O.sErvER2pEekCOnfIg.wORKeRs.dEV"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoieWhJcW05SUZlaktsc2oiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=?ed=2560"
-      headers:
-        Host: "o.server2peekconfig.workers.dev"
-  - name: "🇨🇦_237"
-    type: vless
-    server: "104.21.77.94"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_238"
-    type: vless
-    server: "172.67.185.178"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_239"
-    type: vless
-    server: "104.17.158.173"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_240"
-    type: vless
-    server: "104.21.200.243"
-    port: 2053
-    uuid: "7074b9d7-2183-8919-fc11-ca5e00000000"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "netlivpn2584.vjvdgbc.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN"
-      headers:
-        Host: "netlivpn2584.vjvdgbc.workers.dev"
-  - name: "🇨🇦_241"
-    type: vless
-    server: "104.16.253.69"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_242"
-    type: vless
-    server: "chat.openai.com"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    network: ws
-    ws-opts:
-      path: "/fp"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_243"
-    type: vless
-    server: "love.ns.cloudflare.com"
-    port: 443
-    uuid: "49e76398-5127-4005-90cb-c2a971f745f1"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "oekja.megacitylab-nomt.sbs"
-    client-fingerprint: "firefox"
-    network: ws
-    ws-opts:
-      path: "/carbon"
-      headers:
-        Host: "oekja.megacitylab-nomt.sbs"
-  - name: "🇨🇦_244"
-    type: vless
-    server: "172.67.150.239"
-    port: 443
-    uuid: "98262dbd-3606-437b-b12e-3f38ca62522f"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "1.rmgyvpn.rest"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/ws-cdn"
-      headers:
-        Host: "1.rmgyvpn.rest"
-  - name: "🇨🇦_245"
-    type: vless
-    server: "104.16.72.251"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_246"
-    type: vless
-    server: "peekconfig.hamrahfree2.workers.dev"
-    port: 2096
-    uuid: "c648c6d0-4d3e-4f51-8ee6-4fcdbdddd684"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "PEekCoNFig.hAMRahfreE2.wORKERs.dEv"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoibTBZdXp5cm93NSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIl19?ed=2560"
-      headers:
-        Host: "peekconfig.hamrahfree2.workers.dev"
-  - name: "🇨🇦_247"
-    type: vless
-    server: "104.18.37.228"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    network: ws
-    ws-opts:
-      path: "/fp"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_248"
-    type: vless
-    server: "ezaccess-project-4c7950.ez-dc9bbb.workers.dev"
-    port: 443
-    uuid: "96e341a7-3077-4613-b482-41bd9c90cc4d"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "eZaCCesS-proJEcT-4C7950.Ez-dC9bBB.WorKErs.dEV"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoiN2w4dDlRNVV5NkZ5NU1aeSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560"
-      headers:
-        Host: "ezaccess-project-4c7950.ez-dc9bbb.workers.dev"
-  - name: "🇨🇦_249"
-    type: vless
-    server: "162.159.60.231"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/fp=chrome"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_250"
-    type: vless
-    server: "104.16.239.120"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_251"
-    type: vless
-    server: "172.66.3.133"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_252"
-    type: vless
-    server: "172.66.44.97"
-    port: 443
-    uuid: "83afd88f-200f-4d89-bfc7-66eff160c1d8"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "josni.hoyes.cloudns.ch"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "josni.hoyes.cloudns.ch"
-  - name: "🇨🇦_253"
-    type: vless
-    server: "104.17.22.232"
-    port: 8443
-    uuid: "ad4ae058-cd7e-4e69-a6f7-aee7ce7b0e6e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev"
-  - name: "🇨🇦_254"
-    type: vless
-    server: "104.25.245.126"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_255"
-    type: vless
-    server: "104.21.36.164"
-    port: 2053
-    uuid: "42f3c6bc-fdc3-4d4e-b95d-f84f9e6bf27f"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "ger-full.deepinsane.com"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/api/vote/number/row/n1"
-      headers:
-        Host: "ger-full.deepinsane.com"
-  - name: "🇨🇦_256"
+  - name: "🇨🇦_157"
     type: vless
     server: "free77-sg1.node2.top"
     port: 443
@@ -1191,39 +74,9 @@ proxies:
       path: "/XFJVPNfp=chrome"
       headers:
         Host: "sie704.pages.dev"
-  - name: "🇨🇦_257"
+  - name: "🇨🇦_158"
     type: vless
-    server: "free77-sg3.node2.top"
-    port: 443
-    uuid: "30235bbe-f791-4e53-89f9-5d9363af9b0a"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "sie704.pages.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/XFJVPNfp=chrome"
-      headers:
-        Host: "sie704.pages.dev"
-  - name: "🇨🇦_258"
-    type: vless
-    server: "172.64.32.2"
-    port: 443
-    uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "soucuovls.pages.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "pyip=proxyip.cmliussss.net"
-      headers:
-        Host: "soucuovls.pages.dev"
-  - name: "🇨🇦_259"
-    type: vless
-    server: "104.20.39.109"
+    server: "104.19.54.116"
     port: 443
     uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
     udp: true
@@ -1236,535 +89,33 @@ proxies:
       path: "/sg-melbi"
       headers:
         Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_260"
+  - name: "🇨🇦_159"
     type: vless
-    server: "time.is"
+    server: "104.25.245.126"
     port: 443
-    uuid: "d0298536-d670-4045-bbb1-ddd5ea68683e"
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "azadnet-826.pages.Dev"
+    servername: "support.zoom.us.yxls.eu.cc"
     client-fingerprint: "chrome"
     network: ws
     ws-opts:
-      path: "/"
+      path: "/sg-melbi"
       headers:
-        Host: "azadnet-826.pages.Dev"
-  - name: "🇨🇦_261"
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_160"
     type: vless
-    server: "josni.hoyes.cloudns.ch"
-    port: 2053
-    uuid: "83afd88f-200f-4d89-bfc7-66eff160c1d8"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "josni.hoyes.cloudns.ch"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "josni.hoyes.cloudns.ch"
-  - name: "🇨🇦_262"
-    type: vless
-    server: "173.245.59.159"
-    port: 2053
-    uuid: "54502a61-2af6-40e7-8331-2c9fc40e5903"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "old-cloud-a96a.rohamsahh90.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "old-cloud-a96a.rohamsahh90.workers.dev"
-  - name: "🇨🇦_263"
-    type: vless
-    server: "ad-018.cloud25075.info"
-    port: 8443
-    uuid: "5d3abfa9-bdf5-4334-8383-dcf92df802a5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "ad-018.cloud25075.info"
-    network: ws
-    ws-opts:
-      path: "/"
-  - name: "🇨🇦_264"
-    type: vless
-    server: "130.107.73.148"
-    port: 41373
-    uuid: "a71c8954-66a8-4321-bedb-2336230d81ce"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "google.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU"
-      short-id: "0e"
-    flow: "xtls-rprx-vision"
-  - name: "🇨🇦_265"
-    type: vless
-    server: "yd.mmhh.eu.cc"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_266"
-    type: vless
-    server: "172.64.94.251"
+    server: "104.16.106.213"
     port: 8880
-    uuid: "723c410e-5789-4b21-abb9-d6ec05547ba9"
+    uuid: "ae83f4a6-7fd3-4168-9f42-1260fc601155"
     udp: true
     network: ws
     ws-opts:
-      path: "/pyip=ProxyIP.US.CMLiussss.net"
+      path: "/pyip=ProxyIP.JP.CMLiussss.net"
       headers:
-        Host: "blue-sky-e65b.221-553.workers.dev"
-  - name: "🇨🇦_267"
-    type: vless
-    server: "216.152.147.28"
-    port: 443
-    uuid: "d9e4721d-cdac-44c7-bc91-117367eac194"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "kjiuPmjM4IutdZudHfcPZHEwcrBEFY4qBLlvfC6A_Ss"
-      short-id: "b9f8d3f8"
-    flow: "xtls-rprx-vision"
-  - name: "🇨🇦_268"
-    type: vless
-    server: "104.16.72.41"
-    port: 80
-    uuid: "dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/http"
-      headers:
-        Host: "de.vpnbase.net"
-  - name: "🇨🇦_269"
-    type: vless
-    server: "104.16.158.249"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "random"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_270"
-    type: vless
-    server: "104.21.56.8"
-    port: 8443
-    uuid: "2e8beadd-99bf-4fda-8692-8493886504bc"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "ad-007.cloud25075.info"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "ad-007.cloud25075.info"
-  - name: "🇨🇦_271"
-    type: vless
-    server: "162.159.141.83"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_272"
-    type: vless
-    server: "104.17.28.89"
-    port: 443
-    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "workspace.evan00.dpdns.org"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "workspace.evan00.dpdns.org"
-  - name: "🇨🇦_273"
-    type: vless
-    server: "hi.n2foriran.workers.dev"
-    port: 443
-    uuid: "58e78cf6-2b50-40fb-b6bf-ec7eae5b5000"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hi.n2foriran.workers.dev"
-    network: ws
-    ws-opts:
-      path: "/"
-  - name: "🇨🇦_274"
-    type: vless
-    server: "188.114.96.2"
-    port: 2096
-    uuid: "8d82944e-17b9-473f-a456-dec9a6e21471"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "peekconfig.peekconf1.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoidnlSRWhQQ3ZCNGZRNHVYMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSJdfQ=="
-      headers:
-        Host: "peekconfig.peekconf1.workers.dev"
-  - name: "🇨🇦_275"
-    type: vless
-    server: "dx.mmhh.eu.cc"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/fp=chrome"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_276"
-    type: vless
-    server: "104.17.147.118"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_277"
-    type: vless
-    server: "104.17.144.235"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "random"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_278"
-    type: vless
-    server: "162.159.137.54"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-  - name: "🇨🇦_279"
-    type: vless
-    server: "158.69.112.254"
-    port: 443
-    uuid: "661f395d-b153-4199-a04b-693f5fe7f261"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.speedtest.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y"
-      short-id: "3d3c1e645f763ee3"
-    flow: "xtls-rprx-vision"
-  - name: "🇨🇦_280"
-    type: vless
-    server: "104.17.112.113"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_281"
-    type: vless
-    server: "104.17.172.114"
-    port: 2053
-    uuid: "ad4ae058-cd7e-4e69-a6f7-aee7ce7b0e6e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev"
-  - name: "🇨🇦_282"
-    type: vless
-    server: "172.67.170.118"
-    port: 8080
-    uuid: "e3eff0b8-7276-3179-e538-a53000000002"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/sync"
-      headers:
-        Host: "tiny-hat-f95e.ilia-1000-a.workers.dev"
-  - name: "🇨🇦_283"
-    type: vless
-    server: "172.64.53.194"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "🇨🇦_284"
-    type: vless
-    server: "anydesk.com"
-    port: 8880
-    uuid: "1399f473-ffb5-4942-b05c-7dd3fc0007fb"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.US.CMLiussss.net"
-      headers:
-        Host: "round-truth-dcf1.34-719.workers.dev"
-  - name: "🇨🇦_285"
-    type: vless
-    server: "104.17.136.118"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_286"
-    type: vless
-    server: "104.16.107.139"
-    port: 8880
-    uuid: "24c2a873-4584-4c53-8679-61029682d0bb"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.US.CMLiussss.net"
-      headers:
-        Host: "soft-thunder-bc22.111-f59.workers.dev"
-  - name: "🇨🇦_287"
-    type: vless
-    server: "172.64.80.1"
-    port: 8443
-    uuid: "304a1e62-eb26-4b44-994e-b96a70fff9b4"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "ad-013.fluxmxd18.info"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "ad-013.fluxmxd18.info"
-  - name: "🇨🇦_288"
-    type: vless
-    server: "104.26.9.48"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_289"
-    type: vless
-    server: "162.159.43.121"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_290"
-    type: vless
-    server: "www.fbi.gov"
-    port: 2095
-    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "cnmfangbinxing-nmsl.cnm-fangbinxing-nmsl.workers.dev"
-  - name: "🇨🇦_291"
-    type: vless
-    server: "104.24.67.15"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_292"
-    type: vless
-    server: "104.25.220.68"
-    port: 443
-    uuid: "9952b71a-6c86-4522-888f-ff9ea9b93536"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "1.hshs8227shhshs.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-  - name: "🇨🇦_293"
-    type: vless
-    server: "104.16.248.48"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "random"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇨🇦_294"
-    type: vless
-    server: "104.16.241.173"
-    port: 2096
-    uuid: "d6bbaa54-2fa9-46b9-8f6d-42ccdfc9122b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "odd-wildflower-db1b.yasinmohammad.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "odd-wildflower-db1b.yasinmohammad.workers.dev"
-  - name: "🇨🇦_295"
-    type: vless
-    server: "www.baipiao.eu.org"
-    port: 8880
-    uuid: "392ed37c-c0cd-472e-8765-a94677005b0b"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.SG.CMLiussss.net"
-      headers:
-        Host: "frosty-bread-788f.398.workers.dev"
-  - name: "🇨🇦_296"
-    type: vless
-    server: "172.64.34.119"
-    port: 443
-    uuid: "49e76398-5127-4005-90cb-c2a971f745f1"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "utmwb.freshlionnode-fla.sbs"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/carbon"
-      headers:
-        Host: "utmwb.freshlionnode-fla.sbs"
-  - name: "🇨🇦_297"
-    type: vless
-    server: "172.67.75.55"
-    port: 8443
-    uuid: "b7bda73b-9852-480e-86ff-616789593610"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "damp-voice-0cd5.qplm2770.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/proxyip=31.77.161.247,31.57.190.85,208.85.17.114"
-      headers:
-        Host: "damp-voice-0cd5.qplm2770.workers.dev"
-  - name: "🇨🇦_298"
+        Host: "shy-mud-e936.15-bb9.workers.dev"
+  - name: "🇨🇦_161"
     type: vless
     server: "188.114.97.6"
     port: 443
@@ -1779,9 +130,84 @@ proxies:
       path: "/eyJqdW5rIjoiQmFCblN3SmhXYTB3RzVoIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OjExOjY0OjpdIiwiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0=?ed=2560"
       headers:
         Host: "free.server14peekconfig.workers.dev"
-  - name: "🇨🇦_299"
+  - name: "🇨🇦_162"
     type: vless
-    server: "162.159.0.3"
+    server: "104.17.158.173"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_163"
+    type: vless
+    server: "104.17.22.240"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "random"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_164"
+    type: vless
+    server: "172.64.146.86"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_165"
+    type: vless
+    server: "104.20.39.109"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_166"
+    type: vless
+    server: "172.64.150.28"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/fp"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_167"
+    type: vless
+    server: "172.64.32.2"
     port: 443
     uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
     udp: true
@@ -1791,119 +217,54 @@ proxies:
     client-fingerprint: "chrome"
     network: ws
     ws-opts:
-      path: "/pyip=proxyip.cmliussss.netfp=random"
+      path: "pyip=proxyip.cmliussss.net"
       headers:
         Host: "soucuovls.pages.dev"
-  - name: "🇨🇦_300"
+  - name: "🇨🇦_168"
     type: vless
-    server: "188.114.98.0"
-    port: 2083
-    uuid: "273e9057-8167-4d17-8de3-d44c82037cda"
+    server: "104.16.239.120"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "old-sky-2b90.seyowkclient.workers.dev"
+    servername: "support.zoom.us.yxls.eu.cc"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_169"
+    type: vless
+    server: "104.24.212.81"
+    port: 443
+    uuid: "52322144-50c7-9d9f-6ba9-fdb600000003"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "broad-wind-e1ca.salmanmahigir9508.workers.dev"
     client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sync"
+      headers:
+        Host: "broad-wind-e1ca.salmanmahigir9508.workers.dev"
+  - name: "🇨🇦_170"
+    type: vless
+    server: "104.16.158.249"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "random"
     network: ws
     ws-opts:
       path: "/"
       headers:
-        Host: "old-sky-2b90.seyowkclient.workers.dev"
-  - name: "🇨🇦_301"
-    type: vless
-    server: "198.41.208.112"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_302"
-    type: vless
-    server: "ad-013.fluxmxd18.info"
-    port: 8443
-    uuid: "304a1e62-eb26-4b44-994e-b96a70fff9b4"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "ad-013.fluxmxd18.info"
-    network: ws
-    ws-opts:
-      path: "/"
-  - name: "🇨🇦_303"
-    type: vless
-    server: "104.17.21.32"
-    port: 8880
-    uuid: "4070e7c9-a412-4ed0-a5fa-fdb455451d2c"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.SG.CMLiussss.net"
-      headers:
-        Host: "icy-sky-53f2.9-e8e.workers.dev"
-  - name: "🇨🇦_304"
-    type: vless
-    server: "104.18.34.245"
-    port: 8880
-    uuid: "0b01d4d8-656d-4d55-8ad5-ed2a362788b5"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.SG.CMLiussss.net"
-      headers:
-        Host: "square-tree-3dbf.285.workers.dev"
-  - name: "🇨🇦_305"
-    type: vless
-    server: "104.25.244.217"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_306"
-    type: vless
-    server: "104.17.223.103"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_307"
-    type: vless
-    server: "198.41.209.43"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_308"
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_171"
     type: vless
     server: "104.21.2.192"
     port: 443
@@ -1918,7 +279,1379 @@ proxies:
       path: "/sg-melbi"
       headers:
         Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇨🇦_309"
+  - name: "🇨🇦_172"
+    type: vless
+    server: "nameless-moon-7c4d.shafmrhjlos23.workers.dev"
+    port: 443
+    uuid: "9e65fe63-b771-c63d-5272-fdd700000000"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "nameless-moon-7c4d.shafmrhjlos23.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/vasl"
+  - name: "🇨🇦_173"
+    type: vless
+    server: "104.21.66.61"
+    port: 8443
+    uuid: "05cf7b0e-ad1a-42bb-80e7-73ae45b1019a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "france.io-com-de-dev.org"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/api/voip/updates/static/x9i2"
+      headers:
+        Host: "france.io-com-de-dev.org"
+  - name: "🇨🇦_174"
+    type: vless
+    server: "104.17.144.235"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "random"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_175"
+    type: vless
+    server: "104.16.251.148"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "random"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_176"
+    type: vless
+    server: "162.159.2.228"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_177"
+    type: vless
+    server: "162.159.0.3"
+    port: 443
+    uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "soucuovls.pages.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/pyip=proxyip.cmliussss.netfp=random"
+      headers:
+        Host: "soucuovls.pages.dev"
+  - name: "🇨🇦_178"
+    type: vless
+    server: "104.16.72.251"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_179"
+    type: vless
+    server: "198.41.209.80"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_180"
+    type: vless
+    server: "108.162.195.7"
+    port: 2053
+    uuid: "83afd88f-200f-4d89-bfc7-66eff160c1d8"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "josni.hoyes.cloudns.ch"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "josni.hoyes.cloudns.ch"
+  - name: "🇨🇦_181"
+    type: vless
+    server: "104.18.34.245"
+    port: 8880
+    uuid: "0b01d4d8-656d-4d55-8ad5-ed2a362788b5"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/pyip=ProxyIP.SG.CMLiussss.net"
+      headers:
+        Host: "square-tree-3dbf.285.workers.dev"
+  - name: "🇨🇦_182"
+    type: vless
+    server: "216.152.147.28"
+    port: 443
+    uuid: "d9e4721d-cdac-44c7-bc91-117367eac194"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "kjiuPmjM4IutdZudHfcPZHEwcrBEFY4qBLlvfC6A_Ss"
+      short-id: "b9f8d3f8"
+    flow: "xtls-rprx-vision"
+  - name: "🇨🇦_183"
+    type: vless
+    server: "104.16.43.192"
+    port: 2083
+    uuid: "88e32d76-b49f-44ee-a90a-1ad01d542d55"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "ez-2cB1f5.sabZIpolObAMAHi9.WORkerS.deV"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoiOWc3WUROOHZXemEiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560"
+      headers:
+        Host: "ez-2cb1f5.sabzipolobamahi9.workers.dev"
+  - name: "🇨🇦_184"
+    type: vless
+    server: "soskeynets-hat-f95e.ilia-1000-a.workers.dev"
+    port: 8080
+    uuid: "e3eff0b8-7276-3179-e538-a53000000002"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/sync"
+      headers:
+        Host: "tiny-hat-f95e.ilia-1000-a.workers.dev"
+  - name: "🇨🇦_185"
+    type: vless
+    server: "104.21.96.1"
+    port: 443
+    uuid: "0836463b-214f-4af6-aa85-85a56a62388e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "D2127A49-Flat-WOoD-c4b5.Milia-AKbaRpOor.workers.Dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/Pl67KhTLWmJqQ2lY?ed=2560"
+      headers:
+        Host: "D2127A49-Flat-WOoD-c4b5.Milia-AKbaRpOor.workers.Dev"
+  - name: "🇨🇦_186"
+    type: vless
+    server: "104.17.172.114"
+    port: 2053
+    uuid: "ad4ae058-cd7e-4e69-a6f7-aee7ce7b0e6e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev"
+  - name: "🇨🇦_187"
+    type: vless
+    server: "172.67.75.55"
+    port: 8443
+    uuid: "b7bda73b-9852-480e-86ff-616789593610"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "damp-voice-0cd5.qplm2770.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/proxyip=31.77.161.247,31.57.190.85,208.85.17.114"
+      headers:
+        Host: "damp-voice-0cd5.qplm2770.workers.dev"
+  - name: "🇨🇦_188"
+    type: vless
+    server: "ezaccess-project-4c7950.ez-dc9bbb.workers.dev"
+    port: 443
+    uuid: "96e341a7-3077-4613-b482-41bd9c90cc4d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "eZaCCesS-proJEcT-4C7950.Ez-dC9bBB.WorKErs.dEV"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoiN2w4dDlRNVV5NkZ5NU1aeSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560"
+      headers:
+        Host: "ezaccess-project-4c7950.ez-dc9bbb.workers.dev"
+  - name: "🇨🇦_189"
+    type: vless
+    server: "104.26.9.48"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_190"
+    type: vless
+    server: "172.64.32.7"
+    port: 443
+    uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "soucuovls.pages.dev"
+    client-fingerprint: "random"
+    network: ws
+    ws-opts:
+      path: "/pyip=proxyip.cmliussss.net"
+      headers:
+        Host: "soucuovls.pages.dev"
+  - name: "🇨🇦_191"
+    type: vless
+    server: "www.fbi.gov"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "cnmfangbinxing-nmsl.cnm-fangbinxing-nmsl.workers.dev"
+  - name: "🇨🇦_192"
+    type: vless
+    server: "104.17.22.232"
+    port: 8443
+    uuid: "ad4ae058-cd7e-4e69-a6f7-aee7ce7b0e6e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev"
+  - name: "🇨🇦_193"
+    type: vless
+    server: "104.21.200.243"
+    port: 2053
+    uuid: "7074b9d7-2183-8919-fc11-ca5e00000000"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "netlivpn2584.vjvdgbc.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN"
+      headers:
+        Host: "netlivpn2584.vjvdgbc.workers.dev"
+  - name: "🇨🇦_194"
+    type: vless
+    server: "104.16.241.173"
+    port: 2096
+    uuid: "d6bbaa54-2fa9-46b9-8f6d-42ccdfc9122b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "odd-wildflower-db1b.yasinmohammad.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "odd-wildflower-db1b.yasinmohammad.workers.dev"
+  - name: "🇨🇦_195"
+    type: vless
+    server: "162.159.40.49"
+    port: 80
+    uuid: "57bd62cf-5550-4075-8fa3-d4519aae8df0"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoiRURaNEp6YUhMbVlqdzQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0="
+      headers:
+        Host: "silent-feather-8539.sddadad2233122eew.workers.dev"
+  - name: "🇨🇦_196"
+    type: vless
+    server: "peekconfig.hamrahfree2.workers.dev"
+    port: 2096
+    uuid: "c648c6d0-4d3e-4f51-8ee6-4fcdbdddd684"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "PEekCoNFig.hAMRahfreE2.wORKERs.dEv"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoibTBZdXp5cm93NSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIl19?ed=2560"
+      headers:
+        Host: "peekconfig.hamrahfree2.workers.dev"
+  - name: "🇨🇦_197"
+    type: vless
+    server: "188.114.97.6"
+    port: 2096
+    uuid: "c648c6d0-4d3e-4f51-8ee6-4fcdbdddd684"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "PEekCoNFig.hAMRahfreE2.wORKERs.dEv"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoibTBZdXp5cm93NSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIl19?ed=2560"
+      headers:
+        Host: "peekconfig.hamrahfree2.workers.dev"
+  - name: "🇨🇦_198"
+    type: vless
+    server: "198.41.209.43"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_199"
+    type: vless
+    server: "162.159.12.41"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_200"
+    type: vless
+    server: "108.162.192.5"
+    port: 443
+    uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "soucuovls.pages.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/pyip=proxyip.cmliussss.netfp=random"
+      headers:
+        Host: "soucuovls.pages.dev"
+  - name: "🇨🇦_201"
+    type: vless
+    server: "104.17.223.103"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_202"
+    type: vless
+    server: "130.107.73.148"
+    port: 41373
+    uuid: "a71c8954-66a8-4321-bedb-2336230d81ce"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "google.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU"
+      short-id: "0e"
+    flow: "xtls-rprx-vision"
+  - name: "🇨🇦_203"
+    type: vless
+    server: "188.114.98.0"
+    port: 2083
+    uuid: "273e9057-8167-4d17-8de3-d44c82037cda"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "old-sky-2b90.seyowkclient.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "old-sky-2b90.seyowkclient.workers.dev"
+  - name: "🇨🇦_204"
+    type: vless
+    server: "104.25.220.68"
+    port: 443
+    uuid: "9952b71a-6c86-4522-888f-ff9ea9b93536"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "1.hshs8227shhshs.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+  - name: "🇨🇦_205"
+    type: vless
+    server: "josni.hoyes.cloudns.ch"
+    port: 2053
+    uuid: "83afd88f-200f-4d89-bfc7-66eff160c1d8"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "josni.hoyes.cloudns.ch"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "josni.hoyes.cloudns.ch"
+  - name: "🇨🇦_206"
+    type: vless
+    server: "188.114.96.2"
+    port: 2096
+    uuid: "8d82944e-17b9-473f-a456-dec9a6e21471"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "peekconfig.peekconf1.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoidnlSRWhQQ3ZCNGZRNHVYMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSJdfQ=="
+      headers:
+        Host: "peekconfig.peekconf1.workers.dev"
+  - name: "🇨🇦_207"
+    type: vless
+    server: "104.17.147.118"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_208"
+    type: vless
+    server: "104.19.35.8"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_209"
+    type: vless
+    server: "104.17.136.118"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_210"
+    type: vless
+    server: "yd.mmhh.eu.cc"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_211"
+    type: vless
+    server: "172.64.53.194"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "🇨🇦_212"
+    type: vless
+    server: "162.159.156.214"
+    port: 8880
+    uuid: "ad85a1ce-3519-4634-9ea1-66c60d3694ba"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/pyip=ProxyIP.SG.CMLiussss.net"
+      headers:
+        Host: "little-pond-8731.81-68e.workers.dev"
+  - name: "🇨🇦_213"
+    type: vless
+    server: "104.17.182.11"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_214"
+    type: vless
+    server: "premium-us-ca-01-gthost.efgwf.online"
+    port: 8080
+    uuid: "4e0f4e59-3613-4f0c-b824-7348413d20e6"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/ws-6Tta3kYF"
+      headers:
+        Host: "premium-us-ca-01-gthost.efgwf.online"
+  - name: "🇨🇦_215"
+    type: vless
+    server: "104.19.35.206"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_216"
+    type: vless
+    server: "108.162.192.9"
+    port: 443
+    uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "soucuovls.pages.dev"
+    client-fingerprint: "random"
+    network: ws
+    ws-opts:
+      path: "/pyip=proxyip.cmliussss.net"
+      headers:
+        Host: "soucuovls.pages.dev"
+  - name: "🇨🇦_217"
+    type: vless
+    server: "104.16.248.48"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "random"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_218"
+    type: vless
+    server: "104.21.117.9"
+    port: 443
+    uuid: "0926b50d-3a90-18dd-7c8e-0cf100000000"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "netlivpn4024.bgfjhd.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN"
+      headers:
+        Host: "netlivpn4024.bgfjhd.workers.dev"
+  - name: "🇨🇦_219"
+    type: vless
+    server: "172.66.44.97"
+    port: 443
+    uuid: "83afd88f-200f-4d89-bfc7-66eff160c1d8"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "josni.hoyes.cloudns.ch"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "josni.hoyes.cloudns.ch"
+  - name: "🇨🇦_220"
+    type: vless
+    server: "104.26.2.173"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_221"
+    type: vless
+    server: "158.69.112.254"
+    port: 443
+    uuid: "661f395d-b153-4199-a04b-693f5fe7f261"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.speedtest.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y"
+      short-id: "3d3c1e645f763ee3"
+    flow: "xtls-rprx-vision"
+  - name: "🇨🇦_222"
+    type: vless
+    server: "172.67.78.254"
+    port: 2083
+    uuid: "fc8a0708-951a-4027-860f-2a154ebc4dd7"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "crimson-king-301d.nexoxnet.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "crimson-king-301d.nexoxnet.workers.dev"
+  - name: "🇨🇦_223"
+    type: vless
+    server: "104.18.109.147"
+    port: 80
+    uuid: "c29d39bd-92a4-45db-bb61-56013998617c"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/Telegram-XV2ry2?ed=2048"
+      headers:
+        Host: "www.speedtest.net.www.1google.com.bing.com.visa.com.tls.xv98.ip-ddns.com"
+  - name: "🇨🇦_224"
+    type: vless
+    server: "soskeynets.hoyes.cloudns.ch"
+    port: 2053
+    uuid: "83afd88f-200f-4d89-bfc7-66eff160c1d8"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "josni.hoyes.cloudns.ch"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "josni.hoyes.cloudns.ch"
+  - name: "🇨🇦_225"
+    type: vless
+    server: "o.server3peekconfig.workers.dev"
+    port: 443
+    uuid: "78abbe41-95dd-4f6f-a500-1450913fb933"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "o.SERVeR3PeEkConFIG.WOrKerS.dEv"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoiZ3VVMHdacGtDIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19?ed=2560"
+      headers:
+        Host: "o.server3peekconfig.workers.dev"
+  - name: "🇨🇦_226"
+    type: vless
+    server: "162.159.60.231"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_227"
+    type: vless
+    server: "104.18.34.124"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_228"
+    type: vless
+    server: "104.16.72.41"
+    port: 80
+    uuid: "dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/http"
+      headers:
+        Host: "de.vpnbase.net"
+  - name: "🇨🇦_229"
+    type: vless
+    server: "172.67.170.118"
+    port: 8080
+    uuid: "e3eff0b8-7276-3179-e538-a53000000002"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/sync"
+      headers:
+        Host: "tiny-hat-f95e.ilia-1000-a.workers.dev"
+  - name: "🇨🇦_230"
+    type: vless
+    server: "104.16.253.69"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_231"
+    type: vless
+    server: "104.17.112.113"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_232"
+    type: vless
+    server: "188.114.98.66"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_233"
+    type: vless
+    server: "104.16.75.44"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "de-new-1.ariyuz.org"
+    network: ws
+    ws-opts:
+      path: "/"
+  - name: "🇨🇦_234"
+    type: vless
+    server: "104.21.77.94"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_235"
+    type: vless
+    server: "free77-sg3.node2.top"
+    port: 443
+    uuid: "30235bbe-f791-4e53-89f9-5d9363af9b0a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "sie704.pages.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/XFJVPNfp=chrome"
+      headers:
+        Host: "sie704.pages.dev"
+  - name: "🇨🇦_236"
+    type: vless
+    server: "time.is"
+    port: 443
+    uuid: "d0298536-d670-4045-bbb1-ddd5ea68683e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "azadnet-826.pages.Dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "azadnet-826.pages.Dev"
+  - name: "🇨🇦_237"
+    type: vless
+    server: "162.159.23.117"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_238"
+    type: vless
+    server: "172.64.32.6"
+    port: 443
+    uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "soucuovls.pages.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/pyip=proxyip.cmliussss.net"
+      headers:
+        Host: "soucuovls.pages.dev"
+  - name: "🇨🇦_239"
+    type: vless
+    server: "www.gov.ua"
+    port: 8880
+    uuid: "942bdcfc-e522-44f1-b899-3bd8db7c5ae2"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/pyip=ProxyIP.SG.CMLiussss.net"
+      headers:
+        Host: "winter-leaf-b4da.122-6c9.workers.dev"
+  - name: "🇨🇦_240"
+    type: vless
+    server: "172.67.150.239"
+    port: 443
+    uuid: "98262dbd-3606-437b-b12e-3f38ca62522f"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "1.rmgyvpn.rest"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/ws-cdn"
+      headers:
+        Host: "1.rmgyvpn.rest"
+  - name: "🇨🇦_241"
+    type: vless
+    server: "104.18.37.228"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    network: ws
+    ws-opts:
+      path: "/fp"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_242"
+    type: vless
+    server: "162.159.43.121"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_243"
+    type: vless
+    server: "104.16.174.164"
+    port: 443
+    uuid: "73796e63-0000-4000-8000-000000000000"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "wireguard.ahmad-kh5716.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sync"
+      headers:
+        Host: "wireguard.ahmad-kh5716.workers.dev"
+  - name: "🇨🇦_244"
+    type: vless
+    server: "104.24.67.15"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_245"
+    type: vless
+    server: "162.159.137.54"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+  - name: "🇨🇦_246"
+    type: vless
+    server: "188.114.97.3"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_247"
+    type: vless
+    server: "162.159.141.83"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_248"
+    type: vless
+    server: "chat.openai.com"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    network: ws
+    ws-opts:
+      path: "/fp"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_249"
+    type: vless
+    server: "173.245.59.159"
+    port: 2053
+    uuid: "54502a61-2af6-40e7-8331-2c9fc40e5903"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "old-cloud-a96a.rohamsahh90.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "old-cloud-a96a.rohamsahh90.workers.dev"
+  - name: "🇨🇦_250"
+    type: vless
+    server: "download.yunzhongzhuan.com"
+    port: 8880
+    uuid: "f22856f8-66f0-4655-ba86-5385971e1302"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/pyip=ProxyIP.US.CMLiussss.net"
+      headers:
+        Host: "throbbing-mountain-45e9.314-df3.workers.dev"
+  - name: "🇨🇦_251"
+    type: vless
+    server: "104.18.13.229"
+    port: 8880
+    uuid: "d7ec3e31-a9c4-4bdf-a2d8-7f75a8381035"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "weathered-lake-e883.35-bc4.workers.dev"
+  - name: "🇨🇦_252"
+    type: vless
+    server: "104.26.12.41"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_253"
+    type: vless
+    server: "104.17.149.233"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_254"
+    type: vless
+    server: "104.16.158.255"
+    port: 443
+    uuid: "d2213442-94d7-4143-8398-082efde2174e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "nova-atlas-core-5a95.rajabyshokofeh3-bcc.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "nova-atlas-core-5a95.rajabyshokofeh3-bcc.workers.dev"
+  - name: "🇨🇦_255"
+    type: vless
+    server: "104.25.244.217"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_256"
+    type: vless
+    server: "162.159.140.78"
+    port: 8880
+    uuid: "363202dd-0521-46b4-b4e2-443dfbaa2ce1"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/pyip=ProxyIP.KR.CMLiussss.net"
+      headers:
+        Host: "flat-heart-b60a.401-306.workers.dev"
+  - name: "🇨🇦_257"
+    type: vless
+    server: "o.server2peekconfig.workers.dev"
+    port: 443
+    uuid: "ca185ddd-de24-4bc0-b907-232fe947b538"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "O.sErvER2pEekCOnfIg.wORKeRs.dEV"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoieWhJcW05SUZlaktsc2oiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=?ed=2560"
+      headers:
+        Host: "o.server2peekconfig.workers.dev"
+  - name: "🇨🇦_258"
+    type: vless
+    server: "104.17.28.89"
+    port: 443
+    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "workspace.evan00.dpdns.org"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "workspace.evan00.dpdns.org"
+  - name: "🇨🇦_259"
+    type: vless
+    server: "free.server6peekconfig.workers.dev"
+    port: 443
+    uuid: "d195909a-eff4-489d-a261-955b904894cb"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fREE.sERVer6PeeKCOnFIG.wOrkErs.dEv"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoieUhYMWhoZEVEIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19?ed=2560"
+      headers:
+        Host: "free.server6peekconfig.workers.dev"
+  - name: "🇨🇦_260"
+    type: vless
+    server: "104.18.95.26"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_261"
+    type: vless
+    server: "198.41.208.112"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_262"
+    type: vless
+    server: "104.21.36.164"
+    port: 2053
+    uuid: "42f3c6bc-fdc3-4d4e-b95d-f84f9e6bf27f"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "ger-full.deepinsane.com"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/api/vote/number/row/n1"
+      headers:
+        Host: "ger-full.deepinsane.com"
+  - name: "🇨🇦_263"
+    type: vless
+    server: "172.67.78.139"
+    port: 8443
+    uuid: "ad4ae058-cd7e-4e69-a6f7-aee7ce7b0e6e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev"
+  - name: "🇨🇦_264"
+    type: vless
+    server: "104.16.72.70"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2560"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_265"
+    type: vless
+    server: "172.66.3.133"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇨🇦_266"
+    type: vless
+    server: "172.67.185.178"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇨🇦_267"
+    type: vless
+    server: "162.159.0.8"
+    port: 443
+    uuid: "dd321f25-8f90-4e7c-a1fa-01883a8988a7"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "soucuovls.pages.dev"
+    client-fingerprint: "random"
+    network: ws
+    ws-opts:
+      path: "/pyip=proxyip.cmliussss.net"
+      headers:
+        Host: "soucuovls.pages.dev"
+  - name: "🇨🇦_268"
     type: vless
     server: "premium-us-az-01-hostinger.efgwf.online"
     port: 8080
@@ -1929,83 +1662,33 @@ proxies:
       path: "/ws-hTopcF3L"
       headers:
         Host: "premium-us-az-01-hostinger.efgwf.online"
-  - name: "🇨🇦_310"
+  - name: "🇨🇦_269"
     type: vless
-    server: "104.27.82.154"
+    server: "104.17.21.32"
     port: 8880
-    uuid: "0ed342c3-eb45-4d63-83a1-697252636ca9"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.KR.CMLiussss.net"
-      headers:
-        Host: "yellow-hall-d482.260-d22.workers.dev"
-  - name: "🇨🇦_311"
-    type: vless
-    server: "104.21.90.146"
-    port: 443
-    uuid: "e35a5ad5-0175-4cd6-b654-1eb220ff28f0"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "node-dispatch-c8-2.e20260720.kdns.fr"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/Wvf67jc5MgASmsb9Qsr0"
-      headers:
-        Host: "node-dispatch-c8-2.e20260720.kdns.fr"
-  - name: "🇨🇦_312"
-    type: vless
-    server: "162.159.21.178"
-    port: 8880
-    uuid: "f9a53aa5-774e-4556-b2b7-d8b57b423b97"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.KR.CMLiussss.net"
-      headers:
-        Host: "yellow-breeze-989b.348-9b8.workers.dev"
-  - name: "🇨🇦_313"
-    type: vless
-    server: "104.17.170.132"
-    port: 8880
-    uuid: "8e8e2034-33eb-4ccc-938f-ba86d877c449"
+    uuid: "4070e7c9-a412-4ed0-a5fa-fdb455451d2c"
     udp: true
     network: ws
     ws-opts:
       path: "/pyip=ProxyIP.SG.CMLiussss.net"
       headers:
-        Host: "icy-hall-8013.386-58c.workers.dev"
-  - name: "🇨🇦_314"
+        Host: "icy-sky-53f2.9-e8e.workers.dev"
+  - name: "🇨🇦_270"
     type: vless
-    server: "172.67.169.143"
+    server: "104.21.0.119"
     port: 443
-    uuid: "e35a5ad5-0175-4cd6-b654-1eb220ff28f0"
+    uuid: "98262dbd-3606-437b-b12e-3f38ca62522f"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "infra-services-c8-2.21491204-f13b-4977-9cc9-5275edd68fd8.kdns.fr"
+    servername: "1.rmgyvpn.rest"
     client-fingerprint: "chrome"
     network: ws
     ws-opts:
-      path: "/Wvf67jc5MgASmsb9Qsr0"
+      path: "/ws-cdn"
       headers:
-        Host: "infra-services-c8-2.21491204-f13b-4977-9cc9-5275edd68fd8.kdns.fr"
-  - name: "🇨🇦_315"
-    type: vless
-    server: "ad-013.pixel9xdmq.info"
-    port: 8443
-    uuid: "304a1e62-eb26-4b44-994e-b96a70fff9b4"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "ad-013.pixel9xdmq.info"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-  - name: "🇨🇦_316"
+        Host: "1.rmgyvpn.rest"
+  - name: "🇨🇦_271"
     type: vless
     server: "www.visa.com.sg"
     port: 8880
@@ -2016,40 +1699,40 @@ proxies:
       path: "/pyip=ProxyIP.JP.CMLiussss.net"
       headers:
         Host: "weathered-lake-e883.35-bc4.workers.dev"
-  - name: "🇨🇦_317"
+  - name: "🇨🇦_272"
     type: vless
-    server: "162.159.48.193"
+    server: "104.16.107.139"
     port: 8880
-    uuid: "1bc8fb2a-3bee-4ae0-aa12-957885e63e18"
+    uuid: "24c2a873-4584-4c53-8679-61029682d0bb"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/pyip=ProxyIP.US.CMLiussss.net"
+      headers:
+        Host: "soft-thunder-bc22.111-f59.workers.dev"
+  - name: "🇨🇦_273"
+    type: vless
+    server: "172.66.214.247"
+    port: 8880
+    uuid: "e7f6f783-6754-4228-a5d0-aeed84b9949a"
     udp: true
     network: ws
     ws-opts:
       path: "/pyip=ProxyIP.SG.CMLiussss.net"
       headers:
-        Host: "super-mud-8b38.114-a90.workers.dev"
-  - name: "🇨🇦_318"
+        Host: "sweet-sun-c70f.317-ba5.workers.dev"
+  - name: "🇨🇦_274"
     type: vless
-    server: "104.17.181.19"
+    server: "104.27.82.154"
     port: 8880
-    uuid: "4ae1f5c4-6595-4a20-85c0-0deec1e6ecb9"
+    uuid: "0ed342c3-eb45-4d63-83a1-697252636ca9"
     udp: true
     network: ws
     ws-opts:
-      path: "/pyip=ProxyIP.US.CMLiussss.net"
+      path: "/pyip=ProxyIP.KR.CMLiussss.net"
       headers:
-        Host: "misty-dew-009a.484.workers.dev"
-  - name: "🇨🇦_319"
-    type: vless
-    server: "104.17.58.113"
-    port: 8880
-    uuid: "fbd6ffcc-f07b-4790-898e-2a6827f6d10f"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/pyip=ProxyIP.US.CMLiussss.net"
-      headers:
-        Host: "old-disk-b667.399-1b9.workers.dev"
-  - name: "🇨🇦_320"
+        Host: "yellow-hall-d482.260-d22.workers.dev"
+  - name: "🇨🇦_275"
     type: vless
     server: "log.bpminecraft.com"
     port: 8880
@@ -2060,156 +1743,42 @@ proxies:
       path: "/pyip=ProxyIP.US.CMLiussss.net"
       headers:
         Host: "delicate-meadow-15da.423-c77.workers.dev"
-  - name: "🇨🇦_321"
+  - name: "🇨🇦_276"
     type: vless
-    server: "104.16.106.213"
+    server: "162.159.48.193"
     port: 8880
-    uuid: "ae83f4a6-7fd3-4168-9f42-1260fc601155"
+    uuid: "1bc8fb2a-3bee-4ae0-aa12-957885e63e18"
     udp: true
     network: ws
     ws-opts:
-      path: "/pyip=ProxyIP.JP.CMLiussss.net"
+      path: "/pyip=ProxyIP.SG.CMLiussss.net"
       headers:
-        Host: "shy-mud-e936.15-bb9.workers.dev"
-  - name: "🇨🇦_322"
-    type: trojan
-    server: "104.16.71.213"
-    port: 443
-    password: "humanity"
-    sni: "www.calmlunch.com"
-    skip-cert-verify: true
+        Host: "super-mud-8b38.114-a90.workers.dev"
+  - name: "🇨🇦_277"
+    type: vless
+    server: "www.ipget.net"
+    port: 8880
+    uuid: "472e0fb5-3a6b-48be-8060-cfffc6335624"
     udp: true
     network: ws
     ws-opts:
-      path: "/assignment"
+      path: "/pyip=ProxyIP.KR.CMLiussss.net"
       headers:
-        Host: "www.calmlunch.com"
-  - name: "🇨🇦_323"
-    type: trojan
-    server: "104.18.155.119"
-    port: 443
-    password: "988sR-269PKCKlb&3pMrFTEr"
-    sni: "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV"
-    skip-cert-verify: true
+        Host: "broken-grass-24c4.288-005.workers.dev"
+  - name: "🇨🇦_278"
+    type: vless
+    server: "188.114.97.6"
+    port: 80
+    uuid: "dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51"
     udp: true
     network: ws
     ws-opts:
-      path: "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560"
-  - name: "🇨🇦_324"
-    type: trojan
-    server: "cf.090227.xyz"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_325"
-    type: trojan
-    server: "cnamefuckxxs.yuchen.icu"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_326"
-    type: trojan
-    server: "xn--b6gac.eu.org"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_327"
-    type: trojan
-    server: "cloudflare-ip.mofashi.ltd"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_328"
-    type: trojan
-    server: "162.159.82.246"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_329"
-    type: trojan
-    server: "172.67.147.60"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_330"
-    type: trojan
-    server: "162.159.1.251"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_331"
-    type: trojan
-    server: "104.21.17.125"
-    port: 443
-    password: "Telegram_healer_config"
-    sni: "30f67sBQ8jJwMt7GYtfc14.0M68-Qz3hqYfnLAR6n3Iq.wORkErs.dEv"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/tr/hYgAqUlh5GyczDyXP?ed"
-  - name: "🇨🇦_332"
-    type: trojan
-    server: "cf.877771.xyz"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_333"
-    type: trojan
-    server: "104.16.72.2"
-    port: 443
-    password: "humanity"
-    sni: "www.calmlunch.com"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/assignment"
+      path: "/http"
       headers:
-        Host: "www.calmlunch.com"
-  - name: "🇨🇦_334"
+        Host: "de.vpnbase.net"
+  - name: "🇨🇦_279"
     type: trojan
-    server: "cfip.1323123.xyz"
+    server: "104.25.242.132"
     port: 443
     password: "87961f9d-bee1-4377-826b-e169e7891c4f"
     sni: "yks-dd9.pages.dev"
@@ -2218,95 +1787,7 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "🇨🇦_335"
-    type: trojan
-    server: "162.159.3.212"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_336"
-    type: trojan
-    server: "172.66.173.172"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_337"
-    type: trojan
-    server: "162.159.4.103"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_338"
-    type: trojan
-    server: "jquery.com"
-    port: 443
-    password: "988sR-269PKCKlb&3pMrFTEr"
-    sni: "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560"
-  - name: "🇨🇦_339"
-    type: trojan
-    server: "cf.0sm.com"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_340"
-    type: trojan
-    server: "172.64.35.26"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "🇨🇦_341"
-    type: trojan
-    server: "www.speedtest.net"
-    port: 443
-    password: "Telegram_healer_config"
-    sni: "f1d3r2i3j-9cBv9iXQ6U73529fGb.lxmdYxORMmmDIaBX0-tD.WOrkerS.dEv"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/tr/D738GCJkClC3ZuZTvEDbh?ed=2560"
-  - name: "🇨🇦_342"
-    type: trojan
-    server: "104.19.164.155"
-    port: 2083
-    password: "988sR-269PKCKlb&3pMrFTEr"
-    sni: "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ"
-  - name: "🇨🇦_343"
+  - name: "🇨🇦_280"
     type: trojan
     server: "104.16.252.34"
     port: 443
@@ -2317,9 +1798,9 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "🇨🇦_344"
+  - name: "🇨🇦_281"
     type: trojan
-    server: "cdn.tzpro.xyz"
+    server: "162.159.4.103"
     port: 443
     password: "87961f9d-bee1-4377-826b-e169e7891c4f"
     sni: "yks-dd9.pages.dev"
@@ -2328,7 +1809,7 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "🇨🇦_345"
+  - name: "🇨🇦_282"
     type: trojan
     server: "104.19.64.105"
     port: 443
@@ -2341,9 +1822,9 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.calmlunch.com"
-  - name: "🇨🇦_346"
+  - name: "🇨🇦_283"
     type: trojan
-    server: "172.64.146.75"
+    server: "xn--b6gac.eu.org"
     port: 443
     password: "87961f9d-bee1-4377-826b-e169e7891c4f"
     sni: "yks-dd9.pages.dev"
@@ -2352,7 +1833,64 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "🇨🇦_347"
+  - name: "🇨🇦_284"
+    type: trojan
+    server: "162.159.1.251"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "🇨🇦_285"
+    type: trojan
+    server: "104.21.17.125"
+    port: 443
+    password: "Telegram_healer_config"
+    sni: "30f67sBQ8jJwMt7GYtfc14.0M68-Qz3hqYfnLAR6n3Iq.wORkErs.dEv"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/tr/hYgAqUlh5GyczDyXP?ed"
+  - name: "🇨🇦_286"
+    type: trojan
+    server: "cf.877771.xyz"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "🇨🇦_287"
+    type: trojan
+    server: "cfip.1323123.xyz"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "🇨🇦_288"
+    type: trojan
+    server: "104.16.71.213"
+    port: 443
+    password: "humanity"
+    sni: "www.calmlunch.com"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🇨🇦_289"
     type: trojan
     server: "104.25.241.194"
     port: 443
@@ -2363,7 +1901,51 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "🇨🇦_348"
+  - name: "🇨🇦_290"
+    type: trojan
+    server: "172.67.147.60"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "🇨🇦_291"
+    type: trojan
+    server: "172.64.146.75"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "🇨🇦_292"
+    type: trojan
+    server: "172.66.173.172"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "🇨🇦_293"
+    type: trojan
+    server: "cnamefuckxxs.yuchen.icu"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "🇨🇦_294"
     type: trojan
     server: "172.64.35.127"
     port: 443
@@ -2374,9 +1956,9 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "🇨🇦_349"
+  - name: "🇨🇦_295"
     type: trojan
-    server: "104.21.84.3"
+    server: "cf.0sm.com"
     port: 443
     password: "87961f9d-bee1-4377-826b-e169e7891c4f"
     sni: "yks-dd9.pages.dev"
@@ -2385,18 +1967,29 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "🇨🇦_350"
+  - name: "🇨🇦_296"
     type: trojan
-    server: "join.my.telegram.channel.cmliussss.to.unlock.more.premium.nodes.cf.090227.xyz"
+    server: "172.64.35.26"
     port: 443
-    password: "87d1bfd4-574e-4c96-ad42-0426f27461ff"
-    sni: "_acme-challenge.sb.cloudns.biz"
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
     skip-cert-verify: true
     udp: true
     network: ws
     ws-opts:
-      path: "/"
-  - name: "🇨🇦_351"
+      path: "/?ed=2048"
+  - name: "🇨🇦_297"
+    type: trojan
+    server: "104.19.164.155"
+    port: 2083
+    password: "988sR-269PKCKlb&3pMrFTEr"
+    sni: "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ"
+  - name: "🇨🇦_298"
     type: trojan
     server: "162.159.24.245"
     port: 443
@@ -2407,9 +2000,31 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "🇨🇦_352"
+  - name: "🇨🇦_299"
     type: trojan
-    server: "104.25.242.132"
+    server: "jquery.com"
+    port: 443
+    password: "988sR-269PKCKlb&3pMrFTEr"
+    sni: "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560"
+  - name: "🇨🇦_300"
+    type: trojan
+    server: "www.speedtest.net"
+    port: 443
+    password: "Telegram_healer_config"
+    sni: "f1d3r2i3j-9cBv9iXQ6U73529fGb.lxmdYxORMmmDIaBX0-tD.WOrkerS.dEv"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/tr/D738GCJkClC3ZuZTvEDbh?ed=2560"
+  - name: "🇨🇦_301"
+    type: trojan
+    server: "cf.090227.xyz"
     port: 443
     password: "87961f9d-bee1-4377-826b-e169e7891c4f"
     sni: "yks-dd9.pages.dev"
@@ -2418,19 +2033,116 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "🇨🇦_353"
+  - name: "🇨🇦_302"
+    type: trojan
+    server: "cloudflare-ip.mofashi.ltd"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "🇨🇦_303"
+    type: trojan
+    server: "104.16.72.2"
+    port: 443
+    password: "humanity"
+    sni: "www.calmlunch.com"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🇨🇦_304"
+    type: trojan
+    server: "cdn.tzpro.xyz"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "🇨🇦_305"
+    type: trojan
+    server: "104.18.155.119"
+    port: 443
+    password: "988sR-269PKCKlb&3pMrFTEr"
+    sni: "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560"
+  - name: "🇨🇦_306"
+    type: trojan
+    server: "162.159.82.246"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "🇨🇦_307"
+    type: trojan
+    server: "104.21.84.3"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "🇨🇦_308"
+    type: trojan
+    server: "join.my.telegram.channel.cmliussss.to.unlock.more.premium.nodes.cf.090227.xyz"
+    port: 443
+    password: "87d1bfd4-574e-4c96-ad42-0426f27461ff"
+    sni: "_acme-challenge.sb.cloudns.biz"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/"
+  - name: "🇨🇦_309"
+    type: trojan
+    server: "162.159.3.212"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "🇨🇦_310"
     type: ss
     server: "185.196.61.82"
     port: 8080
     cipher: "aes-256-gcm"
     password: "KixLvKzwjekG00rm"
     udp: true
-  - name: "🇨🇦_354"
+  - name: "🇨🇦_311"
     type: ss
     server: "149.22.95.183"
     port: 443
     cipher: "aes-128-gcm"
     password: "shadowsocks"
+    udp: true
+  - name: "🇨🇦_312"
+    type: ss
+    server: "38.113.188.118"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
     udp: true
 
 proxy-groups:
@@ -2474,6 +2186,27 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇨🇦_157"
+      - "🇨🇦_158"
+      - "🇨🇦_159"
+      - "🇨🇦_160"
+      - "🇨🇦_161"
+      - "🇨🇦_162"
+      - "🇨🇦_163"
+      - "🇨🇦_164"
+      - "🇨🇦_165"
+      - "🇨🇦_166"
+      - "🇨🇦_167"
+      - "🇨🇦_168"
+      - "🇨🇦_169"
+      - "🇨🇦_170"
+      - "🇨🇦_171"
+      - "🇨🇦_172"
+      - "🇨🇦_173"
+      - "🇨🇦_174"
+      - "🇨🇦_175"
+      - "🇨🇦_176"
+      - "🇨🇦_177"
       - "🇨🇦_178"
       - "🇨🇦_179"
       - "🇨🇦_180"
@@ -2609,48 +2342,6 @@ proxy-groups:
       - "🇨🇦_310"
       - "🇨🇦_311"
       - "🇨🇦_312"
-      - "🇨🇦_313"
-      - "🇨🇦_314"
-      - "🇨🇦_315"
-      - "🇨🇦_316"
-      - "🇨🇦_317"
-      - "🇨🇦_318"
-      - "🇨🇦_319"
-      - "🇨🇦_320"
-      - "🇨🇦_321"
-      - "🇨🇦_322"
-      - "🇨🇦_323"
-      - "🇨🇦_324"
-      - "🇨🇦_325"
-      - "🇨🇦_326"
-      - "🇨🇦_327"
-      - "🇨🇦_328"
-      - "🇨🇦_329"
-      - "🇨🇦_330"
-      - "🇨🇦_331"
-      - "🇨🇦_332"
-      - "🇨🇦_333"
-      - "🇨🇦_334"
-      - "🇨🇦_335"
-      - "🇨🇦_336"
-      - "🇨🇦_337"
-      - "🇨🇦_338"
-      - "🇨🇦_339"
-      - "🇨🇦_340"
-      - "🇨🇦_341"
-      - "🇨🇦_342"
-      - "🇨🇦_343"
-      - "🇨🇦_344"
-      - "🇨🇦_345"
-      - "🇨🇦_346"
-      - "🇨🇦_347"
-      - "🇨🇦_348"
-      - "🇨🇦_349"
-      - "🇨🇦_350"
-      - "🇨🇦_351"
-      - "🇨🇦_352"
-      - "🇨🇦_353"
-      - "🇨🇦_354"
 
   - name: "LB-CDN"
     type: load-balance
@@ -2660,6 +2351,27 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇨🇦_157"
+      - "🇨🇦_158"
+      - "🇨🇦_159"
+      - "🇨🇦_160"
+      - "🇨🇦_161"
+      - "🇨🇦_162"
+      - "🇨🇦_163"
+      - "🇨🇦_164"
+      - "🇨🇦_165"
+      - "🇨🇦_166"
+      - "🇨🇦_167"
+      - "🇨🇦_168"
+      - "🇨🇦_169"
+      - "🇨🇦_170"
+      - "🇨🇦_171"
+      - "🇨🇦_172"
+      - "🇨🇦_173"
+      - "🇨🇦_174"
+      - "🇨🇦_175"
+      - "🇨🇦_176"
+      - "🇨🇦_177"
       - "🇨🇦_178"
       - "🇨🇦_179"
       - "🇨🇦_180"
@@ -2795,48 +2507,6 @@ proxy-groups:
       - "🇨🇦_310"
       - "🇨🇦_311"
       - "🇨🇦_312"
-      - "🇨🇦_313"
-      - "🇨🇦_314"
-      - "🇨🇦_315"
-      - "🇨🇦_316"
-      - "🇨🇦_317"
-      - "🇨🇦_318"
-      - "🇨🇦_319"
-      - "🇨🇦_320"
-      - "🇨🇦_321"
-      - "🇨🇦_322"
-      - "🇨🇦_323"
-      - "🇨🇦_324"
-      - "🇨🇦_325"
-      - "🇨🇦_326"
-      - "🇨🇦_327"
-      - "🇨🇦_328"
-      - "🇨🇦_329"
-      - "🇨🇦_330"
-      - "🇨🇦_331"
-      - "🇨🇦_332"
-      - "🇨🇦_333"
-      - "🇨🇦_334"
-      - "🇨🇦_335"
-      - "🇨🇦_336"
-      - "🇨🇦_337"
-      - "🇨🇦_338"
-      - "🇨🇦_339"
-      - "🇨🇦_340"
-      - "🇨🇦_341"
-      - "🇨🇦_342"
-      - "🇨🇦_343"
-      - "🇨🇦_344"
-      - "🇨🇦_345"
-      - "🇨🇦_346"
-      - "🇨🇦_347"
-      - "🇨🇦_348"
-      - "🇨🇦_349"
-      - "🇨🇦_350"
-      - "🇨🇦_351"
-      - "🇨🇦_352"
-      - "🇨🇦_353"
-      - "🇨🇦_354"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -2846,6 +2516,27 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇨🇦_157"
+      - "🇨🇦_158"
+      - "🇨🇦_159"
+      - "🇨🇦_160"
+      - "🇨🇦_161"
+      - "🇨🇦_162"
+      - "🇨🇦_163"
+      - "🇨🇦_164"
+      - "🇨🇦_165"
+      - "🇨🇦_166"
+      - "🇨🇦_167"
+      - "🇨🇦_168"
+      - "🇨🇦_169"
+      - "🇨🇦_170"
+      - "🇨🇦_171"
+      - "🇨🇦_172"
+      - "🇨🇦_173"
+      - "🇨🇦_174"
+      - "🇨🇦_175"
+      - "🇨🇦_176"
+      - "🇨🇦_177"
       - "🇨🇦_178"
       - "🇨🇦_179"
       - "🇨🇦_180"
@@ -2981,48 +2672,6 @@ proxy-groups:
       - "🇨🇦_310"
       - "🇨🇦_311"
       - "🇨🇦_312"
-      - "🇨🇦_313"
-      - "🇨🇦_314"
-      - "🇨🇦_315"
-      - "🇨🇦_316"
-      - "🇨🇦_317"
-      - "🇨🇦_318"
-      - "🇨🇦_319"
-      - "🇨🇦_320"
-      - "🇨🇦_321"
-      - "🇨🇦_322"
-      - "🇨🇦_323"
-      - "🇨🇦_324"
-      - "🇨🇦_325"
-      - "🇨🇦_326"
-      - "🇨🇦_327"
-      - "🇨🇦_328"
-      - "🇨🇦_329"
-      - "🇨🇦_330"
-      - "🇨🇦_331"
-      - "🇨🇦_332"
-      - "🇨🇦_333"
-      - "🇨🇦_334"
-      - "🇨🇦_335"
-      - "🇨🇦_336"
-      - "🇨🇦_337"
-      - "🇨🇦_338"
-      - "🇨🇦_339"
-      - "🇨🇦_340"
-      - "🇨🇦_341"
-      - "🇨🇦_342"
-      - "🇨🇦_343"
-      - "🇨🇦_344"
-      - "🇨🇦_345"
-      - "🇨🇦_346"
-      - "🇨🇦_347"
-      - "🇨🇦_348"
-      - "🇨🇦_349"
-      - "🇨🇦_350"
-      - "🇨🇦_351"
-      - "🇨🇦_352"
-      - "🇨🇦_353"
-      - "🇨🇦_354"
 
   - name: "FAST-CDN"
     type: url-test
@@ -3031,6 +2680,27 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇨🇦_157"
+      - "🇨🇦_158"
+      - "🇨🇦_159"
+      - "🇨🇦_160"
+      - "🇨🇦_161"
+      - "🇨🇦_162"
+      - "🇨🇦_163"
+      - "🇨🇦_164"
+      - "🇨🇦_165"
+      - "🇨🇦_166"
+      - "🇨🇦_167"
+      - "🇨🇦_168"
+      - "🇨🇦_169"
+      - "🇨🇦_170"
+      - "🇨🇦_171"
+      - "🇨🇦_172"
+      - "🇨🇦_173"
+      - "🇨🇦_174"
+      - "🇨🇦_175"
+      - "🇨🇦_176"
+      - "🇨🇦_177"
       - "🇨🇦_178"
       - "🇨🇦_179"
       - "🇨🇦_180"
@@ -3166,48 +2836,6 @@ proxy-groups:
       - "🇨🇦_310"
       - "🇨🇦_311"
       - "🇨🇦_312"
-      - "🇨🇦_313"
-      - "🇨🇦_314"
-      - "🇨🇦_315"
-      - "🇨🇦_316"
-      - "🇨🇦_317"
-      - "🇨🇦_318"
-      - "🇨🇦_319"
-      - "🇨🇦_320"
-      - "🇨🇦_321"
-      - "🇨🇦_322"
-      - "🇨🇦_323"
-      - "🇨🇦_324"
-      - "🇨🇦_325"
-      - "🇨🇦_326"
-      - "🇨🇦_327"
-      - "🇨🇦_328"
-      - "🇨🇦_329"
-      - "🇨🇦_330"
-      - "🇨🇦_331"
-      - "🇨🇦_332"
-      - "🇨🇦_333"
-      - "🇨🇦_334"
-      - "🇨🇦_335"
-      - "🇨🇦_336"
-      - "🇨🇦_337"
-      - "🇨🇦_338"
-      - "🇨🇦_339"
-      - "🇨🇦_340"
-      - "🇨🇦_341"
-      - "🇨🇦_342"
-      - "🇨🇦_343"
-      - "🇨🇦_344"
-      - "🇨🇦_345"
-      - "🇨🇦_346"
-      - "🇨🇦_347"
-      - "🇨🇦_348"
-      - "🇨🇦_349"
-      - "🇨🇦_350"
-      - "🇨🇦_351"
-      - "🇨🇦_352"
-      - "🇨🇦_353"
-      - "🇨🇦_354"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -3217,6 +2845,27 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇨🇦_157"
+      - "🇨🇦_158"
+      - "🇨🇦_159"
+      - "🇨🇦_160"
+      - "🇨🇦_161"
+      - "🇨🇦_162"
+      - "🇨🇦_163"
+      - "🇨🇦_164"
+      - "🇨🇦_165"
+      - "🇨🇦_166"
+      - "🇨🇦_167"
+      - "🇨🇦_168"
+      - "🇨🇦_169"
+      - "🇨🇦_170"
+      - "🇨🇦_171"
+      - "🇨🇦_172"
+      - "🇨🇦_173"
+      - "🇨🇦_174"
+      - "🇨🇦_175"
+      - "🇨🇦_176"
+      - "🇨🇦_177"
       - "🇨🇦_178"
       - "🇨🇦_179"
       - "🇨🇦_180"
@@ -3352,53 +3001,32 @@ proxy-groups:
       - "🇨🇦_310"
       - "🇨🇦_311"
       - "🇨🇦_312"
-      - "🇨🇦_313"
-      - "🇨🇦_314"
-      - "🇨🇦_315"
-      - "🇨🇦_316"
-      - "🇨🇦_317"
-      - "🇨🇦_318"
-      - "🇨🇦_319"
-      - "🇨🇦_320"
-      - "🇨🇦_321"
-      - "🇨🇦_322"
-      - "🇨🇦_323"
-      - "🇨🇦_324"
-      - "🇨🇦_325"
-      - "🇨🇦_326"
-      - "🇨🇦_327"
-      - "🇨🇦_328"
-      - "🇨🇦_329"
-      - "🇨🇦_330"
-      - "🇨🇦_331"
-      - "🇨🇦_332"
-      - "🇨🇦_333"
-      - "🇨🇦_334"
-      - "🇨🇦_335"
-      - "🇨🇦_336"
-      - "🇨🇦_337"
-      - "🇨🇦_338"
-      - "🇨🇦_339"
-      - "🇨🇦_340"
-      - "🇨🇦_341"
-      - "🇨🇦_342"
-      - "🇨🇦_343"
-      - "🇨🇦_344"
-      - "🇨🇦_345"
-      - "🇨🇦_346"
-      - "🇨🇦_347"
-      - "🇨🇦_348"
-      - "🇨🇦_349"
-      - "🇨🇦_350"
-      - "🇨🇦_351"
-      - "🇨🇦_352"
-      - "🇨🇦_353"
-      - "🇨🇦_354"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
+      - "🇨🇦_157"
+      - "🇨🇦_158"
+      - "🇨🇦_159"
+      - "🇨🇦_160"
+      - "🇨🇦_161"
+      - "🇨🇦_162"
+      - "🇨🇦_163"
+      - "🇨🇦_164"
+      - "🇨🇦_165"
+      - "🇨🇦_166"
+      - "🇨🇦_167"
+      - "🇨🇦_168"
+      - "🇨🇦_169"
+      - "🇨🇦_170"
+      - "🇨🇦_171"
+      - "🇨🇦_172"
+      - "🇨🇦_173"
+      - "🇨🇦_174"
+      - "🇨🇦_175"
+      - "🇨🇦_176"
+      - "🇨🇦_177"
       - "🇨🇦_178"
       - "🇨🇦_179"
       - "🇨🇦_180"
@@ -3534,48 +3162,6 @@ proxy-groups:
       - "🇨🇦_310"
       - "🇨🇦_311"
       - "🇨🇦_312"
-      - "🇨🇦_313"
-      - "🇨🇦_314"
-      - "🇨🇦_315"
-      - "🇨🇦_316"
-      - "🇨🇦_317"
-      - "🇨🇦_318"
-      - "🇨🇦_319"
-      - "🇨🇦_320"
-      - "🇨🇦_321"
-      - "🇨🇦_322"
-      - "🇨🇦_323"
-      - "🇨🇦_324"
-      - "🇨🇦_325"
-      - "🇨🇦_326"
-      - "🇨🇦_327"
-      - "🇨🇦_328"
-      - "🇨🇦_329"
-      - "🇨🇦_330"
-      - "🇨🇦_331"
-      - "🇨🇦_332"
-      - "🇨🇦_333"
-      - "🇨🇦_334"
-      - "🇨🇦_335"
-      - "🇨🇦_336"
-      - "🇨🇦_337"
-      - "🇨🇦_338"
-      - "🇨🇦_339"
-      - "🇨🇦_340"
-      - "🇨🇦_341"
-      - "🇨🇦_342"
-      - "🇨🇦_343"
-      - "🇨🇦_344"
-      - "🇨🇦_345"
-      - "🇨🇦_346"
-      - "🇨🇦_347"
-      - "🇨🇦_348"
-      - "🇨🇦_349"
-      - "🇨🇦_350"
-      - "🇨🇦_351"
-      - "🇨🇦_352"
-      - "🇨🇦_353"
-      - "🇨🇦_354"
 
 rules:
   - MATCH,PROXY-BEST

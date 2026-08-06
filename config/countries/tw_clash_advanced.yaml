@@ -61,19 +61,19 @@ dns:
 proxies:
   - name: "🇹🇼_6"
     type: vless
-    server: "60.249.101.16"
+    server: "60.249.101.14"
     port: 10000
     uuid: "431fe973-a43a-4fac-bf83-2a772e0d0625"
     udp: true
   - name: "🇹🇼_7"
     type: vless
-    server: "60.249.101.14"
+    server: "60.249.101.16"
     port: 10000
     uuid: "431fe973-a43a-4fac-bf83-2a772e0d0625"
     udp: true
   - name: "🇹🇼_8"
     type: ss
-    server: "r3mrcg00129437x.cybervena.com"
+    server: "r3mrcg001287h3p.cybervena.com"
     port: 50099
     cipher: "chacha20-ietf-poly1305"
     password: "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
@@ -87,7 +87,7 @@ proxies:
     udp: true
   - name: "🇹🇼_10"
     type: ss
-    server: "r3mrcg001287h3p.cybervena.com"
+    server: "r3mrcg00129437x.cybervena.com"
     port: 50099
     cipher: "chacha20-ietf-poly1305"
     password: "7e731ec3-f8e1-43f6-92cf-3978d14705c4"

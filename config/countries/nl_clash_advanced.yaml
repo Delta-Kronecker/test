@@ -59,48 +59,21 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
-  - name: "🇳🇱_129"
+  - name: "🇳🇱_149"
     type: vless
-    server: "130.12.242.106"
+    server: "85.155.226.84"
     port: 443
-    uuid: "bc058e69-0444-4c7b-98da-bd67f0b143da"
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "chrome"
+    servername: "getsavesafe.net"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8"
-      short-id: "15affa0af66dfc79"
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_130"
-    type: vless
-    server: "147.45.145.127"
-    port: 443
-    uuid: "534cbbe2-cc36-4f2d-8fb0-90410e7148c9"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "tWRR3W8jBAQKBUujLzL7Xri3WXy3F08OxHYrkSOnlAc"
-      short-id: "52a6"
-  - name: "🇳🇱_131"
-    type: vless
-    server: "51.158.206.19"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_132"
+  - name: "🇳🇱_150"
     type: vless
     server: "update.netraidly.ru"
     port: 40443
@@ -114,73 +87,77 @@ proxies:
       public-key: "U1ABwLTij71fW63nwMukZBezSQKADiBRuKCATiNUxUw"
       short-id: "27bb"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_133"
+  - name: "🇳🇱_151"
     type: vless
-    server: "64.188.62.138"
+    server: "5.255.110.147"
+    port: 443
+    uuid: "e2e1ddaa-1acf-4c4c-a211-92284f6440ed"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "nll.scroogethebest.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "AYQOZFxjvHN-RIzKYEibwFiFsp03cdlWGdCmyFfuNVc"
+      short-id: "4fa44664f6a566d3"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_152"
+    type: vless
+    server: "51.158.206.29"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_153"
+    type: vless
+    server: "85.155.226.86"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_154"
+    type: vless
+    server: "51.158.206.34"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_155"
+    type: vless
+    server: "images.netraidly.ru"
     port: 40443
-    uuid: "9150748b-fa2b-4ef1-a7f1-7c4a76e2dc0b"
+    uuid: "69a74770-7152-4a27-bef0-2615ca16e1b1"
     udp: true
     tls: true
     skip-cert-verify: true
     servername: "deepl.com"
-    client-fingerprint: "firefox"
+    client-fingerprint: "qq"
     reality-opts:
-      public-key: "U1ABwLTij71fW63nwMukZBezSQKADiBRuKCATiNUxUw"
-      short-id: "27bb"
+      public-key: "D0AQp0cWaQR55Q-zPwp6__AxN9CoT9neZj0UzlNcLCk"
+      short-id: "bd72"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_134"
-    type: vless
-    server: "mypanel.unixzone.us"
-    port: 12068
-    uuid: "05caca6c-9e97-4c0f-8edf-7b88a6e572c5"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/"
-  - name: "🇳🇱_135"
-    type: vless
-    server: "86.107.197.239"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇳🇱_136"
-    type: vless
-    server: "51.158.206.103"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_137"
-    type: vless
-    server: "51.158.206.86"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_138"
+  - name: "🇳🇱_156"
     type: vless
     server: "s2062.ccgfw.online"
     port: 443
@@ -191,74 +168,7 @@ proxies:
     servername: "u695099uaa42ed90s220.gogocs.xyz"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_139"
-    type: vless
-    server: "78.159.245.32"
-    port: 28474
-    uuid: "2c634977-584e-4e1f-b501-1b70c77a6743"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "secure.furrycdn.net"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_140"
-    type: vless
-    server: "146.103.122.110"
-    port: 443
-    uuid: "a5ea9247-79f3-4655-aece-3fb51e1e669e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "19.07-3.yunus.guru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "APXp2igsjxFmGkpb3L98I__FTySIY6saN6skP2y0ank"
-      short-id: "c6d439fd92614ab0"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_141"
-    type: vless
-    server: "51.158.206.25"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_142"
-    type: vless
-    server: "51.158.206.97"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_143"
-    type: vless
-    server: "nl.go-vpn.club"
-    port: 443
-    uuid: "40de6299-d792-4868-8a82-411ead0aa943"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "gateway.icloud.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww"
-      short-id: "ed7b9bdfedb9b8e5"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_144"
+  - name: "🇳🇱_157"
     type: vless
     server: "19.07.yunus.guru"
     port: 443
@@ -272,9 +182,23 @@ proxies:
       public-key: "APXp2igsjxFmGkpb3L98I__FTySIY6saN6skP2y0ank"
       short-id: "c6d439fd92614ab0"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_145"
+  - name: "🇳🇱_158"
     type: vless
-    server: "19.07-3.yunus.guru"
+    server: "cdn.netraidly.ru"
+    port: 40443
+    uuid: "4bf5a71c-d726-4585-b095-7396675706d5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU"
+      short-id: "c84f"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_159"
+    type: vless
+    server: "146.103.122.110"
     port: 443
     uuid: "a5ea9247-79f3-4655-aece-3fb51e1e669e"
     udp: true
@@ -286,7 +210,77 @@ proxies:
       public-key: "APXp2igsjxFmGkpb3L98I__FTySIY6saN6skP2y0ank"
       short-id: "c6d439fd92614ab0"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_146"
+  - name: "🇳🇱_160"
+    type: vless
+    server: "139.64.166.55"
+    port: 443
+    uuid: "c743b343-b1c9-4e44-98a9-274df2015727"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "cudJBi1zLMATgg_nlqMK5O6Lshlv8EQ2BBQjxbpF4AY"
+      short-id: "eedf31ed"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_161"
+    type: vless
+    server: "51.158.206.8"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_162"
+    type: vless
+    server: "95.85.228.84"
+    port: 31845
+    uuid: "88652810-6723-4087-bc65-e7c65cb4fc90"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "QRfBKijY94gn30sQWyklYIr4UyEXpoqakbN7fY1R_DQ"
+      short-id: "4a1f967b1da8"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_163"
+    type: vless
+    server: "51.158.206.97"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_164"
+    type: vless
+    server: "51.158.206.87"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_165"
     type: vless
     server: "109.120.150.17"
     port: 7443
@@ -301,167 +295,21 @@ proxies:
       path: "/@Marisa_kristi"
       headers:
         Host: "wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev"
-  - name: "🇳🇱_147"
+  - name: "🇳🇱_166"
     type: vless
-    server: "images.netraidly.ru"
-    port: 40443
-    uuid: "69a74770-7152-4a27-bef0-2615ca16e1b1"
+    server: "85.155.226.211"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "deepl.com"
+    servername: "getsavesafe.net"
     client-fingerprint: "qq"
     reality-opts:
-      public-key: "D0AQp0cWaQR55Q-zPwp6__AxN9CoT9neZj0UzlNcLCk"
-      short-id: "bd72"
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_148"
-    type: vless
-    server: "51.158.206.87"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_149"
-    type: vless
-    server: "152.70.58.201"
-    port: 443
-    uuid: "8892e34a-339b-4526-b88d-cf68c516231c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.nvidia.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28"
-      short-id: "52c723e0fad49689"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_150"
-    type: vless
-    server: "50.7.41.142"
-    port: 443
-    uuid: "b8794f67-80d9-4124-8fc5-2d2ce5516573"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "AYL1z7PNyo6LqYLeZpXa50FnK9eEu7o18KHRhOlST1w"
-      short-id: "bd72"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_151"
-    type: vless
-    server: "51.158.206.93"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_152"
-    type: vless
-    server: "144.124.246.55"
-    port: 443
-    uuid: "40de6299-d792-4868-8a82-411ead0aa943"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "gateway.icloud.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww"
-      short-id: "ed7b9bdfedb9b8e5"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_153"
-    type: vless
-    server: "72.56.92.177"
-    port: 40443
-    uuid: "4480161e-2c59-4d37-8736-675c9af32bf1"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y"
-      short-id: "01d1bf2d4755d40c"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_154"
-    type: vless
-    server: "95.85.228.84"
-    port: 31845
-    uuid: "88652810-6723-4087-bc65-e7c65cb4fc90"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "QRfBKijY94gn30sQWyklYIr4UyEXpoqakbN7fY1R_DQ"
-      short-id: "4a1f967b1da8"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_155"
-    type: vless
-    server: "51.158.206.34"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_156"
-    type: vless
-    server: "19.07-7.yunus.guru"
-    port: 443
-    uuid: "a5ea9247-79f3-4655-aece-3fb51e1e669e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "19.07-7.yunus.guru"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "APXp2igsjxFmGkpb3L98I__FTySIY6saN6skP2y0ank"
-      short-id: "c6d439fd92614ab0"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_157"
-    type: vless
-    server: "212.34.134.163"
-    port: 8443
-    uuid: "5bb7df8d-ad02-41fa-a8e6-8a8a4650d2c4"
-    udp: true
-  - name: "🇳🇱_158"
-    type: vless
-    server: "5.255.110.147"
-    port: 443
-    uuid: "e2e1ddaa-1acf-4c4c-a211-92284f6440ed"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "nll.scroogethebest.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "AYQOZFxjvHN-RIzKYEibwFiFsp03cdlWGdCmyFfuNVc"
-      short-id: "4fa44664f6a566d3"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_159"
+  - name: "🇳🇱_167"
     type: vless
     server: "77.233.214.116"
     port: 40443
@@ -475,121 +323,9 @@ proxies:
       public-key: "D0AQp0cWaQR55Q-zPwp6__AxN9CoT9neZj0UzlNcLCk"
       short-id: "bd72"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_160"
-    type: vless
-    server: "cdn.netraidly.ru"
-    port: 40443
-    uuid: "4bf5a71c-d726-4585-b095-7396675706d5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU"
-      short-id: "c84f"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_161"
-    type: vless
-    server: "89.124.124.221"
-    port: 443
-    uuid: "a5ea9247-79f3-4655-aece-3fb51e1e669e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "19.07.yunus.guru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "APXp2igsjxFmGkpb3L98I__FTySIY6saN6skP2y0ank"
-      short-id: "c6d439fd92614ab0"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_162"
-    type: vless
-    server: "51.158.206.12"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_163"
-    type: vless
-    server: "51.158.206.8"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_164"
-    type: vless
-    server: "50.7.177.179"
-    port: 443
-    uuid: "b8794f67-80d9-4124-8fc5-2d2ce5516573"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "AYL1z7PNyo6LqYLeZpXa50FnK9eEu7o18KHRhOlST1w"
-      short-id: "bd72"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_165"
-    type: vless
-    server: "144.124.248.186"
-    port: 443
-    uuid: "40de6299-d792-4868-8a82-411ead0aa943"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "gateway.icloud.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww"
-      short-id: "ed7b9bdfedb9b8e5"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_166"
-    type: vless
-    server: "51.158.206.20"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_167"
-    type: vless
-    server: "31.76.79.118"
-    port: 2444
-    uuid: "fc1ee51e-72ec-4af0-ab0f-540c9e22427b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "JsSTmS0VKNaHF-_QKYS-_utnS-LJuPOBrWcMbVE2RDA"
-      short-id: "0809f782a29a2030"
-    flow: "xtls-rprx-vision"
   - name: "🇳🇱_168"
     type: vless
-    server: "51.158.206.80"
+    server: "51.158.206.93"
     port: 23576
     uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
@@ -603,21 +339,49 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇳🇱_169"
     type: vless
-    server: "netraidly.ru"
-    port: 40443
-    uuid: "4480161e-2c59-4d37-8736-675c9af32bf1"
+    server: "85.155.226.144"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "deepl.com"
+    servername: "getsavesafe.net"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y"
-      short-id: "01d1bf2d4755d40c"
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
     flow: "xtls-rprx-vision"
   - name: "🇳🇱_170"
     type: vless
-    server: "144.124.249.252"
+    server: "85.155.226.22"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_171"
+    type: vless
+    server: "19.07-3.yunus.guru"
+    port: 443
+    uuid: "a5ea9247-79f3-4655-aece-3fb51e1e669e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "19.07-3.yunus.guru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "APXp2igsjxFmGkpb3L98I__FTySIY6saN6skP2y0ank"
+      short-id: "c6d439fd92614ab0"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_172"
+    type: vless
+    server: "144.124.248.186"
     port: 443
     uuid: "40de6299-d792-4868-8a82-411ead0aa943"
     udp: true
@@ -629,21 +393,7 @@ proxies:
       public-key: "L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww"
       short-id: "ed7b9bdfedb9b8e5"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_171"
-    type: vless
-    server: "51.158.206.96"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇳🇱_172"
+  - name: "🇳🇱_173"
     type: vless
     server: "212.34.134.163"
     port: 443
@@ -657,21 +407,49 @@ proxies:
       public-key: "XZa7f7bABj7lY4HuLopVCBBBYTu-RB7QyIZ96njvYwo"
       short-id: "7bcfc0bc"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_173"
+  - name: "🇳🇱_174"
     type: vless
-    server: "78.40.195.56"
+    server: "50.7.41.142"
     port: 443
-    uuid: "a5ea9247-79f3-4655-aece-3fb51e1e669e"
+    uuid: "b8794f67-80d9-4124-8fc5-2d2ce5516573"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "19.07-7.yunus.guru"
+    servername: "deepl.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "APXp2igsjxFmGkpb3L98I__FTySIY6saN6skP2y0ank"
-      short-id: "c6d439fd92614ab0"
+      public-key: "AYL1z7PNyo6LqYLeZpXa50FnK9eEu7o18KHRhOlST1w"
+      short-id: "bd72"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_174"
+  - name: "🇳🇱_175"
+    type: vless
+    server: "152.70.58.201"
+    port: 443
+    uuid: "8892e34a-339b-4526-b88d-cf68c516231c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.nvidia.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28"
+      short-id: "52c723e0fad49689"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_176"
+    type: vless
+    server: "85.155.226.207"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_177"
     type: vless
     server: "51.158.206.98"
     port: 23576
@@ -685,9 +463,9 @@ proxies:
       public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
       short-id: "01"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_175"
+  - name: "🇳🇱_178"
     type: vless
-    server: "51.158.206.29"
+    server: "51.158.206.80"
     port: 23576
     uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
@@ -699,21 +477,287 @@ proxies:
       public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
       short-id: "01"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_176"
+  - name: "🇳🇱_179"
     type: vless
-    server: "2.26.70.181"
-    port: 443
-    uuid: "a046297b-0f66-4514-8d4f-2a7d200d8d37"
+    server: "31.76.79.118"
+    port: 2444
+    uuid: "fc1ee51e-72ec-4af0-ab0f-540c9e22427b"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "1.aws-lbr.amazonaws.com"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "JsSTmS0VKNaHF-_QKYS-_utnS-LJuPOBrWcMbVE2RDA"
+      short-id: "0809f782a29a2030"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_180"
+    type: vless
+    server: "86.107.197.239"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇳🇱_181"
+    type: vless
+    server: "85.155.226.113"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
     client-fingerprint: "qq"
     reality-opts:
-      public-key: "s2vIO76C2QmrvyeujAWxTmQtQ51bwMTWDgQESIm8J1c"
-      short-id: "bdcaf30f86"
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_177"
+  - name: "🇳🇱_182"
+    type: vless
+    server: "85.155.226.149"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_183"
+    type: vless
+    server: "85.155.226.69"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_184"
+    type: vless
+    server: "85.155.226.156"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_185"
+    type: vless
+    server: "78.40.195.56"
+    port: 443
+    uuid: "a5ea9247-79f3-4655-aece-3fb51e1e669e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "19.07-7.yunus.guru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "APXp2igsjxFmGkpb3L98I__FTySIY6saN6skP2y0ank"
+      short-id: "c6d439fd92614ab0"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_186"
+    type: vless
+    server: "85.155.226.135"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_187"
+    type: vless
+    server: "85.155.226.172"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_188"
+    type: vless
+    server: "85.155.226.6"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_189"
+    type: vless
+    server: "95.85.247.7"
+    port: 443
+    uuid: "218fd696-e3a2-4c33-b397-a5f13a82969e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "cats.abvphelp.cc"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "4-bYlfzBxbmfxZa5uFAobphk74V83FF5Y1lbo9l8RWQ"
+      short-id: "50c30ab7"
+  - name: "🇳🇱_190"
+    type: vless
+    server: "85.155.226.30"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_191"
+    type: vless
+    server: "51.158.206.96"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_192"
+    type: vless
+    server: "147.45.145.127"
+    port: 443
+    uuid: "534cbbe2-cc36-4f2d-8fb0-90410e7148c9"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "tWRR3W8jBAQKBUujLzL7Xri3WXy3F08OxHYrkSOnlAc"
+      short-id: "52a6"
+  - name: "🇳🇱_193"
+    type: vless
+    server: "89.124.124.221"
+    port: 443
+    uuid: "a5ea9247-79f3-4655-aece-3fb51e1e669e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "19.07.yunus.guru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "APXp2igsjxFmGkpb3L98I__FTySIY6saN6skP2y0ank"
+      short-id: "c6d439fd92614ab0"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_194"
+    type: vless
+    server: "85.155.226.141"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_195"
+    type: vless
+    server: "nl.go-vpn.club"
+    port: 443
+    uuid: "40de6299-d792-4868-8a82-411ead0aa943"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "gateway.icloud.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww"
+      short-id: "ed7b9bdfedb9b8e5"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_196"
+    type: vless
+    server: "85.155.226.96"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_197"
+    type: vless
+    server: "72.56.92.177"
+    port: 40443
+    uuid: "4480161e-2c59-4d37-8736-675c9af32bf1"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y"
+      short-id: "01d1bf2d4755d40c"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_198"
+    type: vless
+    server: "mypanel.unixzone.us"
+    port: 12068
+    uuid: "05caca6c-9e97-4c0f-8edf-7b88a6e572c5"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/"
+  - name: "🇳🇱_199"
+    type: vless
+    server: "212.34.134.163"
+    port: 8443
+    uuid: "5bb7df8d-ad02-41fa-a8e6-8a8a4650d2c4"
+    udp: true
+  - name: "🇳🇱_200"
     type: vless
     server: "51.158.206.26"
     port: 23576
@@ -727,7 +771,63 @@ proxies:
       public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
       short-id: "01"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_178"
+  - name: "🇳🇱_201"
+    type: vless
+    server: "51.158.206.12"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_202"
+    type: vless
+    server: "85.155.226.140"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_203"
+    type: vless
+    server: "netraidly.ru"
+    port: 40443
+    uuid: "4480161e-2c59-4d37-8736-675c9af32bf1"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y"
+      short-id: "01d1bf2d4755d40c"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_204"
+    type: vless
+    server: "2.26.70.181"
+    port: 443
+    uuid: "a046297b-0f66-4514-8d4f-2a7d200d8d37"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "1.aws-lbr.amazonaws.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "s2vIO76C2QmrvyeujAWxTmQtQ51bwMTWDgQESIm8J1c"
+      short-id: "bdcaf30f86"
+    flow: "xtls-rprx-vision"
+  - name: "🇳🇱_205"
     type: vless
     server: "205.237.109.211"
     port: 448
@@ -740,558 +840,744 @@ proxies:
     reality-opts:
       public-key: "IuB1jsALd-wN_8jRTGxVLBbVG5eSxNbOXjvFyZlm3UU"
       short-id: "113241ad01e99a2d"
-  - name: "🇳🇱_179"
+  - name: "🇳🇱_206"
     type: vless
-    server: "139.64.166.55"
+    server: "144.124.246.55"
     port: 443
-    uuid: "c743b343-b1c9-4e44-98a9-274df2015727"
+    uuid: "40de6299-d792-4868-8a82-411ead0aa943"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "www.cloudflare.com"
+    servername: "gateway.icloud.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "cudJBi1zLMATgg_nlqMK5O6Lshlv8EQ2BBQjxbpF4AY"
-      short-id: "eedf31ed"
+      public-key: "L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww"
+      short-id: "ed7b9bdfedb9b8e5"
     flow: "xtls-rprx-vision"
-  - name: "🇳🇱_180"
-    type: ss
-    server: "82.38.31.39"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_181"
-    type: ss
-    server: "82.38.31.48"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_182"
-    type: ss
-    server: "193.29.139.151"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_183"
-    type: ss
-    server: "82.38.31.208"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_184"
-    type: ss
-    server: "82.38.31.185"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_185"
-    type: ss
-    server: "82.38.31.35"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_186"
-    type: ss
-    server: "82.38.31.42"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_187"
-    type: ss
-    server: "82.38.31.217"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_188"
-    type: ss
-    server: "82.38.31.34"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_189"
-    type: ss
-    server: "109.104.154.163"
-    port: 2375
-    cipher: "aes-256-gcm"
-    password: "faBAoD54k87UJG7"
-    udp: true
-  - name: "🇳🇱_190"
-    type: ss
-    server: "82.38.31.194"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_191"
-    type: ss
-    server: "82.38.31.155"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_192"
-    type: ss
-    server: "82.38.31.47"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_193"
-    type: ss
-    server: "82.38.31.206"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_194"
-    type: ss
-    server: "213.109.147.242"
-    port: 62685
-    cipher: "chacha20-ietf-poly1305"
-    password: "VpKABcOpNNA0l5G2AVOmw8"
-    udp: true
-  - name: "🇳🇱_195"
-    type: ss
-    server: "193.29.139.235"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_196"
-    type: ss
-    server: "82.38.31.156"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_197"
-    type: ss
-    server: "82.38.31.202"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_198"
-    type: ss
-    server: "82.38.31.191"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_199"
-    type: ss
-    server: "82.38.31.174"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_200"
-    type: ss
-    server: "82.38.31.36"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_201"
-    type: ss
-    server: "82.38.31.26"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_202"
-    type: ss
-    server: "82.38.31.184"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_203"
-    type: ss
-    server: "82.38.31.204"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_204"
-    type: ss
-    server: "82.38.31.10"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_205"
-    type: ss
-    server: "82.38.31.29"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_206"
-    type: ss
-    server: "82.38.31.193"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
   - name: "🇳🇱_207"
-    type: ss
-    server: "82.38.31.212"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    type: vless
+    server: "51.158.206.86"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_208"
-    type: ss
-    server: "82.38.31.195"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    type: vless
+    server: "130.12.242.106"
+    port: 443
+    uuid: "bc058e69-0444-4c7b-98da-bd67f0b143da"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8"
+      short-id: "15affa0af66dfc79"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_209"
-    type: ss
-    server: "82.38.31.187"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    type: vless
+    server: "51.158.206.19"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_210"
-    type: ss
-    server: "82.38.31.200"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    type: vless
+    server: "51.158.206.103"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_211"
-    type: ss
-    server: "82.38.31.57"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    type: vless
+    server: "78.159.245.32"
+    port: 28474
+    uuid: "2c634977-584e-4e1f-b501-1b70c77a6743"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "secure.furrycdn.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_212"
-    type: ss
-    server: "82.38.31.162"
+    type: vless
+    server: "85.155.226.108"
     port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_213"
-    type: ss
-    server: "82.38.31.176"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    type: vless
+    server: "85.155.226.27"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_214"
-    type: ss
-    server: "82.38.31.15"
+    type: vless
+    server: "144.124.249.252"
     port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    uuid: "40de6299-d792-4868-8a82-411ead0aa943"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "gateway.icloud.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww"
+      short-id: "ed7b9bdfedb9b8e5"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_215"
-    type: ss
-    server: "82.38.31.32"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    type: vless
+    server: "51.158.206.25"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_216"
-    type: ss
-    server: "108.181.58.239"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "CJmTCCx7Ltud"
+    type: vless
+    server: "64.188.62.138"
+    port: 40443
+    uuid: "9150748b-fa2b-4ef1-a7f1-7c4a76e2dc0b"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "U1ABwLTij71fW63nwMukZBezSQKADiBRuKCATiNUxUw"
+      short-id: "27bb"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_217"
-    type: ss
-    server: "158.173.20.208"
+    type: vless
+    server: "19.07-7.yunus.guru"
     port: 443
-    cipher: "aes-128-gcm"
-    password: "shadowsocks"
+    uuid: "a5ea9247-79f3-4655-aece-3fb51e1e669e"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "19.07-7.yunus.guru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "APXp2igsjxFmGkpb3L98I__FTySIY6saN6skP2y0ank"
+      short-id: "c6d439fd92614ab0"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_218"
-    type: ss
-    server: "108.181.126.122"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "CJmTCCx7Ltud"
+    type: vless
+    server: "85.155.226.78"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_219"
-    type: ss
-    server: "82.38.31.214"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    type: vless
+    server: "85.155.226.212"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_220"
-    type: ss
-    server: "82.38.31.190"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    type: vless
+    server: "51.158.206.20"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
   - name: "🇳🇱_221"
     type: ss
-    server: "82.38.31.207"
+    server: "82.38.31.198"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
   - name: "🇳🇱_222"
     type: ss
-    server: "82.38.31.3"
-    port: 8080
+    server: "108.181.126.122"
+    port: 8388
     cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    password: "CJmTCCx7Ltud"
     udp: true
   - name: "🇳🇱_223"
     type: ss
-    server: "82.38.31.36"
-    port: 443
+    server: "82.38.31.204"
+    port: 8080
     cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
   - name: "🇳🇱_224"
-    type: ss
-    server: "82.38.31.192"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_225"
-    type: ss
-    server: "82.38.31.181"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_226"
-    type: ss
-    server: "193.29.139.223"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_227"
-    type: ss
-    server: "82.38.31.180"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_228"
-    type: ss
-    server: "82.38.31.49"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_229"
-    type: ss
-    server: "82.38.31.13"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_230"
-    type: ss
-    server: "82.38.31.174"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_231"
-    type: ss
-    server: "141.227.152.129"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "bBnV36tzt7MKV75aDZTbzG"
-    udp: true
-  - name: "🇳🇱_232"
-    type: ss
-    server: "82.38.31.35"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_233"
-    type: ss
-    server: "193.29.139.168"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "QCXDxuDlTTMD7jtgHUjIoj"
-    udp: true
-  - name: "🇳🇱_234"
-    type: ss
-    server: "82.38.31.219"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_235"
-    type: ss
-    server: "193.29.139.198"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_236"
-    type: ss
-    server: "82.38.31.16"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_237"
-    type: ss
-    server: "82.38.31.179"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_238"
-    type: ss
-    server: "193.29.139.144"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_239"
-    type: ss
-    server: "82.38.31.189"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_240"
-    type: ss
-    server: "82.38.31.46"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_241"
-    type: ss
-    server: "82.38.31.11"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_242"
-    type: ss
-    server: "193.29.139.147"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_243"
     type: ss
     server: "82.38.31.216"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-  - name: "🇳🇱_244"
+  - name: "🇳🇱_225"
     type: ss
-    server: "82.38.31.186"
-    port: 8080
+    server: "108.181.58.239"
+    port: 8388
     cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    password: "CJmTCCx7Ltud"
     udp: true
-  - name: "🇳🇱_245"
+  - name: "🇳🇱_226"
     type: ss
-    server: "82.38.31.149"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_246"
-    type: ss
-    server: "82.38.31.218"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_247"
-    type: ss
-    server: "82.38.31.201"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_248"
-    type: ss
-    server: "82.38.31.2"
+    server: "82.38.31.46"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
-  - name: "🇳🇱_249"
+  - name: "🇳🇱_227"
     type: ss
-    server: "82.38.31.164"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_250"
-    type: ss
-    server: "82.38.31.28"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🇳🇱_251"
-    type: ss
-    server: "82.38.31.203"
+    server: "82.38.31.179"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-  - name: "🇳🇱_252"
+  - name: "🇳🇱_228"
     type: ss
-    server: "82.38.31.205"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_253"
-    type: ss
-    server: "82.38.31.213"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "🇳🇱_254"
-    type: ss
-    server: "193.29.139.204"
-    port: 8080
+    server: "82.38.31.57"
+    port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
-  - name: "🇳🇱_255"
+  - name: "🇳🇱_229"
+    type: ss
+    server: "82.38.31.32"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_230"
     type: ss
     server: "82.38.31.199"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-  - name: "🇳🇱_256"
+  - name: "🇳🇱_231"
     type: ss
-    server: "82.38.31.198"
+    server: "82.38.31.208"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_232"
+    type: ss
+    server: "82.38.31.26"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_233"
+    type: ss
+    server: "82.38.31.13"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_234"
+    type: ss
+    server: "82.38.31.180"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_235"
+    type: ss
+    server: "82.38.31.34"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_236"
+    type: ss
+    server: "193.29.139.223"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_237"
+    type: ss
+    server: "193.29.139.235"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_238"
+    type: ss
+    server: "82.38.31.206"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_239"
+    type: ss
+    server: "82.38.31.176"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_240"
+    type: ss
+    server: "82.38.31.217"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_241"
+    type: ss
+    server: "82.38.31.213"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_242"
+    type: ss
+    server: "82.38.31.156"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_243"
+    type: ss
+    server: "82.38.31.11"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_244"
+    type: ss
+    server: "82.38.31.181"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_245"
+    type: ss
+    server: "82.38.31.200"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_246"
+    type: ss
+    server: "193.29.139.168"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "QCXDxuDlTTMD7jtgHUjIoj"
+    udp: true
+  - name: "🇳🇱_247"
+    type: ss
+    server: "82.38.31.16"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_248"
+    type: ss
+    server: "82.38.31.162"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_249"
+    type: ss
+    server: "82.38.31.205"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_250"
+    type: ss
+    server: "193.29.139.147"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_251"
+    type: ss
+    server: "82.38.31.2"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_252"
+    type: ss
+    server: "193.29.139.204"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_253"
+    type: ss
+    server: "82.38.31.35"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_254"
+    type: ss
+    server: "82.38.31.184"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_255"
+    type: ss
+    server: "82.38.31.149"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_256"
+    type: ss
+    server: "193.29.139.198"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_257"
+    type: ss
+    server: "82.38.31.35"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_258"
+    type: ss
+    server: "82.38.31.203"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_259"
+    type: ss
+    server: "82.38.31.187"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_260"
+    type: ss
+    server: "82.38.31.212"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_261"
+    type: ss
+    server: "193.29.139.144"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_262"
+    type: ss
+    server: "82.38.31.48"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_263"
+    type: ss
+    server: "82.38.31.207"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_264"
+    type: ss
+    server: "82.38.31.201"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_265"
+    type: ss
+    server: "82.38.31.192"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_266"
+    type: ss
+    server: "82.38.31.36"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_267"
+    type: ss
+    server: "82.38.31.219"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_268"
+    type: ss
+    server: "82.38.31.194"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_269"
+    type: ss
+    server: "82.38.31.190"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_270"
+    type: ss
+    server: "82.38.31.10"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_271"
+    type: ss
+    server: "82.38.31.36"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_272"
+    type: ss
+    server: "82.38.31.174"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_273"
+    type: ss
+    server: "82.38.31.49"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_274"
+    type: ss
+    server: "82.38.31.193"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_275"
+    type: ss
+    server: "213.109.147.242"
+    port: 62685
+    cipher: "chacha20-ietf-poly1305"
+    password: "VpKABcOpNNA0l5G2AVOmw8"
+    udp: true
+  - name: "🇳🇱_276"
+    type: ss
+    server: "82.38.31.214"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_277"
+    type: ss
+    server: "109.104.154.163"
+    port: 2375
+    cipher: "aes-256-gcm"
+    password: "faBAoD54k87UJG7"
+    udp: true
+  - name: "🇳🇱_278"
+    type: ss
+    server: "82.38.31.42"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_279"
+    type: ss
+    server: "82.38.31.195"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_280"
+    type: ss
+    server: "193.29.139.151"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_281"
+    type: ss
+    server: "82.38.31.218"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_282"
+    type: ss
+    server: "82.38.31.202"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_283"
+    type: ss
+    server: "82.38.31.15"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_284"
+    type: ss
+    server: "82.38.31.47"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_285"
+    type: ss
+    server: "82.38.31.3"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_286"
+    type: ss
+    server: "82.38.31.164"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_287"
+    type: ss
+    server: "82.38.31.191"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_288"
+    type: ss
+    server: "82.38.31.186"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_289"
+    type: ss
+    server: "158.173.20.208"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "🇳🇱_290"
+    type: ss
+    server: "82.38.31.155"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_291"
+    type: ss
+    server: "82.38.31.189"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_292"
+    type: ss
+    server: "82.38.31.28"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_293"
+    type: ss
+    server: "82.38.31.174"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_294"
+    type: ss
+    server: "82.38.31.185"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "🇳🇱_295"
+    type: ss
+    server: "82.38.31.39"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "🇳🇱_296"
+    type: ss
+    server: "82.38.31.29"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
 
 proxy-groups:
@@ -1335,26 +1621,6 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
-      - "🇳🇱_129"
-      - "🇳🇱_130"
-      - "🇳🇱_131"
-      - "🇳🇱_132"
-      - "🇳🇱_133"
-      - "🇳🇱_134"
-      - "🇳🇱_135"
-      - "🇳🇱_136"
-      - "🇳🇱_137"
-      - "🇳🇱_138"
-      - "🇳🇱_139"
-      - "🇳🇱_140"
-      - "🇳🇱_141"
-      - "🇳🇱_142"
-      - "🇳🇱_143"
-      - "🇳🇱_144"
-      - "🇳🇱_145"
-      - "🇳🇱_146"
-      - "🇳🇱_147"
-      - "🇳🇱_148"
       - "🇳🇱_149"
       - "🇳🇱_150"
       - "🇳🇱_151"
@@ -1463,6 +1729,46 @@ proxy-groups:
       - "🇳🇱_254"
       - "🇳🇱_255"
       - "🇳🇱_256"
+      - "🇳🇱_257"
+      - "🇳🇱_258"
+      - "🇳🇱_259"
+      - "🇳🇱_260"
+      - "🇳🇱_261"
+      - "🇳🇱_262"
+      - "🇳🇱_263"
+      - "🇳🇱_264"
+      - "🇳🇱_265"
+      - "🇳🇱_266"
+      - "🇳🇱_267"
+      - "🇳🇱_268"
+      - "🇳🇱_269"
+      - "🇳🇱_270"
+      - "🇳🇱_271"
+      - "🇳🇱_272"
+      - "🇳🇱_273"
+      - "🇳🇱_274"
+      - "🇳🇱_275"
+      - "🇳🇱_276"
+      - "🇳🇱_277"
+      - "🇳🇱_278"
+      - "🇳🇱_279"
+      - "🇳🇱_280"
+      - "🇳🇱_281"
+      - "🇳🇱_282"
+      - "🇳🇱_283"
+      - "🇳🇱_284"
+      - "🇳🇱_285"
+      - "🇳🇱_286"
+      - "🇳🇱_287"
+      - "🇳🇱_288"
+      - "🇳🇱_289"
+      - "🇳🇱_290"
+      - "🇳🇱_291"
+      - "🇳🇱_292"
+      - "🇳🇱_293"
+      - "🇳🇱_294"
+      - "🇳🇱_295"
+      - "🇳🇱_296"
 
   - name: "LB-CDN"
     type: load-balance
@@ -1472,26 +1778,6 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
-      - "🇳🇱_129"
-      - "🇳🇱_130"
-      - "🇳🇱_131"
-      - "🇳🇱_132"
-      - "🇳🇱_133"
-      - "🇳🇱_134"
-      - "🇳🇱_135"
-      - "🇳🇱_136"
-      - "🇳🇱_137"
-      - "🇳🇱_138"
-      - "🇳🇱_139"
-      - "🇳🇱_140"
-      - "🇳🇱_141"
-      - "🇳🇱_142"
-      - "🇳🇱_143"
-      - "🇳🇱_144"
-      - "🇳🇱_145"
-      - "🇳🇱_146"
-      - "🇳🇱_147"
-      - "🇳🇱_148"
       - "🇳🇱_149"
       - "🇳🇱_150"
       - "🇳🇱_151"
@@ -1600,6 +1886,46 @@ proxy-groups:
       - "🇳🇱_254"
       - "🇳🇱_255"
       - "🇳🇱_256"
+      - "🇳🇱_257"
+      - "🇳🇱_258"
+      - "🇳🇱_259"
+      - "🇳🇱_260"
+      - "🇳🇱_261"
+      - "🇳🇱_262"
+      - "🇳🇱_263"
+      - "🇳🇱_264"
+      - "🇳🇱_265"
+      - "🇳🇱_266"
+      - "🇳🇱_267"
+      - "🇳🇱_268"
+      - "🇳🇱_269"
+      - "🇳🇱_270"
+      - "🇳🇱_271"
+      - "🇳🇱_272"
+      - "🇳🇱_273"
+      - "🇳🇱_274"
+      - "🇳🇱_275"
+      - "🇳🇱_276"
+      - "🇳🇱_277"
+      - "🇳🇱_278"
+      - "🇳🇱_279"
+      - "🇳🇱_280"
+      - "🇳🇱_281"
+      - "🇳🇱_282"
+      - "🇳🇱_283"
+      - "🇳🇱_284"
+      - "🇳🇱_285"
+      - "🇳🇱_286"
+      - "🇳🇱_287"
+      - "🇳🇱_288"
+      - "🇳🇱_289"
+      - "🇳🇱_290"
+      - "🇳🇱_291"
+      - "🇳🇱_292"
+      - "🇳🇱_293"
+      - "🇳🇱_294"
+      - "🇳🇱_295"
+      - "🇳🇱_296"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -1609,26 +1935,6 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇳🇱_129"
-      - "🇳🇱_130"
-      - "🇳🇱_131"
-      - "🇳🇱_132"
-      - "🇳🇱_133"
-      - "🇳🇱_134"
-      - "🇳🇱_135"
-      - "🇳🇱_136"
-      - "🇳🇱_137"
-      - "🇳🇱_138"
-      - "🇳🇱_139"
-      - "🇳🇱_140"
-      - "🇳🇱_141"
-      - "🇳🇱_142"
-      - "🇳🇱_143"
-      - "🇳🇱_144"
-      - "🇳🇱_145"
-      - "🇳🇱_146"
-      - "🇳🇱_147"
-      - "🇳🇱_148"
       - "🇳🇱_149"
       - "🇳🇱_150"
       - "🇳🇱_151"
@@ -1737,6 +2043,46 @@ proxy-groups:
       - "🇳🇱_254"
       - "🇳🇱_255"
       - "🇳🇱_256"
+      - "🇳🇱_257"
+      - "🇳🇱_258"
+      - "🇳🇱_259"
+      - "🇳🇱_260"
+      - "🇳🇱_261"
+      - "🇳🇱_262"
+      - "🇳🇱_263"
+      - "🇳🇱_264"
+      - "🇳🇱_265"
+      - "🇳🇱_266"
+      - "🇳🇱_267"
+      - "🇳🇱_268"
+      - "🇳🇱_269"
+      - "🇳🇱_270"
+      - "🇳🇱_271"
+      - "🇳🇱_272"
+      - "🇳🇱_273"
+      - "🇳🇱_274"
+      - "🇳🇱_275"
+      - "🇳🇱_276"
+      - "🇳🇱_277"
+      - "🇳🇱_278"
+      - "🇳🇱_279"
+      - "🇳🇱_280"
+      - "🇳🇱_281"
+      - "🇳🇱_282"
+      - "🇳🇱_283"
+      - "🇳🇱_284"
+      - "🇳🇱_285"
+      - "🇳🇱_286"
+      - "🇳🇱_287"
+      - "🇳🇱_288"
+      - "🇳🇱_289"
+      - "🇳🇱_290"
+      - "🇳🇱_291"
+      - "🇳🇱_292"
+      - "🇳🇱_293"
+      - "🇳🇱_294"
+      - "🇳🇱_295"
+      - "🇳🇱_296"
 
   - name: "FAST-CDN"
     type: url-test
@@ -1745,26 +2091,6 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇳🇱_129"
-      - "🇳🇱_130"
-      - "🇳🇱_131"
-      - "🇳🇱_132"
-      - "🇳🇱_133"
-      - "🇳🇱_134"
-      - "🇳🇱_135"
-      - "🇳🇱_136"
-      - "🇳🇱_137"
-      - "🇳🇱_138"
-      - "🇳🇱_139"
-      - "🇳🇱_140"
-      - "🇳🇱_141"
-      - "🇳🇱_142"
-      - "🇳🇱_143"
-      - "🇳🇱_144"
-      - "🇳🇱_145"
-      - "🇳🇱_146"
-      - "🇳🇱_147"
-      - "🇳🇱_148"
       - "🇳🇱_149"
       - "🇳🇱_150"
       - "🇳🇱_151"
@@ -1873,6 +2199,46 @@ proxy-groups:
       - "🇳🇱_254"
       - "🇳🇱_255"
       - "🇳🇱_256"
+      - "🇳🇱_257"
+      - "🇳🇱_258"
+      - "🇳🇱_259"
+      - "🇳🇱_260"
+      - "🇳🇱_261"
+      - "🇳🇱_262"
+      - "🇳🇱_263"
+      - "🇳🇱_264"
+      - "🇳🇱_265"
+      - "🇳🇱_266"
+      - "🇳🇱_267"
+      - "🇳🇱_268"
+      - "🇳🇱_269"
+      - "🇳🇱_270"
+      - "🇳🇱_271"
+      - "🇳🇱_272"
+      - "🇳🇱_273"
+      - "🇳🇱_274"
+      - "🇳🇱_275"
+      - "🇳🇱_276"
+      - "🇳🇱_277"
+      - "🇳🇱_278"
+      - "🇳🇱_279"
+      - "🇳🇱_280"
+      - "🇳🇱_281"
+      - "🇳🇱_282"
+      - "🇳🇱_283"
+      - "🇳🇱_284"
+      - "🇳🇱_285"
+      - "🇳🇱_286"
+      - "🇳🇱_287"
+      - "🇳🇱_288"
+      - "🇳🇱_289"
+      - "🇳🇱_290"
+      - "🇳🇱_291"
+      - "🇳🇱_292"
+      - "🇳🇱_293"
+      - "🇳🇱_294"
+      - "🇳🇱_295"
+      - "🇳🇱_296"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -1882,26 +2248,6 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇳🇱_129"
-      - "🇳🇱_130"
-      - "🇳🇱_131"
-      - "🇳🇱_132"
-      - "🇳🇱_133"
-      - "🇳🇱_134"
-      - "🇳🇱_135"
-      - "🇳🇱_136"
-      - "🇳🇱_137"
-      - "🇳🇱_138"
-      - "🇳🇱_139"
-      - "🇳🇱_140"
-      - "🇳🇱_141"
-      - "🇳🇱_142"
-      - "🇳🇱_143"
-      - "🇳🇱_144"
-      - "🇳🇱_145"
-      - "🇳🇱_146"
-      - "🇳🇱_147"
-      - "🇳🇱_148"
       - "🇳🇱_149"
       - "🇳🇱_150"
       - "🇳🇱_151"
@@ -2010,31 +2356,51 @@ proxy-groups:
       - "🇳🇱_254"
       - "🇳🇱_255"
       - "🇳🇱_256"
+      - "🇳🇱_257"
+      - "🇳🇱_258"
+      - "🇳🇱_259"
+      - "🇳🇱_260"
+      - "🇳🇱_261"
+      - "🇳🇱_262"
+      - "🇳🇱_263"
+      - "🇳🇱_264"
+      - "🇳🇱_265"
+      - "🇳🇱_266"
+      - "🇳🇱_267"
+      - "🇳🇱_268"
+      - "🇳🇱_269"
+      - "🇳🇱_270"
+      - "🇳🇱_271"
+      - "🇳🇱_272"
+      - "🇳🇱_273"
+      - "🇳🇱_274"
+      - "🇳🇱_275"
+      - "🇳🇱_276"
+      - "🇳🇱_277"
+      - "🇳🇱_278"
+      - "🇳🇱_279"
+      - "🇳🇱_280"
+      - "🇳🇱_281"
+      - "🇳🇱_282"
+      - "🇳🇱_283"
+      - "🇳🇱_284"
+      - "🇳🇱_285"
+      - "🇳🇱_286"
+      - "🇳🇱_287"
+      - "🇳🇱_288"
+      - "🇳🇱_289"
+      - "🇳🇱_290"
+      - "🇳🇱_291"
+      - "🇳🇱_292"
+      - "🇳🇱_293"
+      - "🇳🇱_294"
+      - "🇳🇱_295"
+      - "🇳🇱_296"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
-      - "🇳🇱_129"
-      - "🇳🇱_130"
-      - "🇳🇱_131"
-      - "🇳🇱_132"
-      - "🇳🇱_133"
-      - "🇳🇱_134"
-      - "🇳🇱_135"
-      - "🇳🇱_136"
-      - "🇳🇱_137"
-      - "🇳🇱_138"
-      - "🇳🇱_139"
-      - "🇳🇱_140"
-      - "🇳🇱_141"
-      - "🇳🇱_142"
-      - "🇳🇱_143"
-      - "🇳🇱_144"
-      - "🇳🇱_145"
-      - "🇳🇱_146"
-      - "🇳🇱_147"
-      - "🇳🇱_148"
       - "🇳🇱_149"
       - "🇳🇱_150"
       - "🇳🇱_151"
@@ -2143,6 +2509,46 @@ proxy-groups:
       - "🇳🇱_254"
       - "🇳🇱_255"
       - "🇳🇱_256"
+      - "🇳🇱_257"
+      - "🇳🇱_258"
+      - "🇳🇱_259"
+      - "🇳🇱_260"
+      - "🇳🇱_261"
+      - "🇳🇱_262"
+      - "🇳🇱_263"
+      - "🇳🇱_264"
+      - "🇳🇱_265"
+      - "🇳🇱_266"
+      - "🇳🇱_267"
+      - "🇳🇱_268"
+      - "🇳🇱_269"
+      - "🇳🇱_270"
+      - "🇳🇱_271"
+      - "🇳🇱_272"
+      - "🇳🇱_273"
+      - "🇳🇱_274"
+      - "🇳🇱_275"
+      - "🇳🇱_276"
+      - "🇳🇱_277"
+      - "🇳🇱_278"
+      - "🇳🇱_279"
+      - "🇳🇱_280"
+      - "🇳🇱_281"
+      - "🇳🇱_282"
+      - "🇳🇱_283"
+      - "🇳🇱_284"
+      - "🇳🇱_285"
+      - "🇳🇱_286"
+      - "🇳🇱_287"
+      - "🇳🇱_288"
+      - "🇳🇱_289"
+      - "🇳🇱_290"
+      - "🇳🇱_291"
+      - "🇳🇱_292"
+      - "🇳🇱_293"
+      - "🇳🇱_294"
+      - "🇳🇱_295"
+      - "🇳🇱_296"
 
 rules:
   - MATCH,PROXY-BEST

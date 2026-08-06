@@ -59,19 +59,13 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
-  - name: "🇭🇰_5"
-    type: vless
-    server: "45.125.32.115"
-    port: 443
-    uuid: "e2c8fa8c-886d-4649-bd59-cf73bee48b55"
-    udp: true
-  - name: "🇭🇰_6"
+  - name: "🇭🇰_4"
     type: vless
     server: "182.16.61.3"
     port: 45647
     uuid: "431fe973-a43a-4fac-bf83-2a772e0d0625"
     udp: true
-  - name: "🇭🇰_7"
+  - name: "🇭🇰_5"
     type: vless
     server: "38.207.177.236"
     port: 443
@@ -85,7 +79,7 @@ proxies:
       public-key: "maES4RMEtsm5emBCixDRa6Y5GvmVwmwZNBL2G4Q03D4"
       short-id: "47de54e71fee3451"
     flow: "xtls-rprx-vision"
-  - name: "🇭🇰_8"
+  - name: "🇭🇰_6"
     type: trojan
     server: "18.163.180.201"
     port: 6357
@@ -135,10 +129,9 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇭🇰_4"
       - "🇭🇰_5"
       - "🇭🇰_6"
-      - "🇭🇰_7"
-      - "🇭🇰_8"
 
   - name: "LB-CDN"
     type: load-balance
@@ -148,10 +141,9 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇭🇰_4"
       - "🇭🇰_5"
       - "🇭🇰_6"
-      - "🇭🇰_7"
-      - "🇭🇰_8"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -161,10 +153,9 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇭🇰_4"
       - "🇭🇰_5"
       - "🇭🇰_6"
-      - "🇭🇰_7"
-      - "🇭🇰_8"
 
   - name: "FAST-CDN"
     type: url-test
@@ -173,10 +164,9 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇭🇰_4"
       - "🇭🇰_5"
       - "🇭🇰_6"
-      - "🇭🇰_7"
-      - "🇭🇰_8"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -186,19 +176,17 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇭🇰_4"
       - "🇭🇰_5"
       - "🇭🇰_6"
-      - "🇭🇰_7"
-      - "🇭🇰_8"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
+      - "🇭🇰_4"
       - "🇭🇰_5"
       - "🇭🇰_6"
-      - "🇭🇰_7"
-      - "🇭🇰_8"
 
 rules:
   - MATCH,PROXY-BEST
