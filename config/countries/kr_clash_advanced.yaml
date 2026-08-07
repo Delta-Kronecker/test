@@ -100,45 +100,13 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇰🇷_21"
     type: trojan
-    server: "communal-sunbird.rooster465.autos"
+    server: "moved-meerkat.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "communal-sunbird.rooster465.autos"
+    sni: "moved-meerkat.rooster465.autos"
     skip-cert-verify: true
     udp: true
   - name: "🇰🇷_22"
-    type: trojan
-    server: "distinct-llama.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "distinct-llama.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "🇰🇷_23"
-    type: trojan
-    server: "upward-puma.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "upward-puma.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "🇰🇷_24"
-    type: trojan
-    server: "grateful-owl.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "grateful-owl.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "🇰🇷_25"
-    type: trojan
-    server: "humorous-malamute.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "humorous-malamute.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "🇰🇷_26"
     type: trojan
     server: "definite-malamute.rooster465.autos"
     port: 443
@@ -146,23 +114,15 @@ proxies:
     sni: "definite-malamute.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "🇰🇷_27"
+  - name: "🇰🇷_23"
     type: trojan
-    server: "select-ferret.rooster465.autos"
+    server: "chief-bluegill.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "select-ferret.rooster465.autos"
+    sni: "chief-bluegill.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "🇰🇷_28"
-    type: trojan
-    server: "main-whippet.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "main-whippet.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "🇰🇷_29"
+  - name: "🇰🇷_24"
     type: trojan
     server: "saving-octopus.rooster465.autos"
     port: 443
@@ -170,7 +130,23 @@ proxies:
     sni: "saving-octopus.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "🇰🇷_30"
+  - name: "🇰🇷_25"
+    type: trojan
+    server: "distinct-llama.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "distinct-llama.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇰🇷_26"
+    type: trojan
+    server: "grateful-owl.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "grateful-owl.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇰🇷_27"
     type: trojan
     server: "pure-ram.rooster465.autos"
     port: 443
@@ -178,7 +154,23 @@ proxies:
     sni: "pure-ram.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "🇰🇷_31"
+  - name: "🇰🇷_28"
+    type: trojan
+    server: "humorous-malamute.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "humorous-malamute.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇰🇷_29"
+    type: trojan
+    server: "select-ferret.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "select-ferret.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇰🇷_30"
     type: trojan
     server: "striking-maggot.rooster465.autos"
     port: 443
@@ -186,12 +178,20 @@ proxies:
     sni: "striking-maggot.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "🇰🇷_32"
+  - name: "🇰🇷_31"
     type: trojan
-    server: "chief-bluegill.rooster465.autos"
+    server: "upward-puma.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "chief-bluegill.rooster465.autos"
+    sni: "upward-puma.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇰🇷_32"
+    type: trojan
+    server: "main-whippet.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "main-whippet.rooster465.autos"
     skip-cert-verify: true
     udp: true
   - name: "🇰🇷_33"
@@ -204,10 +204,10 @@ proxies:
     udp: true
   - name: "🇰🇷_34"
     type: trojan
-    server: "moved-meerkat.rooster465.autos"
+    server: "communal-sunbird.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "moved-meerkat.rooster465.autos"
+    sni: "communal-sunbird.rooster465.autos"
     skip-cert-verify: true
     udp: true
 

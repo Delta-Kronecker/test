@@ -59,82 +59,17 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
-  - name: "@DeltaKroneckerGithub_616"
+  - name: "@DeltaKroneckerGithub_575"
     type: trojan
-    server: "learning-leopard.rooster465.autos"
+    server: "moved-meerkat.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "learning-leopard.rooster465.autos"
+    sni: "moved-meerkat.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_617"
+  - name: "@DeltaKroneckerGithub_576"
     type: trojan
-    server: "communal-sunbird.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "communal-sunbird.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_618"
-    type: trojan
-    server: "104.25.242.132"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_620"
-    type: trojan
-    server: "104.16.252.34"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_622"
-    type: trojan
-    server: "prompt-duckling.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "prompt-duckling.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_623"
-    type: trojan
-    server: "162.159.4.103"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_625"
-    type: trojan
-    server: "nearby-egret.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "nearby-egret.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_626"
-    type: trojan
-    server: "stunning-mite.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "stunning-mite.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_627"
-    type: trojan
-    server: "104.19.64.105"
+    server: "185.18.250.252"
     port: 443
     password: "humanity"
     sni: "www.calmlunch.com"
@@ -145,9 +80,9 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.calmlunch.com"
-  - name: "@DeltaKroneckerGithub_629"
+  - name: "@DeltaKroneckerGithub_578"
     type: trojan
-    server: "xn--b6gac.eu.org"
+    server: "172.64.35.26"
     port: 443
     password: "87961f9d-bee1-4377-826b-e169e7891c4f"
     sni: "yks-dd9.pages.dev"
@@ -156,53 +91,88 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_631"
+  - name: "@DeltaKroneckerGithub_580"
     type: trojan
-    server: "clear-snail.rooster465.autos"
+    server: "upright-impala.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "clear-snail.rooster465.autos"
+    sni: "upright-impala.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_632"
+  - name: "@DeltaKroneckerGithub_581"
     type: trojan
-    server: "distinct-llama.rooster465.autos"
+    server: "learning-leopard.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "distinct-llama.rooster465.autos"
+    sni: "learning-leopard.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_633"
+  - name: "@DeltaKroneckerGithub_582"
     type: trojan
-    server: "real-werewolf.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "real-werewolf.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_634"
-    type: trojan
-    server: "162.159.1.251"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_636"
-    type: trojan
-    server: "104.21.17.125"
+    server: "www.speedtest.net"
     port: 443
     password: "Telegram_healer_config"
-    sni: "30f67sBQ8jJwMt7GYtfc14.0M68-Qz3hqYfnLAR6n3Iq.wORkErs.dEv"
+    sni: "f1d3r2i3j-9cBv9iXQ6U73529fGb.lxmdYxORMmmDIaBX0-tD.WOrkerS.dEv"
     skip-cert-verify: true
     udp: true
     network: ws
     ws-opts:
-      path: "/tr/hYgAqUlh5GyczDyXP?ed"
-  - name: "@DeltaKroneckerGithub_638"
+      path: "/tr/D738GCJkClC3ZuZTvEDbh?ed=2560"
+  - name: "@DeltaKroneckerGithub_584"
+    type: trojan
+    server: "definite-malamute.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "definite-malamute.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_585"
+    type: trojan
+    server: "172.64.35.127"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_587"
+    type: trojan
+    server: "104.21.84.3"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_589"
+    type: trojan
+    server: "jquery.com"
+    port: 443
+    password: "988sR-269PKCKlb&3pMrFTEr"
+    sni: "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560"
+  - name: "@DeltaKroneckerGithub_591"
+    type: trojan
+    server: "104.16.72.2"
+    port: 443
+    password: "humanity"
+    sni: "www.calmlunch.com"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@DeltaKroneckerGithub_593"
     type: trojan
     server: "45.130.125.112"
     port: 443
@@ -213,53 +183,7 @@ proxies:
     network: ws
     ws-opts:
       path: "/assignment"
-  - name: "@DeltaKroneckerGithub_640"
-    type: trojan
-    server: "sensible-mongrel.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "sensible-mongrel.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_641"
-    type: trojan
-    server: "wise-bengal.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "wise-bengal.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_642"
-    type: trojan
-    server: "cf.877771.xyz"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_644"
-    type: trojan
-    server: "healthy-louse.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "healthy-louse.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_645"
-    type: trojan
-    server: "cfip.1323123.xyz"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_647"
+  - name: "@DeltaKroneckerGithub_595"
     type: trojan
     server: "104.16.71.213"
     port: 443
@@ -272,31 +196,31 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.calmlunch.com"
-  - name: "@DeltaKroneckerGithub_649"
+  - name: "@DeltaKroneckerGithub_597"
     type: trojan
-    server: "devoted-heron.rooster465.autos"
+    server: "moral-buzzard.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "devoted-heron.rooster465.autos"
+    sni: "moral-buzzard.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_650"
+  - name: "@DeltaKroneckerGithub_598"
     type: trojan
-    server: "becoming-hare.rooster465.autos"
+    server: "chief-bluegill.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "becoming-hare.rooster465.autos"
+    sni: "chief-bluegill.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_651"
+  - name: "@DeltaKroneckerGithub_599"
     type: trojan
-    server: "smart-pup.rooster465.autos"
+    server: "nearby-egret.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "smart-pup.rooster465.autos"
+    sni: "nearby-egret.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_652"
+  - name: "@DeltaKroneckerGithub_600"
     type: trojan
     server: "picked-guinea.rooster465.autos"
     port: 443
@@ -304,49 +228,9 @@ proxies:
     sni: "picked-guinea.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_653"
+  - name: "@DeltaKroneckerGithub_601"
     type: trojan
-    server: "upward-puma.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "upward-puma.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_654"
-    type: trojan
-    server: "sure-humpback.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "sure-humpback.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_655"
-    type: trojan
-    server: "upright-impala.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "upright-impala.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_656"
-    type: trojan
-    server: "relaxing-bluebird.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "relaxing-bluebird.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_657"
-    type: trojan
-    server: "better-molly.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "better-molly.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_658"
-    type: trojan
-    server: "104.25.241.194"
+    server: "cf.0sm.com"
     port: 443
     password: "87961f9d-bee1-4377-826b-e169e7891c4f"
     sni: "yks-dd9.pages.dev"
@@ -355,7 +239,117 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_660"
+  - name: "@DeltaKroneckerGithub_603"
+    type: trojan
+    server: "saving-octopus.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "saving-octopus.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_604"
+    type: trojan
+    server: "163.245.196.68"
+    port: 49361
+    password: "0ebb269c9f2d4e8e46b0cd4105a55134"
+    sni: "163.245.196.68.sslip.io"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_605"
+    type: trojan
+    server: "162.159.3.212"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_607"
+    type: trojan
+    server: "18.163.180.201"
+    port: 6357
+    password: "d1960ba9f0f6353353994fa844cf817b"
+    sni: "www.nintendogames.net"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_608"
+    type: trojan
+    server: "real-werewolf.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "real-werewolf.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_609"
+    type: trojan
+    server: "definite-sturgeon.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "definite-sturgeon.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_610"
+    type: trojan
+    server: "198.62.62.23"
+    port: 443
+    password: "humanity"
+    sni: "www.calmlunch.com"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "//assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@DeltaKroneckerGithub_612"
+    type: trojan
+    server: "162.159.24.245"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_614"
+    type: trojan
+    server: "clear-snail.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "clear-snail.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_615"
+    type: trojan
+    server: "tough-robin.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "tough-robin.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_616"
+    type: trojan
+    server: "162.159.82.246"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_618"
+    type: trojan
+    server: "distinct-llama.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "distinct-llama.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_619"
     type: trojan
     server: "grateful-owl.rooster465.autos"
     port: 443
@@ -363,15 +357,64 @@ proxies:
     sni: "grateful-owl.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_661"
+  - name: "@DeltaKroneckerGithub_620"
     type: trojan
-    server: "social-mutt.rooster465.autos"
+    server: "pure-ram.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "social-mutt.rooster465.autos"
+    sni: "pure-ram.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_662"
+  - name: "@DeltaKroneckerGithub_621"
+    type: trojan
+    server: "104.19.164.155"
+    port: 2083
+    password: "988sR-269PKCKlb&3pMrFTEr"
+    sni: "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ"
+  - name: "@DeltaKroneckerGithub_623"
+    type: trojan
+    server: "better-molly.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "better-molly.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_624"
+    type: trojan
+    server: "104.25.242.132"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_626"
+    type: trojan
+    server: "162.159.4.103"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_628"
+    type: trojan
+    server: "thankful-mustang.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "thankful-mustang.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_629"
     type: trojan
     server: "172.67.147.60"
     port: 443
@@ -382,7 +425,214 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_664"
+  - name: "@DeltaKroneckerGithub_631"
+    type: trojan
+    server: "humorous-malamute.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "humorous-malamute.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_632"
+    type: trojan
+    server: "select-ferret.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "select-ferret.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_633"
+    type: trojan
+    server: "stunning-mite.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "stunning-mite.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_634"
+    type: trojan
+    server: "cf.877771.xyz"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_636"
+    type: trojan
+    server: "154.64.226.149"
+    port: 9450
+    password: "ba07a8af-5544-48ac-ab62-3b6c00a44fa6"
+    sni: "hk.catxstar.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_637"
+    type: trojan
+    server: "relaxing-bluebird.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "relaxing-bluebird.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_638"
+    type: trojan
+    server: "sensible-mongrel.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "sensible-mongrel.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_639"
+    type: trojan
+    server: "tidy-gelding.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "tidy-gelding.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_640"
+    type: trojan
+    server: "104.19.64.105"
+    port: 443
+    password: "humanity"
+    sni: "www.calmlunch.com"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@DeltaKroneckerGithub_642"
+    type: trojan
+    server: "striking-maggot.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "striking-maggot.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_643"
+    type: trojan
+    server: "cf.090227.xyz"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_645"
+    type: trojan
+    server: "adjusted-labrador.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "adjusted-labrador.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_646"
+    type: trojan
+    server: "upward-puma.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "upward-puma.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_647"
+    type: trojan
+    server: "xn--b6gac.eu.org"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_649"
+    type: trojan
+    server: "162.159.1.251"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_651"
+    type: trojan
+    server: "healthy-louse.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "healthy-louse.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_652"
+    type: trojan
+    server: "perfect-slug.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "perfect-slug.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_653"
+    type: trojan
+    server: "104.25.241.194"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_655"
+    type: trojan
+    server: "104.18.155.119"
+    port: 443
+    password: "988sR-269PKCKlb&3pMrFTEr"
+    sni: "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560"
+  - name: "@DeltaKroneckerGithub_657"
+    type: trojan
+    server: "devoted-heron.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "devoted-heron.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_658"
+    type: trojan
+    server: "smart-pup.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "smart-pup.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_659"
+    type: trojan
+    server: "main-whippet.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "main-whippet.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_660"
+    type: trojan
+    server: "oplosgru-c.catcat321.com"
+    port: 20004
+    password: "ba07a8af-5544-48ac-ab62-3b6c00a44fa6"
+    sni: "hk.catxstar.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_661"
     type: trojan
     server: "172.64.146.75"
     port: 443
@@ -393,9 +643,17 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_666"
+  - name: "@DeltaKroneckerGithub_663"
     type: trojan
-    server: "172.66.173.172"
+    server: "uncommon-feline.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "uncommon-feline.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_664"
+    type: trojan
+    server: "cloudflare-ip.mofashi.ltd"
     port: 443
     password: "87961f9d-bee1-4377-826b-e169e7891c4f"
     sni: "yks-dd9.pages.dev"
@@ -404,6 +662,17 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
+  - name: "@DeltaKroneckerGithub_666"
+    type: trojan
+    server: "join.my.telegram.channel.cmliussss.to.unlock.more.premium.nodes.cf.090227.xyz"
+    port: 443
+    password: "87d1bfd4-574e-4c96-ad42-0426f27461ff"
+    sni: "_acme-challenge.sb.cloudns.biz"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/"
   - name: "@DeltaKroneckerGithub_668"
     type: trojan
     server: "cnamefuckxxs.yuchen.icu"
@@ -417,69 +686,64 @@ proxies:
       path: "/?ed=2048"
   - name: "@DeltaKroneckerGithub_670"
     type: trojan
-    server: "humorous-malamute.rooster465.autos"
+    server: "104.16.252.34"
     port: 443
-    password: "ND91608427"
-    sni: "humorous-malamute.rooster465.autos"
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_671"
-    type: trojan
-    server: "tough-robin.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "tough-robin.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
   - name: "@DeltaKroneckerGithub_672"
     type: trojan
-    server: "perfect-slug.rooster465.autos"
+    server: "wise-bengal.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "perfect-slug.rooster465.autos"
+    sni: "wise-bengal.rooster465.autos"
     skip-cert-verify: true
     udp: true
   - name: "@DeltaKroneckerGithub_673"
     type: trojan
-    server: "172.64.35.127"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_675"
-    type: trojan
-    server: "154.64.226.149"
-    port: 9450
-    password: "ba07a8af-5544-48ac-ab62-3b6c00a44fa6"
-    sni: "hk.catxstar.com"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_676"
-    type: trojan
-    server: "cf.0sm.com"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_678"
-    type: trojan
-    server: "definite-malamute.rooster465.autos"
+    server: "communal-sunbird.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "definite-malamute.rooster465.autos"
+    sni: "communal-sunbird.rooster465.autos"
     skip-cert-verify: true
     udp: true
+  - name: "@DeltaKroneckerGithub_674"
+    type: trojan
+    server: "104.21.17.125"
+    port: 443
+    password: "Telegram_healer_config"
+    sni: "30f67sBQ8jJwMt7GYtfc14.0M68-Qz3hqYfnLAR6n3Iq.wORkErs.dEv"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/tr/hYgAqUlh5GyczDyXP?ed"
+  - name: "@DeltaKroneckerGithub_676"
+    type: trojan
+    server: "prompt-duckling.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "prompt-duckling.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_677"
+    type: trojan
+    server: "172.66.173.172"
+    port: 443
+    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
+    sni: "yks-dd9.pages.dev"
+    skip-cert-verify: true
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/?ed=2048"
   - name: "@DeltaKroneckerGithub_679"
     type: trojan
-    server: "172.64.35.26"
+    server: "cfip.1323123.xyz"
     port: 443
     password: "87961f9d-bee1-4377-826b-e169e7891c4f"
     sni: "yks-dd9.pages.dev"
@@ -490,140 +754,21 @@ proxies:
       path: "/?ed=2048"
   - name: "@DeltaKroneckerGithub_681"
     type: trojan
-    server: "104.19.164.155"
-    port: 2083
-    password: "988sR-269PKCKlb&3pMrFTEr"
-    sni: "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV"
+    server: "casual-bee.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "casual-bee.rooster465.autos"
     skip-cert-verify: true
     udp: true
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ"
+  - name: "@DeltaKroneckerGithub_682"
+    type: trojan
+    server: "social-mutt.rooster465.autos"
+    port: 443
+    password: "ND91608427"
+    sni: "social-mutt.rooster465.autos"
+    skip-cert-verify: true
+    udp: true
   - name: "@DeltaKroneckerGithub_683"
-    type: trojan
-    server: "162.159.24.245"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_685"
-    type: trojan
-    server: "jquery.com"
-    port: 443
-    password: "988sR-269PKCKlb&3pMrFTEr"
-    sni: "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560"
-  - name: "@DeltaKroneckerGithub_687"
-    type: trojan
-    server: "thankful-mustang.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "thankful-mustang.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_688"
-    type: trojan
-    server: "internal-sunbird.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "internal-sunbird.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_689"
-    type: trojan
-    server: "select-ferret.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "select-ferret.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_690"
-    type: trojan
-    server: "163.245.196.68"
-    port: 49361
-    password: "0ebb269c9f2d4e8e46b0cd4105a55134"
-    sni: "163.245.196.68.sslip.io"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_691"
-    type: trojan
-    server: "main-whippet.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "main-whippet.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_692"
-    type: trojan
-    server: "www.speedtest.net"
-    port: 443
-    password: "Telegram_healer_config"
-    sni: "f1d3r2i3j-9cBv9iXQ6U73529fGb.lxmdYxORMmmDIaBX0-tD.WOrkerS.dEv"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/tr/D738GCJkClC3ZuZTvEDbh?ed=2560"
-  - name: "@DeltaKroneckerGithub_694"
-    type: trojan
-    server: "cf.090227.xyz"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_696"
-    type: trojan
-    server: "cloudflare-ip.mofashi.ltd"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_698"
-    type: trojan
-    server: "definite-sturgeon.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "definite-sturgeon.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_699"
-    type: trojan
-    server: "104.16.72.2"
-    port: 443
-    password: "humanity"
-    sni: "www.calmlunch.com"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.calmlunch.com"
-  - name: "@DeltaKroneckerGithub_701"
-    type: trojan
-    server: "tidy-gelding.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "tidy-gelding.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_702"
     type: trojan
     server: "cdn.tzpro.xyz"
     port: 443
@@ -634,90 +779,15 @@ proxies:
     network: ws
     ws-opts:
       path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_704"
+  - name: "@DeltaKroneckerGithub_685"
     type: trojan
-    server: "saving-octopus.rooster465.autos"
+    server: "internal-sunbird.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "saving-octopus.rooster465.autos"
+    sni: "internal-sunbird.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_705"
-    type: trojan
-    server: "pure-ram.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "pure-ram.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_706"
-    type: trojan
-    server: "striking-maggot.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "striking-maggot.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_707"
-    type: trojan
-    server: "moral-buzzard.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "moral-buzzard.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_708"
-    type: trojan
-    server: "casual-bee.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "casual-bee.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_709"
-    type: trojan
-    server: "198.62.62.23"
-    port: 443
-    password: "humanity"
-    sni: "www.calmlunch.com"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "//assignment"
-      headers:
-        Host: "www.calmlunch.com"
-  - name: "@DeltaKroneckerGithub_711"
-    type: trojan
-    server: "adjusted-labrador.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "adjusted-labrador.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_712"
-    type: trojan
-    server: "104.18.155.119"
-    port: 443
-    password: "988sR-269PKCKlb&3pMrFTEr"
-    sni: "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560"
-  - name: "@DeltaKroneckerGithub_714"
-    type: trojan
-    server: "162.159.82.246"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_716"
+  - name: "@DeltaKroneckerGithub_686"
     type: trojan
     server: "153.75.250.171"
     port: 49271
@@ -725,98 +795,20 @@ proxies:
     sni: "153.75.250.171.sslip.io"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_717"
+  - name: "@DeltaKroneckerGithub_687"
     type: trojan
-    server: "chief-bluegill.rooster465.autos"
+    server: "sure-humpback.rooster465.autos"
     port: 443
     password: "ND91608427"
-    sni: "chief-bluegill.rooster465.autos"
+    sni: "sure-humpback.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "@DeltaKroneckerGithub_718"
-    type: trojan
-    server: "104.21.84.3"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_720"
-    type: trojan
-    server: "18.163.180.201"
-    port: 6357
-    password: "d1960ba9f0f6353353994fa844cf817b"
-    sni: "www.nintendogames.net"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_721"
-    type: trojan
-    server: "join.my.telegram.channel.cmliussss.to.unlock.more.premium.nodes.cf.090227.xyz"
-    port: 443
-    password: "87d1bfd4-574e-4c96-ad42-0426f27461ff"
-    sni: "_acme-challenge.sb.cloudns.biz"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/"
-  - name: "@DeltaKroneckerGithub_723"
-    type: trojan
-    server: "162.159.3.212"
-    port: 443
-    password: "87961f9d-bee1-4377-826b-e169e7891c4f"
-    sni: "yks-dd9.pages.dev"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/?ed=2048"
-  - name: "@DeltaKroneckerGithub_725"
-    type: trojan
-    server: "uncommon-feline.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "uncommon-feline.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_726"
+  - name: "@DeltaKroneckerGithub_688"
     type: trojan
     server: "149.104.104.58"
     port: 443
     password: "S.ibYdZshHTF-ne.M+.Fznp_-hyFFnCSix"
     sni: "149.104.104.58"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_727"
-    type: trojan
-    server: "185.18.250.252"
-    port: 443
-    password: "humanity"
-    sni: "www.calmlunch.com"
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.calmlunch.com"
-  - name: "@DeltaKroneckerGithub_729"
-    type: trojan
-    server: "moved-meerkat.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    sni: "moved-meerkat.rooster465.autos"
-    skip-cert-verify: true
-    udp: true
-  - name: "@DeltaKroneckerGithub_730"
-    type: trojan
-    server: "oplosgru-c.catcat321.com"
-    port: 20004
-    password: "ba07a8af-5544-48ac-ab62-3b6c00a44fa6"
-    sni: "hk.catxstar.com"
     skip-cert-verify: true
     udp: true
 
@@ -861,87 +853,86 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "@DeltaKroneckerGithub_575"
+      - "@DeltaKroneckerGithub_576"
+      - "@DeltaKroneckerGithub_578"
+      - "@DeltaKroneckerGithub_580"
+      - "@DeltaKroneckerGithub_581"
+      - "@DeltaKroneckerGithub_582"
+      - "@DeltaKroneckerGithub_584"
+      - "@DeltaKroneckerGithub_585"
+      - "@DeltaKroneckerGithub_587"
+      - "@DeltaKroneckerGithub_589"
+      - "@DeltaKroneckerGithub_591"
+      - "@DeltaKroneckerGithub_593"
+      - "@DeltaKroneckerGithub_595"
+      - "@DeltaKroneckerGithub_597"
+      - "@DeltaKroneckerGithub_598"
+      - "@DeltaKroneckerGithub_599"
+      - "@DeltaKroneckerGithub_600"
+      - "@DeltaKroneckerGithub_601"
+      - "@DeltaKroneckerGithub_603"
+      - "@DeltaKroneckerGithub_604"
+      - "@DeltaKroneckerGithub_605"
+      - "@DeltaKroneckerGithub_607"
+      - "@DeltaKroneckerGithub_608"
+      - "@DeltaKroneckerGithub_609"
+      - "@DeltaKroneckerGithub_610"
+      - "@DeltaKroneckerGithub_612"
+      - "@DeltaKroneckerGithub_614"
+      - "@DeltaKroneckerGithub_615"
       - "@DeltaKroneckerGithub_616"
-      - "@DeltaKroneckerGithub_617"
       - "@DeltaKroneckerGithub_618"
+      - "@DeltaKroneckerGithub_619"
       - "@DeltaKroneckerGithub_620"
-      - "@DeltaKroneckerGithub_622"
+      - "@DeltaKroneckerGithub_621"
       - "@DeltaKroneckerGithub_623"
-      - "@DeltaKroneckerGithub_625"
+      - "@DeltaKroneckerGithub_624"
       - "@DeltaKroneckerGithub_626"
-      - "@DeltaKroneckerGithub_627"
+      - "@DeltaKroneckerGithub_628"
       - "@DeltaKroneckerGithub_629"
       - "@DeltaKroneckerGithub_631"
       - "@DeltaKroneckerGithub_632"
       - "@DeltaKroneckerGithub_633"
       - "@DeltaKroneckerGithub_634"
       - "@DeltaKroneckerGithub_636"
+      - "@DeltaKroneckerGithub_637"
       - "@DeltaKroneckerGithub_638"
+      - "@DeltaKroneckerGithub_639"
       - "@DeltaKroneckerGithub_640"
-      - "@DeltaKroneckerGithub_641"
       - "@DeltaKroneckerGithub_642"
-      - "@DeltaKroneckerGithub_644"
+      - "@DeltaKroneckerGithub_643"
       - "@DeltaKroneckerGithub_645"
+      - "@DeltaKroneckerGithub_646"
       - "@DeltaKroneckerGithub_647"
       - "@DeltaKroneckerGithub_649"
-      - "@DeltaKroneckerGithub_650"
       - "@DeltaKroneckerGithub_651"
       - "@DeltaKroneckerGithub_652"
       - "@DeltaKroneckerGithub_653"
-      - "@DeltaKroneckerGithub_654"
       - "@DeltaKroneckerGithub_655"
-      - "@DeltaKroneckerGithub_656"
       - "@DeltaKroneckerGithub_657"
       - "@DeltaKroneckerGithub_658"
+      - "@DeltaKroneckerGithub_659"
       - "@DeltaKroneckerGithub_660"
       - "@DeltaKroneckerGithub_661"
-      - "@DeltaKroneckerGithub_662"
+      - "@DeltaKroneckerGithub_663"
       - "@DeltaKroneckerGithub_664"
       - "@DeltaKroneckerGithub_666"
       - "@DeltaKroneckerGithub_668"
       - "@DeltaKroneckerGithub_670"
-      - "@DeltaKroneckerGithub_671"
       - "@DeltaKroneckerGithub_672"
       - "@DeltaKroneckerGithub_673"
-      - "@DeltaKroneckerGithub_675"
+      - "@DeltaKroneckerGithub_674"
       - "@DeltaKroneckerGithub_676"
-      - "@DeltaKroneckerGithub_678"
+      - "@DeltaKroneckerGithub_677"
       - "@DeltaKroneckerGithub_679"
       - "@DeltaKroneckerGithub_681"
+      - "@DeltaKroneckerGithub_682"
       - "@DeltaKroneckerGithub_683"
       - "@DeltaKroneckerGithub_685"
+      - "@DeltaKroneckerGithub_686"
       - "@DeltaKroneckerGithub_687"
       - "@DeltaKroneckerGithub_688"
-      - "@DeltaKroneckerGithub_689"
-      - "@DeltaKroneckerGithub_690"
-      - "@DeltaKroneckerGithub_691"
-      - "@DeltaKroneckerGithub_692"
-      - "@DeltaKroneckerGithub_694"
-      - "@DeltaKroneckerGithub_696"
-      - "@DeltaKroneckerGithub_698"
-      - "@DeltaKroneckerGithub_699"
-      - "@DeltaKroneckerGithub_701"
-      - "@DeltaKroneckerGithub_702"
-      - "@DeltaKroneckerGithub_704"
-      - "@DeltaKroneckerGithub_705"
-      - "@DeltaKroneckerGithub_706"
-      - "@DeltaKroneckerGithub_707"
-      - "@DeltaKroneckerGithub_708"
-      - "@DeltaKroneckerGithub_709"
-      - "@DeltaKroneckerGithub_711"
-      - "@DeltaKroneckerGithub_712"
-      - "@DeltaKroneckerGithub_714"
-      - "@DeltaKroneckerGithub_716"
-      - "@DeltaKroneckerGithub_717"
-      - "@DeltaKroneckerGithub_718"
-      - "@DeltaKroneckerGithub_720"
-      - "@DeltaKroneckerGithub_721"
-      - "@DeltaKroneckerGithub_723"
-      - "@DeltaKroneckerGithub_725"
-      - "@DeltaKroneckerGithub_726"
-      - "@DeltaKroneckerGithub_727"
-      - "@DeltaKroneckerGithub_729"
-      - "@DeltaKroneckerGithub_730"
 
   - name: "LB-CDN"
     type: load-balance
@@ -951,87 +942,86 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "@DeltaKroneckerGithub_575"
+      - "@DeltaKroneckerGithub_576"
+      - "@DeltaKroneckerGithub_578"
+      - "@DeltaKroneckerGithub_580"
+      - "@DeltaKroneckerGithub_581"
+      - "@DeltaKroneckerGithub_582"
+      - "@DeltaKroneckerGithub_584"
+      - "@DeltaKroneckerGithub_585"
+      - "@DeltaKroneckerGithub_587"
+      - "@DeltaKroneckerGithub_589"
+      - "@DeltaKroneckerGithub_591"
+      - "@DeltaKroneckerGithub_593"
+      - "@DeltaKroneckerGithub_595"
+      - "@DeltaKroneckerGithub_597"
+      - "@DeltaKroneckerGithub_598"
+      - "@DeltaKroneckerGithub_599"
+      - "@DeltaKroneckerGithub_600"
+      - "@DeltaKroneckerGithub_601"
+      - "@DeltaKroneckerGithub_603"
+      - "@DeltaKroneckerGithub_604"
+      - "@DeltaKroneckerGithub_605"
+      - "@DeltaKroneckerGithub_607"
+      - "@DeltaKroneckerGithub_608"
+      - "@DeltaKroneckerGithub_609"
+      - "@DeltaKroneckerGithub_610"
+      - "@DeltaKroneckerGithub_612"
+      - "@DeltaKroneckerGithub_614"
+      - "@DeltaKroneckerGithub_615"
       - "@DeltaKroneckerGithub_616"
-      - "@DeltaKroneckerGithub_617"
       - "@DeltaKroneckerGithub_618"
+      - "@DeltaKroneckerGithub_619"
       - "@DeltaKroneckerGithub_620"
-      - "@DeltaKroneckerGithub_622"
+      - "@DeltaKroneckerGithub_621"
       - "@DeltaKroneckerGithub_623"
-      - "@DeltaKroneckerGithub_625"
+      - "@DeltaKroneckerGithub_624"
       - "@DeltaKroneckerGithub_626"
-      - "@DeltaKroneckerGithub_627"
+      - "@DeltaKroneckerGithub_628"
       - "@DeltaKroneckerGithub_629"
       - "@DeltaKroneckerGithub_631"
       - "@DeltaKroneckerGithub_632"
       - "@DeltaKroneckerGithub_633"
       - "@DeltaKroneckerGithub_634"
       - "@DeltaKroneckerGithub_636"
+      - "@DeltaKroneckerGithub_637"
       - "@DeltaKroneckerGithub_638"
+      - "@DeltaKroneckerGithub_639"
       - "@DeltaKroneckerGithub_640"
-      - "@DeltaKroneckerGithub_641"
       - "@DeltaKroneckerGithub_642"
-      - "@DeltaKroneckerGithub_644"
+      - "@DeltaKroneckerGithub_643"
       - "@DeltaKroneckerGithub_645"
+      - "@DeltaKroneckerGithub_646"
       - "@DeltaKroneckerGithub_647"
       - "@DeltaKroneckerGithub_649"
-      - "@DeltaKroneckerGithub_650"
       - "@DeltaKroneckerGithub_651"
       - "@DeltaKroneckerGithub_652"
       - "@DeltaKroneckerGithub_653"
-      - "@DeltaKroneckerGithub_654"
       - "@DeltaKroneckerGithub_655"
-      - "@DeltaKroneckerGithub_656"
       - "@DeltaKroneckerGithub_657"
       - "@DeltaKroneckerGithub_658"
+      - "@DeltaKroneckerGithub_659"
       - "@DeltaKroneckerGithub_660"
       - "@DeltaKroneckerGithub_661"
-      - "@DeltaKroneckerGithub_662"
+      - "@DeltaKroneckerGithub_663"
       - "@DeltaKroneckerGithub_664"
       - "@DeltaKroneckerGithub_666"
       - "@DeltaKroneckerGithub_668"
       - "@DeltaKroneckerGithub_670"
-      - "@DeltaKroneckerGithub_671"
       - "@DeltaKroneckerGithub_672"
       - "@DeltaKroneckerGithub_673"
-      - "@DeltaKroneckerGithub_675"
+      - "@DeltaKroneckerGithub_674"
       - "@DeltaKroneckerGithub_676"
-      - "@DeltaKroneckerGithub_678"
+      - "@DeltaKroneckerGithub_677"
       - "@DeltaKroneckerGithub_679"
       - "@DeltaKroneckerGithub_681"
+      - "@DeltaKroneckerGithub_682"
       - "@DeltaKroneckerGithub_683"
       - "@DeltaKroneckerGithub_685"
+      - "@DeltaKroneckerGithub_686"
       - "@DeltaKroneckerGithub_687"
       - "@DeltaKroneckerGithub_688"
-      - "@DeltaKroneckerGithub_689"
-      - "@DeltaKroneckerGithub_690"
-      - "@DeltaKroneckerGithub_691"
-      - "@DeltaKroneckerGithub_692"
-      - "@DeltaKroneckerGithub_694"
-      - "@DeltaKroneckerGithub_696"
-      - "@DeltaKroneckerGithub_698"
-      - "@DeltaKroneckerGithub_699"
-      - "@DeltaKroneckerGithub_701"
-      - "@DeltaKroneckerGithub_702"
-      - "@DeltaKroneckerGithub_704"
-      - "@DeltaKroneckerGithub_705"
-      - "@DeltaKroneckerGithub_706"
-      - "@DeltaKroneckerGithub_707"
-      - "@DeltaKroneckerGithub_708"
-      - "@DeltaKroneckerGithub_709"
-      - "@DeltaKroneckerGithub_711"
-      - "@DeltaKroneckerGithub_712"
-      - "@DeltaKroneckerGithub_714"
-      - "@DeltaKroneckerGithub_716"
-      - "@DeltaKroneckerGithub_717"
-      - "@DeltaKroneckerGithub_718"
-      - "@DeltaKroneckerGithub_720"
-      - "@DeltaKroneckerGithub_721"
-      - "@DeltaKroneckerGithub_723"
-      - "@DeltaKroneckerGithub_725"
-      - "@DeltaKroneckerGithub_726"
-      - "@DeltaKroneckerGithub_727"
-      - "@DeltaKroneckerGithub_729"
-      - "@DeltaKroneckerGithub_730"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -1041,87 +1031,86 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "@DeltaKroneckerGithub_575"
+      - "@DeltaKroneckerGithub_576"
+      - "@DeltaKroneckerGithub_578"
+      - "@DeltaKroneckerGithub_580"
+      - "@DeltaKroneckerGithub_581"
+      - "@DeltaKroneckerGithub_582"
+      - "@DeltaKroneckerGithub_584"
+      - "@DeltaKroneckerGithub_585"
+      - "@DeltaKroneckerGithub_587"
+      - "@DeltaKroneckerGithub_589"
+      - "@DeltaKroneckerGithub_591"
+      - "@DeltaKroneckerGithub_593"
+      - "@DeltaKroneckerGithub_595"
+      - "@DeltaKroneckerGithub_597"
+      - "@DeltaKroneckerGithub_598"
+      - "@DeltaKroneckerGithub_599"
+      - "@DeltaKroneckerGithub_600"
+      - "@DeltaKroneckerGithub_601"
+      - "@DeltaKroneckerGithub_603"
+      - "@DeltaKroneckerGithub_604"
+      - "@DeltaKroneckerGithub_605"
+      - "@DeltaKroneckerGithub_607"
+      - "@DeltaKroneckerGithub_608"
+      - "@DeltaKroneckerGithub_609"
+      - "@DeltaKroneckerGithub_610"
+      - "@DeltaKroneckerGithub_612"
+      - "@DeltaKroneckerGithub_614"
+      - "@DeltaKroneckerGithub_615"
       - "@DeltaKroneckerGithub_616"
-      - "@DeltaKroneckerGithub_617"
       - "@DeltaKroneckerGithub_618"
+      - "@DeltaKroneckerGithub_619"
       - "@DeltaKroneckerGithub_620"
-      - "@DeltaKroneckerGithub_622"
+      - "@DeltaKroneckerGithub_621"
       - "@DeltaKroneckerGithub_623"
-      - "@DeltaKroneckerGithub_625"
+      - "@DeltaKroneckerGithub_624"
       - "@DeltaKroneckerGithub_626"
-      - "@DeltaKroneckerGithub_627"
+      - "@DeltaKroneckerGithub_628"
       - "@DeltaKroneckerGithub_629"
       - "@DeltaKroneckerGithub_631"
       - "@DeltaKroneckerGithub_632"
       - "@DeltaKroneckerGithub_633"
       - "@DeltaKroneckerGithub_634"
       - "@DeltaKroneckerGithub_636"
+      - "@DeltaKroneckerGithub_637"
       - "@DeltaKroneckerGithub_638"
+      - "@DeltaKroneckerGithub_639"
       - "@DeltaKroneckerGithub_640"
-      - "@DeltaKroneckerGithub_641"
       - "@DeltaKroneckerGithub_642"
-      - "@DeltaKroneckerGithub_644"
+      - "@DeltaKroneckerGithub_643"
       - "@DeltaKroneckerGithub_645"
+      - "@DeltaKroneckerGithub_646"
       - "@DeltaKroneckerGithub_647"
       - "@DeltaKroneckerGithub_649"
-      - "@DeltaKroneckerGithub_650"
       - "@DeltaKroneckerGithub_651"
       - "@DeltaKroneckerGithub_652"
       - "@DeltaKroneckerGithub_653"
-      - "@DeltaKroneckerGithub_654"
       - "@DeltaKroneckerGithub_655"
-      - "@DeltaKroneckerGithub_656"
       - "@DeltaKroneckerGithub_657"
       - "@DeltaKroneckerGithub_658"
+      - "@DeltaKroneckerGithub_659"
       - "@DeltaKroneckerGithub_660"
       - "@DeltaKroneckerGithub_661"
-      - "@DeltaKroneckerGithub_662"
+      - "@DeltaKroneckerGithub_663"
       - "@DeltaKroneckerGithub_664"
       - "@DeltaKroneckerGithub_666"
       - "@DeltaKroneckerGithub_668"
       - "@DeltaKroneckerGithub_670"
-      - "@DeltaKroneckerGithub_671"
       - "@DeltaKroneckerGithub_672"
       - "@DeltaKroneckerGithub_673"
-      - "@DeltaKroneckerGithub_675"
+      - "@DeltaKroneckerGithub_674"
       - "@DeltaKroneckerGithub_676"
-      - "@DeltaKroneckerGithub_678"
+      - "@DeltaKroneckerGithub_677"
       - "@DeltaKroneckerGithub_679"
       - "@DeltaKroneckerGithub_681"
+      - "@DeltaKroneckerGithub_682"
       - "@DeltaKroneckerGithub_683"
       - "@DeltaKroneckerGithub_685"
+      - "@DeltaKroneckerGithub_686"
       - "@DeltaKroneckerGithub_687"
       - "@DeltaKroneckerGithub_688"
-      - "@DeltaKroneckerGithub_689"
-      - "@DeltaKroneckerGithub_690"
-      - "@DeltaKroneckerGithub_691"
-      - "@DeltaKroneckerGithub_692"
-      - "@DeltaKroneckerGithub_694"
-      - "@DeltaKroneckerGithub_696"
-      - "@DeltaKroneckerGithub_698"
-      - "@DeltaKroneckerGithub_699"
-      - "@DeltaKroneckerGithub_701"
-      - "@DeltaKroneckerGithub_702"
-      - "@DeltaKroneckerGithub_704"
-      - "@DeltaKroneckerGithub_705"
-      - "@DeltaKroneckerGithub_706"
-      - "@DeltaKroneckerGithub_707"
-      - "@DeltaKroneckerGithub_708"
-      - "@DeltaKroneckerGithub_709"
-      - "@DeltaKroneckerGithub_711"
-      - "@DeltaKroneckerGithub_712"
-      - "@DeltaKroneckerGithub_714"
-      - "@DeltaKroneckerGithub_716"
-      - "@DeltaKroneckerGithub_717"
-      - "@DeltaKroneckerGithub_718"
-      - "@DeltaKroneckerGithub_720"
-      - "@DeltaKroneckerGithub_721"
-      - "@DeltaKroneckerGithub_723"
-      - "@DeltaKroneckerGithub_725"
-      - "@DeltaKroneckerGithub_726"
-      - "@DeltaKroneckerGithub_727"
-      - "@DeltaKroneckerGithub_729"
-      - "@DeltaKroneckerGithub_730"
 
   - name: "FAST-CDN"
     type: url-test
@@ -1130,87 +1119,86 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "@DeltaKroneckerGithub_575"
+      - "@DeltaKroneckerGithub_576"
+      - "@DeltaKroneckerGithub_578"
+      - "@DeltaKroneckerGithub_580"
+      - "@DeltaKroneckerGithub_581"
+      - "@DeltaKroneckerGithub_582"
+      - "@DeltaKroneckerGithub_584"
+      - "@DeltaKroneckerGithub_585"
+      - "@DeltaKroneckerGithub_587"
+      - "@DeltaKroneckerGithub_589"
+      - "@DeltaKroneckerGithub_591"
+      - "@DeltaKroneckerGithub_593"
+      - "@DeltaKroneckerGithub_595"
+      - "@DeltaKroneckerGithub_597"
+      - "@DeltaKroneckerGithub_598"
+      - "@DeltaKroneckerGithub_599"
+      - "@DeltaKroneckerGithub_600"
+      - "@DeltaKroneckerGithub_601"
+      - "@DeltaKroneckerGithub_603"
+      - "@DeltaKroneckerGithub_604"
+      - "@DeltaKroneckerGithub_605"
+      - "@DeltaKroneckerGithub_607"
+      - "@DeltaKroneckerGithub_608"
+      - "@DeltaKroneckerGithub_609"
+      - "@DeltaKroneckerGithub_610"
+      - "@DeltaKroneckerGithub_612"
+      - "@DeltaKroneckerGithub_614"
+      - "@DeltaKroneckerGithub_615"
       - "@DeltaKroneckerGithub_616"
-      - "@DeltaKroneckerGithub_617"
       - "@DeltaKroneckerGithub_618"
+      - "@DeltaKroneckerGithub_619"
       - "@DeltaKroneckerGithub_620"
-      - "@DeltaKroneckerGithub_622"
+      - "@DeltaKroneckerGithub_621"
       - "@DeltaKroneckerGithub_623"
-      - "@DeltaKroneckerGithub_625"
+      - "@DeltaKroneckerGithub_624"
       - "@DeltaKroneckerGithub_626"
-      - "@DeltaKroneckerGithub_627"
+      - "@DeltaKroneckerGithub_628"
       - "@DeltaKroneckerGithub_629"
       - "@DeltaKroneckerGithub_631"
       - "@DeltaKroneckerGithub_632"
       - "@DeltaKroneckerGithub_633"
       - "@DeltaKroneckerGithub_634"
       - "@DeltaKroneckerGithub_636"
+      - "@DeltaKroneckerGithub_637"
       - "@DeltaKroneckerGithub_638"
+      - "@DeltaKroneckerGithub_639"
       - "@DeltaKroneckerGithub_640"
-      - "@DeltaKroneckerGithub_641"
       - "@DeltaKroneckerGithub_642"
-      - "@DeltaKroneckerGithub_644"
+      - "@DeltaKroneckerGithub_643"
       - "@DeltaKroneckerGithub_645"
+      - "@DeltaKroneckerGithub_646"
       - "@DeltaKroneckerGithub_647"
       - "@DeltaKroneckerGithub_649"
-      - "@DeltaKroneckerGithub_650"
       - "@DeltaKroneckerGithub_651"
       - "@DeltaKroneckerGithub_652"
       - "@DeltaKroneckerGithub_653"
-      - "@DeltaKroneckerGithub_654"
       - "@DeltaKroneckerGithub_655"
-      - "@DeltaKroneckerGithub_656"
       - "@DeltaKroneckerGithub_657"
       - "@DeltaKroneckerGithub_658"
+      - "@DeltaKroneckerGithub_659"
       - "@DeltaKroneckerGithub_660"
       - "@DeltaKroneckerGithub_661"
-      - "@DeltaKroneckerGithub_662"
+      - "@DeltaKroneckerGithub_663"
       - "@DeltaKroneckerGithub_664"
       - "@DeltaKroneckerGithub_666"
       - "@DeltaKroneckerGithub_668"
       - "@DeltaKroneckerGithub_670"
-      - "@DeltaKroneckerGithub_671"
       - "@DeltaKroneckerGithub_672"
       - "@DeltaKroneckerGithub_673"
-      - "@DeltaKroneckerGithub_675"
+      - "@DeltaKroneckerGithub_674"
       - "@DeltaKroneckerGithub_676"
-      - "@DeltaKroneckerGithub_678"
+      - "@DeltaKroneckerGithub_677"
       - "@DeltaKroneckerGithub_679"
       - "@DeltaKroneckerGithub_681"
+      - "@DeltaKroneckerGithub_682"
       - "@DeltaKroneckerGithub_683"
       - "@DeltaKroneckerGithub_685"
+      - "@DeltaKroneckerGithub_686"
       - "@DeltaKroneckerGithub_687"
       - "@DeltaKroneckerGithub_688"
-      - "@DeltaKroneckerGithub_689"
-      - "@DeltaKroneckerGithub_690"
-      - "@DeltaKroneckerGithub_691"
-      - "@DeltaKroneckerGithub_692"
-      - "@DeltaKroneckerGithub_694"
-      - "@DeltaKroneckerGithub_696"
-      - "@DeltaKroneckerGithub_698"
-      - "@DeltaKroneckerGithub_699"
-      - "@DeltaKroneckerGithub_701"
-      - "@DeltaKroneckerGithub_702"
-      - "@DeltaKroneckerGithub_704"
-      - "@DeltaKroneckerGithub_705"
-      - "@DeltaKroneckerGithub_706"
-      - "@DeltaKroneckerGithub_707"
-      - "@DeltaKroneckerGithub_708"
-      - "@DeltaKroneckerGithub_709"
-      - "@DeltaKroneckerGithub_711"
-      - "@DeltaKroneckerGithub_712"
-      - "@DeltaKroneckerGithub_714"
-      - "@DeltaKroneckerGithub_716"
-      - "@DeltaKroneckerGithub_717"
-      - "@DeltaKroneckerGithub_718"
-      - "@DeltaKroneckerGithub_720"
-      - "@DeltaKroneckerGithub_721"
-      - "@DeltaKroneckerGithub_723"
-      - "@DeltaKroneckerGithub_725"
-      - "@DeltaKroneckerGithub_726"
-      - "@DeltaKroneckerGithub_727"
-      - "@DeltaKroneckerGithub_729"
-      - "@DeltaKroneckerGithub_730"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -1220,173 +1208,171 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "@DeltaKroneckerGithub_575"
+      - "@DeltaKroneckerGithub_576"
+      - "@DeltaKroneckerGithub_578"
+      - "@DeltaKroneckerGithub_580"
+      - "@DeltaKroneckerGithub_581"
+      - "@DeltaKroneckerGithub_582"
+      - "@DeltaKroneckerGithub_584"
+      - "@DeltaKroneckerGithub_585"
+      - "@DeltaKroneckerGithub_587"
+      - "@DeltaKroneckerGithub_589"
+      - "@DeltaKroneckerGithub_591"
+      - "@DeltaKroneckerGithub_593"
+      - "@DeltaKroneckerGithub_595"
+      - "@DeltaKroneckerGithub_597"
+      - "@DeltaKroneckerGithub_598"
+      - "@DeltaKroneckerGithub_599"
+      - "@DeltaKroneckerGithub_600"
+      - "@DeltaKroneckerGithub_601"
+      - "@DeltaKroneckerGithub_603"
+      - "@DeltaKroneckerGithub_604"
+      - "@DeltaKroneckerGithub_605"
+      - "@DeltaKroneckerGithub_607"
+      - "@DeltaKroneckerGithub_608"
+      - "@DeltaKroneckerGithub_609"
+      - "@DeltaKroneckerGithub_610"
+      - "@DeltaKroneckerGithub_612"
+      - "@DeltaKroneckerGithub_614"
+      - "@DeltaKroneckerGithub_615"
       - "@DeltaKroneckerGithub_616"
-      - "@DeltaKroneckerGithub_617"
       - "@DeltaKroneckerGithub_618"
+      - "@DeltaKroneckerGithub_619"
       - "@DeltaKroneckerGithub_620"
-      - "@DeltaKroneckerGithub_622"
+      - "@DeltaKroneckerGithub_621"
       - "@DeltaKroneckerGithub_623"
-      - "@DeltaKroneckerGithub_625"
+      - "@DeltaKroneckerGithub_624"
       - "@DeltaKroneckerGithub_626"
-      - "@DeltaKroneckerGithub_627"
+      - "@DeltaKroneckerGithub_628"
       - "@DeltaKroneckerGithub_629"
       - "@DeltaKroneckerGithub_631"
       - "@DeltaKroneckerGithub_632"
       - "@DeltaKroneckerGithub_633"
       - "@DeltaKroneckerGithub_634"
       - "@DeltaKroneckerGithub_636"
+      - "@DeltaKroneckerGithub_637"
       - "@DeltaKroneckerGithub_638"
+      - "@DeltaKroneckerGithub_639"
       - "@DeltaKroneckerGithub_640"
-      - "@DeltaKroneckerGithub_641"
       - "@DeltaKroneckerGithub_642"
-      - "@DeltaKroneckerGithub_644"
+      - "@DeltaKroneckerGithub_643"
       - "@DeltaKroneckerGithub_645"
+      - "@DeltaKroneckerGithub_646"
       - "@DeltaKroneckerGithub_647"
       - "@DeltaKroneckerGithub_649"
-      - "@DeltaKroneckerGithub_650"
       - "@DeltaKroneckerGithub_651"
       - "@DeltaKroneckerGithub_652"
       - "@DeltaKroneckerGithub_653"
-      - "@DeltaKroneckerGithub_654"
       - "@DeltaKroneckerGithub_655"
-      - "@DeltaKroneckerGithub_656"
       - "@DeltaKroneckerGithub_657"
       - "@DeltaKroneckerGithub_658"
+      - "@DeltaKroneckerGithub_659"
       - "@DeltaKroneckerGithub_660"
       - "@DeltaKroneckerGithub_661"
-      - "@DeltaKroneckerGithub_662"
+      - "@DeltaKroneckerGithub_663"
       - "@DeltaKroneckerGithub_664"
       - "@DeltaKroneckerGithub_666"
       - "@DeltaKroneckerGithub_668"
       - "@DeltaKroneckerGithub_670"
-      - "@DeltaKroneckerGithub_671"
       - "@DeltaKroneckerGithub_672"
       - "@DeltaKroneckerGithub_673"
-      - "@DeltaKroneckerGithub_675"
+      - "@DeltaKroneckerGithub_674"
       - "@DeltaKroneckerGithub_676"
-      - "@DeltaKroneckerGithub_678"
+      - "@DeltaKroneckerGithub_677"
       - "@DeltaKroneckerGithub_679"
       - "@DeltaKroneckerGithub_681"
+      - "@DeltaKroneckerGithub_682"
       - "@DeltaKroneckerGithub_683"
       - "@DeltaKroneckerGithub_685"
+      - "@DeltaKroneckerGithub_686"
       - "@DeltaKroneckerGithub_687"
       - "@DeltaKroneckerGithub_688"
-      - "@DeltaKroneckerGithub_689"
-      - "@DeltaKroneckerGithub_690"
-      - "@DeltaKroneckerGithub_691"
-      - "@DeltaKroneckerGithub_692"
-      - "@DeltaKroneckerGithub_694"
-      - "@DeltaKroneckerGithub_696"
-      - "@DeltaKroneckerGithub_698"
-      - "@DeltaKroneckerGithub_699"
-      - "@DeltaKroneckerGithub_701"
-      - "@DeltaKroneckerGithub_702"
-      - "@DeltaKroneckerGithub_704"
-      - "@DeltaKroneckerGithub_705"
-      - "@DeltaKroneckerGithub_706"
-      - "@DeltaKroneckerGithub_707"
-      - "@DeltaKroneckerGithub_708"
-      - "@DeltaKroneckerGithub_709"
-      - "@DeltaKroneckerGithub_711"
-      - "@DeltaKroneckerGithub_712"
-      - "@DeltaKroneckerGithub_714"
-      - "@DeltaKroneckerGithub_716"
-      - "@DeltaKroneckerGithub_717"
-      - "@DeltaKroneckerGithub_718"
-      - "@DeltaKroneckerGithub_720"
-      - "@DeltaKroneckerGithub_721"
-      - "@DeltaKroneckerGithub_723"
-      - "@DeltaKroneckerGithub_725"
-      - "@DeltaKroneckerGithub_726"
-      - "@DeltaKroneckerGithub_727"
-      - "@DeltaKroneckerGithub_729"
-      - "@DeltaKroneckerGithub_730"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
+      - "@DeltaKroneckerGithub_575"
+      - "@DeltaKroneckerGithub_576"
+      - "@DeltaKroneckerGithub_578"
+      - "@DeltaKroneckerGithub_580"
+      - "@DeltaKroneckerGithub_581"
+      - "@DeltaKroneckerGithub_582"
+      - "@DeltaKroneckerGithub_584"
+      - "@DeltaKroneckerGithub_585"
+      - "@DeltaKroneckerGithub_587"
+      - "@DeltaKroneckerGithub_589"
+      - "@DeltaKroneckerGithub_591"
+      - "@DeltaKroneckerGithub_593"
+      - "@DeltaKroneckerGithub_595"
+      - "@DeltaKroneckerGithub_597"
+      - "@DeltaKroneckerGithub_598"
+      - "@DeltaKroneckerGithub_599"
+      - "@DeltaKroneckerGithub_600"
+      - "@DeltaKroneckerGithub_601"
+      - "@DeltaKroneckerGithub_603"
+      - "@DeltaKroneckerGithub_604"
+      - "@DeltaKroneckerGithub_605"
+      - "@DeltaKroneckerGithub_607"
+      - "@DeltaKroneckerGithub_608"
+      - "@DeltaKroneckerGithub_609"
+      - "@DeltaKroneckerGithub_610"
+      - "@DeltaKroneckerGithub_612"
+      - "@DeltaKroneckerGithub_614"
+      - "@DeltaKroneckerGithub_615"
       - "@DeltaKroneckerGithub_616"
-      - "@DeltaKroneckerGithub_617"
       - "@DeltaKroneckerGithub_618"
+      - "@DeltaKroneckerGithub_619"
       - "@DeltaKroneckerGithub_620"
-      - "@DeltaKroneckerGithub_622"
+      - "@DeltaKroneckerGithub_621"
       - "@DeltaKroneckerGithub_623"
-      - "@DeltaKroneckerGithub_625"
+      - "@DeltaKroneckerGithub_624"
       - "@DeltaKroneckerGithub_626"
-      - "@DeltaKroneckerGithub_627"
+      - "@DeltaKroneckerGithub_628"
       - "@DeltaKroneckerGithub_629"
       - "@DeltaKroneckerGithub_631"
       - "@DeltaKroneckerGithub_632"
       - "@DeltaKroneckerGithub_633"
       - "@DeltaKroneckerGithub_634"
       - "@DeltaKroneckerGithub_636"
+      - "@DeltaKroneckerGithub_637"
       - "@DeltaKroneckerGithub_638"
+      - "@DeltaKroneckerGithub_639"
       - "@DeltaKroneckerGithub_640"
-      - "@DeltaKroneckerGithub_641"
       - "@DeltaKroneckerGithub_642"
-      - "@DeltaKroneckerGithub_644"
+      - "@DeltaKroneckerGithub_643"
       - "@DeltaKroneckerGithub_645"
+      - "@DeltaKroneckerGithub_646"
       - "@DeltaKroneckerGithub_647"
       - "@DeltaKroneckerGithub_649"
-      - "@DeltaKroneckerGithub_650"
       - "@DeltaKroneckerGithub_651"
       - "@DeltaKroneckerGithub_652"
       - "@DeltaKroneckerGithub_653"
-      - "@DeltaKroneckerGithub_654"
       - "@DeltaKroneckerGithub_655"
-      - "@DeltaKroneckerGithub_656"
       - "@DeltaKroneckerGithub_657"
       - "@DeltaKroneckerGithub_658"
+      - "@DeltaKroneckerGithub_659"
       - "@DeltaKroneckerGithub_660"
       - "@DeltaKroneckerGithub_661"
-      - "@DeltaKroneckerGithub_662"
+      - "@DeltaKroneckerGithub_663"
       - "@DeltaKroneckerGithub_664"
       - "@DeltaKroneckerGithub_666"
       - "@DeltaKroneckerGithub_668"
       - "@DeltaKroneckerGithub_670"
-      - "@DeltaKroneckerGithub_671"
       - "@DeltaKroneckerGithub_672"
       - "@DeltaKroneckerGithub_673"
-      - "@DeltaKroneckerGithub_675"
+      - "@DeltaKroneckerGithub_674"
       - "@DeltaKroneckerGithub_676"
-      - "@DeltaKroneckerGithub_678"
+      - "@DeltaKroneckerGithub_677"
       - "@DeltaKroneckerGithub_679"
       - "@DeltaKroneckerGithub_681"
+      - "@DeltaKroneckerGithub_682"
       - "@DeltaKroneckerGithub_683"
       - "@DeltaKroneckerGithub_685"
+      - "@DeltaKroneckerGithub_686"
       - "@DeltaKroneckerGithub_687"
       - "@DeltaKroneckerGithub_688"
-      - "@DeltaKroneckerGithub_689"
-      - "@DeltaKroneckerGithub_690"
-      - "@DeltaKroneckerGithub_691"
-      - "@DeltaKroneckerGithub_692"
-      - "@DeltaKroneckerGithub_694"
-      - "@DeltaKroneckerGithub_696"
-      - "@DeltaKroneckerGithub_698"
-      - "@DeltaKroneckerGithub_699"
-      - "@DeltaKroneckerGithub_701"
-      - "@DeltaKroneckerGithub_702"
-      - "@DeltaKroneckerGithub_704"
-      - "@DeltaKroneckerGithub_705"
-      - "@DeltaKroneckerGithub_706"
-      - "@DeltaKroneckerGithub_707"
-      - "@DeltaKroneckerGithub_708"
-      - "@DeltaKroneckerGithub_709"
-      - "@DeltaKroneckerGithub_711"
-      - "@DeltaKroneckerGithub_712"
-      - "@DeltaKroneckerGithub_714"
-      - "@DeltaKroneckerGithub_716"
-      - "@DeltaKroneckerGithub_717"
-      - "@DeltaKroneckerGithub_718"
-      - "@DeltaKroneckerGithub_720"
-      - "@DeltaKroneckerGithub_721"
-      - "@DeltaKroneckerGithub_723"
-      - "@DeltaKroneckerGithub_725"
-      - "@DeltaKroneckerGithub_726"
-      - "@DeltaKroneckerGithub_727"
-      - "@DeltaKroneckerGithub_729"
-      - "@DeltaKroneckerGithub_730"
 
 rules:
   - MATCH,PROXY-BEST

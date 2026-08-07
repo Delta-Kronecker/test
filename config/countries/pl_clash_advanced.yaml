@@ -59,77 +59,7 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
-  - name: "🇵🇱_8"
-    type: vless
-    server: "pl01.skorostnet.space"
-    port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "pl01.skorostnet.space"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
-      short-id: "fdda9806fe5d8584"
-    flow: "xtls-rprx-vision"
-  - name: "🇵🇱_9"
-    type: vless
-    server: "144.31.0.34"
-    port: 7443
-    uuid: "1fef5248-fdd2-40d6-b3b9-6c33d4e74724"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "_custom_"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "8wD0IhR27ftD5LyJDq9CaFzi6DgA4vFtB-UP6QIdWVc"
-      short-id: "e8ca5079a5e91481"
-    flow: "xtls-rprx-vision"
-  - name: "🇵🇱_10"
-    type: vless
-    server: "uwu.spectrumproxy.shop"
-    port: 443
-    uuid: "76713d07-5a6b-49c2-abd8-bc450a2fa7fc"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "uwu.spectrumproxy.shop"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "EyzTSZxq5qlUT2xW0l7VP-DzIh2ucabMan9ekEv9Owo"
-      short-id: "143627f1"
-    flow: "xtls-rprx-vision"
-  - name: "🇵🇱_11"
-    type: vless
-    server: "201.3.225.13"
-    port: 443
-    uuid: "76713d07-5a6b-49c2-abd8-bc450a2fa7fc"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "uwu.spectrumproxy.shop"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "EyzTSZxq5qlUT2xW0l7VP-DzIh2ucabMan9ekEv9Owo"
-      short-id: "143627f1"
-    flow: "xtls-rprx-vision"
-  - name: "🇵🇱_12"
-    type: vless
-    server: "pl03.skorostnet.space"
-    port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "pl03.skorostnet.space"
-    client-fingerprint: "edge"
-    reality-opts:
-      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
-      short-id: "fdda9806fe5d8584"
-    flow: "xtls-rprx-vision"
-  - name: "🇵🇱_13"
+  - name: "🇵🇱_5"
     type: vless
     server: "31.76.251.127.cdn-one.org"
     port: 443
@@ -144,7 +74,35 @@ proxies:
       path: "/10336/2GCOqG7bvA"
       headers:
         Host: "31.76.251.127.cdn-one.org"
-  - name: "🇵🇱_14"
+  - name: "🇵🇱_6"
+    type: vless
+    server: "uwu.spectrumproxy.shop"
+    port: 443
+    uuid: "76713d07-5a6b-49c2-abd8-bc450a2fa7fc"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "uwu.spectrumproxy.shop"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "EyzTSZxq5qlUT2xW0l7VP-DzIh2ucabMan9ekEv9Owo"
+      short-id: "143627f1"
+    flow: "xtls-rprx-vision"
+  - name: "🇵🇱_7"
+    type: vless
+    server: "144.31.0.34"
+    port: 7443
+    uuid: "1fef5248-fdd2-40d6-b3b9-6c33d4e74724"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "_custom_"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "8wD0IhR27ftD5LyJDq9CaFzi6DgA4vFtB-UP6QIdWVc"
+      short-id: "e8ca5079a5e91481"
+    flow: "xtls-rprx-vision"
+  - name: "🇵🇱_8"
     type: ss
     server: "92.118.205.211"
     port: 5600
@@ -193,13 +151,10 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇵🇱_5"
+      - "🇵🇱_6"
+      - "🇵🇱_7"
       - "🇵🇱_8"
-      - "🇵🇱_9"
-      - "🇵🇱_10"
-      - "🇵🇱_11"
-      - "🇵🇱_12"
-      - "🇵🇱_13"
-      - "🇵🇱_14"
 
   - name: "LB-CDN"
     type: load-balance
@@ -209,13 +164,10 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇵🇱_5"
+      - "🇵🇱_6"
+      - "🇵🇱_7"
       - "🇵🇱_8"
-      - "🇵🇱_9"
-      - "🇵🇱_10"
-      - "🇵🇱_11"
-      - "🇵🇱_12"
-      - "🇵🇱_13"
-      - "🇵🇱_14"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -225,13 +177,10 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇵🇱_5"
+      - "🇵🇱_6"
+      - "🇵🇱_7"
       - "🇵🇱_8"
-      - "🇵🇱_9"
-      - "🇵🇱_10"
-      - "🇵🇱_11"
-      - "🇵🇱_12"
-      - "🇵🇱_13"
-      - "🇵🇱_14"
 
   - name: "FAST-CDN"
     type: url-test
@@ -240,13 +189,10 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇵🇱_5"
+      - "🇵🇱_6"
+      - "🇵🇱_7"
       - "🇵🇱_8"
-      - "🇵🇱_9"
-      - "🇵🇱_10"
-      - "🇵🇱_11"
-      - "🇵🇱_12"
-      - "🇵🇱_13"
-      - "🇵🇱_14"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -256,25 +202,19 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇵🇱_5"
+      - "🇵🇱_6"
+      - "🇵🇱_7"
       - "🇵🇱_8"
-      - "🇵🇱_9"
-      - "🇵🇱_10"
-      - "🇵🇱_11"
-      - "🇵🇱_12"
-      - "🇵🇱_13"
-      - "🇵🇱_14"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
+      - "🇵🇱_5"
+      - "🇵🇱_6"
+      - "🇵🇱_7"
       - "🇵🇱_8"
-      - "🇵🇱_9"
-      - "🇵🇱_10"
-      - "🇵🇱_11"
-      - "🇵🇱_12"
-      - "🇵🇱_13"
-      - "🇵🇱_14"
 
 rules:
   - MATCH,PROXY-BEST

@@ -59,21 +59,7 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
-  - name: "🇰🇿_3"
-    type: vless
-    server: "raff-vpn-kz-server1.ru"
-    port: 443
-    uuid: "6fdfdb73-51b0-4a14-89a5-c9355a0e0397"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "google.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "vCxfuNNmogA1DlPkjvmKb7_hSgXqe4MboPfi2s1JZG0"
-      short-id: "b318242471ba4f5b"
-    flow: "xtls-rprx-vision"
-  - name: "🇰🇿_4"
+  - name: "🇰🇿_2"
     type: vless
     server: "194.59.5.46"
     port: 2096
@@ -130,8 +116,7 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
-      - "🇰🇿_3"
-      - "🇰🇿_4"
+      - "🇰🇿_2"
 
   - name: "LB-CDN"
     type: load-balance
@@ -141,8 +126,7 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
-      - "🇰🇿_3"
-      - "🇰🇿_4"
+      - "🇰🇿_2"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -152,8 +136,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇰🇿_3"
-      - "🇰🇿_4"
+      - "🇰🇿_2"
 
   - name: "FAST-CDN"
     type: url-test
@@ -162,8 +145,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇰🇿_3"
-      - "🇰🇿_4"
+      - "🇰🇿_2"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -173,15 +155,13 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇰🇿_3"
-      - "🇰🇿_4"
+      - "🇰🇿_2"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
-      - "🇰🇿_3"
-      - "🇰🇿_4"
+      - "🇰🇿_2"
 
 rules:
   - MATCH,PROXY-BEST

@@ -1,2 +1,2 @@
-vless://7e5964d036b843ff885b86c4d3bfd466@85.159.228.250:25703?security=&encryption=none&headerType=&type=tcp#%F0%9F%87%B1%F0%9F%87%BB
 vless://fc1b3bda-b226-452a-8c5c-b0e36a1f8f88@195.123.208.92:13443?security=reality&encryption=none&pbk=gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM&headerType=&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=auto.cendora.ru&sid=a7f3c91b2e6d84c0#%F0%9F%87%B1%F0%9F%87%BB
+vless://7e5964d036b843ff885b86c4d3bfd466@85.159.228.250:25703?security=&encryption=none&headerType=&type=tcp#%F0%9F%87%B1%F0%9F%87%BB

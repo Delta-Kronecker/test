@@ -65,62 +65,6 @@ dns:
 proxies:
   - name: "🇫🇮_1"
     type: vless
-    server: "staging.lastilhame.monster"
-    port: 443
-    uuid: "455cfdc6-9abf-4e40-863f-5ff6cc63457c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.microsoft.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "18e4d2d21241"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇮_2"
-    type: vless
-    server: "107.181.147.22"
-    port: 443
-    uuid: "5e18094c-18b1-4198-b211-96b40518cecf"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.techradar.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Cs45TZ-4YKa8fWZ72YJcIcQCKipWsoYNZHEqFvs-PTE"
-      short-id: "f6e197a0b9f2"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇮_3"
-    type: vless
-    server: "193.124.36.234"
-    port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fl09.skorostnet.space"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
-      short-id: "fdda9806fe5d8584"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇮_4"
-    type: vless
-    server: "email.swiftraci.org"
-    port: 443
-    uuid: "baf498db-7039-4ba5-90df-d5f5e5c75331"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.hollywoodreporter.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Cs45TZ-4YKa8fWZ72YJcIcQCKipWsoYNZHEqFvs-PTE"
-      short-id: "8492240eab92"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇮_5"
-    type: vless
     server: "server.slavkiti.monster"
     port: 443
     uuid: "68cf8d29-5aa0-44b3-88a9-f1a576b6e84c"
@@ -133,7 +77,21 @@ proxies:
       public-key: "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk"
       short-id: "73a9e631a09b"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇮_6"
+  - name: "🇫🇮_2"
+    type: vless
+    server: "107.181.151.39"
+    port: 443
+    uuid: "1896c6c9-a941-4688-a865-29027bf7f8e6"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.microsoft.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk"
+      short-id: "6c825bc79850"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇮_3"
     type: vless
     server: "5.181.21.234"
     port: 443
@@ -147,33 +105,76 @@ proxies:
       public-key: "JaP4bhvIMW-l7T0_RkLra59DeBYI6W9XemKa8MyRPSY"
       short-id: "6c6082a2223c1d03"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇮_7"
+  - name: "🇫🇮_4"
     type: vless
-    server: "31.76.80.205"
+    server: "staging.lastilhame.monster"
     port: 443
-    uuid: "b6f29f8d-016e-4f30-b57f-c0cdafab2a40"
+    uuid: "455cfdc6-9abf-4e40-863f-5ff6cc63457c"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "ads.x5.ru"
+    servername: "www.microsoft.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw"
-      short-id: "6ba85179e30d4fc2"
+      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
+      short-id: "18e4d2d21241"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇮_5"
+    type: vless
+    server: "107.181.151.241"
+    port: 443
+    uuid: "ee39fb11-56a3-4ee7-9e7c-35a4235bd30e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.tradingview.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
+      short-id: "b27ba098687b"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇮_6"
+    type: vless
+    server: "83.143.112.140.cdn-one.org"
+    port: 443
+    uuid: "4f375fb4-3c95-425f-bc7b-8085487a6f3c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "83.143.112.140.cdn-one.org"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/29378/wQYeoLE7LS"
+      headers:
+        Host: "83.143.112.140.cdn-one.org"
+  - name: "🇫🇮_7"
+    type: vless
+    server: "107.181.147.22"
+    port: 443
+    uuid: "5e18094c-18b1-4198-b211-96b40518cecf"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.techradar.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Cs45TZ-4YKa8fWZ72YJcIcQCKipWsoYNZHEqFvs-PTE"
+      short-id: "f6e197a0b9f2"
     flow: "xtls-rprx-vision"
   - name: "🇫🇮_8"
     type: vless
-    server: "fl11.skorostnet.space"
+    server: "email.swiftraci.org"
     port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
+    uuid: "baf498db-7039-4ba5-90df-d5f5e5c75331"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "fl11.skorostnet.space"
+    servername: "www.hollywoodreporter.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
-      short-id: "fdda9806fe5d8584"
+      public-key: "Cs45TZ-4YKa8fWZ72YJcIcQCKipWsoYNZHEqFvs-PTE"
+      short-id: "8492240eab92"
     flow: "xtls-rprx-vision"
   - name: "🇫🇮_9"
     type: vless
@@ -192,48 +193,19 @@ proxies:
         Host: "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
   - name: "🇫🇮_10"
     type: vless
-    server: "83.143.112.140.cdn-one.org"
+    server: "31.76.80.205"
     port: 443
-    uuid: "4f375fb4-3c95-425f-bc7b-8085487a6f3c"
+    uuid: "b6f29f8d-016e-4f30-b57f-c0cdafab2a40"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "83.143.112.140.cdn-one.org"
+    servername: "ads.x5.ru"
     client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/29378/wQYeoLE7LS"
-      headers:
-        Host: "83.143.112.140.cdn-one.org"
+    reality-opts:
+      public-key: "nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw"
+      short-id: "6ba85179e30d4fc2"
+    flow: "xtls-rprx-vision"
   - name: "🇫🇮_11"
-    type: vless
-    server: "107.181.151.241"
-    port: 443
-    uuid: "ee39fb11-56a3-4ee7-9e7c-35a4235bd30e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.tradingview.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "b27ba098687b"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇮_12"
-    type: vless
-    server: "107.181.151.39"
-    port: 443
-    uuid: "1896c6c9-a941-4688-a865-29027bf7f8e6"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.microsoft.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk"
-      short-id: "6c825bc79850"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇮_13"
     type: ss
     server: "31.76.80.205"
     port: 8388
@@ -265,8 +237,6 @@ proxy-groups:
       - "🇫🇮_9"
       - "🇫🇮_10"
       - "🇫🇮_11"
-      - "🇫🇮_12"
-      - "🇫🇮_13"
 
 
 rules:

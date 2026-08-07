@@ -59,104 +59,7 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
-  - name: "🇷🇺_14"
-    type: vless
-    server: "status.netraidly.ru"
-    port: 40443
-    uuid: "28d0edc6-93c9-4465-bac9-720274d8b8c4"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "WRveYv8IuUyvai4jgnQ6nWCL971-wKboe8evES5arlg"
-      short-id: "69d4"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_15"
-    type: vless
-    server: "tw05.kinomir.fun"
-    port: 40443
-    uuid: "f0eac976-e4e2-4e24-bc86-cda82ee31442"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "7QJA1tXQcNj8gioQVzief5a4KeUTDT7R8FE0jfKU41k"
-      short-id: "3180"
-  - name: "🇷🇺_16"
-    type: vless
-    server: "94.139.251.189"
-    port: 443
-    uuid: "35699c54-9188-4f43-972e-e8e42dbb104e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_17"
-    type: vless
-    server: "94.139.251.9"
-    port: 443
-    uuid: "35699c54-9188-4f43-972e-e8e42dbb104e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "apple.com"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_18"
-    type: vless
-    server: "ruded1.onlinestreamself.com"
-    port: 443
-    uuid: "eadcacfa-ef1a-4901-a28b-8815fa1962a5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "apple.com"
-    client-fingerprint: "safari"
-    reality-opts:
-      public-key: "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_19"
-    type: vless
-    server: "code-sandbox.blog"
-    port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "code-sandbox.blog"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "84d_aHtsBvclx_Y6FnTmhhTqsZyQdfCGWtmFvefTrUI"
-      short-id: "ee57ea513371ce89"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_20"
-    type: vless
-    server: "94.139.251.191"
-    port: 443
-    uuid: "eadcacfa-ef1a-4901-a28b-8815fa1962a5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "apple.com"
-    client-fingerprint: "edge"
-    reality-opts:
-      public-key: "M9_R2DX7bxoMJpkF4RcyJ0oJ8ZuGsxWrjuREKi6Ol0w"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_21"
+  - name: "🇷🇺_8"
     type: vless
     server: "72.56.36.96"
     port: 40443
@@ -170,7 +73,61 @@ proxies:
       public-key: "cZF84xUCciKRXxTA39vNnh0U8CjUZiUSjLzuNTMOzV8"
       short-id: "33e48a03db900ff3"
     flow: "xtls-rprx-vision"
-  - name: "🇷🇺_22"
+  - name: "🇷🇺_9"
+    type: vless
+    server: "tw05.kinomir.fun"
+    port: 40443
+    uuid: "f0eac976-e4e2-4e24-bc86-cda82ee31442"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "7QJA1tXQcNj8gioQVzief5a4KeUTDT7R8FE0jfKU41k"
+      short-id: "3180"
+  - name: "🇷🇺_10"
+    type: vless
+    server: "status.netraidly.ru"
+    port: 40443
+    uuid: "28d0edc6-93c9-4465-bac9-720274d8b8c4"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "WRveYv8IuUyvai4jgnQ6nWCL971-wKboe8evES5arlg"
+      short-id: "69d4"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺_11"
+    type: vless
+    server: "201.51.1.11"
+    port: 40443
+    uuid: "28d0edc6-93c9-4465-bac9-720274d8b8c4"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "WRveYv8IuUyvai4jgnQ6nWCL971-wKboe8evES5arlg"
+      short-id: "69d4"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺_12"
+    type: vless
+    server: "5.129.215.87"
+    port: 40443
+    uuid: "f0eac976-e4e2-4e24-bc86-cda82ee31442"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "7QJA1tXQcNj8gioQVzief5a4KeUTDT7R8FE0jfKU41k"
+      short-id: "3180"
+  - name: "🇷🇺_13"
     type: vless
     server: "api.kinomir.fun"
     port: 40443
@@ -184,60 +141,19 @@ proxies:
       public-key: "cZF84xUCciKRXxTA39vNnh0U8CjUZiUSjLzuNTMOzV8"
       short-id: "33e48a03db900ff3"
     flow: "xtls-rprx-vision"
-  - name: "🇷🇺_23"
+  - name: "🇷🇺_14"
     type: vless
-    server: "5.129.215.87"
-    port: 40443
-    uuid: "f0eac976-e4e2-4e24-bc86-cda82ee31442"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "7QJA1tXQcNj8gioQVzief5a4KeUTDT7R8FE0jfKU41k"
-      short-id: "3180"
-  - name: "🇷🇺_24"
-    type: vless
-    server: "94.139.251.23"
+    server: "193.168.46.180"
     port: 443
-    uuid: "35699c54-9188-4f43-972e-e8e42dbb104e"
+    uuid: "010d7dc9-776b-4495-a85c-44794f3da49c"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "6ycuxfrEPsqE9eXZ5_Osbnx4g6hXWmkc8pFuAJkJ4jY"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_25"
-    type: vless
-    server: "186.246.3.80"
-    port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "code-sandbox.blog"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "84d_aHtsBvclx_Y6FnTmhhTqsZyQdfCGWtmFvefTrUI"
-      short-id: "ee57ea513371ce89"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_26"
-    type: vless
-    server: "201.51.1.11"
-    port: 40443
-    uuid: "28d0edc6-93c9-4465-bac9-720274d8b8c4"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
+    servername: "rruu.persik.host"
     client-fingerprint: "qq"
     reality-opts:
-      public-key: "WRveYv8IuUyvai4jgnQ6nWCL971-wKboe8evES5arlg"
-      short-id: "69d4"
+      public-key: "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY"
+      short-id: "c1a7e9b4711d5f60"
     flow: "xtls-rprx-vision"
 
 proxy-groups:
@@ -281,19 +197,13 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇷🇺_8"
+      - "🇷🇺_9"
+      - "🇷🇺_10"
+      - "🇷🇺_11"
+      - "🇷🇺_12"
+      - "🇷🇺_13"
       - "🇷🇺_14"
-      - "🇷🇺_15"
-      - "🇷🇺_16"
-      - "🇷🇺_17"
-      - "🇷🇺_18"
-      - "🇷🇺_19"
-      - "🇷🇺_20"
-      - "🇷🇺_21"
-      - "🇷🇺_22"
-      - "🇷🇺_23"
-      - "🇷🇺_24"
-      - "🇷🇺_25"
-      - "🇷🇺_26"
 
   - name: "LB-CDN"
     type: load-balance
@@ -303,19 +213,13 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇷🇺_8"
+      - "🇷🇺_9"
+      - "🇷🇺_10"
+      - "🇷🇺_11"
+      - "🇷🇺_12"
+      - "🇷🇺_13"
       - "🇷🇺_14"
-      - "🇷🇺_15"
-      - "🇷🇺_16"
-      - "🇷🇺_17"
-      - "🇷🇺_18"
-      - "🇷🇺_19"
-      - "🇷🇺_20"
-      - "🇷🇺_21"
-      - "🇷🇺_22"
-      - "🇷🇺_23"
-      - "🇷🇺_24"
-      - "🇷🇺_25"
-      - "🇷🇺_26"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -325,19 +229,13 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇷🇺_8"
+      - "🇷🇺_9"
+      - "🇷🇺_10"
+      - "🇷🇺_11"
+      - "🇷🇺_12"
+      - "🇷🇺_13"
       - "🇷🇺_14"
-      - "🇷🇺_15"
-      - "🇷🇺_16"
-      - "🇷🇺_17"
-      - "🇷🇺_18"
-      - "🇷🇺_19"
-      - "🇷🇺_20"
-      - "🇷🇺_21"
-      - "🇷🇺_22"
-      - "🇷🇺_23"
-      - "🇷🇺_24"
-      - "🇷🇺_25"
-      - "🇷🇺_26"
 
   - name: "FAST-CDN"
     type: url-test
@@ -346,19 +244,13 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇷🇺_8"
+      - "🇷🇺_9"
+      - "🇷🇺_10"
+      - "🇷🇺_11"
+      - "🇷🇺_12"
+      - "🇷🇺_13"
       - "🇷🇺_14"
-      - "🇷🇺_15"
-      - "🇷🇺_16"
-      - "🇷🇺_17"
-      - "🇷🇺_18"
-      - "🇷🇺_19"
-      - "🇷🇺_20"
-      - "🇷🇺_21"
-      - "🇷🇺_22"
-      - "🇷🇺_23"
-      - "🇷🇺_24"
-      - "🇷🇺_25"
-      - "🇷🇺_26"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -368,37 +260,25 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇷🇺_8"
+      - "🇷🇺_9"
+      - "🇷🇺_10"
+      - "🇷🇺_11"
+      - "🇷🇺_12"
+      - "🇷🇺_13"
       - "🇷🇺_14"
-      - "🇷🇺_15"
-      - "🇷🇺_16"
-      - "🇷🇺_17"
-      - "🇷🇺_18"
-      - "🇷🇺_19"
-      - "🇷🇺_20"
-      - "🇷🇺_21"
-      - "🇷🇺_22"
-      - "🇷🇺_23"
-      - "🇷🇺_24"
-      - "🇷🇺_25"
-      - "🇷🇺_26"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
+      - "🇷🇺_8"
+      - "🇷🇺_9"
+      - "🇷🇺_10"
+      - "🇷🇺_11"
+      - "🇷🇺_12"
+      - "🇷🇺_13"
       - "🇷🇺_14"
-      - "🇷🇺_15"
-      - "🇷🇺_16"
-      - "🇷🇺_17"
-      - "🇷🇺_18"
-      - "🇷🇺_19"
-      - "🇷🇺_20"
-      - "🇷🇺_21"
-      - "🇷🇺_22"
-      - "🇷🇺_23"
-      - "🇷🇺_24"
-      - "🇷🇺_25"
-      - "🇷🇺_26"
 
 rules:
   - MATCH,PROXY-BEST

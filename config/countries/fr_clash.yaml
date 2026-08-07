@@ -65,34 +65,6 @@ dns:
 proxies:
   - name: "🇫🇷_1"
     type: vless
-    server: "45.196.201.153"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_2"
-    type: vless
-    server: "45.196.201.201"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_3"
-    type: vless
     server: "45.196.201.217"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
@@ -105,759 +77,7 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_4"
-    type: vless
-    server: "45.13.119.219"
-    port: 8888
-    uuid: "eb77be10-9d9e-527b-a78d-8caaf58992d6"
-    udp: true
-  - name: "🇫🇷_5"
-    type: vless
-    server: "45.196.201.150"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_6"
-    type: vless
-    server: "45.196.201.7"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_7"
-    type: vless
-    server: "45.196.201.93"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_8"
-    type: vless
-    server: "45.196.201.98"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_9"
-    type: vless
-    server: "45.196.201.44"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_10"
-    type: vless
-    server: "45.196.201.80"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_11"
-    type: vless
-    server: "45.196.201.59"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_12"
-    type: vless
-    server: "45.196.201.237"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_13"
-    type: vless
-    server: "45.196.201.52"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_14"
-    type: vless
-    server: "45.196.201.192"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_15"
-    type: vless
-    server: "45.196.201.224"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_16"
-    type: vless
-    server: "45.196.201.185"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_17"
-    type: vless
-    server: "45.196.201.33"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_18"
-    type: vless
-    server: "45.196.201.3"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_19"
-    type: vless
-    server: "45.196.201.12"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_20"
-    type: vless
-    server: "45.196.201.182"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_21"
-    type: vless
-    server: "45.196.201.238"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_22"
-    type: vless
-    server: "45.196.201.170"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_23"
-    type: vless
-    server: "45.196.201.219"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_24"
-    type: vless
-    server: "45.196.201.120"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_25"
-    type: vless
-    server: "45.196.201.230"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_26"
-    type: vless
-    server: "45.196.201.88"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_27"
-    type: vless
-    server: "45.196.201.76"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_28"
-    type: vless
-    server: "15.237.122.88"
-    port: 42287
-    uuid: "1fe3eba8-86ef-4bce-9fb4-c7517954b2e2"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "TeQRou69R4O0YCR0b28I3PF97W9zc3Qf-zUvlOZA43M"
-      short-id: "946e4c05cc69e1"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_29"
-    type: vless
-    server: "45.196.201.155"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_30"
-    type: vless
-    server: "45.196.201.213"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_31"
-    type: vless
-    server: "45.196.201.109"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_32"
-    type: vless
-    server: "45.196.201.86"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_33"
-    type: vless
-    server: "45.196.201.11"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_34"
-    type: vless
-    server: "45.196.201.87"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_35"
-    type: vless
-    server: "45.196.201.13"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_36"
-    type: vless
-    server: "45.196.201.99"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_37"
-    type: vless
-    server: "45.196.201.63"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_38"
-    type: vless
-    server: "45.196.201.222"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_39"
-    type: vless
-    server: "194.226.169.36"
-    port: 443
-    uuid: "fae3277c-0541-4ae9-bbbb-8247453ea652"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "i4Mx_tDND0Xxac3WyA7HgT9rvXdZlXpm5m1EGiQF-Uk"
-      short-id: "b8aa"
-  - name: "🇫🇷_40"
-    type: vless
-    server: "45.196.201.183"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_41"
-    type: vless
-    server: "45.196.201.97"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_42"
-    type: vless
-    server: "45.196.201.160"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_43"
-    type: vless
-    server: "bab-6.site"
-    port: 443
-    uuid: "b585dc5e-55bf-4a8b-913a-27c9ccac05c3"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "bab-6.site"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/vws/"
-  - name: "🇫🇷_44"
-    type: vless
-    server: "45.196.201.123"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_45"
-    type: vless
-    server: "45.196.201.29"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_46"
-    type: vless
-    server: "45.196.201.169"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_47"
-    type: vless
-    server: "45.196.201.204"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_48"
-    type: vless
-    server: "45.196.201.64"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_49"
-    type: vless
-    server: "45.196.201.81"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_50"
-    type: vless
-    server: "45.196.201.74"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_51"
-    type: vless
-    server: "45.196.201.94"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_52"
-    type: vless
-    server: "15.236.201.26"
-    port: 17912
-    uuid: "b05038a1-acce-4a4d-a952-425b845c981a"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "r2mEqqAXfLwVVhxuuIvI9koUrBm0wRYII_eFjuUxWg0"
-      short-id: "6901e5e9bf3a8a0b"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_53"
-    type: vless
-    server: "45.196.201.75"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_54"
-    type: vless
-    server: "45.196.201.61"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_55"
-    type: vless
-    server: "89.208.113.16"
-    port: 443
-    uuid: "adce7c2a-3191-49ae-b61c-9b8258ea1b0e"
-    udp: true
-  - name: "🇫🇷_56"
-    type: vless
-    server: "45.196.201.28"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_57"
-    type: vless
-    server: "45.196.201.246"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_58"
-    type: vless
-    server: "45.196.201.48"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_59"
+  - name: "🇫🇷_2"
     type: vless
     server: "45.196.201.119"
     port: 443
@@ -871,9 +91,9 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_60"
+  - name: "🇫🇷_3"
     type: vless
-    server: "45.196.201.177"
+    server: "45.196.201.213"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -885,121 +105,23 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_61"
+  - name: "🇫🇷_4"
     type: vless
-    server: "45.196.201.190"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_62"
-    type: vless
-    server: "45.196.201.57"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_63"
-    type: vless
-    server: "45.196.201.26"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_64"
-    type: vless
-    server: "45.196.201.27"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_65"
-    type: vless
-    server: "45.196.201.108"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_66"
-    type: vless
-    server: "45.196.201.32"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_67"
-    type: vless
-    server: "15.237.177.139"
-    port: 43248
-    uuid: "f9d8ca28-2fff-45de-9b25-3bf29186018e"
+    server: "15.236.201.26"
+    port: 17912
+    uuid: "b05038a1-acce-4a4d-a952-425b845c981a"
     udp: true
     tls: true
     skip-cert-verify: true
     servername: "yahoo.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "LPLKpq5_G1WB6BqJhrCKQp1oQly3akbsVjvYPZrbGgg"
-      short-id: "3355cf9734b0150e"
+      public-key: "r2mEqqAXfLwVVhxuuIvI9koUrBm0wRYII_eFjuUxWg0"
+      short-id: "6901e5e9bf3a8a0b"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_68"
+  - name: "🇫🇷_5"
     type: vless
-    server: "45.196.201.191"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_69"
-    type: vless
-    server: "45.196.201.67"
+    server: "45.196.201.224"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1011,119 +133,7 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_70"
-    type: vless
-    server: "45.196.201.43"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_71"
-    type: vless
-    server: "45.196.201.100"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_72"
-    type: vless
-    server: "45.196.201.166"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_73"
-    type: vless
-    server: "45.196.201.136"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_74"
-    type: vless
-    server: "45.196.201.95"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_75"
-    type: vless
-    server: "45.196.201.151"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_76"
-    type: vless
-    server: "45.196.201.196"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_77"
-    type: vless
-    server: "45.196.201.206"
-    port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_78"
+  - name: "🇫🇷_6"
     type: vless
     server: "45.196.201.55"
     port: 443
@@ -1137,9 +147,9 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_79"
+  - name: "🇫🇷_7"
     type: vless
-    server: "45.196.201.161"
+    server: "45.196.201.222"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1151,9 +161,9 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_80"
+  - name: "🇫🇷_8"
     type: vless
-    server: "45.196.201.107"
+    server: "45.196.201.93"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1165,9 +175,15 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_81"
+  - name: "🇫🇷_9"
     type: vless
-    server: "45.196.201.17"
+    server: "89.208.113.16"
+    port: 443
+    uuid: "adce7c2a-3191-49ae-b61c-9b8258ea1b0e"
+    udp: true
+  - name: "🇫🇷_10"
+    type: vless
+    server: "45.196.201.166"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1179,23 +195,22 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_82"
+  - name: "🇫🇷_11"
     type: vless
-    server: "45.196.201.159"
+    server: "194.226.169.36"
     port: 443
-    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    uuid: "fae3277c-0541-4ae9-bbbb-8247453ea652"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "storage.yandex.net"
+    servername: "yahoo.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
-      short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_83"
+      public-key: "i4Mx_tDND0Xxac3WyA7HgT9rvXdZlXpm5m1EGiQF-Uk"
+      short-id: "b8aa"
+  - name: "🇫🇷_12"
     type: vless
-    server: "45.196.201.162"
+    server: "45.196.201.76"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1207,9 +222,9 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_84"
+  - name: "🇫🇷_13"
     type: vless
-    server: "45.196.201.105"
+    server: "45.196.201.248"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1221,21 +236,7 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_85"
-    type: vless
-    server: "62.210.91.2"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_86"
+  - name: "🇫🇷_14"
     type: vless
     server: "35.180.187.82"
     port: 12228
@@ -1249,9 +250,9 @@ proxies:
       public-key: "hvyaRhFtrj3cGv1Ya5uXpE256i2PoUi2fOgU0KlvKmI"
       short-id: "59625eb3275249ca"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_87"
+  - name: "🇫🇷_15"
     type: vless
-    server: "45.196.201.23"
+    server: "45.196.201.109"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1263,9 +264,9 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_88"
+  - name: "🇫🇷_16"
     type: vless
-    server: "45.196.201.30"
+    server: "45.196.201.206"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1277,7 +278,97 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_89"
+  - name: "🇫🇷_17"
+    type: vless
+    server: "45.196.201.153"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_18"
+    type: vless
+    server: "45.13.119.219"
+    port: 8888
+    uuid: "eb77be10-9d9e-527b-a78d-8caaf58992d6"
+    udp: true
+  - name: "🇫🇷_19"
+    type: vless
+    server: "45.196.201.63"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_20"
+    type: vless
+    server: "45.196.201.161"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_21"
+    type: vless
+    server: "45.196.201.190"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_22"
+    type: vless
+    server: "45.196.201.80"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_23"
+    type: vless
+    server: "45.196.201.230"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_24"
     type: vless
     server: "45.196.201.91"
     port: 443
@@ -1291,7 +382,525 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷_90"
+  - name: "🇫🇷_25"
+    type: vless
+    server: "45.196.201.184"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_26"
+    type: vless
+    server: "62.210.91.10"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_27"
+    type: vless
+    server: "45.196.201.59"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_28"
+    type: vless
+    server: "45.196.201.183"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_29"
+    type: vless
+    server: "45.196.201.3"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_30"
+    type: vless
+    server: "45.196.201.227"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_31"
+    type: vless
+    server: "45.196.201.162"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_32"
+    type: vless
+    server: "45.196.201.7"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_33"
+    type: vless
+    server: "45.196.201.13"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_34"
+    type: vless
+    server: "45.196.201.74"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_35"
+    type: vless
+    server: "45.196.201.48"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_36"
+    type: vless
+    server: "45.196.201.28"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_37"
+    type: vless
+    server: "45.196.201.11"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_38"
+    type: vless
+    server: "45.196.201.155"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_39"
+    type: vless
+    server: "45.196.201.191"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_40"
+    type: vless
+    server: "45.196.201.12"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_41"
+    type: vless
+    server: "45.196.201.27"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_42"
+    type: vless
+    server: "45.196.201.151"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_43"
+    type: vless
+    server: "45.196.201.238"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_44"
+    type: vless
+    server: "45.196.201.185"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_45"
+    type: vless
+    server: "45.196.201.61"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_46"
+    type: vless
+    server: "45.196.201.23"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_47"
+    type: vless
+    server: "45.196.201.170"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_48"
+    type: vless
+    server: "15.237.122.88"
+    port: 42287
+    uuid: "1fe3eba8-86ef-4bce-9fb4-c7517954b2e2"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "yahoo.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "TeQRou69R4O0YCR0b28I3PF97W9zc3Qf-zUvlOZA43M"
+      short-id: "946e4c05cc69e1"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_49"
+    type: vless
+    server: "45.196.201.196"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_50"
+    type: vless
+    server: "45.196.201.88"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_51"
+    type: vless
+    server: "45.196.201.100"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_52"
+    type: vless
+    server: "45.196.201.44"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_53"
+    type: vless
+    server: "45.196.201.103"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_54"
+    type: vless
+    server: "45.196.201.33"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_55"
+    type: vless
+    server: "45.196.201.95"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_56"
+    type: vless
+    server: "45.196.201.150"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_57"
+    type: vless
+    server: "45.196.201.204"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_58"
+    type: vless
+    server: "45.196.201.246"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_59"
+    type: vless
+    server: "45.196.201.87"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_60"
+    type: vless
+    server: "62.210.91.2"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_61"
+    type: vless
+    server: "45.196.201.30"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_62"
     type: vless
     server: "45.196.201.146"
     port: 443
@@ -1305,9 +914,400 @@ proxies:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
+  - name: "🇫🇷_63"
+    type: vless
+    server: "45.196.201.177"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_64"
+    type: vless
+    server: "45.196.201.219"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_65"
+    type: vless
+    server: "45.196.201.97"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_66"
+    type: vless
+    server: "45.196.201.201"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_67"
+    type: vless
+    server: "bab-6.site"
+    port: 443
+    uuid: "b585dc5e-55bf-4a8b-913a-27c9ccac05c3"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "bab-6.site"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/vws/"
+  - name: "🇫🇷_68"
+    type: vless
+    server: "45.196.201.123"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_69"
+    type: vless
+    server: "45.196.201.64"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_70"
+    type: vless
+    server: "45.196.201.32"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_71"
+    type: vless
+    server: "45.196.201.237"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_72"
+    type: vless
+    server: "45.196.201.75"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_73"
+    type: vless
+    server: "45.196.201.192"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_74"
+    type: vless
+    server: "45.196.201.175"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_75"
+    type: vless
+    server: "45.196.201.107"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_76"
+    type: vless
+    server: "45.196.201.57"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_77"
+    type: vless
+    server: "45.196.201.26"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_78"
+    type: vless
+    server: "45.196.201.169"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_79"
+    type: vless
+    server: "45.196.201.81"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_80"
+    type: vless
+    server: "45.196.201.136"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_81"
+    type: vless
+    server: "45.196.201.67"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_82"
+    type: vless
+    server: "45.196.201.120"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_83"
+    type: vless
+    server: "45.196.201.98"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_84"
+    type: vless
+    server: "45.196.201.52"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_85"
+    type: vless
+    server: "45.196.201.113"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_86"
+    type: vless
+    server: "45.196.201.17"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_87"
+    type: vless
+    server: "45.196.201.160"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_88"
+    type: vless
+    server: "45.196.201.108"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_89"
+    type: vless
+    server: "45.196.201.182"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷_90"
+    type: vless
+    server: "45.196.201.43"
+    port: 443
+    uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
+      short-id: "c6ef72e4635d15a5"
+    flow: "xtls-rprx-vision"
   - name: "🇫🇷_91"
     type: vless
-    server: "45.196.201.62"
+    server: "45.196.201.53"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1335,7 +1335,7 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇫🇷_93"
     type: vless
-    server: "45.196.201.248"
+    server: "45.196.201.105"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1349,7 +1349,7 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇫🇷_94"
     type: vless
-    server: "45.196.201.227"
+    server: "45.196.201.29"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1363,7 +1363,7 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇫🇷_95"
     type: vless
-    server: "45.196.201.184"
+    server: "45.196.201.159"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1377,7 +1377,7 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇫🇷_96"
     type: vless
-    server: "45.196.201.53"
+    server: "45.196.201.86"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1391,21 +1391,21 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇫🇷_97"
     type: vless
-    server: "45.196.201.175"
+    server: "45.196.201.99"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
     tls: true
     skip-cert-verify: true
     servername: "storage.yandex.net"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
     flow: "xtls-rprx-vision"
   - name: "🇫🇷_98"
     type: vless
-    server: "45.196.201.103"
+    server: "45.196.201.62"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1419,7 +1419,7 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇫🇷_99"
     type: vless
-    server: "45.196.201.113"
+    server: "45.196.201.94"
     port: 443
     uuid: "f75814f6-8f81-4847-b792-168c41f2dc85"
     udp: true
@@ -1430,20 +1430,6 @@ proxies:
     reality-opts:
       public-key: "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04"
       short-id: "c6ef72e4635d15a5"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷_100"
-    type: vless
-    server: "62.210.91.10"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
     flow: "xtls-rprx-vision"
 
 proxy-groups:
@@ -1558,7 +1544,6 @@ proxy-groups:
       - "🇫🇷_97"
       - "🇫🇷_98"
       - "🇫🇷_99"
-      - "🇫🇷_100"
 
 
 rules:

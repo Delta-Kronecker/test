@@ -59,7 +59,7 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
-  - name: "🇸🇪_6"
+  - name: "🇸🇪_5"
     type: vless
     server: "150.241.79.143"
     port: 8443
@@ -72,21 +72,20 @@ proxies:
     reality-opts:
       public-key: "dNfk0sOCzOlmE61B7ur7YzU2i08RqXIBcGVBA2Ne1Ck"
       short-id: "7548bc"
-  - name: "🇸🇪_7"
+  - name: "🇸🇪_6"
     type: vless
-    server: "150.241.72.5"
-    port: 443
-    uuid: "fc1b3bda-b226-452a-8c5c-b0e36a1f8f88"
+    server: "v-de-node-03.bot-auth.com"
+    port: 8443
+    uuid: "b9b1e7c9-4160-49b4-85a4-2f096706509a"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "eu-central.cendora.ru"
+    servername: "www.oracle.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI"
-      short-id: "00bca5982f82d083"
-    flow: "xtls-rprx-vision"
-  - name: "🇸🇪_8"
+      public-key: "dNfk0sOCzOlmE61B7ur7YzU2i08RqXIBcGVBA2Ne1Ck"
+      short-id: "7548bc"
+  - name: "🇸🇪_7"
     type: vless
     server: "smm.tunnelpoint.space"
     port: 443
@@ -100,33 +99,20 @@ proxies:
       public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
       short-id: "fdda9806fe5d8584"
     flow: "xtls-rprx-vision"
-  - name: "🇸🇪_9"
+  - name: "🇸🇪_8"
     type: vless
-    server: "148.253.211.10"
+    server: "150.241.72.5"
     port: 443
-    uuid: "60576147-90e7-4afc-9cf9-c7361a8c7fd8"
+    uuid: "fc1b3bda-b226-452a-8c5c-b0e36a1f8f88"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "vk.me"
-    client-fingerprint: "ios"
-    reality-opts:
-      public-key: "B3MWDjEWGQsObyH-9npa_PlkaoQDBqzwlwURFK1zlE8"
-      short-id: "3e0527d94cc8d1"
-    flow: "xtls-rprx-vision"
-  - name: "🇸🇪_10"
-    type: vless
-    server: "v-de-node-03.bot-auth.com"
-    port: 8443
-    uuid: "b9b1e7c9-4160-49b4-85a4-2f096706509a"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.oracle.com"
+    servername: "eu-central.cendora.ru"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "dNfk0sOCzOlmE61B7ur7YzU2i08RqXIBcGVBA2Ne1Ck"
-      short-id: "7548bc"
+      public-key: "b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI"
+      short-id: "00bca5982f82d083"
+    flow: "xtls-rprx-vision"
 
 proxy-groups:
   # ── Top-level selector ────────────────────────────────────────────────────
@@ -169,11 +155,10 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇸🇪_5"
       - "🇸🇪_6"
       - "🇸🇪_7"
       - "🇸🇪_8"
-      - "🇸🇪_9"
-      - "🇸🇪_10"
 
   - name: "LB-CDN"
     type: load-balance
@@ -183,11 +168,10 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇸🇪_5"
       - "🇸🇪_6"
       - "🇸🇪_7"
       - "🇸🇪_8"
-      - "🇸🇪_9"
-      - "🇸🇪_10"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -197,11 +181,10 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇸🇪_5"
       - "🇸🇪_6"
       - "🇸🇪_7"
       - "🇸🇪_8"
-      - "🇸🇪_9"
-      - "🇸🇪_10"
 
   - name: "FAST-CDN"
     type: url-test
@@ -210,11 +193,10 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇸🇪_5"
       - "🇸🇪_6"
       - "🇸🇪_7"
       - "🇸🇪_8"
-      - "🇸🇪_9"
-      - "🇸🇪_10"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -224,21 +206,19 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇸🇪_5"
       - "🇸🇪_6"
       - "🇸🇪_7"
       - "🇸🇪_8"
-      - "🇸🇪_9"
-      - "🇸🇪_10"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
+      - "🇸🇪_5"
       - "🇸🇪_6"
       - "🇸🇪_7"
       - "🇸🇪_8"
-      - "🇸🇪_9"
-      - "🇸🇪_10"
 
 rules:
   - MATCH,PROXY-BEST

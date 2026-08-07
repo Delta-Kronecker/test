@@ -65,17 +65,17 @@ dns:
 proxies:
   - name: "🇷🇺_1"
     type: vless
-    server: "status.netraidly.ru"
+    server: "72.56.36.96"
     port: 40443
-    uuid: "28d0edc6-93c9-4465-bac9-720274d8b8c4"
+    uuid: "598b823c-d3fc-4013-aae5-837f10080f7a"
     udp: true
     tls: true
     skip-cert-verify: true
     servername: "deepl.com"
-    client-fingerprint: "chrome"
+    client-fingerprint: "qq"
     reality-opts:
-      public-key: "WRveYv8IuUyvai4jgnQ6nWCL971-wKboe8evES5arlg"
-      short-id: "69d4"
+      public-key: "cZF84xUCciKRXxTA39vNnh0U8CjUZiUSjLzuNTMOzV8"
+      short-id: "33e48a03db900ff3"
     flow: "xtls-rprx-vision"
   - name: "🇷🇺_2"
     type: vless
@@ -92,89 +92,46 @@ proxies:
       short-id: "3180"
   - name: "🇷🇺_3"
     type: vless
-    server: "94.139.251.189"
-    port: 443
-    uuid: "35699c54-9188-4f43-972e-e8e42dbb104e"
+    server: "status.netraidly.ru"
+    port: 40443
+    uuid: "28d0edc6-93c9-4465-bac9-720274d8b8c4"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "apple.com"
+    servername: "deepl.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE"
-      short-id: ""
+      public-key: "WRveYv8IuUyvai4jgnQ6nWCL971-wKboe8evES5arlg"
+      short-id: "69d4"
     flow: "xtls-rprx-vision"
   - name: "🇷🇺_4"
     type: vless
-    server: "94.139.251.9"
-    port: 443
-    uuid: "35699c54-9188-4f43-972e-e8e42dbb104e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "apple.com"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_5"
-    type: vless
-    server: "ruded1.onlinestreamself.com"
-    port: 443
-    uuid: "eadcacfa-ef1a-4901-a28b-8815fa1962a5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "apple.com"
-    client-fingerprint: "safari"
-    reality-opts:
-      public-key: "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_6"
-    type: vless
-    server: "code-sandbox.blog"
-    port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "code-sandbox.blog"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "84d_aHtsBvclx_Y6FnTmhhTqsZyQdfCGWtmFvefTrUI"
-      short-id: "ee57ea513371ce89"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_7"
-    type: vless
-    server: "94.139.251.191"
-    port: 443
-    uuid: "eadcacfa-ef1a-4901-a28b-8815fa1962a5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "apple.com"
-    client-fingerprint: "edge"
-    reality-opts:
-      public-key: "M9_R2DX7bxoMJpkF4RcyJ0oJ8ZuGsxWrjuREKi6Ol0w"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_8"
-    type: vless
-    server: "72.56.36.96"
+    server: "201.51.1.11"
     port: 40443
-    uuid: "598b823c-d3fc-4013-aae5-837f10080f7a"
+    uuid: "28d0edc6-93c9-4465-bac9-720274d8b8c4"
     udp: true
     tls: true
     skip-cert-verify: true
     servername: "deepl.com"
     client-fingerprint: "qq"
     reality-opts:
-      public-key: "cZF84xUCciKRXxTA39vNnh0U8CjUZiUSjLzuNTMOzV8"
-      short-id: "33e48a03db900ff3"
+      public-key: "WRveYv8IuUyvai4jgnQ6nWCL971-wKboe8evES5arlg"
+      short-id: "69d4"
     flow: "xtls-rprx-vision"
-  - name: "🇷🇺_9"
+  - name: "🇷🇺_5"
+    type: vless
+    server: "5.129.215.87"
+    port: 40443
+    uuid: "f0eac976-e4e2-4e24-bc86-cda82ee31442"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "7QJA1tXQcNj8gioQVzief5a4KeUTDT7R8FE0jfKU41k"
+      short-id: "3180"
+  - name: "🇷🇺_6"
     type: vless
     server: "api.kinomir.fun"
     port: 40443
@@ -188,60 +145,19 @@ proxies:
       public-key: "cZF84xUCciKRXxTA39vNnh0U8CjUZiUSjLzuNTMOzV8"
       short-id: "33e48a03db900ff3"
     flow: "xtls-rprx-vision"
-  - name: "🇷🇺_10"
+  - name: "🇷🇺_7"
     type: vless
-    server: "5.129.215.87"
-    port: 40443
-    uuid: "f0eac976-e4e2-4e24-bc86-cda82ee31442"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "7QJA1tXQcNj8gioQVzief5a4KeUTDT7R8FE0jfKU41k"
-      short-id: "3180"
-  - name: "🇷🇺_11"
-    type: vless
-    server: "94.139.251.23"
+    server: "193.168.46.180"
     port: 443
-    uuid: "35699c54-9188-4f43-972e-e8e42dbb104e"
+    uuid: "010d7dc9-776b-4495-a85c-44794f3da49c"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "6ycuxfrEPsqE9eXZ5_Osbnx4g6hXWmkc8pFuAJkJ4jY"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_12"
-    type: vless
-    server: "186.246.3.80"
-    port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "code-sandbox.blog"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "84d_aHtsBvclx_Y6FnTmhhTqsZyQdfCGWtmFvefTrUI"
-      short-id: "ee57ea513371ce89"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺_13"
-    type: vless
-    server: "201.51.1.11"
-    port: 40443
-    uuid: "28d0edc6-93c9-4465-bac9-720274d8b8c4"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
+    servername: "rruu.persik.host"
     client-fingerprint: "qq"
     reality-opts:
-      public-key: "WRveYv8IuUyvai4jgnQ6nWCL971-wKboe8evES5arlg"
-      short-id: "69d4"
+      public-key: "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY"
+      short-id: "c1a7e9b4711d5f60"
     flow: "xtls-rprx-vision"
 
 proxy-groups:
@@ -264,12 +180,6 @@ proxy-groups:
       - "🇷🇺_5"
       - "🇷🇺_6"
       - "🇷🇺_7"
-      - "🇷🇺_8"
-      - "🇷🇺_9"
-      - "🇷🇺_10"
-      - "🇷🇺_11"
-      - "🇷🇺_12"
-      - "🇷🇺_13"
 
 
 rules:

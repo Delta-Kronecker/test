@@ -59,173 +59,35 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
+  - name: "🇺🇸_81"
+    type: vless
+    server: "193.202.11.44"
+    port: 443
+    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "4usa.skorostnet.space"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
+      short-id: "fdda9806fe5d8584"
+    flow: "xtls-rprx-vision"
   - name: "🇺🇸_82"
     type: vless
-    server: "52.43.158.158"
+    server: "169.40.42.113"
     port: 443
-    uuid: "0370b162-baff-4757-86cc-cce4bf07f6f1"
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "www.cloudflare.com"
+    servername: "yahoo.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "lYcMPEgf6ePmF_d8RXR5fsVorycW37v_ECl-fz_H6w4"
-      short-id: "cfe08c23a85f24"
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+    flow: "xtls-rprx-vision"
   - name: "🇺🇸_83"
-    type: vless
-    server: "180.178.60.252"
-    port: 10000
-    uuid: "431fe973-a43a-4fac-bf83-2a772e0d0625"
-    udp: true
-  - name: "🇺🇸_84"
-    type: vless
-    server: "169.40.42.52"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "ios"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_85"
-    type: vless
-    server: "154.19.184.40"
-    port: 52535
-    uuid: "a1ac8747-4fd7-486b-b099-19fbb45610be"
-    udp: true
-  - name: "🇺🇸_86"
-    type: vless
-    server: "169.40.42.44"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_87"
-    type: vless
-    server: "billing.netraidly.ru"
-    port: 40443
-    uuid: "17d29827-7cf1-4115-b40d-548e10ec355d"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM"
-      short-id: "aa3c"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_88"
-    type: vless
-    server: "108.162.198.5"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇺🇸_89"
-    type: vless
-    server: "70.39.198.183"
-    port: 46197
-    uuid: "5aab0d40-c509-4560-b048-ade921fdfb6a"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "updates.cdn-apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "npJEB6VpYJ9iYTZ-z0IL06Xs7PEz0N3fZU_IRwftQ00"
-      short-id: "f24c17bb7fc284"
-  - name: "🇺🇸_90"
-    type: vless
-    server: "169.40.42.212"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "ios"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_91"
-    type: vless
-    server: "private.netraidly.ru"
-    port: 40443
-    uuid: "5e3f974b-06fc-4555-907a-6681391b7c17"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE"
-      short-id: "2bc0"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_92"
-    type: vless
-    server: "137.184.218.169"
-    port: 36925
-    uuid: "c9fd0fb1-8251-4106-b09a-f4b426736f67"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_93"
-    type: vless
-    server: "162.159.44.7"
-    port: 2053
-    uuid: "83afd88f-200f-4d89-bfc7-66eff160c1d8"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "josni.hoyes.cloudns.ch"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "josni.hoyes.cloudns.ch"
-  - name: "🇺🇸_94"
-    type: vless
-    server: "15.204.97.219"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_95"
     type: vless
     server: "162.159.38.105"
     port: 443
@@ -240,122 +102,7 @@ proxies:
       path: "/sg-melbi"
       headers:
         Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇺🇸_96"
-    type: vless
-    server: "192.204.50.220"
-    port: 443
-    uuid: "8ed3f6f4-f14b-4e1a-9256-189b5524a45f"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "timeline.www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "DGu3KSodkjq3ai4OvLbiFv8V5WUhCX7yHkYTD5UyaEc"
-      short-id: "66a4787cbd041d22"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_97"
-    type: vless
-    server: "169.40.42.182"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "ios"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_98"
-    type: vless
-    server: "15.204.97.214"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_99"
-    type: vless
-    server: "167.17.69.171"
-    port: 443
-    uuid: "00144519-7e0d-476b-8d28-435576af9262"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk"
-      short-id: "0990d22f"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_100"
-    type: vless
-    server: "169.40.42.16"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "ios"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_101"
-    type: vless
-    server: "support.zoom.us"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇺🇸_102"
-    type: vless
-    server: "108.162.198.201"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇺🇸_103"
-    type: vless
-    server: "170.114.46.6"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇺🇸_104"
+  - name: "🇺🇸_84"
     type: vless
     server: "169.40.42.184"
     port: 443
@@ -369,23 +116,9 @@ proxies:
       public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
       short-id: "c39cc7310a"
     flow: "xtls-rprx-vision"
-  - name: "🇺🇸_105"
+  - name: "🇺🇸_85"
     type: vless
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "ec83e1b5-f535-4219-b530-49fdab9ca1ef"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_106"
-    type: vless
-    server: "15.204.97.197"
+    server: "15.204.97.214"
     port: 23576
     uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
@@ -397,188 +130,7 @@ proxies:
       public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
       short-id: "01"
     flow: "xtls-rprx-vision"
-  - name: "🇺🇸_107"
-    type: vless
-    server: "162.159.44.195"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/fp=random"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇺🇸_108"
-    type: vless
-    server: "dx.mmhh.eu.cc"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/fp=chrome"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇺🇸_109"
-    type: vless
-    server: "88.218.44.4"
-    port: 993
-    uuid: "7c74b0e4-f132-5583-4692-622a7d6b71a4"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "swcdn.apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_110"
-    type: vless
-    server: "169.40.42.15"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_111"
-    type: vless
-    server: "15.204.97.206"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_112"
-    type: vless
-    server: "216.227.169.104"
-    port: 443
-    uuid: "b8794f67-80d9-4124-8fc5-2d2ce5516573"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "AYL1z7PNyo6LqYLeZpXa50FnK9eEu7o18KHRhOlST1w"
-      short-id: "bd72"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_113"
-    type: vless
-    server: "69.48.201.136"
-    port: 30016
-    uuid: "03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/usserver"
-      headers:
-        Host: "uspanel.unixzone.us"
-  - name: "🇺🇸_114"
-    type: vless
-    server: "66.175.217.170"
-    port: 443
-    uuid: "b98d4c6e-6770-4a31-8256-a4750cdea0e7"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.amazon.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo"
-      short-id: "1a"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_115"
-    type: vless
-    server: "70.39.178.231"
-    port: 46197
-    uuid: "5aab0d40-c509-4560-b048-ade921fdfb6a"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "updates.cdn-apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "npJEB6VpYJ9iYTZ-z0IL06Xs7PEz0N3fZU_IRwftQ00"
-      short-id: "f24c17bb7fc284"
-  - name: "🇺🇸_116"
-    type: vless
-    server: "169.40.42.179"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "ios"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_117"
-    type: vless
-    server: "104.168.146.122"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇺🇸_118"
-    type: vless
-    server: "147.182.212.232"
-    port: 56565
-    uuid: "7b188eea-b08f-42c2-bac7-d3b0e74218b8"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.paypal.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_119"
-    type: vless
-    server: "t18.qifei.app"
-    port: 443
-    uuid: "b98d4c6e-6770-4a31-8256-a4750cdea0e7"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.amazon.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo"
-      short-id: "1a"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_120"
+  - name: "🇺🇸_86"
     type: vless
     server: "186.246.19.79"
     port: 40443
@@ -592,36 +144,13 @@ proxies:
       public-key: "oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE"
       short-id: "2bc0"
     flow: "xtls-rprx-vision"
-  - name: "🇺🇸_121"
+  - name: "🇺🇸_87"
     type: vless
-    server: "170.114.45.6"
+    server: "138.68.53.88"
     port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    uuid: "413a66e9-b05b-4ae6-a9eb-6d28204a28f4"
     udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇺🇸_122"
-    type: vless
-    server: "15.204.97.216"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_123"
+  - name: "🇺🇸_88"
     type: vless
     server: "169.40.42.75"
     port: 443
@@ -635,63 +164,7 @@ proxies:
       public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
       short-id: "c39cc7310a"
     flow: "xtls-rprx-vision"
-  - name: "🇺🇸_124"
-    type: vless
-    server: "169.40.42.95"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "ios"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_125"
-    type: vless
-    server: "186.246.21.156"
-    port: 40443
-    uuid: "17d29827-7cf1-4115-b40d-548e10ec355d"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "deepl.com"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM"
-      short-id: "aa3c"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_126"
-    type: vless
-    server: "15.204.97.198"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_127"
-    type: vless
-    server: "47.253.226.114"
-    port: 443
-    uuid: "055a1ce8-2a16-4a0d-a2c2-22826c9b2413"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc"
-      short-id: ""
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_128"
+  - name: "🇺🇸_89"
     type: vless
     server: "titandarkness.mooo.com"
     port: 443
@@ -706,35 +179,68 @@ proxies:
       path: "/21381/0kO2id8FMQ"
       headers:
         Host: "titandarkness.mooo.com"
-  - name: "🇺🇸_129"
+  - name: "🇺🇸_90"
     type: vless
-    server: "194.55.189.249"
-    port: 40443
-    uuid: "8212a50b-25bf-4739-bba1-aaffb5ffc84c"
+    server: "dx.mmhh.eu.cc"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "deepl.com"
+    servername: "hhlfy.twiladaphne.ndjp.net"
     client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo"
-      short-id: "aae8"
-  - name: "🇺🇸_130"
+    network: ws
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇺🇸_91"
     type: vless
-    server: "70.39.198.93"
-    port: 46197
-    uuid: "5aab0d40-c509-4560-b048-ade921fdfb6a"
+    server: "t18.qifei.app"
+    port: 443
+    uuid: "b98d4c6e-6770-4a31-8256-a4750cdea0e7"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "updates.cdn-apple.com"
+    servername: "www.amazon.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "npJEB6VpYJ9iYTZ-z0IL06Xs7PEz0N3fZU_IRwftQ00"
-      short-id: "f24c17bb7fc284"
-  - name: "🇺🇸_131"
+      public-key: "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo"
+      short-id: "1a"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_92"
     type: vless
-    server: "169.40.42.232"
+    server: "170.114.46.6"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇺🇸_93"
+    type: vless
+    server: "104.168.146.122"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇺🇸_94"
+    type: vless
+    server: "169.40.42.16"
     port: 443
     uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
     udp: true
@@ -746,73 +252,7 @@ proxies:
       public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
       short-id: "c39cc7310a"
     flow: "xtls-rprx-vision"
-  - name: "🇺🇸_132"
-    type: vless
-    server: "193.202.11.44"
-    port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "4usa.skorostnet.space"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
-      short-id: "fdda9806fe5d8584"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_133"
-    type: vless
-    server: "47.89.186.170"
-    port: 55861
-    uuid: "d51ed55c-d6dd-400b-aaf6-017c33969bfe"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.intel.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs"
-      short-id: "7551ed1b"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_134"
-    type: vless
-    server: "169.40.42.113"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-    flow: "xtls-rprx-vision"
-  - name: "🇺🇸_135"
-    type: vless
-    server: "70.39.197.13"
-    port: 46197
-    uuid: "5aab0d40-c509-4560-b048-ade921fdfb6a"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "updates.cdn-apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "npJEB6VpYJ9iYTZ-z0IL06Xs7PEz0N3fZU_IRwftQ00"
-      short-id: "f24c17bb7fc284"
-  - name: "🇺🇸_136"
-    type: vless
-    server: "uspanel.unixzone.us"
-    port: 30016
-    uuid: "03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/usserver"
-      headers:
-        Host: "uspanel.unixzone.us"
-  - name: "🇺🇸_137"
+  - name: "🇺🇸_95"
     type: vless
     server: "169.40.42.121"
     port: 443
@@ -826,9 +266,23 @@ proxies:
       public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
       short-id: "c39cc7310a"
     flow: "xtls-rprx-vision"
-  - name: "🇺🇸_138"
+  - name: "🇺🇸_96"
     type: vless
-    server: "15.204.97.195"
+    server: "137.184.218.169"
+    port: 36925
+    uuid: "c9fd0fb1-8251-4106-b09a-f4b426736f67"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0"
+      short-id: ""
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_97"
+    type: vless
+    server: "15.204.97.197"
     port: 23576
     uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
@@ -840,7 +294,240 @@ proxies:
       public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
       short-id: "01"
     flow: "xtls-rprx-vision"
-  - name: "🇺🇸_139"
+  - name: "🇺🇸_98"
+    type: vless
+    server: "169.40.42.232"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_99"
+    type: vless
+    server: "170.114.45.6"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇺🇸_100"
+    type: vless
+    server: "169.40.42.44"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_101"
+    type: vless
+    server: "66.175.217.170"
+    port: 443
+    uuid: "b98d4c6e-6770-4a31-8256-a4750cdea0e7"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.amazon.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo"
+      short-id: "1a"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_102"
+    type: vless
+    server: "192.204.50.220"
+    port: 443
+    uuid: "8ed3f6f4-f14b-4e1a-9256-189b5524a45f"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "timeline.www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "DGu3KSodkjq3ai4OvLbiFv8V5WUhCX7yHkYTD5UyaEc"
+      short-id: "66a4787cbd041d22"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_103"
+    type: vless
+    server: "15.204.97.198"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_104"
+    type: vless
+    server: "support.zoom.us"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇺🇸_105"
+    type: vless
+    server: "108.162.198.201"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇺🇸_106"
+    type: vless
+    server: "70.39.178.231"
+    port: 46197
+    uuid: "5aab0d40-c509-4560-b048-ade921fdfb6a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "updates.cdn-apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "npJEB6VpYJ9iYTZ-z0IL06Xs7PEz0N3fZU_IRwftQ00"
+      short-id: "f24c17bb7fc284"
+  - name: "🇺🇸_107"
+    type: vless
+    server: "15.204.97.219"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_108"
+    type: vless
+    server: "162.159.44.7"
+    port: 2053
+    uuid: "83afd88f-200f-4d89-bfc7-66eff160c1d8"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "josni.hoyes.cloudns.ch"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "josni.hoyes.cloudns.ch"
+  - name: "🇺🇸_109"
+    type: vless
+    server: "169.40.42.95"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_110"
+    type: vless
+    server: "180.178.60.252"
+    port: 10000
+    uuid: "431fe973-a43a-4fac-bf83-2a772e0d0625"
+    udp: true
+  - name: "🇺🇸_111"
+    type: vless
+    server: "167.17.69.171"
+    port: 443
+    uuid: "00144519-7e0d-476b-8d28-435576af9262"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk"
+      short-id: "0990d22f"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_112"
+    type: vless
+    server: "186.246.21.156"
+    port: 40443
+    uuid: "17d29827-7cf1-4115-b40d-548e10ec355d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM"
+      short-id: "aa3c"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_113"
+    type: vless
+    server: "31.58.50.200"
+    port: 8443
+    uuid: "ec83e1b5-f535-4219-b530-49fdab9ca1ef"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "tradingview.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
+      short-id: ""
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_114"
+    type: vless
+    server: "47.253.226.114"
+    port: 443
+    uuid: "055a1ce8-2a16-4a0d-a2c2-22826c9b2413"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc"
+      short-id: ""
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_115"
     type: vless
     server: "64.49.38.6"
     port: 993
@@ -854,15 +541,292 @@ proxies:
       public-key: "JeVpfwIwteGa8xfysPJUzrbHgmOPyLGomRqyH8Pi7W0"
       short-id: ""
     flow: "xtls-rprx-vision"
-  - name: "🇺🇸_140"
-    type: trojan
-    server: "154.64.226.149"
-    port: 9450
-    password: "ba07a8af-5544-48ac-ab62-3b6c00a44fa6"
-    sni: "hk.catxstar.com"
-    skip-cert-verify: true
+  - name: "🇺🇸_116"
+    type: vless
+    server: "169.40.42.15"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
     udp: true
-  - name: "🇺🇸_141"
+    tls: true
+    skip-cert-verify: true
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_117"
+    type: vless
+    server: "15.204.97.216"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_118"
+    type: vless
+    server: "216.227.169.104"
+    port: 443
+    uuid: "b8794f67-80d9-4124-8fc5-2d2ce5516573"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "AYL1z7PNyo6LqYLeZpXa50FnK9eEu7o18KHRhOlST1w"
+      short-id: "bd72"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_119"
+    type: vless
+    server: "private.netraidly.ru"
+    port: 40443
+    uuid: "5e3f974b-06fc-4555-907a-6681391b7c17"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE"
+      short-id: "2bc0"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_120"
+    type: vless
+    server: "billing.netraidly.ru"
+    port: 40443
+    uuid: "17d29827-7cf1-4115-b40d-548e10ec355d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM"
+      short-id: "aa3c"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_121"
+    type: vless
+    server: "108.162.198.5"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇺🇸_122"
+    type: vless
+    server: "162.159.44.195"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/fp=random"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇺🇸_123"
+    type: vless
+    server: "169.40.42.52"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_124"
+    type: vless
+    server: "194.55.189.249"
+    port: 40443
+    uuid: "8212a50b-25bf-4739-bba1-aaffb5ffc84c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "deepl.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo"
+      short-id: "aae8"
+  - name: "🇺🇸_125"
+    type: vless
+    server: "88.218.44.4"
+    port: 993
+    uuid: "7c74b0e4-f132-5583-4692-622a7d6b71a4"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "swcdn.apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4"
+      short-id: ""
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_126"
+    type: vless
+    server: "70.39.198.183"
+    port: 46197
+    uuid: "5aab0d40-c509-4560-b048-ade921fdfb6a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "updates.cdn-apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "npJEB6VpYJ9iYTZ-z0IL06Xs7PEz0N3fZU_IRwftQ00"
+      short-id: "f24c17bb7fc284"
+  - name: "🇺🇸_127"
+    type: vless
+    server: "169.40.42.182"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_128"
+    type: vless
+    server: "169.40.42.212"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_129"
+    type: vless
+    server: "15.204.97.195"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_130"
+    type: vless
+    server: "15.204.97.206"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_131"
+    type: vless
+    server: "70.39.197.13"
+    port: 46197
+    uuid: "5aab0d40-c509-4560-b048-ade921fdfb6a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "updates.cdn-apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "npJEB6VpYJ9iYTZ-z0IL06Xs7PEz0N3fZU_IRwftQ00"
+      short-id: "f24c17bb7fc284"
+  - name: "🇺🇸_132"
+    type: vless
+    server: "soskeynets.hoyes.cloudns.ch"
+    port: 2053
+    uuid: "83afd88f-200f-4d89-bfc7-66eff160c1d8"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "josni.hoyes.cloudns.ch"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "josni.hoyes.cloudns.ch"
+  - name: "🇺🇸_133"
+    type: vless
+    server: "70.39.198.93"
+    port: 46197
+    uuid: "5aab0d40-c509-4560-b048-ade921fdfb6a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "updates.cdn-apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "npJEB6VpYJ9iYTZ-z0IL06Xs7PEz0N3fZU_IRwftQ00"
+      short-id: "f24c17bb7fc284"
+  - name: "🇺🇸_134"
+    type: vless
+    server: "47.89.186.170"
+    port: 55861
+    uuid: "d51ed55c-d6dd-400b-aaf6-017c33969bfe"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.intel.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs"
+      short-id: "7551ed1b"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_135"
+    type: vless
+    server: "154.19.184.40"
+    port: 52535
+    uuid: "a1ac8747-4fd7-486b-b099-19fbb45610be"
+    udp: true
+  - name: "🇺🇸_136"
+    type: vless
+    server: "169.40.42.179"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+    flow: "xtls-rprx-vision"
+  - name: "🇺🇸_137"
     type: trojan
     server: "163.245.196.68"
     port: 49361
@@ -870,7 +834,7 @@ proxies:
     sni: "163.245.196.68.sslip.io"
     skip-cert-verify: true
     udp: true
-  - name: "🇺🇸_142"
+  - name: "🇺🇸_138"
     type: trojan
     server: "198.62.62.23"
     port: 443
@@ -883,15 +847,15 @@ proxies:
       path: "//assignment"
       headers:
         Host: "www.calmlunch.com"
-  - name: "🇺🇸_143"
+  - name: "🇺🇸_139"
     type: trojan
-    server: "153.75.250.171"
-    port: 49271
-    password: "9ad83f65a560960e6509b677eb6162c1"
-    sni: "153.75.250.171.sslip.io"
+    server: "154.64.226.149"
+    port: 9450
+    password: "ba07a8af-5544-48ac-ab62-3b6c00a44fa6"
+    sni: "hk.catxstar.com"
     skip-cert-verify: true
     udp: true
-  - name: "🇺🇸_144"
+  - name: "🇺🇸_140"
     type: trojan
     server: "oplosgru-c.catcat321.com"
     port: 20004
@@ -899,47 +863,76 @@ proxies:
     sni: "hk.catxstar.com"
     skip-cert-verify: true
     udp: true
-  - name: "🇺🇸_145"
-    type: ss
-    server: "108.181.57.93"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "RSo52SbxW40r"
+  - name: "🇺🇸_141"
+    type: trojan
+    server: "153.75.250.171"
+    port: 49271
+    password: "9ad83f65a560960e6509b677eb6162c1"
+    sni: "153.75.250.171.sslip.io"
+    skip-cert-verify: true
     udp: true
-  - name: "🇺🇸_146"
+  - name: "🇺🇸_142"
     type: ss
-    server: "108.181.118.10"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "G5p6ww4o67HB"
-    udp: true
-  - name: "🇺🇸_147"
-    type: ss
-    server: "173.244.56.6"
+    server: "198.98.53.130"
     port: 443
-    cipher: "aes-128-gcm"
-    password: "shadowsocks"
-    udp: true
-  - name: "🇺🇸_148"
-    type: ss
-    server: "70.39.198.35"
-    port: 54166
     cipher: "chacha20-ietf-poly1305"
-    password: "EvLfWGe0AKvK"
+    password: "eDfN7SODQceIOmIAbtJJtK"
     udp: true
-  - name: "🇺🇸_149"
+  - name: "🇺🇸_143"
     type: ss
     server: "156.146.38.168"
     port: 443
     cipher: "aes-128-gcm"
     password: "shadowsocks"
     udp: true
+  - name: "🇺🇸_144"
+    type: ss
+    server: "173.244.56.9"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "🇺🇸_145"
+    type: ss
+    server: "173.244.56.6"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "🇺🇸_146"
+    type: ss
+    server: "37.19.198.244"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "🇺🇸_147"
+    type: ss
+    server: "156.146.38.170"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "🇺🇸_148"
+    type: ss
+    server: "156.146.38.169"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "🇺🇸_149"
+    type: ss
+    server: "107.172.219.230"
+    port: 2096
+    cipher: "chacha20-ietf-poly1305"
+    password: "768b923a-4918-46ad-96e7-9cf5543ddc4c"
+    udp: true
   - name: "🇺🇸_150"
     type: ss
-    server: "198.98.53.130"
-    port: 443
+    server: "108.181.57.93"
+    port: 8388
     cipher: "chacha20-ietf-poly1305"
-    password: "eDfN7SODQceIOmIAbtJJtK"
+    password: "RSo52SbxW40r"
     udp: true
   - name: "🇺🇸_151"
     type: ss
@@ -950,75 +943,61 @@ proxies:
     udp: true
   - name: "🇺🇸_152"
     type: ss
-    server: "37.19.198.236"
+    server: "37.19.198.243"
     port: 443
     cipher: "aes-128-gcm"
     password: "shadowsocks"
     udp: true
   - name: "🇺🇸_153"
     type: ss
-    server: "37.19.198.243"
+    server: "156.146.38.167"
     port: 443
     cipher: "aes-128-gcm"
     password: "shadowsocks"
     udp: true
   - name: "🇺🇸_154"
     type: ss
-    server: "156.146.38.170"
-    port: 443
-    cipher: "aes-128-gcm"
-    password: "shadowsocks"
+    server: "172.245.235.84"
+    port: 2375
+    cipher: "aes-256-gcm"
+    password: "faBAoD54k87UJG7"
     udp: true
   - name: "🇺🇸_155"
     type: ss
-    server: "156.146.38.169"
-    port: 443
-    cipher: "aes-128-gcm"
-    password: "shadowsocks"
+    server: "108.181.118.10"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "G5p6ww4o67HB"
     udp: true
   - name: "🇺🇸_156"
     type: ss
-    server: "156.146.38.167"
+    server: "37.19.198.236"
     port: 443
     cipher: "aes-128-gcm"
     password: "shadowsocks"
     udp: true
   - name: "🇺🇸_157"
     type: ss
+    server: "70.39.198.35"
+    port: 54166
+    cipher: "chacha20-ietf-poly1305"
+    password: "EvLfWGe0AKvK"
+    udp: true
+  - name: "🇺🇸_158"
+    type: ss
     server: "37.19.198.160"
     port: 443
     cipher: "aes-128-gcm"
     password: "shadowsocks"
     udp: true
-  - name: "🇺🇸_158"
+  - name: "🇺🇸_159"
     type: ss
     server: "68.168.222.210"
     port: 1234
     cipher: "chacha20-ietf-poly1305"
     password: "zz0dHjDfoaSaZuRFLGH-hNfBALSEJUYD"
     udp: true
-  - name: "🇺🇸_159"
-    type: ss
-    server: "37.19.198.244"
-    port: 443
-    cipher: "aes-128-gcm"
-    password: "shadowsocks"
-    udp: true
   - name: "🇺🇸_160"
-    type: ss
-    server: "172.245.235.84"
-    port: 2375
-    cipher: "aes-256-gcm"
-    password: "faBAoD54k87UJG7"
-    udp: true
-  - name: "🇺🇸_161"
-    type: ss
-    server: "173.244.56.9"
-    port: 443
-    cipher: "aes-128-gcm"
-    password: "shadowsocks"
-    udp: true
-  - name: "🇺🇸_162"
     type: ss
     server: "193.42.38.209"
     port: 1080
@@ -1067,6 +1046,7 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇺🇸_81"
       - "🇺🇸_82"
       - "🇺🇸_83"
       - "🇺🇸_84"
@@ -1146,8 +1126,6 @@ proxy-groups:
       - "🇺🇸_158"
       - "🇺🇸_159"
       - "🇺🇸_160"
-      - "🇺🇸_161"
-      - "🇺🇸_162"
 
   - name: "LB-CDN"
     type: load-balance
@@ -1157,6 +1135,7 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇺🇸_81"
       - "🇺🇸_82"
       - "🇺🇸_83"
       - "🇺🇸_84"
@@ -1236,8 +1215,6 @@ proxy-groups:
       - "🇺🇸_158"
       - "🇺🇸_159"
       - "🇺🇸_160"
-      - "🇺🇸_161"
-      - "🇺🇸_162"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -1247,6 +1224,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇺🇸_81"
       - "🇺🇸_82"
       - "🇺🇸_83"
       - "🇺🇸_84"
@@ -1326,8 +1304,6 @@ proxy-groups:
       - "🇺🇸_158"
       - "🇺🇸_159"
       - "🇺🇸_160"
-      - "🇺🇸_161"
-      - "🇺🇸_162"
 
   - name: "FAST-CDN"
     type: url-test
@@ -1336,6 +1312,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇺🇸_81"
       - "🇺🇸_82"
       - "🇺🇸_83"
       - "🇺🇸_84"
@@ -1415,8 +1392,6 @@ proxy-groups:
       - "🇺🇸_158"
       - "🇺🇸_159"
       - "🇺🇸_160"
-      - "🇺🇸_161"
-      - "🇺🇸_162"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -1426,6 +1401,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇺🇸_81"
       - "🇺🇸_82"
       - "🇺🇸_83"
       - "🇺🇸_84"
@@ -1505,13 +1481,12 @@ proxy-groups:
       - "🇺🇸_158"
       - "🇺🇸_159"
       - "🇺🇸_160"
-      - "🇺🇸_161"
-      - "🇺🇸_162"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
+      - "🇺🇸_81"
       - "🇺🇸_82"
       - "🇺🇸_83"
       - "🇺🇸_84"
@@ -1591,8 +1566,6 @@ proxy-groups:
       - "🇺🇸_158"
       - "🇺🇸_159"
       - "🇺🇸_160"
-      - "🇺🇸_161"
-      - "🇺🇸_162"
 
 rules:
   - MATCH,PROXY-BEST

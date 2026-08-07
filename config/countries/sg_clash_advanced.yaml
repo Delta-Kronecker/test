@@ -59,6 +59,19 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
+  - name: "🇸🇬_9"
+    type: vless
+    server: "217.217.254.126"
+    port: 2053
+    uuid: "6b408e62-c5d5-45e1-ae3a-4c9833d46d82"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "T4CMxxAJiCcrGk2r87kMkDcvmfNs3nL-gKleaE1wTHQ"
+      short-id: "fb7ebc9996caf9ac"
   - name: "🇸🇬_10"
     type: vless
     server: "152.42.217.27"
@@ -90,7 +103,7 @@ proxies:
   - name: "🇸🇬_12"
     type: vless
     server: "3.0.111.82"
-    port: 12972
+    port: 10574
     uuid: "814bd064-544d-4255-a070-5705c03f6da9"
     udp: true
     tls: true
@@ -104,7 +117,7 @@ proxies:
   - name: "🇸🇬_13"
     type: vless
     server: "3.0.111.82"
-    port: 10574
+    port: 12972
     uuid: "814bd064-544d-4255-a070-5705c03f6da9"
     udp: true
     tls: true
@@ -116,28 +129,6 @@ proxies:
       short-id: "48050fab"
     flow: "xtls-rprx-vision"
   - name: "🇸🇬_14"
-    type: vless
-    server: "217.217.254.126"
-    port: 2053
-    uuid: "6b408e62-c5d5-45e1-ae3a-4c9833d46d82"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "T4CMxxAJiCcrGk2r87kMkDcvmfNs3nL-gKleaE1wTHQ"
-      short-id: "fb7ebc9996caf9ac"
-  - name: "🇸🇬_15"
-    type: vless
-    server: "freenet.sahanwickramasinghevip.shop"
-    port: 443
-    uuid: "5e107642-469d-4904-b00d-4f899526e964"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "freenet.sahanwickramasinghevip.shop"
-  - name: "🇸🇬_16"
     type: vless
     server: "3.0.111.82"
     port: 17623
@@ -151,7 +142,7 @@ proxies:
       public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
       short-id: "48050fab"
     flow: "xtls-rprx-vision"
-  - name: "🇸🇬_17"
+  - name: "🇸🇬_15"
     type: trojan
     server: "tidy-gelding.rooster465.autos"
     port: 443
@@ -159,7 +150,7 @@ proxies:
     sni: "tidy-gelding.rooster465.autos"
     skip-cert-verify: true
     udp: true
-  - name: "🇸🇬_18"
+  - name: "🇸🇬_16"
     type: ss
     server: "167.150.100.115"
     port: 27755
@@ -208,6 +199,7 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇸🇬_9"
       - "🇸🇬_10"
       - "🇸🇬_11"
       - "🇸🇬_12"
@@ -215,8 +207,6 @@ proxy-groups:
       - "🇸🇬_14"
       - "🇸🇬_15"
       - "🇸🇬_16"
-      - "🇸🇬_17"
-      - "🇸🇬_18"
 
   - name: "LB-CDN"
     type: load-balance
@@ -226,6 +216,7 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇸🇬_9"
       - "🇸🇬_10"
       - "🇸🇬_11"
       - "🇸🇬_12"
@@ -233,8 +224,6 @@ proxy-groups:
       - "🇸🇬_14"
       - "🇸🇬_15"
       - "🇸🇬_16"
-      - "🇸🇬_17"
-      - "🇸🇬_18"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -244,6 +233,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇸🇬_9"
       - "🇸🇬_10"
       - "🇸🇬_11"
       - "🇸🇬_12"
@@ -251,8 +241,6 @@ proxy-groups:
       - "🇸🇬_14"
       - "🇸🇬_15"
       - "🇸🇬_16"
-      - "🇸🇬_17"
-      - "🇸🇬_18"
 
   - name: "FAST-CDN"
     type: url-test
@@ -261,6 +249,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇸🇬_9"
       - "🇸🇬_10"
       - "🇸🇬_11"
       - "🇸🇬_12"
@@ -268,8 +257,6 @@ proxy-groups:
       - "🇸🇬_14"
       - "🇸🇬_15"
       - "🇸🇬_16"
-      - "🇸🇬_17"
-      - "🇸🇬_18"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -279,6 +266,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇸🇬_9"
       - "🇸🇬_10"
       - "🇸🇬_11"
       - "🇸🇬_12"
@@ -286,13 +274,12 @@ proxy-groups:
       - "🇸🇬_14"
       - "🇸🇬_15"
       - "🇸🇬_16"
-      - "🇸🇬_17"
-      - "🇸🇬_18"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
+      - "🇸🇬_9"
       - "🇸🇬_10"
       - "🇸🇬_11"
       - "🇸🇬_12"
@@ -300,8 +287,6 @@ proxy-groups:
       - "🇸🇬_14"
       - "🇸🇬_15"
       - "🇸🇬_16"
-      - "🇸🇬_17"
-      - "🇸🇬_18"
 
 rules:
   - MATCH,PROXY-BEST
