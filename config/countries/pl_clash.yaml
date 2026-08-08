@@ -94,17 +94,17 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇵🇱_3"
     type: vless
-    server: "144.31.0.34"
-    port: 7443
-    uuid: "1fef5248-fdd2-40d6-b3b9-6c33d4e74724"
+    server: "201.3.225.13"
+    port: 443
+    uuid: "76713d07-5a6b-49c2-abd8-bc450a2fa7fc"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "_custom_"
-    client-fingerprint: "firefox"
+    servername: "uwu.spectrumproxy.shop"
+    client-fingerprint: "chrome"
     reality-opts:
-      public-key: "8wD0IhR27ftD5LyJDq9CaFzi6DgA4vFtB-UP6QIdWVc"
-      short-id: "e8ca5079a5e91481"
+      public-key: "EyzTSZxq5qlUT2xW0l7VP-DzIh2ucabMan9ekEv9Owo"
+      short-id: "143627f1"
     flow: "xtls-rprx-vision"
   - name: "🇵🇱_4"
     type: ss

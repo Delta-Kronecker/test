@@ -65,6 +65,20 @@ dns:
 proxies:
   - name: "🇸🇬_1"
     type: vless
+    server: "3.0.111.82"
+    port: 12972
+    uuid: "814bd064-544d-4255-a070-5705c03f6da9"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
+      short-id: "48050fab"
+    flow: "xtls-rprx-vision"
+  - name: "🇸🇬_2"
+    type: vless
     server: "217.217.254.126"
     port: 2053
     uuid: "6b408e62-c5d5-45e1-ae3a-4c9833d46d82"
@@ -76,35 +90,7 @@ proxies:
     reality-opts:
       public-key: "T4CMxxAJiCcrGk2r87kMkDcvmfNs3nL-gKleaE1wTHQ"
       short-id: "fb7ebc9996caf9ac"
-  - name: "🇸🇬_2"
-    type: vless
-    server: "152.42.217.27"
-    port: 4321
-    uuid: "b8f3a337-ad39-4064-95f1-33a725a65877"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "iFKNWOLqlwrSmvR8wkxap1u85leVrr6YqEBy3Vn8WX0"
-      short-id: "950e9d42106bedae"
-    flow: "xtls-rprx-vision"
   - name: "🇸🇬_3"
-    type: vless
-    server: "91.192.81.214"
-    port: 443
-    uuid: "607801ac-dbdd-4938-a167-129015d9978e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "bMcyxNueltQhz5Kuxcf8odDStWHowYfLhKNdCbUweDc"
-      short-id: "d1742269"
-    flow: "xtls-rprx-vision"
-  - name: "🇸🇬_4"
     type: vless
     server: "3.0.111.82"
     port: 10574
@@ -118,19 +104,33 @@ proxies:
       public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
       short-id: "48050fab"
     flow: "xtls-rprx-vision"
-  - name: "🇸🇬_5"
+  - name: "🇸🇬_4"
     type: vless
-    server: "3.0.111.82"
-    port: 12972
-    uuid: "814bd064-544d-4255-a070-5705c03f6da9"
+    server: "91.192.81.214"
+    port: 443
+    uuid: "607801ac-dbdd-4938-a167-129015d9978e"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "www.apple.com"
+    servername: "www.cloudflare.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
-      short-id: "48050fab"
+      public-key: "bMcyxNueltQhz5Kuxcf8odDStWHowYfLhKNdCbUweDc"
+      short-id: "d1742269"
+    flow: "xtls-rprx-vision"
+  - name: "🇸🇬_5"
+    type: vless
+    server: "152.42.217.27"
+    port: 4321
+    uuid: "b8f3a337-ad39-4064-95f1-33a725a65877"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.yahoo.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "iFKNWOLqlwrSmvR8wkxap1u85leVrr6YqEBy3Vn8WX0"
+      short-id: "950e9d42106bedae"
     flow: "xtls-rprx-vision"
   - name: "🇸🇬_6"
     type: vless

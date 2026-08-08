@@ -59,6 +59,48 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
+  - name: "🇫🇮_9"
+    type: vless
+    server: "staging.lastilhame.monster"
+    port: 443
+    uuid: "455cfdc6-9abf-4e40-863f-5ff6cc63457c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.microsoft.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
+      short-id: "18e4d2d21241"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇮_10"
+    type: vless
+    server: "107.181.151.39"
+    port: 443
+    uuid: "1896c6c9-a941-4688-a865-29027bf7f8e6"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.microsoft.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk"
+      short-id: "6c825bc79850"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇮_11"
+    type: vless
+    server: "5.181.21.234"
+    port: 443
+    uuid: "d7fc372d-c057-43ce-8070-9b96abbc60f3"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "fl4.raketa-balance.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "JaP4bhvIMW-l7T0_RkLra59DeBYI6W9XemKa8MyRPSY"
+      short-id: "6c6082a2223c1d03"
+    flow: "xtls-rprx-vision"
   - name: "🇫🇮_12"
     type: vless
     server: "server.slavkiti.monster"
@@ -75,45 +117,46 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇫🇮_13"
     type: vless
-    server: "107.181.151.39"
-    port: 443
-    uuid: "1896c6c9-a941-4688-a865-29027bf7f8e6"
+    server: "83.147.216.223"
+    port: 4433
+    uuid: "660174a2-d32d-4521-840d-d1853bfc80b8"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "www.microsoft.com"
+    servername: "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
     client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk"
-      short-id: "6c825bc79850"
-    flow: "xtls-rprx-vision"
+    network: ws
+    ws-opts:
+      path: "/@Marisa_kristi"
+      headers:
+        Host: "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
   - name: "🇫🇮_14"
     type: vless
-    server: "5.181.21.234"
+    server: "107.181.147.22"
     port: 443
-    uuid: "d7fc372d-c057-43ce-8070-9b96abbc60f3"
+    uuid: "5e18094c-18b1-4198-b211-96b40518cecf"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "fl4.raketa-balance.com"
+    servername: "www.techradar.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "JaP4bhvIMW-l7T0_RkLra59DeBYI6W9XemKa8MyRPSY"
-      short-id: "6c6082a2223c1d03"
+      public-key: "Cs45TZ-4YKa8fWZ72YJcIcQCKipWsoYNZHEqFvs-PTE"
+      short-id: "f6e197a0b9f2"
     flow: "xtls-rprx-vision"
   - name: "🇫🇮_15"
     type: vless
-    server: "staging.lastilhame.monster"
+    server: "email.swiftraci.org"
     port: 443
-    uuid: "455cfdc6-9abf-4e40-863f-5ff6cc63457c"
+    uuid: "baf498db-7039-4ba5-90df-d5f5e5c75331"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "www.microsoft.com"
+    servername: "www.hollywoodreporter.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "18e4d2d21241"
+      public-key: "Cs45TZ-4YKa8fWZ72YJcIcQCKipWsoYNZHEqFvs-PTE"
+      short-id: "8492240eab92"
     flow: "xtls-rprx-vision"
   - name: "🇫🇮_16"
     type: vless
@@ -129,85 +172,6 @@ proxies:
       public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
       short-id: "b27ba098687b"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇮_17"
-    type: vless
-    server: "83.143.112.140.cdn-one.org"
-    port: 443
-    uuid: "4f375fb4-3c95-425f-bc7b-8085487a6f3c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "83.143.112.140.cdn-one.org"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/29378/wQYeoLE7LS"
-      headers:
-        Host: "83.143.112.140.cdn-one.org"
-  - name: "🇫🇮_18"
-    type: vless
-    server: "107.181.147.22"
-    port: 443
-    uuid: "5e18094c-18b1-4198-b211-96b40518cecf"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.techradar.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Cs45TZ-4YKa8fWZ72YJcIcQCKipWsoYNZHEqFvs-PTE"
-      short-id: "f6e197a0b9f2"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇮_19"
-    type: vless
-    server: "email.swiftraci.org"
-    port: 443
-    uuid: "baf498db-7039-4ba5-90df-d5f5e5c75331"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.hollywoodreporter.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Cs45TZ-4YKa8fWZ72YJcIcQCKipWsoYNZHEqFvs-PTE"
-      short-id: "8492240eab92"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇮_20"
-    type: vless
-    server: "83.147.216.223"
-    port: 4433
-    uuid: "660174a2-d32d-4521-840d-d1853bfc80b8"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/@Marisa_kristi"
-      headers:
-        Host: "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
-  - name: "🇫🇮_21"
-    type: vless
-    server: "31.76.80.205"
-    port: 443
-    uuid: "b6f29f8d-016e-4f30-b57f-c0cdafab2a40"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "ads.x5.ru"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw"
-      short-id: "6ba85179e30d4fc2"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇮_22"
-    type: ss
-    server: "31.76.80.205"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "UZQY9hNjVNWwamajrXAf1vt8u63nj0fF"
-    udp: true
 
 proxy-groups:
   # ── Top-level selector ────────────────────────────────────────────────────
@@ -250,17 +214,14 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇫🇮_9"
+      - "🇫🇮_10"
+      - "🇫🇮_11"
       - "🇫🇮_12"
       - "🇫🇮_13"
       - "🇫🇮_14"
       - "🇫🇮_15"
       - "🇫🇮_16"
-      - "🇫🇮_17"
-      - "🇫🇮_18"
-      - "🇫🇮_19"
-      - "🇫🇮_20"
-      - "🇫🇮_21"
-      - "🇫🇮_22"
 
   - name: "LB-CDN"
     type: load-balance
@@ -270,17 +231,14 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
+      - "🇫🇮_9"
+      - "🇫🇮_10"
+      - "🇫🇮_11"
       - "🇫🇮_12"
       - "🇫🇮_13"
       - "🇫🇮_14"
       - "🇫🇮_15"
       - "🇫🇮_16"
-      - "🇫🇮_17"
-      - "🇫🇮_18"
-      - "🇫🇮_19"
-      - "🇫🇮_20"
-      - "🇫🇮_21"
-      - "🇫🇮_22"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -290,17 +248,14 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇫🇮_9"
+      - "🇫🇮_10"
+      - "🇫🇮_11"
       - "🇫🇮_12"
       - "🇫🇮_13"
       - "🇫🇮_14"
       - "🇫🇮_15"
       - "🇫🇮_16"
-      - "🇫🇮_17"
-      - "🇫🇮_18"
-      - "🇫🇮_19"
-      - "🇫🇮_20"
-      - "🇫🇮_21"
-      - "🇫🇮_22"
 
   - name: "FAST-CDN"
     type: url-test
@@ -309,17 +264,14 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇫🇮_9"
+      - "🇫🇮_10"
+      - "🇫🇮_11"
       - "🇫🇮_12"
       - "🇫🇮_13"
       - "🇫🇮_14"
       - "🇫🇮_15"
       - "🇫🇮_16"
-      - "🇫🇮_17"
-      - "🇫🇮_18"
-      - "🇫🇮_19"
-      - "🇫🇮_20"
-      - "🇫🇮_21"
-      - "🇫🇮_22"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -329,33 +281,27 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇫🇮_9"
+      - "🇫🇮_10"
+      - "🇫🇮_11"
       - "🇫🇮_12"
       - "🇫🇮_13"
       - "🇫🇮_14"
       - "🇫🇮_15"
       - "🇫🇮_16"
-      - "🇫🇮_17"
-      - "🇫🇮_18"
-      - "🇫🇮_19"
-      - "🇫🇮_20"
-      - "🇫🇮_21"
-      - "🇫🇮_22"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
+      - "🇫🇮_9"
+      - "🇫🇮_10"
+      - "🇫🇮_11"
       - "🇫🇮_12"
       - "🇫🇮_13"
       - "🇫🇮_14"
       - "🇫🇮_15"
       - "🇫🇮_16"
-      - "🇫🇮_17"
-      - "🇫🇮_18"
-      - "🇫🇮_19"
-      - "🇫🇮_20"
-      - "🇫🇮_21"
-      - "🇫🇮_22"
 
 rules:
   - MATCH,PROXY-BEST

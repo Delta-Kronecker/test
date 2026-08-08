@@ -59,59 +59,7 @@ dns:
     - tls://94.140.14.14:853
 
 proxies:
-  - name: "🇬🇧_12"
-    type: vless
-    server: "57.129.132.223"
-    port: 80
-    uuid: "9e20b04d-5a81-4e16-b421-01e502f0aac6"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "google.com"
-  - name: "🇬🇧_13"
-    type: vless
-    server: "144.31.213.150"
-    port: 443
-    uuid: "b052df40-d51c-456c-9bd6-57af01a87e4e"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "cdn.pinecloud.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "vWSgdMDirb9aDZLWijSXXXl-NCTrtBgEe9MQqcgV6h8"
-      short-id: "6a2e3af684799b19"
-    flow: "xtls-rprx-vision"
-  - name: "🇬🇧_14"
-    type: vless
-    server: "82.39.171.145"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-    flow: "xtls-rprx-vision"
   - name: "🇬🇧_15"
-    type: vless
-    server: "46.250.250.149"
-    port: 2053
-    uuid: "98944209-4d92-41b2-9c24-c5ac17b3b493"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "2mp1wwmKQyvIVuGujoT0AGoAHwP1IFXlZRj8jB_UnGo"
-      short-id: "61abecf0a82c31f5"
-  - name: "🇬🇧_16"
     type: vless
     server: "82.39.171.148"
     port: 443
@@ -125,7 +73,50 @@ proxies:
       public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
       short-id: "c39cc7310a"
     flow: "xtls-rprx-vision"
+  - name: "🇬🇧_16"
+    type: vless
+    server: "91.193.59.27"
+    port: 2096
+    uuid: "a1de0630-5786-48a0-84f6-dc6f2de10d6d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "vlso300.1d.mom"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/socks5=888:888@hkip.1d.mom:1080"
+      headers:
+        Host: "vlso300.1d.mom"
   - name: "🇬🇧_17"
+    type: vless
+    server: "91.193.59.32"
+    port: 2083
+    uuid: "a1de0630-5786-48a0-84f6-dc6f2de10d6d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "vlsovip.1d.mom"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/socks5=888:888@hkip.1d.mom:1080"
+      headers:
+        Host: "vlsovip.1d.mom"
+  - name: "🇬🇧_18"
+    type: vless
+    server: "46.250.250.149"
+    port: 2053
+    uuid: "98944209-4d92-41b2-9c24-c5ac17b3b493"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "2mp1wwmKQyvIVuGujoT0AGoAHwP1IFXlZRj8jB_UnGo"
+      short-id: "61abecf0a82c31f5"
+  - name: "🇬🇧_19"
     type: vless
     server: "149.248.79.235"
     port: 17301
@@ -141,50 +132,17 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: ""
-  - name: "🇬🇧_18"
-    type: vless
-    server: "91.193.59.27"
-    port: 2096
-    uuid: "a1de0630-5786-48a0-84f6-dc6f2de10d6d"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "vlso300.1d.mom"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/socks5=888:888@hkip.1d.mom:1080"
-      headers:
-        Host: "vlso300.1d.mom"
-  - name: "🇬🇧_19"
-    type: vless
-    server: "91.193.59.32"
-    port: 2083
-    uuid: "a1de0630-5786-48a0-84f6-dc6f2de10d6d"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "vlsovip.1d.mom"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/socks5=888:888@hkip.1d.mom:1080"
-      headers:
-        Host: "vlsovip.1d.mom"
   - name: "🇬🇧_20"
     type: vless
-    server: "cdn.pinecloud.net"
-    port: 443
-    uuid: "b052df40-d51c-456c-9bd6-57af01a87e4e"
+    server: "57.129.132.223"
+    port: 80
+    uuid: "9e20b04d-5a81-4e16-b421-01e502f0aac6"
     udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "cdn.pinecloud.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "vWSgdMDirb9aDZLWijSXXXl-NCTrtBgEe9MQqcgV6h8"
-      short-id: "6a2e3af684799b19"
-    flow: "xtls-rprx-vision"
+    network: ws
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "google.com"
   - name: "🇬🇧_21"
     type: vless
     server: "82.39.171.131"
@@ -200,11 +158,74 @@ proxies:
       short-id: "c39cc7310a"
     flow: "xtls-rprx-vision"
   - name: "🇬🇧_22"
+    type: vless
+    server: "82.39.171.145"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+    flow: "xtls-rprx-vision"
+  - name: "🇬🇧_23"
+    type: vless
+    server: "144.31.213.150"
+    port: 443
+    uuid: "b052df40-d51c-456c-9bd6-57af01a87e4e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "cdn.pinecloud.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "vWSgdMDirb9aDZLWijSXXXl-NCTrtBgEe9MQqcgV6h8"
+      short-id: "6a2e3af684799b19"
+    flow: "xtls-rprx-vision"
+  - name: "🇬🇧_24"
+    type: vless
+    server: "cdn.pinecloud.net"
+    port: 443
+    uuid: "b052df40-d51c-456c-9bd6-57af01a87e4e"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "cdn.pinecloud.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "vWSgdMDirb9aDZLWijSXXXl-NCTrtBgEe9MQqcgV6h8"
+      short-id: "6a2e3af684799b19"
+    flow: "xtls-rprx-vision"
+  - name: "🇬🇧_25"
     type: ss
     server: "94.156.250.148"
     port: 7001
     cipher: "aes-256-gcm"
     password: "RexnBgU7EV5ADxG"
+    udp: true
+  - name: "🇬🇧_26"
+    type: ss
+    server: "141.98.101.182"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "🇬🇧_27"
+    type: ss
+    server: "141.98.101.181"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "🇬🇧_28"
+    type: ss
+    server: "141.98.101.179"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
     udp: true
 
 proxy-groups:
@@ -248,9 +269,6 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
-      - "🇬🇧_12"
-      - "🇬🇧_13"
-      - "🇬🇧_14"
       - "🇬🇧_15"
       - "🇬🇧_16"
       - "🇬🇧_17"
@@ -259,6 +277,12 @@ proxy-groups:
       - "🇬🇧_20"
       - "🇬🇧_21"
       - "🇬🇧_22"
+      - "🇬🇧_23"
+      - "🇬🇧_24"
+      - "🇬🇧_25"
+      - "🇬🇧_26"
+      - "🇬🇧_27"
+      - "🇬🇧_28"
 
   - name: "LB-CDN"
     type: load-balance
@@ -268,9 +292,6 @@ proxy-groups:
     tolerance: 150
     lazy: true
     proxies:
-      - "🇬🇧_12"
-      - "🇬🇧_13"
-      - "🇬🇧_14"
       - "🇬🇧_15"
       - "🇬🇧_16"
       - "🇬🇧_17"
@@ -279,6 +300,12 @@ proxy-groups:
       - "🇬🇧_20"
       - "🇬🇧_21"
       - "🇬🇧_22"
+      - "🇬🇧_23"
+      - "🇬🇧_24"
+      - "🇬🇧_25"
+      - "🇬🇧_26"
+      - "🇬🇧_27"
+      - "🇬🇧_28"
 
   # ── Fastest-proxy groups ──────────────────────────────────────────────────
   - name: "FAST-ALL"
@@ -288,9 +315,6 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇬🇧_12"
-      - "🇬🇧_13"
-      - "🇬🇧_14"
       - "🇬🇧_15"
       - "🇬🇧_16"
       - "🇬🇧_17"
@@ -299,6 +323,12 @@ proxy-groups:
       - "🇬🇧_20"
       - "🇬🇧_21"
       - "🇬🇧_22"
+      - "🇬🇧_23"
+      - "🇬🇧_24"
+      - "🇬🇧_25"
+      - "🇬🇧_26"
+      - "🇬🇧_27"
+      - "🇬🇧_28"
 
   - name: "FAST-CDN"
     type: url-test
@@ -307,9 +337,6 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇬🇧_12"
-      - "🇬🇧_13"
-      - "🇬🇧_14"
       - "🇬🇧_15"
       - "🇬🇧_16"
       - "🇬🇧_17"
@@ -318,6 +345,12 @@ proxy-groups:
       - "🇬🇧_20"
       - "🇬🇧_21"
       - "🇬🇧_22"
+      - "🇬🇧_23"
+      - "🇬🇧_24"
+      - "🇬🇧_25"
+      - "🇬🇧_26"
+      - "🇬🇧_27"
+      - "🇬🇧_28"
 
   # ── UDP group ─────────────────────────────────────────────────────────────
   - name: "UDP-BEST"
@@ -327,9 +360,6 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇬🇧_12"
-      - "🇬🇧_13"
-      - "🇬🇧_14"
       - "🇬🇧_15"
       - "🇬🇧_16"
       - "🇬🇧_17"
@@ -338,14 +368,17 @@ proxy-groups:
       - "🇬🇧_20"
       - "🇬🇧_21"
       - "🇬🇧_22"
+      - "🇬🇧_23"
+      - "🇬🇧_24"
+      - "🇬🇧_25"
+      - "🇬🇧_26"
+      - "🇬🇧_27"
+      - "🇬🇧_28"
 
   # ── Manual selector ───────────────────────────────────────────────────────
   - name: "MANUAL"
     type: select
     proxies:
-      - "🇬🇧_12"
-      - "🇬🇧_13"
-      - "🇬🇧_14"
       - "🇬🇧_15"
       - "🇬🇧_16"
       - "🇬🇧_17"
@@ -354,6 +387,12 @@ proxy-groups:
       - "🇬🇧_20"
       - "🇬🇧_21"
       - "🇬🇧_22"
+      - "🇬🇧_23"
+      - "🇬🇧_24"
+      - "🇬🇧_25"
+      - "🇬🇧_26"
+      - "🇬🇧_27"
+      - "🇬🇧_28"
 
 rules:
   - MATCH,PROXY-BEST

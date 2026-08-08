@@ -1,2 +1,1 @@
 vless://2a77a470-315c-493d-b690-59b814a804cb@178.83.226.55:443?security=reality&encryption=none&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sellflow.org#%F0%9F%87%A8%F0%9F%87%AD
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpYRjBrbHc3ODcwdlhuM3VRSXhlMTlR@146.70.26.156:1080#%F0%9F%87%A8%F0%9F%87%AD

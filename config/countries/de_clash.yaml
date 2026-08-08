@@ -65,128 +65,6 @@ dns:
 proxies:
   - name: "🇩🇪_1"
     type: vless
-    server: "49.13.64.206"
-    port: 443
-    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "support.zoom.us.yxls.eu.cc"
-    client-fingerprint: "chrome"
-    network: ws
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇩🇪_2"
-    type: vless
-    server: "jdwabxe.cvewfjg.shop"
-    port: 443
-    uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
-      short-id: "7a76f3c4b9dd"
-    flow: "xtls-rprx-vision"
-  - name: "🇩🇪_3"
-    type: vless
-    server: "144.31.87.16"
-    port: 443
-    uuid: "c40f773e-3b96-417e-b22c-e48cb63ca7d9"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "yandex.ru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "l5eAOSPQMEyzEPvWGAKvCkcPpsJvR3DJfYo6elw1UTE"
-      short-id: "3b802dad547b0847"
-  - name: "🇩🇪_4"
-    type: vless
-    server: "159.195.44.159"
-    port: 443
-    uuid: "859a537b-09cf-4bce-8da4-ecbb72950e3a"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "5.oncloudnineservicestreang.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "RurLbpOTStqCjS3lhwB0d3MEZ3629j3atv_r1dT5zjM"
-      short-id: "273940fba6ad8250"
-    flow: "xtls-rprx-vision"
-  - name: "🇩🇪_5"
-    type: vless
-    server: "159.195.27.99"
-    port: 443
-    uuid: "859a537b-09cf-4bce-8da4-ecbb72950e3a"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "1.oncloudnineservicestreang.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "EuExqpNB141gtIjbCmU0yyurbBqiLtGjDg-n95JIuig"
-      short-id: "28415a7918168947"
-    flow: "xtls-rprx-vision"
-  - name: "🇩🇪_6"
-    type: vless
-    server: "144.31.87.16"
-    port: 2053
-    uuid: "c40f773e-3b96-417e-b22c-e48cb63ca7d9"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "pinterest.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "EDeWEPBq0QDOPp73PNVlaV2EWaEBWhgBcNy3MROgZ00"
-      short-id: "04b38b6b152a1b0b"
-  - name: "🇩🇪_7"
-    type: vless
-    server: "jdwadgw.cvewfjg.shop"
-    port: 443
-    uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
-      short-id: "7a76f3c4b9dd"
-    flow: "xtls-rprx-vision"
-  - name: "🇩🇪_8"
-    type: vless
-    server: "185.126.67.76"
-    port: 443
-    uuid: "b6f3b292-00c9-430e-bc4c-b1294bd895c0"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "cdn-de-4.ai-apiroute.cc"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "kaw2U8L2ZTcgo56qUBONfylYJpHprI_CgZfv1I4q2Sc"
-      short-id: "b512d49930874a31"
-    flow: "xtls-rprx-vision"
-  - name: "🇩🇪_9"
-    type: vless
-    server: "57.129.41.216"
-    port: 80
-    uuid: "7d74eae4-8a06-4306-a923-ad686f30bf26"
-    udp: true
-    network: ws
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "OV-Germany1.09vpn.com"
-  - name: "🇩🇪_10"
-    type: vless
     server: "93.114.194.114"
     port: 448
     uuid: "bc5b801f-49a7-4db7-ac92-a2c57d42d132"
@@ -198,104 +76,7 @@ proxies:
     reality-opts:
       public-key: "qX6IJfWNN-SNray6xJugb8pCpgY_zjeyCfvq9IUyd3w"
       short-id: "e1bdc95c1554c8eb"
-  - name: "🇩🇪_11"
-    type: vless
-    server: "93.152.223.98"
-    port: 443
-    uuid: "0b9bcbc1-b289-4a64-86fa-a5b731b65384"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "web.max.ru"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "QocXHwad0mV7WA5jSAcqDac3uuVBEp1WF775-CilniE"
-      short-id: "45ba18f429ad1f28"
-    flow: "xtls-rprx-vision"
-  - name: "🇩🇪_12"
-    type: vless
-    server: "152.53.239.182"
-    port: 443
-    uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
-      short-id: "7a76f3c4b9dd"
-    flow: "xtls-rprx-vision"
-  - name: "🇩🇪_13"
-    type: vless
-    server: "168.222.244.66"
-    port: 10277
-    uuid: "c95f6104-6b19-4f3e-aaa6-a74fec3ee258"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "play.google.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "5WM9qJQUXyEnE2xaJHvXai6IV7HrBLnuy5s39fcqCAA"
-      short-id: "7a"
-  - name: "🇩🇪_14"
-    type: vless
-    server: "jdvymxi.cvewfjg.shop"
-    port: 443
-    uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
-      short-id: "7a76f3c4b9dd"
-    flow: "xtls-rprx-vision"
-  - name: "🇩🇪_15"
-    type: vless
-    server: "159.195.22.155"
-    port: 443
-    uuid: "859a537b-09cf-4bce-8da4-ecbb72950e3a"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "2.oncloudnineservicestreang.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Mg3ZxHNUFbX96q1HpS3WReeM7rnhEsXXtlEzxALeTDc"
-      short-id: "d8d3dc6c3ca45dd4"
-    flow: "xtls-rprx-vision"
-  - name: "🇩🇪_16"
-    type: vless
-    server: "jdwacdi.cvewfjg.shop"
-    port: 443
-    uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
-      short-id: "7a76f3c4b9dd"
-    flow: "xtls-rprx-vision"
-  - name: "🇩🇪_17"
-    type: vless
-    server: "152.53.127.214"
-    port: 443
-    uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
-      short-id: "7a76f3c4b9dd"
-    flow: "xtls-rprx-vision"
-  - name: "🇩🇪_18"
+  - name: "🇩🇪_2"
     type: vless
     server: "170.101.109.37"
     port: 443
@@ -309,9 +90,9 @@ proxies:
       public-key: "rTnh7Y8RsSA5HSvFf-pWT49x8va6U6XHMRgNiMuwB0A"
       short-id: "ab88d256"
     flow: "xtls-rprx-vision"
-  - name: "🇩🇪_19"
+  - name: "🇩🇪_3"
     type: vless
-    server: "152.53.236.182"
+    server: "jdwacdi.cvewfjg.shop"
     port: 443
     uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
     udp: true
@@ -323,7 +104,21 @@ proxies:
       public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
       short-id: "7a76f3c4b9dd"
     flow: "xtls-rprx-vision"
-  - name: "🇩🇪_20"
+  - name: "🇩🇪_4"
+    type: vless
+    server: "93.152.223.98"
+    port: 443
+    uuid: "0b9bcbc1-b289-4a64-86fa-a5b731b65384"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "web.max.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "QocXHwad0mV7WA5jSAcqDac3uuVBEp1WF775-CilniE"
+      short-id: "45ba18f429ad1f28"
+    flow: "xtls-rprx-vision"
+  - name: "🇩🇪_5"
     type: vless
     server: "138.124.126.158"
     port: 443
@@ -337,7 +132,130 @@ proxies:
       public-key: "Lxs8Ruv2zHH0XW5EiQmuCaScfkGPCxWjW02YDWH8pyU"
       short-id: "eb0cca7312345678"
     flow: "xtls-rprx-vision"
-  - name: "🇩🇪_21"
+  - name: "🇩🇪_6"
+    type: vless
+    server: "144.31.87.16"
+    port: 443
+    uuid: "c40f773e-3b96-417e-b22c-e48cb63ca7d9"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "yandex.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "l5eAOSPQMEyzEPvWGAKvCkcPpsJvR3DJfYo6elw1UTE"
+      short-id: "3b802dad547b0847"
+  - name: "🇩🇪_7"
+    type: vless
+    server: "jdwabxe.cvewfjg.shop"
+    port: 443
+    uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
+      short-id: "7a76f3c4b9dd"
+    flow: "xtls-rprx-vision"
+  - name: "🇩🇪_8"
+    type: vless
+    server: "de.vpnbase.net"
+    port: 80
+    uuid: "dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51"
+    udp: true
+    network: ws
+    ws-opts:
+      path: "/http"
+      headers:
+        Host: "de.vpnbase.net"
+  - name: "🇩🇪_9"
+    type: vless
+    server: "159.195.44.159"
+    port: 443
+    uuid: "859a537b-09cf-4bce-8da4-ecbb72950e3a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "5.oncloudnineservicestreang.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "RurLbpOTStqCjS3lhwB0d3MEZ3629j3atv_r1dT5zjM"
+      short-id: "273940fba6ad8250"
+    flow: "xtls-rprx-vision"
+  - name: "🇩🇪_10"
+    type: vless
+    server: "jdvymxi.cvewfjg.shop"
+    port: 443
+    uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
+      short-id: "7a76f3c4b9dd"
+    flow: "xtls-rprx-vision"
+  - name: "🇩🇪_11"
+    type: vless
+    server: "185.126.67.76"
+    port: 443
+    uuid: "b6f3b292-00c9-430e-bc4c-b1294bd895c0"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "cdn-de-4.ai-apiroute.cc"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "kaw2U8L2ZTcgo56qUBONfylYJpHprI_CgZfv1I4q2Sc"
+      short-id: "b512d49930874a31"
+    flow: "xtls-rprx-vision"
+  - name: "🇩🇪_12"
+    type: vless
+    server: "152.53.127.214"
+    port: 443
+    uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
+      short-id: "7a76f3c4b9dd"
+    flow: "xtls-rprx-vision"
+  - name: "🇩🇪_13"
+    type: vless
+    server: "jdwadgw.cvewfjg.shop"
+    port: 443
+    uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
+      short-id: "7a76f3c4b9dd"
+    flow: "xtls-rprx-vision"
+  - name: "🇩🇪_14"
+    type: vless
+    server: "49.13.64.206"
+    port: 443
+    uuid: "4d10c997-4781-4cd9-82c3-15453523e12c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "support.zoom.us.yxls.eu.cc"
+    client-fingerprint: "chrome"
+    network: ws
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "support.zoom.us.yxls.eu.cc"
+  - name: "🇩🇪_15"
     type: vless
     server: "159.195.45.129"
     port: 443
@@ -351,7 +269,33 @@ proxies:
       public-key: "dp-ncBuRHgZl5O80eHBYhSKo1i9qbt-J7MJ1alyWXmM"
       short-id: "1991780b928b292d"
     flow: "xtls-rprx-vision"
-  - name: "🇩🇪_22"
+  - name: "🇩🇪_16"
+    type: vless
+    server: "144.31.87.16"
+    port: 2053
+    uuid: "c40f773e-3b96-417e-b22c-e48cb63ca7d9"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "pinterest.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "EDeWEPBq0QDOPp73PNVlaV2EWaEBWhgBcNy3MROgZ00"
+      short-id: "04b38b6b152a1b0b"
+  - name: "🇩🇪_17"
+    type: vless
+    server: "168.222.244.66"
+    port: 10277
+    uuid: "c95f6104-6b19-4f3e-aaa6-a74fec3ee258"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "play.google.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "5WM9qJQUXyEnE2xaJHvXai6IV7HrBLnuy5s39fcqCAA"
+      short-id: "7a"
+  - name: "🇩🇪_18"
     type: vless
     server: "152.53.236.22"
     port: 443
@@ -365,28 +309,84 @@ proxies:
       public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
       short-id: "7a76f3c4b9dd"
     flow: "xtls-rprx-vision"
-  - name: "🇩🇪_23"
+  - name: "🇩🇪_19"
     type: vless
-    server: "31.76.11.46.cdn-one.org"
+    server: "159.195.22.155"
     port: 443
-    uuid: "4f375fb4-3c95-425f-bc7b-8085487a6f3c"
+    uuid: "859a537b-09cf-4bce-8da4-ecbb72950e3a"
     udp: true
     tls: true
     skip-cert-verify: true
-    servername: "31.76.11.46.cdn-one.org"
+    servername: "2.oncloudnineservicestreang.com"
     client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Mg3ZxHNUFbX96q1HpS3WReeM7rnhEsXXtlEzxALeTDc"
+      short-id: "d8d3dc6c3ca45dd4"
+    flow: "xtls-rprx-vision"
+  - name: "🇩🇪_20"
+    type: vless
+    server: "152.53.236.182"
+    port: 443
+    uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
+      short-id: "7a76f3c4b9dd"
+    flow: "xtls-rprx-vision"
+  - name: "🇩🇪_21"
+    type: vless
+    server: "162.19.228.119"
+    port: 80
+    uuid: "dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51"
+    udp: true
     network: ws
     ws-opts:
-      path: "/52872/BNzG4FvIAr"
+      path: "/http"
       headers:
-        Host: "31.76.11.46.cdn-one.org"
-  - name: "🇩🇪_24"
-    type: ss
-    server: "209.46.102.22"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "1hhrqrokj3ag"
+        Host: "de.vpnbase.net"
+  - name: "🇩🇪_22"
+    type: vless
+    server: "57.129.41.216"
+    port: 80
+    uuid: "7d74eae4-8a06-4306-a923-ad686f30bf26"
     udp: true
+    network: ws
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "OV-Germany1.09vpn.com"
+  - name: "🇩🇪_23"
+    type: vless
+    server: "159.195.27.99"
+    port: 443
+    uuid: "859a537b-09cf-4bce-8da4-ecbb72950e3a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "1.oncloudnineservicestreang.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "EuExqpNB141gtIjbCmU0yyurbBqiLtGjDg-n95JIuig"
+      short-id: "28415a7918168947"
+    flow: "xtls-rprx-vision"
+  - name: "🇩🇪_24"
+    type: vless
+    server: "152.53.239.182"
+    port: 443
+    uuid: "711c018e-2692-4aa8-93f3-544d83fcd16c"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
+      short-id: "7a76f3c4b9dd"
+    flow: "xtls-rprx-vision"
   - name: "🇩🇪_25"
     type: ss
     server: "185.226.172.8"
@@ -402,6 +402,13 @@ proxies:
     password: "RexnBgU7EV5ADxG"
     udp: true
   - name: "🇩🇪_27"
+    type: ss
+    server: "209.46.102.22"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "1hhrqrokj3ag"
+    udp: true
+  - name: "🇩🇪_28"
     type: ss
     server: "8.209.74.72"
     port: 20001
@@ -449,6 +456,7 @@ proxy-groups:
       - "🇩🇪_25"
       - "🇩🇪_26"
       - "🇩🇪_27"
+      - "🇩🇪_28"
 
 
 rules:
