@@ -1,0 +1,364 @@
+name: "Standard"
+mixed-port: 7890
+socks-port: 7891
+port: 7892
+allow-lan: true
+bind-address: '*'
+mode: global
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: ui
+secret: ""
+unified-delay: true
+tcp-concurrent: true
+global-client-fingerprint: chrome
+find-process-mode: strict
+keep-alive-interval: 15
+
+fragment:
+  enable: true
+  size: "5-40"
+  sleep: "1-2"
+
+ttl: 5
+
+profile:
+  store-selected: true
+  store-fake-ip: false
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:5353
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.local'
+    - '*.lan'
+    - '*.localhost'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - 'time.*'
+    - 'time.*.com'
+    - 'connectivitycheck.gstatic.com'
+    - 'detectportal.firefox.com'
+    - 'captive.apple.com'
+    - 'www.msftncsi.com'
+    - 'cp.cloudflare.com'
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  nameserver:
+    - 1.1.1.1
+    - 1.0.0.1
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 149.112.112.112
+    - 208.67.222.222
+    - 208.67.220.220
+
+proxies:
+  - name: "🇨🇦_1"
+    type: vless
+    server: "216.152.147.28"
+    port: 443
+    uuid: "d9e4721d-cdac-44c7-bc91-117367eac194"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "kjiuPmjM4IutdZudHfcPZHEwcrBEFY4qBLlvfC6A_Ss"
+      short-id: "b9f8d3f8"
+    flow: "xtls-rprx-vision"
+  - name: "🇨🇦_2"
+    type: vless
+    server: "130.107.73.148"
+    port: 41373
+    uuid: "a71c8954-66a8-4321-bedb-2336230d81ce"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "google.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU"
+      short-id: "0e"
+    flow: "xtls-rprx-vision"
+  - name: "🇨🇦_3"
+    type: vless
+    server: "158.69.112.254"
+    port: 443
+    uuid: "661f395d-b153-4199-a04b-693f5fe7f261"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.speedtest.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y"
+      short-id: "3d3c1e645f763ee3"
+    flow: "xtls-rprx-vision"
+  - name: "🇨🇦_4"
+    type: vless
+    server: "66.70.179.198"
+    port: 2053
+    uuid: "b82a5521-f45f-4d40-92df-86d236eb04f4"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.google.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "Xgn5Vcz-gtFFJXJWnGvn22m3Fc2TwoCFLUy_acTQdm8"
+      short-id: "5653d14b657a1d0b"
+  - name: "🇨🇦_5"
+    type: vless
+    server: "209.200.246.86"
+    port: 443
+    uuid: "f9c6ae5c-a537-4ce1-8ad5-d1e579e0275f"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "ECtV4BdcZKXG49uHtDX-71e1YVr7gu54ykbaBms9kh4"
+      short-id: "c2f3117b3268d0a6"
+    flow: "xtls-rprx-vision"
+  - name: "🇨🇦_6"
+    type: vless
+    server: "209.200.246.143"
+    port: 443
+    uuid: "6ca50712-c5cd-4e32-97c5-bfa6485b848a"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "6clD-wWfOGRFlh91SRgnfvtO6BjZP7LM2-B4u7x3gh0"
+      short-id: "03c7c40feb004001"
+    flow: "xtls-rprx-vision"
+  - name: "🇨🇦_7"
+    type: vless
+    server: "184.107.106.68"
+    port: 443
+    uuid: "716426fa-bcb7-4eb9-b460-36399ebf740d"
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: "lizca2.footballfantasyforum.com"
+    client-fingerprint: "firefox"
+  - name: "🇨🇦_8"
+    type: trojan
+    server: "35.183.238.42"
+    port: 443
+    password: "your_password"
+    sni: "aws-ca-central-1.f1rocketnode.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇨🇦_9"
+    type: trojan
+    server: "137.184.172.228"
+    port: 443
+    password: "5392c4d3-b13e-456f-a0e5-8eaf52b7fc1d"
+    sni: "termux.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇨🇦_10"
+    type: trojan
+    server: "167.114.153.171"
+    port: 443
+    password: "opentunnel.net-newdday"
+    sni: "cat-1.opensvr.net"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇨🇦_11"
+    type: trojan
+    server: "216.128.184.4"
+    port: 443
+    password: "qr5nXh3P7K6T"
+    sni: "ash.d22e0961-e0a7-49b8-8259-eac71e24d27b.kailib.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇨🇦_12"
+    type: trojan
+    server: "159.203.22.227"
+    port: 443
+    password: "acfef609-b3c7-4e52-b292-8921d5fca90d"
+    sni: "ca-full.privateip.net"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇨🇦_13"
+    type: trojan
+    server: "64.74.163.118"
+    port: 58536
+    password: "lEjtI3pFYfU7O1UYozJcfZV5K6Fwfths"
+    sni: "64.74.163.118"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇨🇦_14"
+    type: ss
+    server: "155.138.136.240"
+    port: 443
+    cipher: "aes-256-gcm"
+    password: "sZSZi7tGs9wodT7k"
+    udp: true
+  - name: "🇨🇦_15"
+    type: ss
+    server: "142.4.216.225"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "ytw2awn"
+    udp: true
+  - name: "🇨🇦_16"
+    type: ss
+    server: "155.138.136.240"
+    port: 80
+    cipher: "aes-256-gcm"
+    password: "sZSZi7tGs9wodT7k"
+    udp: true
+  - name: "🇨🇦_17"
+    type: ss
+    server: "51.79.49.116"
+    port: 8882
+    cipher: "aes-256-gcm"
+    password: "kDWvXYZoTBcGkC4"
+    udp: true
+  - name: "🇨🇦_18"
+    type: ss
+    server: "155.138.136.240"
+    port: 80
+    cipher: "aes-256-gcm"
+    password: "sZSZi7tGs9wodT7k"
+    udp: true
+  - name: "🇨🇦_19"
+    type: ss
+    server: "51.222.155.32"
+    port: 5003
+    cipher: "aes-256-gcm"
+    password: "g5MeD6Ft3CWlJId"
+    udp: true
+  - name: "🇨🇦_20"
+    type: ss
+    server: "51.222.155.113"
+    port: 5601
+    cipher: "aes-256-gcm"
+    password: "Y6R9pAtvxxzmGC"
+    udp: true
+  - name: "🇨🇦_21"
+    type: ss
+    server: "51.79.64.198"
+    port: 8119
+    cipher: "aes-256-gcm"
+    password: "cdBIDV42DCwnfIN"
+    udp: true
+  - name: "🇨🇦_22"
+    type: ss
+    server: "51.222.12.127"
+    port: 445
+    cipher: "aes-256-gcm"
+    password: "zDNVedRFPQexG9v"
+    udp: true
+  - name: "🇨🇦_23"
+    type: ss
+    server: "51.222.155.113"
+    port: 5601
+    cipher: "aes-256-gcm"
+    password: "Y6R9pAtvxxzmGC"
+    udp: true
+  - name: "🇨🇦_24"
+    type: ss
+    server: "155.138.136.240"
+    port: 443
+    cipher: "aes-256-gcm"
+    password: "sZSZi7tGs9wodT7k"
+    udp: true
+  - name: "🇨🇦_25"
+    type: ss
+    server: "68.168.114.238"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "Auto"
+      - "Load Balance"
+
+      
+  - name: "Auto"
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 30
+    lazy: true
+    proxies:
+      - "🇨🇦_1"
+      - "🇨🇦_2"
+      - "🇨🇦_3"
+      - "🇨🇦_4"
+      - "🇨🇦_5"
+      - "🇨🇦_6"
+      - "🇨🇦_7"
+      - "🇨🇦_8"
+      - "🇨🇦_9"
+      - "🇨🇦_10"
+      - "🇨🇦_11"
+      - "🇨🇦_12"
+      - "🇨🇦_13"
+      - "🇨🇦_14"
+      - "🇨🇦_15"
+      - "🇨🇦_16"
+      - "🇨🇦_17"
+      - "🇨🇦_18"
+      - "🇨🇦_19"
+      - "🇨🇦_20"
+      - "🇨🇦_21"
+      - "🇨🇦_22"
+      - "🇨🇦_23"
+      - "🇨🇦_24"
+      - "🇨🇦_25"
+
+
+  - name: "Load Balance"
+    type: load-balance
+    strategy: round-robin
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - "🇨🇦_1"
+      - "🇨🇦_2"
+      - "🇨🇦_3"
+      - "🇨🇦_4"
+      - "🇨🇦_5"
+      - "🇨🇦_6"
+      - "🇨🇦_7"
+      - "🇨🇦_8"
+      - "🇨🇦_9"
+      - "🇨🇦_10"
+      - "🇨🇦_11"
+      - "🇨🇦_12"
+      - "🇨🇦_13"
+      - "🇨🇦_14"
+      - "🇨🇦_15"
+      - "🇨🇦_16"
+      - "🇨🇦_17"
+      - "🇨🇦_18"
+      - "🇨🇦_19"
+      - "🇨🇦_20"
+      - "🇨🇦_21"
+      - "🇨🇦_22"
+      - "🇨🇦_23"
+      - "🇨🇦_24"
+      - "🇨🇦_25"
+
+rules:
+  - MATCH,PROXY
