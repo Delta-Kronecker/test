@@ -12,8 +12,8 @@
     "http_dial_timeout_ms": 14000,
     "http_response_timeout_ms": 14000,
 
-    "max_retries": 0,
-    "validation_retries": 0,
+    "max_retries": 1,
+    "validation_retries": 1,
 
     "base_port": 10000,
 
@@ -32,11 +32,13 @@
     "tcp_ping_batch_rest_ms": 300,
     
     "test_urls": [
-      "http://www.gstatic.com/generate_204"
+      "http://www.gstatic.com/generate_204",
+      "https://www.gstatic.com/generate_204"
+
     ]
   },
-  "protocols": ["vless", "trojan", "ss", "vmess"],
-  "protocol_order": ["vless", "trojan", "ss", "vmess"],
+  "protocols": ["vless", "trojan"],
+  "protocol_order": ["vless", "trojan"],
   "base64_links": [],
   "text_links": [],
   "output": {
