@@ -484,6 +484,25 @@ func dedup(lines []string) (map[string][]string, int) {
 	return byProto, duplicates
 }
 
+func filterWSTransport(lines []string) []string {
+	var filtered []string
+	for _, line := range lines {
+		line = strings.TrimSpace(line)
+		if line == "" {
+			continue
+		}
+		for _, proto := range cfg.Protocols {
+			if strings.HasPrefix(line, proto+"://") {
+				if isWSTransport(line, proto) {
+					filtered = append(filtered, line)
+				}
+				break
+			}
+		}
+	}
+	return filtered
+}
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 func isLikelyBase64(s string) bool {

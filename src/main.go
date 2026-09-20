@@ -78,6 +78,10 @@ func main() {
 	}
 	fmt.Printf(" Total fetched: %d | Failed sources: %d\n", len(allConfigs), len(failedLinks))
 
+	wsConfigs := filterWSTransport(allConfigs)
+	fmt.Printf(" WebSocket configs: %d (filtered from %d)\n", len(wsConfigs), len(allConfigs))
+	allConfigs = wsConfigs
+
 	if gLog != nil {
 		gLog.logStart(len(allConfigs), len(failedLinks))
 	}
