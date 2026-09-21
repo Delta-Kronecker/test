@@ -3,17 +3,17 @@
 <details>
 <summary><strong>V2ray</strong></summary>
 
-V2ray All (854 config):
+V2ray All (2287 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/all_configs.txt
 ```
 
-V2ray VLESS (768 config):
+V2ray VLESS (2123 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/protocols/vless.txt
 ```
 
-V2ray TROJAN (86 config):
+V2ray TROJAN (164 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/protocols/trojan.txt
 ```
@@ -28,9 +28,24 @@ V2ray Batch 001 (500 config):
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/v2ray/batch_001.txt
 ```
 
-V2ray Batch 002 (354 config):
+V2ray Batch 002 (500 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/v2ray/batch_002.txt
+```
+
+V2ray Batch 003 (500 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/v2ray/batch_003.txt
+```
+
+V2ray Batch 004 (500 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/v2ray/batch_004.txt
+```
+
+V2ray Batch 005 (287 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/v2ray/batch_005.txt
 ```
 
 </details>
@@ -38,17 +53,17 @@ https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batch
 <details>
 <summary><strong>Clash</strong></summary>
 
-Clash All (854 config):
+Clash All (2287 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/clash.yaml
 ```
 
-Clash VLESS (768 config):
+Clash VLESS (2123 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/protocols/vless_clash.yaml
 ```
 
-Clash TROJAN (86 config):
+Clash TROJAN (164 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/protocols/trojan_clash.yaml
 ```
@@ -63,9 +78,24 @@ Clash Batch 001 (500 config):
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/clash/batch_001.yaml
 ```
 
-Clash Batch 002 (354 config):
+Clash Batch 002 (500 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/clash/batch_002.yaml
+```
+
+Clash Batch 003 (500 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/clash/batch_003.yaml
+```
+
+Clash Batch 004 (500 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/clash/batch_004.yaml
+```
+
+Clash Batch 005 (287 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/clash/batch_005.yaml
 ```
 
 </details>
@@ -73,17 +103,17 @@ https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batch
 <details>
 <summary><strong>Patt</strong></summary>
 
-Patt All (854 config):
+Patt All (2287 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/patt/all.txt
 ```
 
-Patt VLESS (768 config):
+Patt VLESS (2123 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/patt/protocols/vless.txt
 ```
 
-Patt TROJAN (86 config):
+Patt TROJAN (164 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/patt/protocols/trojan.txt
 ```
@@ -98,9 +128,24 @@ Patt Batch 001 (500 config):
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/patt/batches/batch_001.txt
 ```
 
-Patt Batch 002 (354 config):
+Patt Batch 002 (500 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/patt/batches/batch_002.txt
+```
+
+Patt Batch 003 (500 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/patt/batches/batch_003.txt
+```
+
+Patt Batch 004 (500 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/patt/batches/batch_004.txt
+```
+
+Patt Batch 005 (287 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/patt/batches/batch_005.txt
 ```
 
 </details>
@@ -108,17 +153,17 @@ https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/patt/
 <details>
 <summary><strong>Custom (Fragment)</strong></summary>
 
-Custom All (854 config):
+Custom All (2287 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/farg/all_configs.json
 ```
 
-Custom VLESS (768 config):
+Custom VLESS (2123 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/farg/protocols/vless.json
 ```
 
-Custom TROJAN (86 config):
+Custom TROJAN (164 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/farg/protocols/trojan.json
 ```
@@ -133,9 +178,24 @@ Custom Batch 001 (500 config):
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/farg/batches/batch_001.json
 ```
 
-Custom Batch 002 (354 config):
+Custom Batch 002 (500 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/farg/batches/batch_002.json
+```
+
+Custom Batch 003 (500 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/farg/batches/batch_003.json
+```
+
+Custom Batch 004 (500 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/farg/batches/batch_004.json
+```
+
+Custom Batch 005 (287 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/farg/batches/batch_005.json
 ```
 
 </details>
@@ -143,17 +203,17 @@ https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/farg/
 <details>
 <summary><strong>Local</strong></summary>
 
-Local All (854 config):
+Local All (2287 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/sni/all_configs_sni.txt
 ```
 
-Local VLESS (768 config):
+Local VLESS (2123 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/sni/protocols/vless_sni.txt
 ```
 
-Local TROJAN (86 config):
+Local TROJAN (164 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/sni/protocols/trojan_sni.txt
 ```
@@ -168,9 +228,24 @@ Local Batch 001 (500 config):
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/sni_v2ray/batch_001.txt
 ```
 
-Local Batch 002 (354 config):
+Local Batch 002 (500 config):
 ```
 https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/sni_v2ray/batch_002.txt
+```
+
+Local Batch 003 (500 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/sni_v2ray/batch_003.txt
+```
+
+Local Batch 004 (500 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/sni_v2ray/batch_004.txt
+```
+
+Local Batch 005 (287 config):
+```
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/sni_v2ray/batch_005.txt
 ```
 
 </details>
@@ -178,7 +253,7 @@ https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batch
 <details>
 <summary><strong>TCP Pass (for advanced users)</strong></summary>
 
-> All configs that passed TCP ping. Total: **8289**
+> All configs that passed TCP ping. Total: **8429**
 
 TCP Pass Batch 001:
 ```
@@ -190,7 +265,7 @@ https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/tcp-p
 <details>
 <summary><strong>Local TCP Pass (for advanced users)</strong></summary>
 
-> SNI version of TCP Pass configs. Total: **8289**
+> SNI version of TCP Pass configs. Total: **8429**
 
 TCP Pass SNI Batch 001:
 ```
